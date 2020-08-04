@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:BotLib:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BotLib/build/.transforms/bedc827946ac0262e1a5429a1fca4906/BotLib/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/BotLib/build/.transforms/bedc827946ac0262e1a5429a1fca4906/BotLib/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

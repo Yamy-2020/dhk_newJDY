@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f9"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_below="@+id/head_i"
+        android:layout_alignParentRight="true"
+        android:background="@color/gray_f4">
+
+        <!--<cn.finalteam.loadingviewfinal.PtrClassicFrameLayout-->
+        <!--android:id="@+id/ptr_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" >-->
+
+        <cn.finalteam.loadingview.ListViewFinal
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_f9"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            app:loadMoreMode="scroll" />
+        <!--</cn.finalteam.loadingviewfinal.PtrClassicFrameLayout>-->
+
+        <include layout="@layout/layout_empty_view" />
+    </FrameLayout>
+
+</LinearLayout>

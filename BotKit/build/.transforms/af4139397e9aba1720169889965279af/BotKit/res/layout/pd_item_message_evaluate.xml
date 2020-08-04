@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/pd_panel_back"
+    >
+    <TextView
+        android:id="@+id/pd_message_item_title"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="@color/pd_message_text"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textSize="14sp"
+        android:textColor="@color/pd_message_time"
+        android:background="@color/pd_hyperlink_text"
+        android:text="@string/pd_evaluation"
+        />
+</LinearLayout>

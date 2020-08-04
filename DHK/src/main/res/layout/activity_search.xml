@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kym.ui.SearchActivity" >
+
+    <include layout="@layout/head" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="关键字："
+        android:paddingLeft="@dimen/dp_2" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/login_btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/select_login1"
+        android:gravity="center"
+        android:text="搜索"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17"
+        android:textStyle="normal" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

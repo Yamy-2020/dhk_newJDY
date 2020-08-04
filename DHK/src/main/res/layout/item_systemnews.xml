@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@drawable/ic_mg_fr"/>
+
+        <TextView
+            android:id="@+id/textV_title"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_toRightOf="@+id/imageView1"
+            android:singleLine="true"
+            android:textColor="@color/black_33" />
+
+        <TextView
+            android:id="@+id/textV_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_9"
+            android:layout_toRightOf="@+id/imageView1"
+            android:singleLine="true"
+            android:textColor="@color/gray_a7" />
+
+        <TextView
+            android:id="@+id/textV_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="@color/gray_a7"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

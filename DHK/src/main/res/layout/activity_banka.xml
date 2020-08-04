@@ -1,0 +1,431 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/fenqi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/li1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/corner8"
+
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="工商银行星座金卡专属卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="没钱也能全球游"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/li2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="上海银行专属卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="知识也能分期"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/li3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="浦发银行高端专属定制卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="新车也不怕被刮"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/li4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="100dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:src="@drawable/banka4" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="兴业银行金卡专属渠道"-->
+                        <!--android:textColor="@color/black_33"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:textStyle="bold" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="专享特权"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="190dp"-->
+                <!--android:padding="15dp">-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/li5"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/corner8"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:src="@drawable/banka5"-->
+
+                <!--android:background="@drawable/corner8"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:text="中信银行金卡专属渠道"-->
+                <!--android:textColor="@color/black_33"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textStyle="bold" />-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingLeft="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingRight="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="没钱也能全球游"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/jiugongge"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="13sp" />&ndash;&gt;-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                <!--android:layout_width="10dp"-->
+                <!--android:layout_height="match_parent" />-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/li6"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/corner8"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:src="@drawable/banka6" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:text="平安银行金卡专属卡"-->
+                <!--android:textColor="@color/black_33"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textStyle="bold" />-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingLeft="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingRight="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="知识也能分期"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/jiugongge"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="13sp" />&ndash;&gt;-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lianming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/lianming_li1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="中青旅联名卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="提前入住，延时退房"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/lianming_li2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="中青旅联名白金卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="遨游不只是想象"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/lianming_li3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="时尚芭莎联名白金卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="任意'购'，随意'分'"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/lianming_li4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner8"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/banka13" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="时尚芭莎联名金卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:text="专享特权"-->
+                        <!--android:textColor="@color/jiugongge"-->
+                        <!--android:textSize="13sp" />-->
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include1"
+            layout="@layout/head" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:background="@color/blue_2e"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textV_lj_fenrun_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textV_lj_fenrun_all"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="累计收益（元）"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textV_lj_fenrun_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_52"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="今日收益 :0.00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/textV_lj_fenrun_yue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="月累计00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textV_yester_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/dp_52"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="昨日收益:0.00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listV_fr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:divider="@null"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</RelativeLayout>

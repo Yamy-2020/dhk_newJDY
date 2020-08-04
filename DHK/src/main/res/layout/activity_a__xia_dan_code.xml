@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:background="@drawable/payborder"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_15">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="交易金额"
+            android:textColor="@color/bptext"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="￥5,000"
+            android:textColor="@color/black_33"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_200"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="保存图片"
+            android:textColor="@color/jiugongge"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="打开云闪付APP首页扫一扫付款"
+            android:textColor="@color/jiugongge"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/login_btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@drawable/corner2"
+            android:gravity="center"
+            android:text="保存二维码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_below="@+id/head_i"
+        android:layout_alignParentRight="true">
+
+        <cn.finalteam.loadingview.PtrClassicFrameLayout
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cn.finalteam.loadingview.ListViewFinal
+                android:id="@+id/ListViewFinal1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/white"
+                android:divider="@color/bg_line"
+                android:dividerHeight="@dimen/dp_5"
+                android:listSelector="#00000000"
+                app:loadMoreMode="scroll" />
+        </cn.finalteam.loadingview.PtrClassicFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/zanwu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty1" />
+
+            <TextView
+                android:id="@+id/zanwu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无消息提醒"
+                android:textColor="@color/jiugongge"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

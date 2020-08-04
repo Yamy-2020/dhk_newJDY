@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jianyuyouhun:FingerprintScanHelper:1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a02f00e5fd89690503b66948a200f72b/FingerprintScanHelper-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a02f00e5fd89690503b66948a200f72b/FingerprintScanHelper-1.0.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jianyuyouhun/FingerprintScanHelper/1.0.2/5727c4a711083b737f41138e2c5fbe72c9bdbbd5/FingerprintScanHelper-1.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jianyuyouhun/FingerprintScanHelper/1.0.2/29a89af9a7e7f56bfdba55c1079c1d1eb5d69ca3/FingerprintScanHelper-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

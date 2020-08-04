@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0EFF4"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/registertakephoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="20dp"
+        android:background="#00CCCB"
+        android:gravity="center"
+        android:text="拍照"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/goodprice_tv" />
+
+    <TextView
+        android:id="@+id/registerfromphone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#FF6766"
+        android:gravity="center"
+        android:text="从相册导入"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/goodprice_tv" />
+
+    <TextView
+        android:id="@+id/cancle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="取     消"
+        android:textColor="#8A898F"
+        android:textSize="@dimen/goodprice_tv" />
+
+</LinearLayout>

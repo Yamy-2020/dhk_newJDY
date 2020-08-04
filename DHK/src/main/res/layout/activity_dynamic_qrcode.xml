@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_shadow"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="收款金额"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="￥"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@null"
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey" />
+        <!--<TextView-->
+        <!--android:id="@+id/beizhu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="添加收钱备注"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textColor="@color/top"/>-->
+
+        <LinearLayout
+            android:id="@+id/btn_queding"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/submit_btn2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_33"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:text="收款规则"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_33"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:text="1、支持中国银联云闪付及各银行APP扫码支付;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_33"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:text="2、支持各大银行及地方信用卡付款;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_33"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:text="3、支持单笔额度限制1000元以内,单卡单日1万元;"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_33"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:text="4、不支持微信、支付宝扫码支付;"/>
+    </LinearLayout>
+
+
+</LinearLayout>

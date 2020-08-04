@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clipChildren="false"
+    android:scrollbars="none">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:clipChildren="false"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <!--弧形view-->
+            <com.kym.ui.util.ArcImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg"
+                app:arcbump="true"
+                app:archeight="60" />
+
+            <!-- 设置普通指示器 -->
+            <com.donkingliang.banner.CustomBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-90dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:indicatorGravity="CENTER"
+                app:indicatorInterval="5dp"
+                app:indicatorSelectRes="@drawable/shape_point_select"
+                app:indicatorStyle="ORDINARY"
+                app:indicatorUnSelectRes="@drawable/shape_point_unselect" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/home_sk"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/home_sk" />
+
+                        <TextView
+                            android:id="@+id/sk_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收款"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_md"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/home_md" />
+
+                        <TextView
+                            android:id="@+id/md_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="门店码"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_sys"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/home_sys" />
+
+                        <TextView
+                            android:id="@+id/hk_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="还款"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_xf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/home_xf" />
+
+                        <TextView
+                            android:id="@+id/xf_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="消费计划"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingTop="23dp">
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_card"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_card"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_account"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_account"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_card"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_expand" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_expand"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_tg"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_account"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_update"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_update"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_update"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_expand"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_sub_account"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_subaccount"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_update"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="绑卡"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_card"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_card"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="账户"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_account"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_account"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home5_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="推广"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_expand"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_expand"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="优惠"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_update"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_update"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home4_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="商户"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <View
+                        android:id="@+id/view_new_home_1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_1"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_2"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_5"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:focusableInTouchMode="false"
+                    android:paddingTop="15dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_expand1"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/icon_new_home_tg"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_loans"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_loans"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_loans" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_loans"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_dk"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_expand1"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_make_chexian" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_make_chexian"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_bk"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_loans"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_loans"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_yunlian"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_loans" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_yunlian"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/icon_new_home_more"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_loans"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_make_chexian"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_loans" />
+
+                    <TextView
+                        android:id="@+id/home5_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="推广"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_expand1"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_expand1"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_loans" />
+
+                    <TextView
+                        android:id="@+id/home6_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="卡测评"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_loans"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_loans"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_loans" />
+
+                    <TextView
+                        android:id="@+id/home7_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="卡贷"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_make_chexian"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_make_chexian"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_loans" />
+
+                    <TextView
+                        android:id="@+id/home8_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="费率"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_yunlian"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_yunlian"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_loans" />
+
+                    <View
+                        android:id="@+id/view_new_home_51"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_51"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_7"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_7"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_6"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_8"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_7"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/xx_logo" />
+
+                <TextView
+                    android:id="@+id/xx_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="暂无更多消息"
+                    android:textColor="@color/black_33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/xx_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/jiugongge"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:gravity="right|center_vertical"
+                    android:text="更多"
+                    android:textColor="@color/black_33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--卡服务-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="卡服务"
+                android:textColor="@color/black_33"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/li_kcp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kcp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/li_kzd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/kzd" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--帮助中心-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="帮助中心"
+                android:textColor="@color/black_33"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/li_course"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner8"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/xsjc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="新用户必读"
+                        android:textColor="@color/black_33"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="为您解决各种常见问题"
+                        android:textColor="@color/jiugongge"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/li_problem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner8"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/lyfk" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="视频教程课堂"
+                        android:textColor="@color/black_33"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="视频解读不一样的支付"
+                        android:textColor="@color/jiugongge"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.kym.ui.newutil.DragFloatActionButton
+        android:id="@+id/circle_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:src="@drawable/tianjia" />
+</RelativeLayout>

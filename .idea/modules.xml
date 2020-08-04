@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BotKit/BotKit.iml" filepath="$PROJECT_DIR$/BotKit/BotKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BotLib/BotLib.iml" filepath="$PROJECT_DIR$/BotLib/BotLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DHK/DHK.iml" filepath="$PROJECT_DIR$/DHK/DHK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleprogress/circleprogress.iml" filepath="$PROJECT_DIR$/circleprogress/circleprogress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dhk_newJDY.iml" filepath="$PROJECT_DIR$/dhk_newJDY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gallery/gallery.iml" filepath="$PROJECT_DIR$/gallery/gallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+    </modules>
+  </component>
+</project>

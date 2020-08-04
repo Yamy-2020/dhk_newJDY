@@ -1,0 +1,297 @@
+apply plugin: 'com.android.application'
+
+apply from: 'dep.gradle'
+
+android {
+    dexOptions {
+        jumboMode = true
+    }
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tools_version
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        flavorDimensions "versionCode"
+
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+        }
+        multiDexEnabled true
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    signingConfigs {
+        release {
+            keyAlias 'ye'
+            keyPassword 'Zzss123456'
+            storeFile file('../kaumi')
+            storePassword 'Zzss123456'
+        }
+
+        /*
+        复制这个
+         */
+        KaUMi {
+            keyAlias 'ye'
+            keyPassword 'Zzss123456'
+            storeFile file('../kaumi')
+            storePassword 'Zzss123456'
+        }
+        KaUMi1 {
+            keyAlias 'ye'
+            keyPassword 'Zzss123456'
+            storeFile file('../kaumi')
+            storePassword 'Zzss123456'
+        }
+    }
+
+    productFlavors {
+
+
+        /*
+        三方类的
+         */
+        KaUMi1 {
+            applicationId "com.kym.ui"  //包名
+            versionCode 2
+            versionName "1.1.0"   //版本号
+            buildConfigField "String", "WX_APP_ID", '"wxddda0822580a4630"'//微信
+            manifestPlaceholders = [APP_NAME       : "指算",
+                                    QQ_APP_ID      : "tencent1106647221",//qq现在没有用
+                    /* 推送 */
+                                    PUSH_APP_ID    : "xm2JxZ5uFkAjJsiEzDGyUA",
+                                    PUSH_APP_KEY   : "CL86jik1uO7jWj2nzgOh36",
+                                    PUSH_APP_SECRET: "R3Rc5A6rGM60RY5mgiVj7A",
+                                    PACKAGE_NAME   : "com.kym.ui",
+                    /*高德 */
+                                    GAODE_KEY      : "edaba156353a30355acee5376cdd3978"]
+        }
+    }
+
+    lintOptions {
+        /**
+         * 不检查资源类型错误
+         */
+        disable "ResourceType"
+        checkReleaseBuilds false
+    }
+    buildTypes {
+
+
+
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.KaUMi1
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.KaUMi1
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+static def getTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getDefault())
+}
+
+/**
+ * 解决冲突 同一版本
+ */
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$android_support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation "com.android.support:support-v4:$android_support_version"
+    implementation "com.android.support:recyclerview-v7:$android_support_version"
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.chanven.lib:cptr:1.1.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation files('libs/bcprov-jdk15-140.jar')
+    implementation files('libs/json_simple-1.1.jar')
+    implementation files('libs/mta-sdk-1.6.2.jar')
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+    implementation files('libs/open_sdk.jar')
+    implementation files('libs/payecoplugin.jar')
+    implementation files('libs/universal-image-loader-1.9.3.jar')
+    implementation files('libs/vidcard_20160926.jar')
+    implementation files('libs/ymbankcard_20161215.jar')
+    implementation files('libs/AMap_Location_V4.8.0_20191210.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation files('libs/android-async-http-1.4.6.jar')
+    implementation files('libs/lib_volley_0303.jar')
+    implementation('com.thoughtworks.xstream:xstream:1.4.7') {
+        exclude group: 'xmlpull', module: 'xmlpull'
+    }
+
+    /**
+     * 支付宝
+     */
+    implementation files('libs/alipaySdk-20180601.jar')
+
+    /**
+     * 轮播图
+     */
+    implementation 'com.github.donkingliang:CustomBanner:1.1.3'
+
+    /**
+     * 网络请求
+     */
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.github.tozny:java-aes-crypto:1.1.0'
+
+    /**
+     * 下拉刷新
+     */
+    implementation 'com.github.nuptboyzhb.lib.uikit:superswiperefreshlayout:1.0.0'
+
+    /**
+     * 指纹登录
+     */
+    implementation 'com.github.jianyuyouhun:FingerprintScanHelper:1.0.2'
+    implementation 'com.github.supertaohaili:fingerprint:1.0.0'
+
+    /**
+     * 三级联动
+     */
+//    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+//    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+    /**
+     * 64k
+     */
+    implementation 'com.android.support:multidex:1.0.1'
+
+    /**
+     * 视频缓存
+     */
+    implementation 'com.danikula:videocache:2.7.1'
+
+    /**
+     * 视频
+     */
+    implementation 'com.github.dueeeke.dkplayer:dkplayer-java:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:dkplayer-ui:3.0.4'
+//    implementation 'com.github.dueeeke.dkplayer:player-exo:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:player-ijk:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:ijk-armv7a:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:ijk-armv5:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:ijk-arm64:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:ijk-x86:3.0.4'
+    implementation 'com.github.dueeeke.dkplayer:ijk-x86_64:3.0.4'
+
+    /**
+     * 标签
+     */
+    implementation 'com.github.donkingliang:LabelsView:1.5.0'
+
+    /**
+     * 加载窗
+     */
+    implementation 'com.github.limxing:Android-PromptDialog:1.1.3'
+
+    /**
+     * 引导蒙层
+     */
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.zaaach:toprightmenu:1.0'
+
+    /**
+     * 圆形进度条
+     */
+    api project(':circleprogress')
+
+    /**
+     * 第四范式智能客服平台
+     * https://bot.4paradigm.com/doc/android/quick-start.html
+     */
+    implementation project(':BotLib')
+    implementation project(':BotKit')
+
+    /**
+     * 加载gif
+     */
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+
+    /**
+     * jsbridge
+     */
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+
+    /**
+     * 沉浸状态栏
+     */
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
+    /**
+     * 注解
+     */
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    /**
+     * 动态获取权限
+     */
+    implementation 'pub.devrel:easypermissions:2.0.1'
+
+    /**
+     * 个推
+     */
+    implementation 'com.getui:sdk:2.13.3.0'
+    implementation files('libs/AMap_Location_V4.8.0_20191210.jar')
+
+    /**
+     * 百度ocr
+     */
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(path: ':ocr_ui')
+    /**
+     * tab栏
+     */
+    implementation project(':library')
+    implementation project(path: ':gallery')
+    /**
+     * 垂直滚动
+     */
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+    /**
+     * 折叠卡片
+     */
+    implementation 'com.loopeer.library:cardstack:1.0.2'
+    /**
+     * 二维码
+     */
+    implementation 'com.google.zxing:core:3.3.0'
+}

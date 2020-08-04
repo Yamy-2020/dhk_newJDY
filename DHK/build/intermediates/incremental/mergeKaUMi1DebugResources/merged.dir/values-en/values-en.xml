@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="detect_result">
+        <item/>
+        <item>LIVEPASS</item>
+        <item>Face tracking failed</item>
+        <item>Timeout failed</item>
+        <item>LIVENOTPASS</item>
+    </array>
+    <array name="detect_type">
+        <item>Blink</item>
+        <item>Open your Mouth</item>
+        <item>Shake your head</item>
+    </array>
+    <string name="aufail">Failed</string>
+    <string name="authok">Success</string>
+    <string name="blink_detection">BLINK</string>
+    <string name="dkplayer_continue_play">Continue playing</string>
+    <string name="dkplayer_error_message">Something went wrong, please try again later</string>
+    <string name="dkplayer_lock_tip">Please unlock the screen first!</string>
+    <string name="dkplayer_locked">Locked</string>
+    <string name="dkplayer_replay">Replay</string>
+    <string name="dkplayer_retry">  Retry  </string>
+    <string name="dkplayer_unlocked">Unlocked</string>
+    <string name="dkplayer_wifi_tip">You are currently using the mobile network, and continuing to play will consume traffic</string>
+    <string name="face_not_found">Face not found</string>
+    <string name="face_out_of_rect">Face out of rect</string>
+    <string name="face_too_blurry">Face too blurry</string>
+    <string name="face_too_bright">Face too bright</string>
+    <string name="face_too_dark">Face too dark</string>
+    <string name="face_too_large">Face too large</string>
+    <string name="face_too_small">Face too small</string>
+    <string name="facelost">Face Lost</string>
+    <string name="liveness_detection_failed">Rejected</string>
+    <string name="liveness_detection_failed_action_blend">Moving action failure</string>
+    <string name="liveness_detection_failed_not_video">Continuity failure</string>
+    <string name="liveness_detection_failed_timeout">Timeout failure</string>
+    <string name="loading_confirm">OK,I Know</string>
+    <string name="loading_text">Instructions for use：\n1、First you need to enter a name；\n2、Then you need to follow the prompts on the screen to complete the three actions to live detection, while the software will send your face image to the server for face verification；\n3、
+If you do not pass the live test or face verification, login failure, otherwise login success。</string>
+    <string name="meglive_camera_initfailed">Fail to open front camera</string>
+    <string name="meglive_detect_initfailed">Fail to initialize detector</string>
+    <string name="meglive_eye_open_closed">Blink your eye</string>
+    <string name="meglive_getpermission_motion">Please allow fitness data permissions</string>
+    <string name="meglive_keep_eyes_open">Show me your eyes</string>
+    <string name="meglive_keep_mouth_open">Show me your mouth</string>
+    <string name="meglive_mouth_open_closed">Open your mouth</string>
+    <string name="meglive_phone_vertical">Keep your phone vertically</string>
+    <string name="meglive_pitch">Nod your head</string>
+    <string name="meglive_pos_yaw_left">Turn left</string>
+    <string name="meglive_pos_yaw_right">Turn right</string>
+    <string name="meglive_prompt">Please keep in well-lit environment</string>
+    <string name="meglive_yaw">Shake your head</string>
+    <string name="mouth_detection">MOUTH</string>
+    <string name="netowrk_parse_failed">Unknown server respone</string>
+    <string name="network_error">No network connection</string>
+    <string name="novalidframe">No suitable image for face recognition</string>
+    <string name="pd_back">Back</string>
+    <string name="pd_camera">Camera</string>
+    <string name="pd_click_here">Click here</string>
+    <string name="pd_connecting">Connecting ...</string>
+    <string name="pd_connection_closed">Connection closed</string>
+    <string name="pd_connection_failed">Connection failed</string>
+    <string name="pd_evaluate">Evaluate</string>
+    <string name="pd_evaluation">Evaluation</string>
+    <string name="pd_file">File</string>
+    <string name="pd_hold_to_talk">Hold to Talk</string>
+    <string name="pd_human">Human</string>
+    <string name="pd_message">Message</string>
+    <string name="pd_message_acceptgroup">Select business</string>
+    <string name="pd_message_menu">Menu</string>
+    <string name="pd_message_recommend">Do you want to ask</string>
+    <string name="pd_more">More</string>
+    <string name="pd_photo">Photos</string>
+    <string name="pd_release_and_cancel">Release to cancel</string>
+    <string name="pd_release_to_cancel">Release to cancel</string>
+    <string name="pd_release_to_send">Release to Send</string>
+    <string name="pd_send">Send</string>
+    <string name="pd_slideup_and_cancel">Slide up to cancel</string>
+    <string name="pd_unsupported_message">Unsupported message</string>
+    <string name="pd_yesterday">Yesterday</string>
+    <string name="pickerview_cancel">Cancel</string>
+    <string name="pickerview_day"> </string>
+    <string name="pickerview_hours"> </string>
+    <string name="pickerview_minutes"> </string>
+    <string name="pickerview_month"> </string>
+    <string name="pickerview_seconds"> </string>
+    <string name="pickerview_submit">Confirm</string>
+    <string name="pickerview_year"> </string>
+    <string name="pos_detection">POS</string>
+    <string name="steps">活体检测:</string>
+    <string name="timeout">Time out</string>
+    <string name="tipblink">Do blink with your eyes.</string>
+    <string name="tippose">Rotate your pose vertically.</string>
+    <string name="tipsmouth">Open your mouth and close.</string>
+    <string name="verify_error">Rejected</string>
+    <string name="verify_success">Accepted</string>
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:clipChildren="false"
+    android:scrollbars="none">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <!-- 设置普通指示器 -->
+            <com.donkingliang.banner.CustomBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_height="@dimen/dp_120"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                app:indicatorGravity="CENTER"
+                app:indicatorInterval="@dimen/dp_5"
+                app:indicatorSelectRes="@drawable/shape_point_select"
+                app:indicatorStyle="ORDINARY"
+                app:indicatorUnSelectRes="@drawable/shape_point_unselect" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_95"
+                    android:paddingTop="@dimen/dp_15">
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_card"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/icon_new_home_card"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_account"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_account"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_card"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_update" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_update"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_new_home_update"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_account"
+                        app:layout_constraintRight_toLeftOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_home_sub_account"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/icon_new_home_subaccount"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_new_home_account"
+                        app:layout_constraintLeft_toRightOf="@id/iv_new_home_update"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="今日推荐"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_card"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_card"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="邀请好友"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_account"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_account"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="在线客服"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_update"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_update"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <TextView
+                        android:id="@+id/home4_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="我的商户"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintRight_toRightOf="@id/iv_new_home_sub_account"
+                        app:layout_constraintTop_toBottomOf="@id/iv_new_home_account" />
+
+                    <View
+                        android:id="@+id/view_new_home_1"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_2"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_1"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_3"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_2"
+                        app:layout_constraintRight_toLeftOf="@id/view_new_home_4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_new_home_4"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/view_new_home_3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="新手必看"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15">
+
+                <LinearLayout
+                    android:id="@+id/li_course"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/xsjc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="新用户必读"
+                        android:textColor="@color/black_33"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="为您解决各种常见问题"
+                        android:textColor="@color/jiugongge"
+                        android:textSize="@dimen/sp_13" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/li_problem"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/sxy" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="系统开发"
+                        android:textColor="@color/black_33"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="解读不一样的咨询"
+                        android:textColor="@color/jiugongge"
+                        android:textSize="@dimen/sp_13" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="@drawable/corner"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_15">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请选择要转存的账户(元)"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/sp_16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bjzh_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/corner2"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转存成本金"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/corner3"
+            android:gravity="center"
+            android:text="✕"
+            android:textColor="@color/bg_color"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

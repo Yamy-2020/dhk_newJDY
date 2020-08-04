@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 设置圆角半径 -->
+    <corners android:radius="3dp" />
+    <!-- 设置边距 -->
+
+    <!-- 设置渐变角度angle和渐变颜色 -->
+    <gradient
+        android:angle="270"
+        android:endColor="#161513"
+        android:startColor="#696760" />
+    <!-- 设置各边倒角大小 -->
+    <corners
+        android:radius="@dimen/dp_20"/>
+</shape>

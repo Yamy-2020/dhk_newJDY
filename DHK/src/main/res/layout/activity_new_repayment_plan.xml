@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_new_plan" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="还款金额"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/et_new_repayment_amount"
+                        android:layout_width="@dimen/dp_200"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入还款金额"
+                        android:inputType="numberDecimal"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="还款模式"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/tv_new_repayment_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="智能模式"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/sp_16" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/xiala_xin" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_color"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_new_repayment_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="还款时间"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/tv_new_repayment_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="请选择还款时间"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="拆分笔数"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/et_new_repayment_count"
+                        android:layout_width="@dimen/dp_200"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入拆分笔数"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_new_repayment_preview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/corner2"
+                android:gravity="center"
+                android:text="计划预览"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/view_new_repayment_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_new_repayment_date_string"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="还款日期"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_new_repayment_mount_string"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_new_repayment_mount_string"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="还款金额"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintLeft_toRightOf="@id/tv_new_repayment_date_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_new_repayment"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_new_repayment_mount_string" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

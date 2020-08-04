@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/head_top_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="#FFFFFF"
+        android:gravity="top" >
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10" >
+
+            <ImageView
+                android:id="@+id/head_img_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/previoussss" />
+
+            <TextView
+                android:id="@+id/left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左边"
+                android:textColor="#505050"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/head_text_title"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="扫一扫"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_18"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/head_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10" >
+
+            <TextView
+                android:id="@+id/head_img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_2"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右边"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/head_progress_right"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/frameLayout1"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#A7A7A7" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_diss"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_400"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
+        android:background="@drawable/bg_tx_x">
+
+        <com.kym.ui.newutilutil.CircleImageView
+            android:id="@+id/ige_top"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_18"
+            android:src="@drawable/push" />
+
+        <TextView
+            android:id="@+id/textV_name_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ige_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="**"
+            android:textColor="#0C0C0C" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/textV_name_t"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_14"
+            android:background="#D9D9D9" />
+
+        <TextView
+            android:id="@+id/textV_bank_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_name_t"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="某某银行"
+            android:textColor="#0C0C0C"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_bank_t"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="（余额提现）"
+            android:textColor="#3B3B3B"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="提现时间"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textV_time_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="#5A5A5A"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_time_t"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_13"
+            android:text="提现金额"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/textV_money_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="0.00元"
+            android:textSize="@dimen/dp_25" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_75"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@drawable/ic_wancheng" />
+
+    </RelativeLayout>
+
+</LinearLayout>

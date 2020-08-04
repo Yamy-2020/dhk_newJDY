@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_below="@+id/head_i"
+        android:layout_alignParentRight="true"
+        android:background="@color/bg_line">
+
+        <cn.finalteam.loadingview.ListViewFinal
+            android:id="@+id/dc_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:listSelector="@null"
+            android:scrollbars="none"
+            app:loadMoreMode="scroll" />
+
+        <LinearLayout
+            android:id="@+id/zanwu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty1" />
+
+            <TextView
+                android:id="@+id/zanwu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无贷偿计划,赶紧去制定计划试一试吧!"
+                android:textColor="@color/jiugongge"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

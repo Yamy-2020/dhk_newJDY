@@ -1,0 +1,1223 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kym.ui"
+4    android:versionCode="2"
+5    android:versionName="1.1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml
+10    <!-- 个推SDK权限配置开始 -->
+11    <supports-screens
+11-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:6:5-11:39
+12        android:anyDensity="true"
+12-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:7:9-34
+13        android:largeScreens="true"
+13-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:8:9-36
+14        android:normalScreens="true"
+14-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:9:9-37
+15        android:resizeable="true"
+15-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:10:9-34
+16        android:smallScreens="true" />
+16-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:11:9-36
+17
+18    <!-- 个推电子围栏功能所需权限 -->
+19
+20    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- 用于访问网络，网络定位需要上网 -->
+20-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:18:5-74
+20-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:18:22-71
+21    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+21-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:19:5-67
+21-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:19:22-64
+22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+22-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:20:5-75
+22-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:20:22-72
+23    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 读写权限 -->
+23-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:21:5-69
+23-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:21:22-66
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+24-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:22:5-80
+24-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:22:22-77
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- location用于进行网络定位 -->
+25-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:23:5-81
+25-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:23:22-78
+26    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+27    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+28    <!-- location获取运营商信息，用于支持提供运营商信息相关的接口 -->
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- location这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+29-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:27:5-79
+29-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:27:22-76
+30    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+30-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:28:5-76
+30-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:28:22-73
+31
+32    <permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- 更改设置 -->
+32-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:30:5-74
+32-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:30:17-71
+33    <permission android:name="android.permission.WRITE_SETTINGS" /> <!-- location用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+33-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:31:5-68
+33-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:31:17-65
+34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- location用于申请调用A-GPS模块 -->
+34-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:32:5-76
+34-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:32:22-73
+35    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 个推所需支持iBeancon 需要蓝牙权限 -->
+35-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:33:5-89
+35-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:33:22-86
+36    <!-- 可以提高室内定位的精确度 -->
+37    <uses-permission android:name="android.permission.BLUETOOTH" />
+37-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:35:5-68
+37-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:35:22-65
+38    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 个推3.0电子围栏功能所需权限 -->
+38-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:36:5-74
+38-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:36:22-71
+39    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+39-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:37:5-85
+39-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:37:22-82
+40    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+40-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:38:5-77
+40-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:38:22-74
+41    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+41-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:39:5-81
+41-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:39:22-78
+42    <uses-permission android:name="android.permission.VIBRATE" />
+42-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:40:5-66
+42-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:40:22-63
+43    <uses-permission android:name="android.permission.GET_TASKS" />
+43-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:41:5-68
+43-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:41:22-65
+44    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+44-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:42:5-71
+44-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:42:22-68
+45    <uses-permission android:name="android.permission.WAKE_LOCK" />
+45-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:43:5-68
+45-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:43:22-65
+46    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+46-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:44:5-75
+46-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:44:22-72
+47    <uses-permission android:name="android.permission.CAMERA" />
+47-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:45:5-65
+47-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:45:22-62
+48    <uses-permission android:name="android.permission.FLASHLIGHT" />
+48-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:46:5-69
+48-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:46:22-66
+49    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+49-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:47:5-80
+49-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:47:22-77
+50    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" /> <!-- 浮动通知权限 -->
+50-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:48:5-50:47
+50-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:49:9-69
+51    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+51-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:51:5-78
+51-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:51:22-75
+52
+53    <uses-feature android:name="android.hardware.camera" />
+53-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:53:5-60
+53-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:53:19-57
+54    <uses-feature
+54-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:54:5-56:35
+55        android:name="android.hardware.camera.autofocus"
+55-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:55:9-57
+56        android:required="true" />
+56-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:56:9-32
+57    <uses-feature
+57-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:57:5-59:36
+58        android:name="android.hardware.camera.front"
+58-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:58:9-53
+59        android:required="false" />
+59-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:59:9-33
+60    <uses-feature android:name="android.hardware.camera.flash" />
+60-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:60:5-66
+60-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:60:19-63
+61
+62    <uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER" />
+62-->[com.github.supertaohaili:fingerprint:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7183af02b6b9788834be9e514eff80ed\fingerprint-1.0.0\AndroidManifest.xml:12:5-91
+62-->[com.github.supertaohaili:fingerprint:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7183af02b6b9788834be9e514eff80ed\fingerprint-1.0.0\AndroidManifest.xml:12:22-88
+63    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+63-->[com.github.supertaohaili:fingerprint:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7183af02b6b9788834be9e514eff80ed\fingerprint-1.0.0\AndroidManifest.xml:13:5-117
+63-->[com.github.supertaohaili:fingerprint:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7183af02b6b9788834be9e514eff80ed\fingerprint-1.0.0\AndroidManifest.xml:13:22-114
+64
+65    <uses-feature android:name="android.hardware.camera2.full" />
+65-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-66
+65-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:19-63
+66
+67    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 自定义权限 -->
+67-->[com.lzy.net:okgo:3.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\25c2d5b5131b642f1ad24d487b2e4d30\okgo-3.0.4\AndroidManifest.xml:29:5-84
+67-->[com.lzy.net:okgo:3.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\25c2d5b5131b642f1ad24d487b2e4d30\okgo-3.0.4\AndroidManifest.xml:29:22-81
+68    <uses-permission android:name="getui.permission.GetuiService.com.kym.ui" />
+68-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:16:5-86
+68-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:16:22-83
+69
+70    <permission
+70-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:18:5-20:44
+71        android:name="getui.permission.GetuiService.com.kym.ui"
+71-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:19:9-70
+72        android:protectionLevel="normal" />
+72-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:20:9-41
+73
+74    <application
+74-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:62:5-450:19
+75        android:name="com.kym.ui.util.MyApplication"
+75-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:63:9-53
+76        android:allowBackup="true"
+76-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:64:9-35
+77        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+77-->[com.android.support:support-compat:28.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ccf94a4f227dfa4f17156620e28a8b98\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+78        android:configChanges="orientation|keyboardHidden|screenSize"
+78-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:65:9-70
+79        android:debuggable="true"
+80        android:icon="@drawable/abc"
+80-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:66:9-37
+81        android:label="指算"
+81-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:67:9-27
+82        android:screenOrientation="portrait"
+82-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:68:9-45
+83        android:supportsRtl="true"
+83-->[:circleprogress] E:\android\dhk_newJDY\circleprogress\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-35
+84        android:theme="@style/AppTheme"
+84-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:69:9-40
+85        android:usesCleartextTraffic="true"
+85-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:70:9-44
+86        android:vmSafeMode="true" >
+86-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-34
+87        <activity android:name="com.kym.ui.activity.ImgBannerActivity" />
+87-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:72:9-74
+87-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:72:19-71
+88        <activity android:name="com.kym.ui.activity.AllQianYueListActivity" />
+88-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:73:9-79
+88-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:73:19-76
+89        <activity
+89-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:74:9-84:20
+90            android:name="com.kym.ui.comeActivity"
+90-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:75:13-51
+91            android:configChanges="orientation|keyboardHidden"
+91-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:76:13-63
+92            android:screenOrientation="portrait"
+92-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:77:13-49
+93            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+93-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:78:13-73
+94            <intent-filter>
+94-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:79:13-83:29
+95                <action android:name="android.intent.action.MAIN" />
+95-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:80:17-69
+95-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:80:25-66
+96
+97                <category android:name="android.intent.category.LAUNCHER" />
+97-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:82:17-77
+97-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:82:27-74
+98            </intent-filter>
+99        </activity>
+100        <activity
+100-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:85:9-89:76
+101            android:name="com.kym.ui.activity.WelcomeActivity"
+101-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:86:13-63
+102            android:configChanges="orientation|keyboardHidden"
+102-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:87:13-63
+103            android:screenOrientation="portrait"
+103-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:88:13-49
+104            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- //android:usesCleartextTraffic="true" -->
+104-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:89:13-73
+105        <!-- android:name=".util.MyApplication" -->
+106        <!-- android:name="android.support.multidex.MultiDexApplication" -->
+107        <!-- qq sdk配置 -->
+108        <activity
+108-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:93:9-105:20
+109            android:name="com.tencent.tauth.AuthActivity"
+109-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:94:13-58
+110            android:launchMode="singleTask"
+110-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:95:13-44
+111            android:noHistory="true" >
+111-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:96:13-37
+112            <intent-filter>
+112-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:97:13-104:29
+113                <action android:name="android.intent.action.VIEW" />
+113-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:98:17-69
+113-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:98:25-66
+114
+115                <category android:name="android.intent.category.DEFAULT" />
+115-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:100:17-76
+115-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:100:27-73
+116                <category android:name="android.intent.category.BROWSABLE" />
+116-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:101:17-78
+116-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:101:27-75
+117
+118                <data android:scheme="tencent1106647221" />
+118-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:103:23-52
+119            </intent-filter>
+120        </activity>
+121
+122        <service android:name="com.amap.api.location.APSService" /> <!-- alipay sdk begin -->
+122-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:107:9-68
+122-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:107:18-65
+123        <activity
+123-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:108:9-113:70
+124            android:name="com.alipay.sdk.app.H5PayActivity"
+124-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:109:13-60
+125            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+125-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:110:13-85
+126            android:exported="false"
+126-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:111:13-37
+127            android:screenOrientation="behind"
+127-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:112:13-47
+128            android:windowSoftInputMode="adjustResize|stateHidden" />
+128-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:113:13-67
+129        <activity
+129-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:114:9-119:70
+130            android:name="com.alipay.sdk.app.H5AuthActivity"
+130-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:115:13-61
+131            android:configChanges="orientation|keyboardHidden|navigation"
+131-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:116:13-74
+132            android:exported="false"
+132-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:117:13-37
+133            android:screenOrientation="behind"
+133-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:118:13-47
+134            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- alipay sdk end -->
+134-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:119:13-67
+135
+136
+137        <!-- 高德地图key -->
+138        <meta-data
+139            android:name="com.amap.api.v2.apikey"
+139-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:123:13-50
+140            android:value="edaba156353a30355acee5376cdd3978" />
+140-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:124:13-41
+141
+142        <!-- ***********************个推配置开始********************** -->
+143        <meta-data
+144            android:name="PUSH_APPID"
+144-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:128:13-38
+145            android:value="xm2JxZ5uFkAjJsiEzDGyUA" />
+145-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:129:13-43
+146        <meta-data
+147            android:name="PUSH_APPKEY"
+147-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:132:13-39
+148            android:value="CL86jik1uO7jWj2nzgOh36" />
+148-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:133:13-44
+149        <meta-data
+150            android:name="PUSH_APPSECRET"
+150-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:136:13-42
+151            android:value="R3Rc5A6rGM60RY5mgiVj7A" /> <!-- 用户自定义服务名 -->
+151-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:137:13-47
+152        <service
+152-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:139:9-143:46
+153            android:name="com.kym.ui.getui.DemoPushService"
+153-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:140:13-60
+154            android:exported="true"
+154-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:141:13-36
+155            android:label="PushService"
+155-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:142:13-40
+156            android:process=":pushservice" /> <!-- android:permission在2.13.1.0版本后必须配置 -->
+156-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:143:13-43
+157        <service
+157-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:144:9-146:72
+158            android:name="com.kym.ui.getui.DemoIntentService"
+158-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:145:13-62
+159            android:permission="android.permission.BIND_JOB_SERVICE" />
+159-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:146:13-69
+160        <!-- ***********************个推配置结束********************** -->
+161        <activity
+161-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:148:9-152:55
+162            android:name="com.kym.ui.activity.LoginActivity"
+162-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:149:13-61
+163            android:configChanges="orientation|keyboardHidden"
+163-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:150:13-63
+164            android:screenOrientation="portrait"
+164-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:151:13-49
+165            android:windowSoftInputMode="adjustPan" />
+165-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:152:13-52
+166        <activity
+166-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:153:9-156:55
+167            android:name="com.kym.ui.activity.SecondActivity"
+167-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:154:13-62
+168            android:screenOrientation="portrait"
+168-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:155:13-49
+169            android:windowSoftInputMode="adjustPan" />
+169-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:156:13-52
+170        <activity
+170-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:157:9-161:73
+171            android:name="com.kym.ui.activity.RegisterActivity"
+171-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:158:13-64
+172            android:configChanges="orientation|keyboardHidden"
+172-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:159:13-63
+173            android:screenOrientation="portrait"
+173-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:160:13-49
+174            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+174-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:161:13-70
+175        <activity
+175-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:162:9-166:76
+176            android:name="com.kym.ui.activity.MessageCenterContentActivity"
+176-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:163:13-76
+177            android:configChanges="orientation|keyboardHidden"
+177-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:164:13-63
+178            android:screenOrientation="portrait"
+178-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:165:13-49
+179            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+179-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:166:13-73
+180        <activity
+180-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:167:9-171:52
+181            android:name="com.kym.ui.wxapi.WXEntryActivity"
+181-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:168:13-60
+182            android:configChanges="orientation|keyboardHidden"
+182-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:169:13-63
+183            android:exported="true"
+183-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:170:13-36
+184            android:screenOrientation="portrait" />
+184-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:171:13-49
+185        <activity
+185-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:172:9-177:76
+186            android:name="com.kym.ui.LianxiActivity_new"
+186-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:173:13-57
+187            android:configChanges="orientation|keyboardHidden"
+187-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:174:13-63
+188            android:label="@string/title_activity_lianxi"
+188-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:175:13-58
+189            android:screenOrientation="portrait"
+189-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:176:13-49
+190            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+190-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:177:13-73
+191        <activity
+191-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:178:9-181:52
+192            android:name="com.kym.ui.ShangHuActivity"
+192-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:179:13-54
+193            android:label="@string/title_activity_myshanghu_new"
+193-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:180:13-65
+194            android:screenOrientation="portrait" />
+194-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:181:13-49
+195        <activity
+195-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:182:9-186:101
+196            android:name="com.kym.ui.SearchActivity"
+196-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:183:13-53
+197            android:label="@string/title_activity_search"
+197-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:184:13-58
+198            android:screenOrientation="portrait"
+198-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:185:13-49
+199            android:windowSoftInputMode="stateVisible|adjustResize|stateHidden|stateAlwaysHidden" />
+199-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:186:13-98
+200        <activity
+200-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:187:9-190:52
+201            android:name="com.kym.ui.activity.zhanghu.ZhangHuActivity"
+201-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:188:13-71
+202            android:label="@string/title_activity_zhang_hu"
+202-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:189:13-60
+203            android:screenOrientation="portrait" />
+203-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:190:13-49
+204        <activity
+204-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:191:9-194:52
+205            android:name="com.kym.ui.activity.zhanghu.FanXianzhActivity"
+205-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:192:13-73
+206            android:label="@string/title_activity_fan_xianzh"
+206-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:193:13-62
+207            android:screenOrientation="portrait" />
+207-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:194:13-49
+208        <activity
+208-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:195:9-198:52
+209            android:name="com.kym.ui.activity.zhanghu.FanXianTiXianActivity"
+209-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:196:13-77
+210            android:label="@string/title_activity_fan_xian_yer_ti_xian"
+210-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:197:13-72
+211            android:screenOrientation="portrait" />
+211-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:198:13-49
+212        <activity
+212-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:199:9-202:52
+213            android:name="com.kym.ui.PublicWebActivity"
+213-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:200:13-56
+214            android:label="@string/title_activity_public_web"
+214-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:201:13-62
+215            android:screenOrientation="portrait" />
+215-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:202:13-49
+216        <activity
+216-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:203:9-206:52
+217            android:name="com.kym.ui.activity.zhanghu.XinYongKaActivity"
+217-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:204:13-73
+218            android:label="@string/title_activity_xin_yong_ka"
+218-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:205:13-63
+219            android:screenOrientation="portrait" />
+219-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:206:13-49
+220        <activity
+220-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:207:9-210:52
+221            android:name="com.kym.ui.activity.zhanghu.NewDetailActivity"
+221-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:208:13-73
+222            android:label="@string/title_activity_new_detail"
+222-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:209:13-62
+223            android:screenOrientation="portrait" />
+223-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:210:13-49
+224        <activity
+224-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:211:9-213:52
+225            android:name="com.kym.ui.activity.huankuan.BankPlanActivity"
+225-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:212:13-73
+226            android:screenOrientation="portrait" />
+226-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:213:13-49
+227        <activity
+227-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:214:9-218:101
+228            android:name="com.kym.ui.BankChangeActivity"
+228-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:215:13-57
+229            android:label="@string/title_activity_bank_change"
+229-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:216:13-63
+230            android:screenOrientation="portrait"
+230-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:217:13-49
+231            android:windowSoftInputMode="stateVisible|adjustResize|stateHidden|stateAlwaysHidden" />
+231-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:218:13-98
+232        <activity
+232-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:219:9-222:73
+233            android:name="com.kym.ui.activity.huankuan.NewAddCreditCardActivity"
+233-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:220:13-81
+234            android:screenOrientation="portrait"
+234-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:221:13-49
+235            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+235-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:222:13-70
+236        <activity
+236-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:223:9-225:52
+237            android:name="com.kym.ui.activity.huankuan.NewRepaymentPlanActivity"
+237-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:224:13-81
+238            android:screenOrientation="portrait" />
+238-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:225:13-49
+239        <activity
+239-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:226:9-229:52
+240            android:name="com.kym.ui.activity.zhanghu.BankTiXianActivity"
+240-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:227:13-74
+241            android:label="@string/title_activity_bank_ti_xian"
+241-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:228:13-64
+242            android:screenOrientation="portrait" />
+242-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:229:13-49
+243        <activity
+243-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:230:9-233:52
+244            android:name="com.kym.ui.activity.zhanghu.BankTiXianDetailActivity"
+244-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:231:13-80
+245            android:label="@string/title_activity_bank_ti_xian_detail"
+245-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:232:13-71
+246            android:screenOrientation="portrait" />
+246-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:233:13-49
+247        <activity
+247-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:234:9-236:52
+248            android:name="com.kym.ui.activity.RepaymentPlanDetailActivity"
+248-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:235:13-75
+249            android:screenOrientation="portrait" />
+249-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:236:13-49
+250        <activity
+250-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:237:9-240:52
+251            android:name="com.kym.ui.activity.huankuan.BankSigNingActivity"
+251-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:238:13-76
+252            android:label="@string/title_activity_bank_sig_ning"
+252-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:239:13-65
+253            android:screenOrientation="portrait" />
+253-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:240:13-49
+254        <activity
+254-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:241:9-244:52
+255            android:name="com.kym.ui.UpGradeActivity"
+255-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:242:13-54
+256            android:label="@string/title_activity_up_grade"
+256-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:243:13-60
+257            android:screenOrientation="portrait" />
+257-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:244:13-49
+258        <activity
+258-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:245:9-247:52
+259            android:name="com.kym.ui.activity.huankuan.NewRepaymentDetailActivity"
+259-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:246:13-83
+260            android:screenOrientation="portrait" />
+260-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:247:13-49
+261        <activity
+261-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:248:9-251:52
+262            android:name="com.kym.ui.FenRunActivity"
+262-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:249:13-53
+263            android:label="@string/title_activity_fen_run"
+263-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:250:13-59
+264            android:screenOrientation="portrait" />
+264-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:251:13-49
+265        <activity
+265-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:252:9-255:52
+266            android:name="com.kym.ui.FenRunDetailActivity"
+266-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:253:13-59
+267            android:label="@string/title_activity_fen_run_detail"
+267-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:254:13-66
+268            android:screenOrientation="portrait" />
+268-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:255:13-49
+269        <activity
+269-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:256:9-258:52
+270            android:name="com.kym.ui.activity.ShareQRCodeActivity"
+270-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:257:13-67
+271            android:screenOrientation="portrait" />
+271-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:258:13-49
+272        <activity
+272-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:259:9-263:73
+273            android:name="com.kym.ui.activity.bpbro_safe.RegisterActivity_x"
+273-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:260:13-77
+274            android:label="@string/title_activity_register_x"
+274-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:261:13-62
+275            android:screenOrientation="portrait"
+275-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:262:13-49
+276            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+276-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:263:13-70
+277        <activity
+277-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:264:9-267:52
+278            android:name="com.kym.ui.ShaiXunActivity"
+278-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:265:13-54
+279            android:label="@string/title_activity_shai_xun"
+279-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:266:13-60
+280            android:screenOrientation="portrait" />
+280-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:267:13-49
+281        <activity
+281-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:268:9-271:52
+282            android:name="com.kym.ui.activity.news.NewsActivity"
+282-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:269:13-65
+283            android:label="@string/title_activity_news"
+283-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:270:13-56
+284            android:screenOrientation="portrait" />
+284-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:271:13-49
+285        <activity
+285-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:272:9-274:78
+286            android:name="com.kym.ui.activity.zhanghu.FanXianTiXianDetailActivity"
+286-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:273:13-83
+287            android:label="@string/title_activity_fan_xian_ti_xian_detail" />
+287-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:274:13-75
+288        <activity
+288-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:275:9-277:72
+289            android:name="com.kym.ui.activity.zhanghu.FanXianDetailActivity_x"
+289-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:276:13-79
+290            android:label="@string/title_activity_fan_xian_detail_x" />
+290-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:277:13-69
+291        <activity
+291-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:278:9-280:73
+292            android:name="com.kym.ui.activity.zhanghu.FanXianDetailActivity_xx"
+292-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:279:13-80
+293            android:label="@string/title_activity_fan_xian_detail_xx" />
+293-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:280:13-70
+294        <activity android:name="com.kym.ui.activity.SpecialPublicWebActivity" />
+294-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:281:9-81
+294-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:281:19-78
+295        <activity android:name="com.kym.ui.SpecialPublicWebActivity" />
+295-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:282:9-72
+295-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:282:19-69
+296        <activity android:name="com.kym.ui.activity.CardTestWebActivity" />
+296-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:283:9-76
+296-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:283:19-73
+297        <activity android:name="com.kym.ui.OrderActivity" />
+297-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:284:9-61
+297-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:284:19-58
+298        <activity
+298-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:285:9-287:39
+299            android:name="com.kym.ui.PayActivity"
+299-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:286:13-50
+300            android:exported="true" />
+300-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:287:13-36
+301        <activity
+301-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:288:9-292:52
+302            android:name="com.kym.ui.wxapi.WXPayEntryActivity"
+302-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:289:13-63
+303            android:configChanges="orientation|keyboardHidden"
+303-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:290:13-63
+304            android:exported="true"
+304-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:291:13-36
+305            android:screenOrientation="portrait" />
+305-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:292:13-49
+306        <activity
+306-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:293:9-295:73
+307            android:name="com.kym.ui.activity.mendianma.MenDianActivity"
+307-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:294:13-73
+308            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+308-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:295:13-70
+309
+310        <receiver android:name="com.kym.ui.activity.AppRegister" >
+310-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:297:9-301:20
+310-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:297:19-65
+311            <intent-filter>
+311-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:298:13-300:29
+312                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+312-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:299:17-100
+312-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:299:25-97
+313            </intent-filter>
+314        </receiver>
+315
+316        <activity android:name="com.kym.ui.CourseActivity" />
+316-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:303:9-62
+316-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:303:19-59
+317        <activity android:name="com.kym.ui.activity.mendianma.DynamicQRcodeActivity" />
+317-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:304:9-88
+317-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:304:19-85
+318        <activity android:name="com.kym.ui.activity.mendianma.QRcodeActivity" />
+318-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:305:9-81
+318-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:305:19-78
+319        <activity android:name="com.kym.ui.WebActivity" />
+319-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:306:9-59
+319-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:306:19-56
+320        <activity android:name="com.kym.ui.ZDActivity" />
+320-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:307:9-58
+320-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:307:19-55
+321        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanzhActivity" />
+321-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:308:9-83
+321-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:308:19-80
+322        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanDetailActivity" />
+322-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:309:9-87
+322-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:309:19-84
+323        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanDetailListActivity" />
+323-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:310:9-91
+323-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:310:19-88
+324        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuantxActivity" />
+324-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:311:9-83
+324-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:311:19-80
+325        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanTiXianDetailActivity" />
+325-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:312:9-93
+325-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:312:19-90
+326        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieDetailActivity" />
+326-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:313:9-98
+326-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:313:19-95
+327        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieMsgPayActivity" />
+327-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:314:9-98
+327-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:314:19-95
+328        <activity android:name="com.kym.ui.activity.huankuan.CardSignActivity" />
+328-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:315:9-82
+328-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:315:19-79
+329        <activity android:name="com.kym.ui.RongHuiWebActivity" />
+329-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:316:9-66
+329-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:316:19-63
+330        <activity android:name="com.kym.ui.FeiLvActivity" />
+330-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:317:9-61
+330-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:317:19-58
+331        <activity android:name="com.kym.ui.activity.UpdateZdActivity" />
+331-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:318:9-73
+331-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:318:19-70
+332        <activity android:name="com.kym.ui.activity.SheZhiActivity" />
+332-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:319:9-71
+332-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:319:19-68
+333        <activity android:name="com.kym.ui.activity.shiming.ZhengJianActivity" />
+333-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:320:9-82
+333-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:320:19-79
+334        <activity android:name="com.kym.ui.zhengjian.CameraActivity" />
+334-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:321:9-72
+334-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:321:19-69
+335        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_GuanLi_Activity" />
+335-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:322:9-91
+335-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:322:19-88
+336        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_ZuJi_Activity" />
+336-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:323:9-89
+336-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:323:19-86
+337        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_GuiZe_Activity" />
+337-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:324:9-90
+337-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:324:19-87
+338        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_ShengHuo_Activity" />
+338-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:325:9-93
+338-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:325:19-90
+339        <activity android:name="com.kym.ui.activity.bpbro_safe.UserAnQuanActivity" />
+339-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:326:9-86
+339-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:326:19-83
+340        <activity android:name="com.kym.ui.activity.AllCardListActivity" />
+340-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:327:9-76
+340-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:327:19-73
+341        <activity android:name="com.kym.ui.PatternActivity" />
+341-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:328:9-63
+341-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:328:19-60
+342        <activity android:name="com.kym.ui.PassWordActivity" />
+342-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:329:9-64
+342-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:329:19-61
+343        <activity android:name="com.kym.ui.PatterLoginActivity" />
+343-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:330:9-67
+343-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:330:19-64
+344        <activity android:name="com.kym.ui.FingerActivity" />
+344-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:331:9-62
+344-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:331:19-59
+345        <activity android:name="com.kym.ui.Course1Activity" />
+345-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:332:9-63
+345-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:332:19-60
+346        <activity android:name="com.kym.ui.activity.CommonTestActivity" />
+346-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:333:9-75
+346-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:333:19-72
+347        <activity android:name="com.kym.ui.activity.daichang.DaiChangBankCardListActivity" />
+347-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:334:9-94
+347-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:334:19-91
+348        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanActivity" />
+348-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:335:9-86
+348-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:335:19-83
+349        <activity android:name="com.kym.ui.activity.daichang.DaiChangQianYueActivity" />
+349-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:336:9-89
+349-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:336:19-86
+350        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanRecordActivity" />
+350-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:337:9-92
+350-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:337:19-89
+351        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanPreviewActivity" />
+351-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:338:9-93
+351-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:338:19-90
+352        <activity android:name="com.kym.ui.activity.daichang.DaiChangCardPlanDetailActivity" />
+352-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:339:9-96
+352-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:339:19-93
+353        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieShanghuActivity" />
+353-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:340:9-99
+353-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:340:19-96
+354        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanRulesActivity" />
+354-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:341:9-91
+354-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:341:19-88
+355        <activity android:name="com.kym.ui.activity.ShareActivity" />
+355-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:342:9-70
+355-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:342:19-67
+356        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangzhActivity" />
+356-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:343:9-83
+356-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:343:19-80
+357        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangtxActivity" />
+357-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:344:9-83
+357-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:344:19-80
+358        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangTiXianDetailActivity" />
+358-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:345:9-93
+358-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:345:19-90
+359        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangDetailActivity" />
+359-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:346:9-87
+359-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:346:19-84
+360        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangDetailListActivity" />
+360-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:347:9-91
+360-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:347:19-88
+361        <activity android:name="com.kym.ui.activity.lingqian.LingQianActivity" />
+361-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:348:9-82
+361-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:348:19-79
+362        <activity android:name="com.kym.ui.activity.lingqian.LingQianMoneyActivity" />
+362-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:349:9-87
+362-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:349:19-84
+363        <activity android:name="com.kym.ui.activity.lingqian.LingQianTiXianActivity" />
+363-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:350:9-88
+363-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:350:19-85
+364        <activity android:name="com.kym.ui.activity.lingqian.LingQianListActivity" />
+364-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:351:9-86
+364-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:351:19-83
+365        <activity android:name="com.kym.ui.activity.YouHuiActivity" />
+365-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:352:9-71
+365-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:352:19-68
+366        <activity android:name="com.kym.ui.activity.Banka_Activity" />
+366-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:353:9-71
+366-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:353:19-68
+367        <activity android:name="com.kym.ui.activity.Banka_glActivity" />
+367-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:354:9-73
+367-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:354:19-70
+368        <activity android:name="com.kym.ui.activity.daichang.DaiChang_QianYue_Activity" />
+368-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:355:9-91
+368-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:355:19-88
+369        <activity android:name="com.kym.ui.activity.MyCXKActivity" />
+369-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:356:9-70
+369-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:356:19-67
+370        <activity android:name="com.kym.ui.JieBangCardActivity" />
+370-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:357:9-67
+370-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:357:19-64
+371        <activity
+371-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:358:9-362:76
+372            android:name="com.kym.ui.when_page.PageActivity"
+372-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:359:13-61
+373            android:configChanges="orientation|keyboardHidden"
+373-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:360:13-63
+374            android:screenOrientation="portrait"
+374-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:361:13-49
+375            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+375-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:362:13-73
+376        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XiaoFeiActivity" />
+376-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:363:9-92
+376-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:363:19-89
+377        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiZhActivity" />
+377-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:364:9-82
+377-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:364:19-79
+378        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiTiXianActivity" />
+378-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:365:9-86
+378-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:365:19-83
+379        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiTiXianDetailActivity" />
+379-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:366:9-92
+379-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:366:19-89
+380        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiDetailActivity" />
+380-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:367:9-86
+380-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:367:19-83
+381        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiDetailListActivity" /> <!-- ocrphoto -->
+381-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:368:9-90
+381-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:368:19-87
+382        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFsignActivity" />
+382-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:369:9-91
+382-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:369:19-88
+383        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplanActivity" />
+383-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:370:9-91
+383-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:370:19-88
+384        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XF_QRsignActivity" />
+384-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:371:9-94
+384-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:371:19-91
+385        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFprePlanActivity" />
+385-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:372:9-94
+385-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:372:19-91
+386        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplaninfoActivity" />
+386-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:373:9-95
+386-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:373:19-92
+387        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplanlistdetailActivity" />
+387-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:374:9-101
+387-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:374:19-98
+388        <activity
+388-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:375:9-378:52
+389            android:name="com.kym.ui.hualuo.VideoActivity"
+389-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:376:13-59
+390            android:configChanges="orientation|screenSize|keyboardHidden"
+390-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:377:13-74
+391            android:screenOrientation="portrait" />
+391-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:378:13-49
+392        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_BankList_Activity" />
+392-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:379:9-97
+392-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:379:19-94
+393        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sign_Activity" />
+393-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:380:9-93
+393-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:380:19-90
+394        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_QRsignActivity" />
+394-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:381:9-94
+394-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:381:19-91
+395        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planActivity" />
+395-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:382:9-92
+395-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:382:19-89
+396        <activity android:name="com.kym.ui.hualuo.HL_ShuaKaActivity" />
+396-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:383:9-72
+396-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:383:19-69
+397        <activity android:name="com.kym.ui.hualuo.HL_HuanKuanActivity" />
+397-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:384:9-74
+397-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:384:19-71
+398        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity" />
+398-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:385:9-102
+398-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:385:19-99
+399        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_prePlanActivity" />
+399-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:386:9-95
+399-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:386:19-92
+400        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planinfoActivity" />
+400-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:387:9-96
+400-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:387:19-93
+401        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planlistdetailActivity" />
+401-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:388:9-102
+401-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:388:19-99
+402        <activity android:name="com.kym.ui.hualuo.HL_BK_WebActivity" />
+402-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:389:9-72
+402-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:389:19-69
+403        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_BankList_Activity" />
+403-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:390:9-97
+403-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:390:19-94
+404        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_TongDao_Activity" />
+404-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:391:9-96
+404-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:391:19-93
+405        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_XianE_Activity" />
+405-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:392:9-94
+405-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:392:19-91
+406        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_ShouKuan_Activity" />
+406-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:393:9-97
+406-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:393:19-94
+407        <activity android:name="com.kym.ui.activity.ShareWenAn_Activity" />
+407-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:394:9-76
+407-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:394:19-73
+408        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangTuActivity" />
+408-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:395:9-83
+408-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:395:19-80
+409        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangWenAnActivity" />
+409-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:396:9-86
+409-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:396:19-83
+410        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangTuDetailsActivity" />
+410-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:397:9-90
+410-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:397:19-87
+411        <activity android:name="com.kym.ui.activity.JiaoYi_Activity" />
+411-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:398:9-72
+411-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:398:19-69
+412        <activity
+412-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:399:9-402:52
+413            android:name="com.kym.ui.hualuo.RotateRecyclerViewActivity"
+413-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:400:13-72
+414            android:configChanges="orientation|screenSize|keyboardHidden"
+414-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:401:13-74
+415            android:screenOrientation="portrait" />
+415-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:402:13-49
+416        <activity android:name="com.kym.ui.activity.shiming.NewShiMingActivity" />
+416-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:403:9-83
+416-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:403:19-80
+417        <activity android:name="com.kym.ui.activity.shiming.NewUpdateCxkActivity" />
+417-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:404:9-85
+417-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:404:19-82
+418        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li4_Activity" />
+418-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:405:9-89
+418-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:405:19-86
+419        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li4_Sqb_Activity" />
+419-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:406:9-93
+419-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:406:19-90
+420        <activity android:name="com.kym.ui.activity.new_dc.BenJinGuanLiActivity" />
+420-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:407:9-84
+420-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:407:19-81
+421        <activity android:name="com.kym.ui.activity.new_dc.EDuGuanLiActivity" />
+421-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:408:9-81
+421-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:408:19-78
+422        <activity android:name="com.kym.ui.activity.new_dc.BenJinTradeListActivity" />
+422-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:409:9-87
+422-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:409:19-84
+423        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li2_Activity" />
+423-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:410:9-89
+423-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:410:19-86
+424        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li2_Sqb_Activity" />
+424-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:411:9-93
+424-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:411:19-90
+425        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_JieKuan_Activity" />
+425-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:412:9-93
+425-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:412:19-90
+426        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li6_Activity" />
+426-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:413:9-89
+426-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:413:19-86
+427        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li3_Activity" />
+427-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:414:9-89
+427-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:414:19-86
+428        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li5_Activity" />
+428-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:415:9-89
+428-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:415:19-86
+429        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li1_Activity" />
+429-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:416:9-89
+429-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:416:19-86
+430        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li7_Activity" />
+430-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:417:9-89
+430-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:417:19-86
+431        <activity android:name="com.kym.ui.activity.DingDanActivity" />
+431-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:418:9-72
+431-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:418:19-69
+432        <activity
+432-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:419:9-423:76
+433            android:name="com.kym.ui.activity.YeJiActivity"
+433-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:420:13-60
+434            android:configChanges="orientation|keyboardHidden"
+434-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:421:13-63
+435            android:screenOrientation="portrait"
+435-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:422:13-49
+436            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+436-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:423:13-73
+437        <activity android:name="com.kym.ui.activity.fee_kf.DemoChatActivity" />
+437-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:424:9-80
+437-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:424:19-77
+438        <activity android:name="com.kym.ui.activity.fee_kf.ChatActivity" />
+438-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:425:9-76
+438-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:425:19-73
+439        <activity android:name="com.kym.ui.activity.zhanghu.TotalzhActivity" />
+439-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:426:9-80
+439-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:426:19-77
+440        <activity android:name="com.kym.ui.activity.new_dc.DaiChangTotalActivity" />
+440-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:427:9-85
+440-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:427:19-82
+441        <activity android:name="com.kym.ui.activity.new_dc.KeHuGuanLiActivity" />
+441-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:428:9-82
+441-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:428:19-79
+442        <activity android:name="com.kym.ui.activity.new_dc.PaiHangActivity" />
+442-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:429:9-79
+442-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:429:19-76
+443        <activity android:name="com.kym.ui.activity.new_dc.DaiChangShenPiActivity" />
+443-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:430:9-86
+443-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:430:19-83
+444        <activity android:name="com.kym.ui.activity.new_dc.AllDcCardListActivity" />
+444-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:431:9-85
+444-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:431:19-82
+445        <activity android:name="com.kym.ui.BankChangeEduActivity" />
+445-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:432:9-69
+445-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:432:19-66
+446        <activity android:name="com.kym.ui.TieListActivity" />
+446-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:433:9-63
+446-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:433:19-60
+447        <activity android:name="com.kym.ui.activity.daichang.DaiChangCityActivity" />
+447-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:434:9-86
+447-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:434:19-83
+448        <activity android:name="com.kym.ui.activity.daichang.DaiChangRongHuiWebActivity" />
+448-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:435:9-92
+448-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:435:19-89
+449        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_huankuan_Activity" />
+449-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:436:9-94
+449-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:436:19-91
+450        <activity
+450-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:437:9-439:63
+451            android:name="com.kym.ui.activity.bpbro_home.JsbridgeActivity"
+451-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:438:13-75
+452            android:label="@string/title_activity_jsbridge" />
+452-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:439:13-60
+453        <activity android:name="com.kym.ui.activity.shiming.RhZhengJianActivity" />
+453-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:440:9-84
+453-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:440:19-81
+454        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li8_Activity" />
+454-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:441:9-89
+454-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:441:19-86
+455        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DiaChang_DX_Activity" />
+455-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:442:9-103
+455-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:442:19-100
+456        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DaiChangQyActivity" />
+456-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:443:9-101
+456-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:443:19-98
+457        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DaiChang_PayListActivity" />
+457-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:444:9-107
+457-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:444:19-104
+458        <activity android:name="com.kym.ui.activity.bpbro_real_name.Bpbro_Idcardid_Activity" />
+458-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:445:9-96
+458-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:445:19-93
+459        <activity android:name="com.kym.ui.activity.bpbro_safe.YinSiXieYiActivity" />
+459-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:446:9-86
+459-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:446:19-83
+460        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieBangKaMsgActivity" />
+460-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:447:9-101
+460-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:447:19-98
+461        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sb_planinfoActivity" />
+461-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:448:9-99
+461-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:448:19-96
+462        <activity android:name="com.kym.ui.Tab_WebActivity" />
+462-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:449:9-63
+462-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:449:19-60
+463
+464        <service
+464-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:27:9-30:45
+465            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+465-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:28:13-80
+466            android:enabled="false"
+466-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:29:13-36
+467            android:process=":leakcanary" />
+467-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:30:13-42
+468        <service
+468-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:31:9-34:45
+469            android:name="com.squareup.leakcanary.DisplayLeakService"
+469-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:32:13-70
+470            android:enabled="false"
+470-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:33:13-36
+471            android:process=":leakcanary" />
+471-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:34:13-42
+472
+473        <activity
+473-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:36:9-49:20
+474            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+474-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:37:13-80
+475            android:enabled="false"
+475-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:38:13-36
+476            android:icon="@drawable/leak_canary_icon"
+476-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:39:13-54
+477            android:label="@string/leak_canary_display_activity_label"
+477-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:40:13-71
+478            android:process=":leakcanary"
+478-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:41:13-42
+479            android:taskAffinity="com.squareup.leakcanary.com.kym.ui"
+479-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:42:13-76
+480            android:theme="@style/leak_canary_LeakCanary.Base" >
+480-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:43:13-63
+481            <intent-filter>
+481-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:79:13-83:29
+482                <action android:name="android.intent.action.MAIN" />
+482-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:80:17-69
+482-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:80:25-66
+483
+484                <category android:name="android.intent.category.LAUNCHER" />
+484-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:82:17-77
+484-->E:\android\dhk_newJDY\DHK\src\main\AndroidManifest.xml:82:27-74
+485            </intent-filter>
+486        </activity>
+487        <activity
+487-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:50:9-58:68
+488            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+488-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:51:13-93
+489            android:enabled="false"
+489-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:52:13-36
+490            android:excludeFromRecents="true"
+490-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:53:13-46
+491            android:icon="@drawable/leak_canary_icon"
+491-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:54:13-54
+492            android:label="@string/leak_canary_storage_permission_activity_label"
+492-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:55:13-82
+493            android:process=":leakcanary"
+493-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:56:13-42
+494            android:taskAffinity="com.squareup.leakcanary.com.kym.ui"
+494-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:57:13-76
+495            android:theme="@style/leak_canary_Theme.Transparent" />
+495-->[com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\0fc28ab4c832046bd4d6103d394df1fe\leakcanary-android-1.5.4\AndroidManifest.xml:58:13-65
+496        <activity
+496-->[pub.devrel:easypermissions:2.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\14fa5cdfdb36bad96145dc4735b8a632\easypermissions-2.0.1\AndroidManifest.xml:12:9-16:66
+497            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+497-->[pub.devrel:easypermissions:2.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\14fa5cdfdb36bad96145dc4735b8a632\easypermissions-2.0.1\AndroidManifest.xml:13:13-86
+498            android:exported="false"
+498-->[pub.devrel:easypermissions:2.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\14fa5cdfdb36bad96145dc4735b8a632\easypermissions-2.0.1\AndroidManifest.xml:14:13-37
+499            android:label=""
+499-->[pub.devrel:easypermissions:2.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\14fa5cdfdb36bad96145dc4735b8a632\easypermissions-2.0.1\AndroidManifest.xml:15:13-29
+500            android:theme="@style/EasyPermissions.Transparent" />
+500-->[pub.devrel:easypermissions:2.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\14fa5cdfdb36bad96145dc4735b8a632\easypermissions-2.0.1\AndroidManifest.xml:16:13-63
+501        <activity
+501-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-29:80
+502            android:name="com.baidu.ocr.ui.camera.CameraActivity"
+502-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-66
+503            android:configChanges="screenSize|orientation"
+503-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-59
+504            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+504-->[:ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-77
+505        <activity
+505-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:17:9-20:58
+506            android:name="com.paradigm.botkit.ChatActivity"
+506-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:18:13-60
+507            android:configChanges="keyboardHidden|orientation|screenSize"
+507-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:19:13-74
+508            android:windowSoftInputMode="adjustResize" />
+508-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:20:13-55
+509        <activity android:name="com.paradigm.botkit.ImageActivity" />
+509-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:21:9-70
+509-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:21:19-67
+510        <activity android:name="com.paradigm.botkit.WebActivity" /> <!-- 配置SDK核⼼心服务 -->
+510-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:22:9-68
+510-->[:BotKit] E:\android\dhk_newJDY\BotKit\build\.transforms\af4139397e9aba1720169889965279af\BotKit\AndroidManifest.xml:22:19-65
+511        <service
+511-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:38:9-47:19
+512            android:name="com.igexin.sdk.PushService"
+512-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:39:13-54
+513            android:exported="false"
+513-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:40:13-37
+514            android:label="NotificationCenter"
+514-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:41:13-47
+515            android:permission="android.permission.BIND_JOB_SERVICE"
+515-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:42:13-69
+516            android:process=":pushservice" >
+516-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:43:13-43
+517            <intent-filter>
+517-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:44:13-46:29
+518                <action android:name="com.igexin.sdk.action.service.message" />
+518-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:45:17-80
+518-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:45:25-77
+519            </intent-filter>
+520        </service>
+521
+522        <receiver android:name="com.igexin.sdk.PushReceiver" >
+522-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:49:9-59:20
+522-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:49:19-61
+523            <intent-filter>
+523-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:50:13-58:29
+524                <action android:name="android.intent.action.BOOT_COMPLETED" />
+524-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:51:17-79
+524-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:51:25-76
+525                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+525-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:52:17-79
+525-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:52:25-76
+526                <action android:name="android.intent.action.USER_PRESENT" />
+526-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:53:17-77
+526-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:53:25-74
+527                <!-- 以下三项为可选的action声明，可⼤大⼤大提⾼高service存活率和消息到达速度 -->
+528                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+528-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:55:17-78
+528-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:55:25-75
+529                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+529-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:56:17-87
+529-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:56:25-84
+530                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+530-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:57:17-90
+530-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:57:25-87
+531            </intent-filter>
+532        </receiver>
+533
+534        <activity
+534-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:61:9-67:75
+535            android:name="com.igexin.sdk.PushActivity"
+535-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:62:13-55
+536            android:excludeFromRecents="true"
+536-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:63:13-46
+537            android:exported="false"
+537-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:64:13-37
+538            android:process=":pushservice"
+538-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:65:13-43
+539            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+539-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:66:13-67
+540            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+540-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:67:13-72
+541        <activity
+541-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:68:9-74:75
+542            android:name="com.igexin.sdk.GActivity"
+542-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:69:13-52
+543            android:excludeFromRecents="true"
+543-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:70:13-46
+544            android:exported="true"
+544-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:71:13-36
+545            android:process=":pushservice"
+545-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:72:13-43
+546            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+546-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:73:13-67
+547            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+547-->[com.getui:sdk:2.13.3.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\f085a3421b7c6f460aaf4f2174ce9004\sdk-2.13.3.0\AndroidManifest.xml:74:13-72
+548    </application>
+549
+550</manifest>

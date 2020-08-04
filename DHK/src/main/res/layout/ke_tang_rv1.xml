@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dp_10"
+    android:layout_height="@dimen/dp_165"
+    android:id="@+id/linl"
+    android:background="@drawable/ke_tang11"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="老客户"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_15" />
+        <TextView
+            android:id="@+id/look_over"
+            android:textSize="@dimen/sp_11"
+            android:textColor="#F1D99D"
+            android:layout_marginTop="-18dp"
+            android:layout_marginLeft="@dimen/dp_110"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看权益" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_265"
+            android:layout_marginTop="-22dp"
+            android:text="¥"
+            android:textColor="#fff"
+
+            android:textSize="@dimen/sp_15" />
+        <TextView
+
+            android:id="@+id/payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_280"
+            android:layout_marginTop="-22dp"
+            android:text="88"
+            android:textColor="#fff"
+
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="@dimen/dp_50"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易奖励" />
+        <TextView
+            android:textColor="#fff"
+            android:layout_marginRight="@dimen/dp_50"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直推奖励" />
+        <TextView
+            android:textColor="#fff"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="团队奖励" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#fff"
+            android:layout_marginRight="@dimen/dp_80"
+
+            android:id="@+id/lf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%" />
+
+        <TextView
+            android:id="@+id/lf1"
+            android:textColor="#fff"
+            android:layout_marginRight="@dimen/dp_80"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%" />
+
+
+        <TextView
+            android:id="@+id/lf2"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/upgrade_number"
+            android:textColor="#fff"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO.0000001" />
+
+        <Button
+
+            android:id="@+id/shengji"
+            android:gravity="center"
+            android:textSize="@dimen/sp_10"
+            android:background="@drawable/hl_btn1"
+            android:layout_marginLeft="@dimen/dp_95"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="wrap_content"
+            android:text="立即升级" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dc_rule_top" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    1、贷偿功能目前仅支持信用分500分以上的用户，如何提升信用分额度，请返回帮助中心“融信分”了解详情。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    2、在使用贷偿期间务必保证卡内无分期账单及临时额度，否则会导致贷偿失败，影响您的信用分。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    3、在您使用贷偿期间务必保证手机通讯畅通，系统可能会向您进行人工审核，如无法取得联系，会影响您的账单计划。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    4、系统默认您的推荐人为人际关系，为不影响您本人及推荐人的信用，请您制定账单计划后随时关注账单情况，避免产生违约。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    5、如您在使用账单贷偿功能过程中，非恶意产生违约，请及时联系客服还款，申请恢复您正常信用。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    6、如您在使用账单贷偿功能过程中，已产生违约，无法与您取得联系或恶意逾期还款，系统将自动拉黑，还会影响您的征信。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dc_rule_bottom" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

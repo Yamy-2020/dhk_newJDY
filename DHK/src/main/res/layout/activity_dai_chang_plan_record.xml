@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <cn.finalteam.loadingview.PagerSlidingTabStrip
+        xmlns:psts="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/bg_color"
+        psts:SelectedTabTextColor="@color/blue_public"
+        psts:SelectedTabTextSize="16sp"
+        psts:TabTextColor="@color/black_33"
+        psts:TabTextSize="16sp"
+        psts:pstsDividerColor="@color/bg_color"
+        psts:pstsIndicatorColor="@color/blue_public"
+        psts:pstsIndicatorHeight="4dp"
+        psts:pstsShouldExpand="true"
+        psts:pstsTabPaddingLeftRight="12.5dp"
+        psts:pstsTextAllCaps="false"
+        psts:pstsUnderlineColor="#E3E3E3"
+        psts:pstsUnderlineHeight="1dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_line" />
+
+</LinearLayout>

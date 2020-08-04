@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    1、年收入和就业状况。年收入不得少于80000——120000，你填写的收入越高，那么评分就会越高，但是还要符合你的就业职位，以及还款给能力，自就业，就是自己当老板，与在厂里打工，与专业工作的分比较高，因为自就业，风险会比较大，专业工作的是比较稳定的，所以分数就会高了，年龄比较小的，对于很多银行来说，还是不太放心的，而年纪大的，大多数不会乱刷钱，分数方面比较高的。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    2、银行账户和私人电话。信用卡关系到你有没有经常与银行有业务往来，经常进行银行交易，网银交易，银行卡多的人一般都是比较经常与银行进行业务往来的，流动资金比较多，对银行的利益来说，就会比较大，对于座机来说的话，打工者一般不会去养一部座机的，只有做生意的人才会安装座机的，这个也是确定你行业和实力的。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    3、住房和工作持续。代表你在这里的地位和你本人的能力，实力比较强的就会买房子了，银行不怕你还不了这点钱，就看你能否安安稳稳的工作，安安稳稳工作的人一般都是按月拿工资的人，也不缺钱用，只是会偶尔忘记带钱，那只是一时，还款又快!而且还剩余的钱又不用付利息，银行要赚取多少钱呢?数据很是惊人的。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    4、信用卡数量。有了信用卡，他可以查到你的还款能力，还款能力强的，办卡也就容易多了，你办理的信用卡刷卡的时候他收取的商户手续费，银行就是要你变成卡奴，4张信用卡以上的想想也是知道的，一般人哪里需要那么多的信用卡呢?"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    5、贷款和居住时间。大家都知道信贷的利息都是比较高的，一般人不到资金比较紧张的情况下是不会走信贷的，即使做信贷的话，也是老板比较有实力的经常信贷，所以信贷优秀的，分数就会比较高，信贷利息和本金都可以还掉，信用卡这点利息和本金也是太简单不过了，分期越高信用额度就越多可以用的钱就会越多的，办理信用卡的最好银行有定期存款，你的钱就比较多，并且你在这个住的时间越久对这里的环境很熟悉，银行不怕你会搬家，换工作，换工作和搬家直接影响你的个人收入，造成你不能 正常刷卡消费。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    6、单位性质和电话。最好为公务员、事业单位人员、国企工作人员等，如教师、医生，或者上市公司、世界500强等公司，因为银行喜欢工作性质稳定的人。职务当然是越高越好，不过，注意了，最好别写企业法人，总经理在系统里比企业法人强。单位性质非常好，当然是最好的，但如果单位性质一般，也是可以的。但要确保你的单位电话的性质不是私人的，否则直接拒批机会大。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    7、联系人和收卡地址。留同事最好，实在不行留直系亲属，尽量别留什么同学或者朋友。收卡地址，家庭地址是评分低些。"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/dc_conner"
+                    android:padding="8dp"
+                    android:text="    8、籍贯和婚姻状况。最好是已婚。籍贯最好是本地户籍"
+                    android:textColor="@color/black_33"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

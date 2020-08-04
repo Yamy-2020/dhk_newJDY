@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65">
+
+        <ImageView
+            android:id="@+id/imageV_type"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/ic_xitongms" />
+
+        <TextView
+            android:id="@+id/textV_type_t"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_toRightOf="@+id/imageV_type"
+            android:singleLine="true"
+            android:text="分润"
+            android:textColor="#323232" />
+
+        <TextView
+            android:id="@+id/textV_message_fr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_9"
+            android:layout_toRightOf="@+id/imageV_type"
+            android:singleLine="true"
+            android:text="分润金额"
+            android:textColor="#A7A7A7" />
+
+        <TextView
+            android:id="@+id/textV_time_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="#A7A7A7"
+            android:textSize="@dimen/sp_13" />
+    </RelativeLayout>
+
+</LinearLayout>

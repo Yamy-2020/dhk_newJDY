@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义星期 View -->
+    <declare-styleable name="WeekView">
+        <attr name="wv_textColor" format="color|reference" />
+        <attr name="wv_textSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <!-- 自定义日历 View -->
+    <declare-styleable name="CalendarView">
+        <attr name="cv_textColor" format="color|reference" />
+        <attr name="cv_selectTextColor" format="color|reference" />
+        <attr name="cv_textSize" format="dimension|reference" />
+        <attr name="cv_selectTextSize" format="dimension|reference" />
+        <attr name="cv_cannotselectTextColor" format="dimension|reference" />
+        <attr name="cv_dayBackground" format="reference" />
+        <attr name="cv_selectDayBackground" format="reference" />
+        <attr name="cv_cannotselectDayBackground" format="reference" />
+        <attr name="cv_dateFormatPattern" format="string|reference" />
+        <attr name="cv_isChangeDateStatus" format="boolean|reference" />
+    </declare-styleable>
+    <declare-styleable name="indicater">
+        <attr name="radiu" format="dimension" />
+        <attr name="strokecolor" format="color" />
+        <attr name="fillcolor" format="color" />
+        <attr name="num" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2" />
+            <enum name="onTouch" value="1" />
+            <enum name="off" value="0" />
+        </attr>
+        <attr name="fixAspectRatio" format="boolean" />
+        <attr name="aspectRatioX" format="integer" />
+        <attr name="aspectRatioY" format="integer" />
+        <attr name="imageResource" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="TabTextSize" format="dimension" />
+        <attr name="TabTextColor" format="color" />
+        <attr name="SelectedTabTextSize" format="dimension" />
+        <attr name="SelectedTabTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MyRadioButton">
+        <attr name="drawableSize" format="dimension" />
+        <attr name="drawableTop" format="reference" />
+        <attr name="drawableLeft" format="reference" />
+        <attr name="drawableRight" format="reference" />
+        <attr name="drawableBottom" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="CircularProgress">
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="wheelview">
+        <attr name="gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="textColorOut" format="color" />
+        <attr name="textColorCenter" format="color" />
+        <attr name="dividerColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension" />
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="NoScrollViewPager">
+        <attr name="canScroll" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="WaveView">
+        <attr name="wave_background" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="max_height" format="dimension" />
+    </declare-styleable>
+    <!--
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2" />
+            <enum name="onTouch" value="1" />
+            <enum name="off" value="0" />
+        </attr>
+        <attr name="fixAspectRatio" format="boolean" />
+        <attr name="aspectRatioX" format="integer" />
+        <attr name="aspectRatioY" format="integer" />
+        <attr name="imageResource" format="reference" />
+    </declare-styleable>
+    -->
+
+    <declare-styleable name="arc">
+        <attr name="arcbump" format="boolean" />
+        <attr name="archeight" format="integer" />
+        <attr name="arcbgcolor" format="integer" />
+    </declare-styleable>
+
+    <!--自定义ocrphoto-->
+    <declare-styleable name="cameView_MaskView">
+        <attr name="maskview_line_color" format="color"/>
+        <attr name="maskview_line_stroke" format="dimension"/>
+        <attr name="maskview_line_alpha" format="integer"/>
+        <attr name="maskview_area_bg_color" format="color"/>
+        <attr name="maskview_area_bg_alpha" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="SessionReplyListView">
+        <attr name="replierAndTargetTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandTextView">
+        <attr name="defaultShownLines" format="integer" />
+        <attr name="foldableTriggerTextColor" format="color" />
+        <attr name="foldStateTriggerText" format="string" />
+        <attr name="unfoldStateTriggerText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ChatView">
+        <attr name="msgColor" format="color" />
+        <!--<attr name="send"-->
+        <attr name="textSize" format="dimension" />
+        <attr name="mode">
+            <enum name="comment" value="0" />
+            <enum name="chat" value="1" />
+        </attr>
+        <attr name="sendBtnBg" format="reference" />
+        <attr name="sendBtnTextColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RatingView">
+        <attr name="starsNum" format="integer" />
+        <attr name="starWidth" format="dimension" />
+        <attr name="starHeight" format="dimension" />
+        <attr name="starDistance" format="dimension" />
+        <attr name="starBackground" format="reference" />
+        <attr name="starDrawBackground" format="reference" />
+        <attr name="isIndicator" format="boolean" />
+        <!--默认星星数(可为小数)，取值范围[0-starNum]-->
+        <attr name="defaultStarNum" format="float" />
+        <!--每颗星星代表的分值-->
+        <attr name="valuePerStar" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRadioGroup">
+        <attr name="orientation">
+            <enum name="Horizontal" value="0" />
+            <enum name="Vertical" value="1" />
+        </attr>
+        <attr name="checkedButton" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleCountDownView">
+        <!--控件中间图片资源-->
+        <attr name="circleImgSrc" format="reference" />
+        <attr name="circleBorderColor" format="color" />
+        <attr name="circleBorderWidth" format="dimension" />
+        <attr name="valueTextSize" format="dimension" />
+        <attr name="valueTextColor" format="color" />
+        <attr name="padding" format="dimension" />
+        <attr name="showProgress" format="boolean" />
+        <attr name="processColorStart" format="color" />
+        <attr name="processColorEnd" format="color" />
+        <attr name="processBlurMaskRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiGroupHistogramView">
+        <attr name="coordinateAxisWidth" format="dimension" />
+        <attr name="coordinateAxisColor" format="color" />
+        <attr name="groupNameTextColor" format="color" />
+        <attr name="groupNameTextSize" format="dimension" />
+        <attr name="groupInterval" format="dimension" />
+        <attr name="histogramInterval" format="dimension" />
+        <attr name="histogramValueTextColor" format="color" />
+        <attr name="histogramValueTextSize" format="dimension" />
+        <attr name="histogramHistogramWidth" format="dimension" />
+        <attr name="histogramPaddingStart" format="dimension" />
+        <attr name="histogramPaddingEnd" format="dimension" />
+        <attr name="chartPaddingTop" format="dimension" />
+        <attr name="distanceFormGroupNameToAxis" format="dimension" />
+        <attr name="distanceFromValueToHistogram" format="dimension" />
+        <!--图表数值小数点位数-->
+        <attr name="histogramValueDecimalCount">
+            <enum name="ZERO" value="0" />
+            <enum name="ONE" value="1" />
+            <enum name="TWO" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomIndicator">
+        <attr name="indicatorType" format="enum">
+            <enum name="scale" value="0" />
+            <enum name="gradual" value="1" />
+            <enum name="split" value="2" />
+            <enum name="scaleAndGradual" value="3" />
+        </attr>
+        <attr name="normalPointRadius" format="dimension" />
+        <attr name="selectedPointRadius" format="dimension" />
+        <attr name="normalPointColor" format="color" />
+        <attr name="selectedPointColor" format="color" />
+        <attr name="pointInterval" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AudioSignalView">
+        <attr name="asv_groupCount" format="integer" />
+        <attr name="asv_groupInterval" format="dimension" />
+        <attr name="asv_lineColor" format="color" />
+        <attr name="asv_lineWidth" format="dimension" />
+        <attr name="asv_lineInterval" format="dimension" />
+        <attr name="asv_maxDynamicLineHeight" format="dimension" />
+        <attr name="asv_maxStaticLineHeight" format="dimension" />
+        <attr name="asv_minStaticLineHeight" format="dimension"/>
+        <attr name="asv_lineCountInGroup" format="integer"/>
+    </declare-styleable>
+</resources>

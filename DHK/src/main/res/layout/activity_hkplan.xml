@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/head" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner"
+                    android:orientation="horizontal">
+
+                    <com.kym.ui.newutilutil.CircleImageView
+                        android:id="@+id/iv_bank_sign"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_bank_sign_card_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*******"
+                            android:textColor="@color/black_33"
+                            android:textSize="17sp"
+                            tools:text="****银行" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_sign_card_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="**** **** **** ***"
+                            android:textColor="@color/gray_a7"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_go" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="账单总额"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/hk_money"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入账单总额"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/black_33"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="还款城市"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/xf_city"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择还款城市"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="还款日期"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/hk_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择还款日期"
+                            android:singleLine="true"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="还款笔数"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/hk_num"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入还款笔数"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/black_33"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="预留金额"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/hk_yue"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入预留金额"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/black_33"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="还款模式"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/hk_model"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择还款模式"
+                            android:textColorHint="@color/jiugongge"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="支付交易资金由持牌支付公司提供服务"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/corner2"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="预览计划"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.kym.ui.newutil.DragFloatActionButton
+        android:id="@+id/circle_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:clickable="true"
+        android:src="@drawable/tianjia" />
+
+</RelativeLayout>

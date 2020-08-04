@@ -1,0 +1,10 @@
+dependencies {
+    implementation(fileTree(dir: 'libs', include: ['*.jar', '*.aar']))
+}
+
+android {
+    signingConfigs {
+        config {
+        }
+    }
+}

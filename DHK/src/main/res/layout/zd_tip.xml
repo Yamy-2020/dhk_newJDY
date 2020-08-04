@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55555555" >
+
+    <LinearLayout
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/setting_one_selector" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_photo"
+            android:gravity="center"
+            android:text="取 消"
+            android:textColor="#0479FE"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cancel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_photo"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="更新账单"
+            android:textColor="#FF3737"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1" />
+
+        <TextView
+            android:id="@+id/plan1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="立即还款"
+            android:textColor="#0479FE"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1" />
+
+        <TextView
+            android:id="@+id/plan2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="立即还款"
+            android:textColor="#0479FE"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_2e"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_25" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="日期区间收益明细（元）"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/dp_20" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/corner11"
+                android:drawableLeft="@drawable/ic_riqi_b"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="****-*-*" />
+
+            <View
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/corner11"
+                android:drawableLeft="@drawable/ic_riqi_b"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="****-*-*" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/head_i"
+        android:background="@color/gray_f4" >
+
+        <cn.finalteam.loadingview.PtrClassicFrameLayout
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <cn.finalteam.loadingview.ListViewFinal
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                app:loadMoreMode="scroll" />
+        </cn.finalteam.loadingview.PtrClassicFrameLayout>
+
+        <include layout="@layout/layout_empty_view" />
+    </FrameLayout>
+
+</LinearLayout>

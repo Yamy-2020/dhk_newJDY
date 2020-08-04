@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="当前进度1/4" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textColor="@color/blue_21"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_repayment_detail_percent"
+        tools:text="还款成功" />
+
+    <View
+        android:id="@+id/line_repayment_detail"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#EDEDED"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_repayment_detail_percent" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_amount_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="还款金额"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_repayment_detail" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_repayment_detail_amount_string"
+        tools:text="1500" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_fee_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="服务费"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toLeftOf="@id/tv_repayment_detail_amount_string"
+        app:layout_constraintTop_toBottomOf="@id/tv_repayment_detail_amount_string" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintRight_toRightOf="@id/tv_repayment_detail_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_repayment_detail_fee_string"
+        tools:text="38" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_date_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="还款时间"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toLeftOf="@id/tv_repayment_detail_amount_string"
+        app:layout_constraintTop_toBottomOf="@id/tv_repayment_detail_fee_string" />
+
+    <TextView
+        android:id="@+id/tv_repayment_detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintRight_toRightOf="@id/tv_repayment_detail_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_repayment_detail_date_string"
+        tools:text="2018-02-12" />
+</android.support.constraint.ConstraintLayout>

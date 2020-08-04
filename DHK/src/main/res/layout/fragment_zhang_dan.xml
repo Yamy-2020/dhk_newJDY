@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:text="信用卡账单"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="@color/bg_color"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/wangyin"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/wangyin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网银导入"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/youxiang"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/youxiang" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱导入"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_125"
+        android:layout_margin="@dimen/dp_10"
+        android:scaleType="fitXY" />
+
+    <com.github.nuptboyzhb.lib.SuperSwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/zd_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:background="@color/bg_line"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10" />
+
+    </com.github.nuptboyzhb.lib.SuperSwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f8"
+    android:orientation="vertical"
+    tools:context="com.kym.ui.activity.huankuan.BankPlanActivity">
+
+    <include layout="@layout/head" />
+
+    <com.chanven.lib.cptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_bank_plan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sp_20"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/bank_plan_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F5F9"
+            android:divider="#00000000"
+            android:dividerHeight="@dimen/dp_10"
+            android:listSelector="#00000000"
+            android:scrollbars="none" />
+
+    </com.chanven.lib.cptr.PtrClassicFrameLayout>
+
+    <TextView
+        android:id="@+id/add_new_plan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:background="@drawable/corner13"
+        android:gravity="center"
+        android:text="新增计划"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

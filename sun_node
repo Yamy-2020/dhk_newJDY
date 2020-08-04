@@ -1,0 +1,7 @@
+oem注意事项
+   1、个推开放平台  https://dev.getui.com/dev/#/login
+   2、微信开放平台  https://open.weixin.qq.com/
+   3、百度AI开放平台  https://ai.baidu.com/?track=cp:aipinzhuan|pf:pc|pp:AIpingtai|pu:title|ci:|kw:10005792
+   4、支付宝开放平台  https://open.alipay.com/platform/home.htm
+   5、后台对接,针对每个oem要求进行以下配置
+        费率配置、付费等级、user/info接口里的费率字段、推广文案、APP样式

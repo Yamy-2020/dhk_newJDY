@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="pd_emoji">
+        <item>0x1f600</item>
+        <item>0x1f601</item>
+        <item>0x1f602</item>
+        <item>0x1f603</item>
+        <item>0x1f604</item>
+        <item>0x1f605</item>
+        <item>0x1f606</item>
+        <item>0x1f609</item>
+        <item>0x1f60a</item>
+        <item>0x1f60b</item>
+        <item>0x1f60e</item>
+        <item>0x1f60d</item>
+        <item>0x1f618</item>
+        <item>0x1f617</item>
+        <item>0x1f619</item>
+        <item>0x1f61a</item>
+        <item>0x1f607</item>
+        <item>0x1f610</item>
+        <item>0x1f611</item>
+        <item>0x1f636</item>
+        <item>0x1f60f</item>
+        <item>0x1f623</item>
+        <item>0x1f625</item>
+        <item>0x1f62e</item>
+        <item>0x1f62f</item>
+        <item>0x1f62a</item>
+        <item>0x1f62b</item>
+        <item>0x1f634</item>
+        <item>0x1f60c</item>
+        <item>0x1f61b</item>
+        <item>0x1f61c</item>
+        <item>0x1f61d</item>
+        <item>0x1f612</item>
+        <item>0x1f613</item>
+        <item>0x1f614</item>
+        <item>0x1f615</item>
+        <item>0x1f632</item>
+        <item>0x1f637</item>
+        <item>0x1f616</item>
+        <item>0x1f61e</item>
+        <item>0x1f61f</item>
+        <item>0x1f624</item>
+        <item>0x1f622</item>
+        <item>0x1f62d</item>
+        <item>0x1f626</item>
+        <item>0x1f627</item>
+        <item>0x1f628</item>
+        <item>0x1f62c</item>
+        <item>0x1f630</item>
+        <item>0x1f631</item>
+        <item>0x1f633</item>
+        <item>0x1f635</item>
+        <item>0x1f621</item>
+        <item>0x1f620</item>
+        <item>0x1f466</item>
+        <item>0x1f467</item>
+        <item>0x1f468</item>
+        <item>0x1f469</item>
+        <item>0x1f474</item>
+        <item>0x1f475</item>
+        <item>0x1f476</item>
+        <item>0x1f471</item>
+        <item>0x1f46e</item>
+        <item>0x1f472</item>
+        <item>0x1f473</item>
+        <item>0x1f477</item>
+        <item>0x1f478</item>
+        <item>0x1f482</item>
+        <item>0x1f385</item>
+        <item>0x1f470</item>
+        <item>0x1f47c</item>
+        <item>0x1f486</item>
+        <item>0x1f487</item>
+        <item>0x1f64d</item>
+        <item>0x1f64e</item>
+        <item>0x1f645</item>
+        <item>0x1f646</item>
+        <item>0x1f481</item>
+        <item>0x1f64b</item>
+        <item>0x1f647</item>
+        <item>0x1f64c</item>
+        <item>0x1f64f</item>
+        <item>0x1f464</item>
+        <item>0x1f465</item>
+        <item>0x1f6b6</item>
+        <item>0x1f3c3</item>
+        <item>0x1f46f</item>
+        <item>0x1f483</item>
+        <item>0x1f46b</item>
+        <item>0x1f46c</item>
+        <item>0x1f46d</item>
+        <item>0x1f48f</item>
+        <item>0x1f491</item>
+        <item>0x1f46a</item>
+        <item>0x1f4aa</item>
+        <item>0x1f448</item>
+        <item>0x1f449</item>
+        <item>0x261d</item>
+        <item>0x1f446</item>
+        <item>0x1f447</item>
+        <item>0x270c</item>
+        <item>0x270b</item>
+        <item>0x1f44c</item>
+        <item>0x1f44d</item>
+        <item>0x1f44e</item>
+        <item>0x270a</item>
+        <item>0x1f44a</item>
+        <item>0x1f44b</item>
+        <item>0x1f44f</item>
+        <item>0x1f450</item>
+        <item>0x270d</item>
+        <item>0x1f463</item>
+        <item>0x1f440</item>
+        <item>0x1f442</item>
+        <item>0x1f443</item>
+        <item>0x1f445</item>
+        <item>0x1f444</item>
+        <item>0x1f48b</item>
+        <item>0x1f453</item>
+        <item>0x1f454</item>
+        <item>0x1f455</item>
+        <item>0x1f456</item>
+        <item>0x1f457</item>
+        <item>0x1f458</item>
+        <item>0x1f459</item>
+        <item>0x1f45a</item>
+        <item>0x1f45b</item>
+        <item>0x1f45c</item>
+        <item>0x1f45d</item>
+        <item>0x1f392</item>
+        <item>0x1f4bc</item>
+        <item>0x1f45e</item>
+        <item>0x1f45f</item>
+        <item>0x1f460</item>
+        <item>0x1f461</item>
+        <item>0x1f462</item>
+        <item>0x1f451</item>
+        <item>0x1f452</item>
+        <item>0x1f3a9</item>
+        <item>0x1f393</item>
+        <item>0x1f484</item>
+        <item>0x1f485</item>
+        <item>0x1f48d</item>
+        <item>0x1f302</item>
+        <item>0x1f4f1</item>
+        <item>0x1f4f2</item>
+        <item>0x1f4f6</item>
+        <item>0x1f4f3</item>
+        <item>0x1f4f4</item>
+        <item>0x260e</item>
+        <item>0x1f4de</item>
+        <item>0x1f4df</item>
+        <item>0x1f4e0</item>
+        <item>0x267b</item>
+        <item>0x1f3e7</item>
+        <item>0x1f6ae</item>
+        <item>0x1f6b0</item>
+        <item>0x267f</item>
+        <item>0x1f6b9</item>
+        <item>0x1f6ba</item>
+        <item>0x1f6bb</item>
+        <item>0x1f6bc</item>
+        <item>0x1f6be</item>
+        <item>0x26a0</item>
+        <item>0x1f6b8</item>
+        <item>0x26d4</item>
+        <item>0x1f6ab</item>
+        <item>0x1f6b3</item>
+        <item>0x1f6ad</item>
+        <item>0x1f6af</item>
+        <item>0x1f6b1</item>
+        <item>0x1f6b7</item>
+        <item>0x1f51e</item>
+        <item>0x1f488</item>
+        <item>0x1f648</item>
+        <item>0x1f649</item>
+        <item>0x1f64a</item>
+        <item>0x1f435</item>
+        <item>0x1f412</item>
+        <item>0x1f436</item>
+        <item>0x1f415</item>
+        <item>0x1f429</item>
+        <item>0x1f43a</item>
+        <item>0x1f431</item>
+        <item>0x1f63a</item>
+        <item>0x1f638</item>
+        <item>0x1f639</item>
+        <item>0x1f63b</item>
+        <item>0x1f63c</item>
+        <item>0x1f63d</item>
+        <item>0x1f640</item>
+        <item>0x1f63f</item>
+        <item>0x1f63e</item>
+        <item>0x1f408</item>
+        <item>0x1f42f</item>
+        <item>0x1f405</item>
+        <item>0x1f406</item>
+        <item>0x1f434</item>
+        <item>0x1f40e</item>
+        <item>0x1f42e</item>
+        <item>0x1f402</item>
+        <item>0x1f403</item>
+        <item>0x1f404</item>
+        <item>0x1f437</item>
+        <item>0x1f416</item>
+        <item>0x1f417</item>
+        <item>0x1f43d</item>
+        <item>0x1f40f</item>
+        <item>0x1f411</item>
+        <item>0x1f410</item>
+        <item>0x1f42a</item>
+        <item>0x1f42b</item>
+        <item>0x1f418</item>
+        <item>0x1f42d</item>
+        <item>0x1f401</item>
+        <item>0x1f400</item>
+        <item>0x1f439</item>
+        <item>0x1f430</item>
+        <item>0x1f407</item>
+        <item>0x1f43b</item>
+        <item>0x1f428</item>
+        <item>0x1f43c</item>
+        <item>0x1f43e</item>
+        <item>0x1f414</item>
+        <item>0x1f413</item>
+        <item>0x1f423</item>
+        <item>0x1f424</item>
+        <item>0x1f425</item>
+        <item>0x1f426</item>
+        <item>0x1f427</item>
+        <item>0x1f438</item>
+        <item>0x1f40a</item>
+        <item>0x1f422</item>
+        <item>0x1f40d</item>
+        <item>0x1f432</item>
+        <item>0x1f409</item>
+        <item>0x1f433</item>
+        <item>0x1f40b</item>
+        <item>0x1f42c</item>
+        <item>0x1f41f</item>
+        <item>0x1f420</item>
+        <item>0x1f421</item>
+        <item>0x1f419</item>
+        <item>0x1f41a</item>
+        <item>0x1f40c</item>
+        <item>0x1f41b</item>
+        <item>0x1f41c</item>
+        <item>0x1f41d</item>
+        <item>0x1f41e</item>
+        <item>0x1f98b</item>
+    </integer-array>
+    <color name="black_overlay">#66000000</color>
+    <color name="pd_button_text_dark">#ff000000</color>
+    <color name="pd_button_text_light">#ffffff</color>
+    <color name="pd_hyperlink_text">#ff3abaff</color>
+    <color name="pd_message_digest">#ff808080</color>
+    <color name="pd_message_menuhead">#ff666666</color>
+    <color name="pd_message_menuitem">#ff222222</color>
+    <color name="pd_message_text">#ff000000</color>
+    <color name="pd_message_time">#ffffffff</color>
+    <color name="pd_message_title">#ff000000</color>
+    <color name="pd_panel_back">#f3f3f3</color>
+    <color name="pd_record_cancel">#ff93302f</color>
+    <color name="pd_record_finish">#00000000</color>
+    <color name="pd_record_text">#ffffffff</color>
+    <color name="pd_suggestion_back">#fff6f6f6</color>
+    <color name="pd_suggestion_text">#ff222222</color>
+    <string name="pd_back">返回</string>
+    <string name="pd_camera">拍摄</string>
+    <string name="pd_click_here">点击此处</string>
+    <string name="pd_connecting">正在连接...</string>
+    <string name="pd_connection_closed">连接已断开</string>
+    <string name="pd_connection_failed">连接失败</string>
+    <string name="pd_evaluate">评价</string>
+    <string name="pd_evaluation">进行评价</string>
+    <string name="pd_file">文件</string>
+    <string name="pd_hold_to_talk">按住 说话</string>
+    <string name="pd_human">转人工</string>
+    <string name="pd_message">留言</string>
+    <string name="pd_message_acceptgroup">请选择您要咨询的业务</string>
+    <string name="pd_message_menu">菜单</string>
+    <string name="pd_message_recommend">您是不是想问下面的问题</string>
+    <string name="pd_more">更多</string>
+    <string name="pd_photo">照片</string>
+    <string name="pd_release_and_cancel">松开手指，取消发送</string>
+    <string name="pd_release_to_cancel">松开 取消</string>
+    <string name="pd_release_to_send">松开 结束</string>
+    <string name="pd_send">发送</string>
+    <string name="pd_slideup_and_cancel">手指上滑，取消发送</string>
+    <string name="pd_unsupported_message">当前版本不支持该消息</string>
+    <string name="pd_yesterday">昨天</string>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr format="reference" name="metaButtonBarStyle"/>
+        <attr format="reference" name="metaButtonBarButtonStyle"/>
+    </declare-styleable>
+    <declare-styleable name="GifTextureView">
+        <attr format="reference|string" name="gifSource"/>
+        <attr format="boolean" name="isOpaque"/>
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr format="boolean" name="freezesAnimation"/>
+        <attr format="integer" name="loopCount"/>
+    </declare-styleable>
+</resources>

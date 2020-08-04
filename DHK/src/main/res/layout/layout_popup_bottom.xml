@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="bottom" >
+
+    <LinearLayout
+        android:id="@+id/linear_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5" >
+
+            <!-- 取消按钮 -->
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bd_ocr_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="输入密码"
+                android:textColor="#898181"
+                android:textSize="@dimen/sp_20" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#555555" />
+
+        <!-- 6位密码框布局，需要一个圆角边框的shape作为layout的背景 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/shape_input_area"
+            android:orientation="horizontal" >
+
+            <!--
+                 inputType设置隐藏密码明文
+                 textSize设置大一点，否则“点”太小了，不美观
+            -->
+
+            <TextView
+                android:id="@+id/tv_pass1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_pass2"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32"/>
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_pass3"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_pass4"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_pass5"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/tv_pass6"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="@dimen/sp_32" />
+        </LinearLayout>
+
+        <!-- 忘记密码链接 -->
+
+        <TextView
+            android:id="@+id/tv_forgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/dp_15"
+            android:text="忘记密码？"
+            android:textColor="#354EEF" />
+    </LinearLayout>
+
+    <!-- 输入键盘 -->
+
+    <GridView
+        android:id="@+id/gv_keybord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_pass"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@android:color/black"
+        android:horizontalSpacing="0.5dp"
+        android:listSelector="@null"
+        android:numColumns="3"
+        android:verticalSpacing="0.5dp" /><!-- android:listSelector="@null"取消系统自带的按下效果，否则模拟键盘外围会有黑边 -->
+
+</RelativeLayout>

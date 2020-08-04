@@ -1,0 +1,150 @@
+[
+  {
+    "name": "线下零售",
+    "type": "OFFLINE_RETAIL"
+  },
+  {
+    "name": "餐饮/食品",
+    "type": "FOOD_BEVERAGE"
+  },
+  {
+    "name": "票务/旅游",
+    "type": "TICKETING_TRAVEL"
+  },
+  {
+    "name": "教育/培训",
+    "type": "EDUCATION_TRAINING"
+  },
+  {
+    "name": "生活/咨询服务",
+    "type": "LIFE_ADVISORY_SERVICE"
+  },
+  {
+    "name": "娱乐/健身服务",
+    "type": "ENTERTAINMENT_FITNESS_SERVICES"
+  },
+  {
+    "name": "医疗",
+    "type": "MEDICAL_CARE"
+  },
+  {
+    "name": "收藏/拍卖",
+    "type": "COLLECTION_AUCTION"
+  },
+  {
+    "name": "物流/快递",
+    "type": "LOGISTICS_EXPRESS"
+  },
+  {
+    "name": "公益",
+    "type": "PUBLIC_WELFARE"
+  },
+  {
+    "name": "通讯",
+    "type": "COMMUNICATION"
+  },
+  {
+    "name": "金融/保险",
+    "type": "FINANCE_INSURANCE"
+  },
+  {
+    "name": "网络虚拟服务",
+    "type": "NETWORK_VIRTUAL_SERVICE"
+  },
+  {
+    "name": "生活缴费",
+    "type": "LIVING_PAYMENT"
+  },
+  {
+    "name": "酒店",
+    "type": "HOTEL"
+  },
+  {
+    "name": "家居",
+    "type": "HOME_FURNISHING"
+  },
+  {
+    "name": "电商团购",
+    "type": "GROUP_PURCHASE"
+  },
+  {
+    "name": "彩票",
+    "type": "LOTTERY"
+  },
+  {
+    "name": "时尚",
+    "type": "FASHION"
+  },
+  {
+    "name": "公共事业缴费",
+    "type": "UTILITIES_EXPENSE"
+  },
+  {
+    "name": "房地产",
+    "type": "REAL_ESTATE"
+  },
+  {
+    "name": "交通运输服务类",
+    "type": "TRANSPORTATION_SERVICE"
+  },
+  {
+    "name": "机械/电子",
+    "type": "MACHINE_ELECTRON"
+  },
+  {
+    "name": "软件",
+    "type": "SOFTWARE"
+  },
+  {
+    "name": "装饰",
+    "type": "DECORATION"
+  },
+  {
+    "name": "苗木/绿化",
+    "type": "GREEN_SEEDLING"
+  },
+  {
+    "name": "母婴/玩具",
+    "type": "MATERNAL_CHILD_PRODUCT"
+  },
+  {
+    "name": "收藏/宠物",
+    "type": "COLLECTION_PET"
+  },
+  {
+    "name": "书籍/音像/文具",
+    "type": "BOOK_STATIONERY_AUDIO_VIDEO"
+  },
+  {
+    "name": "平台商",
+    "type": "BUSINESS_PLATFORM"
+  },
+  {
+    "name": "数码",
+    "type": "DIGITAL"
+  },
+  {
+    "name": "数字娱乐",
+    "type": "DIGITAL_ENTERTAINMENT"
+  },
+  {
+    "name": "境外",
+    "type": "ABROAD"
+  },
+  {
+    "name": "预付卡",
+    "type": "PREPAID_CARD"
+  },
+  {
+    "name": "直销",
+    "type": "DIRECT_SELLING"
+  },
+  {
+    "name": "众筹",
+    "type": "CROWD_FUNDING"
+  },
+  {
+    "name": "其他",
+    "type": "OTHER"
+  }
+]

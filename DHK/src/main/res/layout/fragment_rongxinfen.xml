@@ -1,0 +1,330 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+ <!--   <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_260"
+                android:paddingTop="@dimen/dp_20"
+                android:background="@color/blue_2e"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rx_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <ImageView
+                    android:id="@+id/rx_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-60dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="-160dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_30"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/level_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/corner"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/daiyue" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wait_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:text="待守约"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/shouyue" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/keep_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:text="已守约"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/weiyue" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nokeep_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:text="未守约"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_220"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/xinyong_guanli"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/public_40_dp"
+                            android:layout_height="@dimen/public_40_dp"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:src="@drawable/xy_guanli" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信用提升"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/public_16_sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/xinyong_zuji"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/public_40_dp"
+                            android:layout_height="@dimen/public_40_dp"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:src="@drawable/xy_zuji" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信用足迹"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/public_16_sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/xinyong_guize"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/public_40_dp"
+                            android:layout_height="@dimen/public_40_dp"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:src="@drawable/xy_guize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信用规则"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/public_16_sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/xinyong_shenghuo"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/public_40_dp"
+                            android:layout_height="@dimen/public_40_dp"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:src="@drawable/xy_shenghuo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信用生活"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/public_16_sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+<!--    </ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.dueeeke.dkplayer:ijk-armv5:3.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ce0fa04ccf3cd8145d5c07fb7f8dbd/ijk-armv5-3.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ce0fa04ccf3cd8145d5c07fb7f8dbd/ijk-armv5-3.0.4/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.dueeeke.dkplayer/ijk-armv5/3.0.4/7fa73a6d84b4d82208ea17a9ae278776f4838788/ijk-armv5-3.0.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.dueeeke.dkplayer/ijk-armv5/3.0.4/7fa73a6d84b4d82208ea17a9ae278776f4838788/ijk-armv5-3.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

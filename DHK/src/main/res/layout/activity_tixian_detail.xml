@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:background="@color/blue_2e">
+
+        <TextView
+            android:id="@+id/textV_txall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="0.00元"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_25" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textV_txall"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="累计提现(元)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/textV_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_txall"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/head_i"
+        android:background="@color/gray_f4">
+
+        <cn.finalteam.loadingview.PtrClassicFrameLayout
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <cn.finalteam.loadingview.ListViewFinal
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                app:loadMoreMode="scroll" />
+        </cn.finalteam.loadingview.PtrClassicFrameLayout>
+
+        <include layout="@layout/layout_empty_view" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_6">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/bg_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:background="@color/red_new" />
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_58"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="招商银行" />
+
+        <TextView
+            android:id="@+id/name_on_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_7"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toLeftOf="@id/bank_name"
+            app:layout_constraintTop_toBottomOf="@id/bank_name"
+            tools:text="信用卡" />
+
+        <TextView
+            android:id="@+id/zd_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="￥1000000.00" />
+
+        <TextView
+            android:id="@+id/zd_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="本期人民币账单已还清" />
+
+        <TextView
+            android:id="@+id/zd_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_7"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintRight_toRightOf="@+id/zd_money"
+            app:layout_constraintTop_toBottomOf="@+id/zd_money"
+            tools:text="账单金额" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@color/bg_color"
+            app:layout_constraintRight_toRightOf="@+id/zd_money"
+            app:layout_constraintTop_toBottomOf="@+id/zd_tip" />
+
+        <TextView
+            android:id="@+id/zd_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:background="@drawable/btn_plan"
+            app:layout_constraintRight_toRightOf="@+id/zd_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="立即还款" />
+
+        <TextView
+            android:id="@+id/zd_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginBottom="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="@+id/line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="到期还款日 12-07" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

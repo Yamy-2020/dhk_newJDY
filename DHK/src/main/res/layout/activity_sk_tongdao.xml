@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DeviceList_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/corner"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="￥"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_25"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/money"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="@null"
+                    android:focusableInTouchMode="true"
+                    android:hint="0.00"
+                    android:inputType="number|numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_25"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_10">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mpay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="到账金额(按实际到账金额为准)："
+                    android:textColor="@color/jiugongge"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/shiji_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/jiugongge"
+                    android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/corner"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择支付通道(建议经常更换通道进行收款)"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/sp_15" />
+
+            <com.donkingliang.labels.LabelsView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:minHeight="@dimen/dp_25"
+                android:paddingLeft="@dimen/dp_5"
+                app:labelBackground="@drawable/label_bg"
+                app:labelTextColor="@drawable/label_text_color"
+                app:labelTextPaddingBottom="@dimen/dp_5"
+                app:labelTextPaddingLeft="@dimen/dp_10"
+                app:labelTextPaddingRight="@dimen/dp_10"
+                app:labelTextPaddingTop="@dimen/dp_5"
+                app:labelTextSize="@dimen/sp_14"
+                app:lineMargin="@dimen/dp_10"
+                app:maxSelect="0"
+                app:minSelect="1"
+                app:selectType="MULTI"
+                app:wordMargin="@dimen/dp_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/submit_btn2"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确认刷卡"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="支付交易资金由持牌支付公司提供服务"
+            android:textSize="@dimen/sp_13" />
+
+        <com.kym.ui.newutil.DragFloatActionButton
+            android:id="@+id/circle_button"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_80"
+            android:clickable="true"
+            android:src="@drawable/tianjia" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.49860725" />
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_kongkadaihuan.xml" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="688cb0c5-da1e-4ae5-9413-14c81f646513" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/BotKit">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/DHK">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dhk_newJDY" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dhk_newJDY" type="f1a62948:ProjectNode" />
+                <item name="DHK" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dhk_newJDY" type="f1a62948:ProjectNode" />
+                <item name="DHK" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dhk_newJDY" type="f1a62948:ProjectNode" />
+                <item name="DHK" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="install" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/UpGradeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="602">
+              <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/popuplayout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4738">
+              <caret line="206" column="60" selection-start-line="206" selection-start-column="60" selection-end-line="206" selection-end-column="60" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape1.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_sha.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <folding>
+                <element signature="e#331#344#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>li_img</find>
+      <find>listView</find>
+      <find>imageV_dj_xin</find>
+      <find>imageView</find>
+      <find>yeji</find>
+      <find>banner</find>
+      <find>beans</find>
+      <find>money</find>
+      <find>sk1</find>
+      <find>home_hk</find>
+      <find>adapter</find>
+      <find>ka</find>
+      <find>kade</find>
+      <find>webView</find>
+      <find>WEB_URL</find>
+      <find>intent</find>
+      <find>view_new_home_8</find>
+      <find>main</find>
+      <find>submit</find>
+      <find>rv_bank_list</find>
+      <find>item_sk_bank_list</find>
+      <find>home_yk</find>
+      <find>view_new_home_3</find>
+      <find>xinyong_shenghuo</find>
+      <find>view_new_home_5</find>
+      <find>R.layout</find>
+      <find>dp_9</find>
+      <find>rec_gounai</find>
+      <find>dp_7</find>
+      <find>dp_8</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>@dimen/dp_180</replace>
+      <replace>@dimen/dp_20</replace>
+      <replace>@dimen/dp_30</replace>
+      <replace>@dimen/dp_40</replace>
+      <replace>@dimen/dp_70</replace>
+      <replace>@dimen/sp_35</replace>
+      <replace>@dimen/sp_15</replace>
+      <replace>@dimen/dp_5</replace>
+      <replace>@dimen/sp_25</replace>
+      <replace>NewBankListAdapter</replace>
+      <replace>@dimen/sp_50</replace>
+      <replace>@dimen/sp_10</replace>
+      <replace>@dimen/dp_10</replace>
+      <replace>@dimen/dp_0</replace>
+      <replace>@dimen/dp_15</replace>
+      <replace>@dimen/dp_1</replace>
+      <replace>@dimen/sp_18</replace>
+      <replace>@dimen/sp_16</replace>
+      <replace>Clone</replace>
+      <replace>H</replace>
+      <replace>ZhiSuan</replace>
+      <replace>V</replace>
+      <replace>data1</replace>
+      <replace>`</replace>
+      <replace>data2</replace>
+      <replace>IServcce</replace>
+      <replace>IService</replace>
+      <replace>dp_7</replace>
+      <replace>dp_8</replace>
+      <replace>dp_9</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\android\dhk_newJDY\DHK\src\main</dir>
+    </dirStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="C:\Users\ASUS\Desktop\kym.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/Connect.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/appconfig/IService.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ShangHuListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_shanghulist.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/bank_list_focus.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/KuaiJieCardListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_sk_bank_list.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ZDAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_zd.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_list_qianyue.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/AllQianYueListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/shape_point_unselect.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/shape_point_select.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/FeiLvActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/build.gradle" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/sjlist_one.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/Sj_oneAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/bannner1.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/bean/CornerTransform.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_all_bank_list.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_bank_list.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/NewBankListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/AllCardListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YouHuiActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_up_grade.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/info/ShareResponse.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/ShareActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_BK_WebActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/ThreeFrement_new.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_tab/BpbroTabActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/fragment_kongkadaihuan.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_new__dai_chang__li8.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/when_page/PageActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_banka.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/page_tab4.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/page_tab2.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/page_tab3.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/page_tab5.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/GouMaiAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/ke_tang_rv1.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/UpGradeActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/textview_color.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape1.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/textview_sha.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/popuplayout.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="406" />
+    <option name="width" value="1515" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <autoscrollFromSource ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+              <item name="apk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+              <item name="apk" type="462c0819:PsiDirectoryNode" />
+              <item name="KaUMi1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="outputs" type="462c0819:PsiDirectoryNode" />
+              <item name="apk" type="462c0819:PsiDirectoryNode" />
+              <item name="KaUMi1" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kym" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="android.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="pm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="f366049" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-03T05:59:36.145Z" />
+    <property name="ExportApk.ApkPath" value="E:\android\dhk_newJDY\DHK" />
+    <property name="ExportApk.BuildVariants" value="KaUMi1Release" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/DHK/src/main/java/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DHK/src/main/res/drawable" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="BUILD_VARIANTS_TAB" value="Flavors" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="debug" />
+    <option name="LAST_EDITED_FLAVOR_OR_DIMENSION" value="KaUMi1" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\java\com\kym\ui\sp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kym.ui" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.zzss.jindy.a_new_app.shualian" />
+      <recent name="com.zzss.jindy.a_new_app.saoma_zh" />
+      <recent name="com.zzss.jindy.a_new_app" />
+      <recent name="com.zzss.jindy.activity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kym.ui.dialog" />
+      <recent name="com.kym.ui.util" />
+      <recent name="com.zzss.jindy.a_new_app.shualian" />
+      <recent name="com.zzss.jindy" />
+      <recent name="com.zzss.jindy.a_new_app.saoma_zh" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xxhdpi" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xhdpi" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-hdpi" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\java\com\kym\ui\util" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.dhk_newJDY:DHK [installKaUMi1Release]">
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DHK" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="DHK" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dhk_newJDY:DHK [androidDependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DHK" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="androidDependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="dhk_newJDY:DHK [installKaUMi1DebugAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DHK" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="installKaUMi1DebugAndroidTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="dhk_newJDY:DHK [installKaUMi1Release]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DHK" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="installKaUMi1Release" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="dhk_newJDY:DHK [sourceSets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DHK" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="sourceSets" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="dhk_newJDY:DHK [uninstallAll]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DHK" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="uninstallAll" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android App.DHK" />
+      <item itemvalue="Gradle.dhk_newJDY:DHK [installKaUMi1Release]" />
+      <item itemvalue="Gradle.dhk_newJDY:DHK [sourceSets]" />
+      <item itemvalue="Gradle.dhk_newJDY:DHK [androidDependencies]" />
+      <item itemvalue="Gradle.dhk_newJDY:DHK [uninstallAll]" />
+      <item itemvalue="Gradle.dhk_newJDY:DHK [installKaUMi1DebugAndroidTest]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.dhk_newJDY:DHK [installKaUMi1DebugAndroidTest]" />
+        <item itemvalue="Gradle.dhk_newJDY:DHK [installKaUMi1Release]" />
+        <item itemvalue="Gradle.dhk_newJDY:DHK [uninstallAll]" />
+        <item itemvalue="Gradle.dhk_newJDY:DHK [androidDependencies]" />
+        <item itemvalue="Gradle.dhk_newJDY:DHK [sourceSets]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="688cb0c5-da1e-4ae5-9413-14c81f646513" name="Default" comment="" />
+      <created>1579268990979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579268990979</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787837" weight="0.25736567" />
+      <window_info id="Structure" order="1" sideWeight="0.50136983" side_tool="true" weight="0.20436187" />
+      <window_info id="Captures" order="2" sideWeight="0.5021216" side_tool="true" weight="0.17292225" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Resources Explorer" order="8" weight="0.32908848" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49396783" weight="0.29857144" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48656294" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32390383" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.5219236" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50603217" side_tool="true" weight="0.5219236" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.6859972" />
+      <window_info anchor="bottom" id="Build" order="12" sideWeight="0.49396783" weight="0.5192582" />
+      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.6138614" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Assistant" order="6" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" />
+      <window_info anchor="right" id="Device File Explorer" order="8" sideWeight="0.50073206" side_tool="true" weight="0.32908848" />
+      <window_info anchor="right" id="Gradle" order="9" sideWeight="0.49926794" weight="0.48353553" />
+      <window_info anchor="right" id="Preview" order="10" weight="0.48793566" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787837" visible="true" weight="0.15482573" />
+      <window_info id="Structure" order="1" sideWeight="0.50136983" side_tool="true" weight="0.20436187" />
+      <window_info id="Captures" order="2" sideWeight="0.5021216" side_tool="true" weight="0.17292225" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Resources Explorer" order="8" weight="0.32956383" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49396783" weight="0.5035765" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48656294" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32390383" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.5219236" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50603217" side_tool="true" weight="0.5219236" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.6859972" />
+      <window_info anchor="bottom" id="Build" order="12" sideWeight="0.49396783" weight="0.5207439" />
+      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.6151645" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Assistant" order="6" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" />
+      <window_info anchor="right" id="Device File Explorer" order="8" sideWeight="0.50073206" side_tool="true" weight="0.32908848" />
+      <window_info anchor="right" id="Gradle" order="9" sideWeight="0.49926794" weight="0.2421875" />
+      <window_info active="true" anchor="right" id="Preview" order="10" visible="true" weight="0.3297587" />
+    </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_untils/MyCheckTextView.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/MyApplication.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DHK/src/KaUMi1/java/com/zzss/jindy/appconfig/Clone.java</url>
+          <line>8</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YouHuiActivity.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dhk_newJDY$dhk_newJDY__installRongEHuanRelease_.ic" NAME="dhk_newJDY [installRongEHuanRelease] Coverage Results" MODIFIED="1580704118343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/page_tab4.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/page_tab2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/page_tab3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/when_page/PageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/page_tab5.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable-xhdpi/ke_tang1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_sk__bank_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_sk/SK_BankList_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_yk/XiaoFeiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/item_sk_bank_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="111" column="35" lean-forward="true" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/KuaiJieCardListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2672">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/output.json" />
+    <entry file="file://E:/android_sdk/sources/android-28/android/content/SharedPreferences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6398">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/DHK-KaUMi1-release.apk" />
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YouHuiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/hl_btn1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+          <folding>
+            <element signature="e#8412#8413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="434" column="56" selection-start-line="434" selection-start-column="41" selection-end-line="434" selection-end-column="56" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_three_frement_new.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/ThreeFrement_new.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1376">
+          <caret line="159" column="66" lean-forward="true" selection-start-line="159" selection-start-column="66" selection-end-line="159" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/backdalog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/BackDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/rongxinfen/RongXinFenFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="426" column="30" selection-start-line="426" selection-start-column="30" selection-end-line="426" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/dialog_model_img.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_rongxinfen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="304" column="57" selection-start-line="304" selection-start-column="41" selection-end-line="304" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/guibindalog1.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_up_grade.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/ke_tang_rv1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="e#950#964#0" expanded="true" />
+            <element signature="e#4209#4223#0" expanded="true" />
+            <element signature="e#4588#4602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="149" column="41" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/GouMaiAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/circular.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/dialog_finger.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_xfsign.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="113" column="13" lean-forward="true" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_loging.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/selector_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/vxblur.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_hkplan.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2353">
+          <caret line="324" column="45" selection-start-line="324" selection-start-column="45" selection-end-line="324" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/checkbox_style.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android_sdk/sources/android-28/android/graphics/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="297" column="38" selection-start-line="297" selection-start-column="38" selection-end-line="297" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android_sdk/sources/android-28/android/widget/PopupWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="506" column="16" selection-start-line="506" selection-start-column="16" selection-end-line="506" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/dialog/GuiBinDialog1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/appconfig/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="1190" column="75" selection-start-line="1190" selection-start-column="49" selection-end-line="1190" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#566#580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_sha.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#331#344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/textview_shape1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/popuplayout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4738">
+          <caret line="206" column="60" selection-start-line="206" selection-start-column="60" selection-end-line="206" selection-end-column="60" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/info/GouMaiQuanYi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4899">
+          <caret line="298" column="34" selection-start-line="298" selection-start-column="34" selection-end-line="298" selection-end-column="34" />
+          <folding>
+            <element signature="e#9524#9525#0" expanded="true" />
+            <element signature="e#9581#9582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/UpGradeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

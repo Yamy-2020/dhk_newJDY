@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:id="@+id/scroll_repayment_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/public_120_dp"
+                android:background="@drawable/bg_shadow">
+
+                <com.kym.ui.newutilutil.CircleImageView
+                    android:id="@+id/civ_repayment_confirm"
+                    android:layout_width="@dimen/dp_72"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:src="@drawable/push"
+                    android:layout_marginLeft="@dimen/public_20_dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_repayment_confirm_bank_name"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="银行名称"
+                    android:textColorHint="#333333"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@id/tv_repayment_confirm_bank_number"
+                    app:layout_constraintLeft_toRightOf="@id/civ_repayment_confirm"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_repayment_confirm_bank_number"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColorHint="#333333"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/civ_repayment_confirm"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_repayment_confirm_bank_name" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_shadow">
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_amount_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="您需要支付金额"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:includeFontPadding="false"
+                    android:text="****"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/sp_20"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_amount_string" />
+
+                <View
+                    android:id="@+id/view_plan_detail_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="#999999"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_amount" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_amount_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="还款总金额"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_total_amount"
+                    app:layout_constraintTop_toBottomOf="@id/view_plan_detail_line" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="******"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_total_amount_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_total_amount_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_fee_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="还款总服务费"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_total_fee"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_total_amount" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="***"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_total_fee_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_total_fee_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_first_repayment_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="第一笔还款金额"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_first_repayment"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_total_fee_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_first_repayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="***"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_first_repayment_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_first_repayment_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_first_fee_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="第一笔还款总服务费"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_first_fee"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_first_repayment_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_first_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="***"
+                    android:textColor="#999999"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_first_fee_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_first_fee_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_count_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="单笔结算费"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_total_count"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_first_fee_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_total_count_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_total_count_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_per_count_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="还款总笔数"
+                    android:textColor="#999999"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_per_count"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_total_count" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_per_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_per_count_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_per_count_string" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_due_date_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="每月还款日"
+                    android:textColor="#999999"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_due_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_per_count" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_due_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="**"
+                    android:textColor="#999999"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_due_date_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_due_date_string" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_shadow">
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_mobile_string"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_50"
+                    android:text="手机号"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@id/line_plan_detail"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    android:id="@+id/line_plan_detail"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#999999"
+                    app:layout_constraintBottom_toTopOf="@id/tv_plan_detail_code_string"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plan_detail_mobile_string"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_code_string"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_50"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="验证码"
+                    android:gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_plan_detail"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_mobile"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_50"
+                    android:singleLine="true"
+                    android:textColor="#333333"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_mobile_string"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_plan_detail_verify_code"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@color/blue_21"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_code_string" />
+
+                <EditText
+                    android:id="@+id/et_plan_detail_code"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请填写验证码"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_plan_detail_code_string"
+                    app:layout_constraintLeft_toRightOf="@id/tv_plan_detail_code_string"
+                    app:layout_constraintRight_toLeftOf="@id/tv_plan_detail_verify_code"
+                    app:layout_constraintTop_toTopOf="@id/tv_plan_detail_code_string" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_plan_detail_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/corner2"
+        android:gravity="center"
+        android:textSize="@dimen/public_16_sp"
+        android:text="确认"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.chaychan.library.BottomBarLayout
+        android:id="@+id/bbl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_home_bl"
+            app:iconSelected="@drawable/icon_home_b"
+            app:itemMarginTop="-5dp"
+            app:itemText="首页"
+            app:itemTextSize="8sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tabhost"
+            app:textColorSelected="@color/blue_public"
+            app:touchDrawable="@drawable/selector_bg" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/home_daichang_blur"
+            app:iconSelected="@drawable/home_daichang_focus"
+            app:itemMarginTop="-5dp"
+            app:itemText="贷偿"
+            app:itemTextSize="8sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tabhost"
+            app:textColorSelected="@color/blue_public"
+            app:touchDrawable="@drawable/selector_bg"
+            app:unreadThreshold="999" />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_rongxinfen_b"
+            app:iconSelected="@drawable/icon_rongxinfen_f"
+            app:itemMarginTop="-5dp"
+            app:itemText="融信分"
+            app:itemTextSize="8sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tabhost"
+            app:textColorSelected="@color/blue_public"
+            app:touchDrawable="@drawable/selector_bg" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_my"
+            app:iconSelected="@drawable/icon_my_press"
+            app:itemMarginTop="-5dp"
+            app:itemText="我的"
+            app:itemTextSize="8sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tabhost"
+            app:textColorSelected="@color/blue_public"
+            app:touchDrawable="@drawable/selector_bg" />
+
+    </com.chaychan.library.BottomBarLayout>
+
+</LinearLayout>

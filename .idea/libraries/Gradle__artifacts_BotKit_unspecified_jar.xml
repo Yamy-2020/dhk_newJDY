@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:BotKit:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BotKit/build/.transforms/af4139397e9aba1720169889965279af/BotKit/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/BotKit/build/.transforms/af4139397e9aba1720169889965279af/BotKit/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

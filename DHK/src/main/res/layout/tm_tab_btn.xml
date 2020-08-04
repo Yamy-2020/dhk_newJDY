@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="#cdcdcd" />-->
+    <RelativeLayout
+        android:id="@+id/tab_icon_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_color">
+
+        <ImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_tab_home_nomal" />
+
+        <TextView
+            android:id="@+id/tab_icon_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:text="SDF"
+            android:textColor="@color/tabhost"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/tab_icon_hint"
+            android:layout_width="8.0dip"
+            android:layout_height="8.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toRightOf="@+id/tab_icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/tmall_bg_red"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

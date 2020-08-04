@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:id="@+id/sk1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/hl_sk1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一键收款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_25" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="传统无卡支付落地商户"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/hl_btn"
+            android:text="立即收款"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sk2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/hl_sk2"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="扫码收款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_25" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="银联小额落地商户规划刷卡"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/hl_btn"
+            android:text="立即收款"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>

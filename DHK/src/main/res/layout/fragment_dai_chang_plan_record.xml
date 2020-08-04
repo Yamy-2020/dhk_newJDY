@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_cart"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/head_i"
+        android:background="@color/bg_line" >
+
+        <cn.finalteam.loadingview.PtrClassicFrameLayout
+            android:id="@+id/dc_ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <cn.finalteam.loadingview.ListViewFinal
+                android:id="@+id/dc_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:background="@color/bg_line"
+                android:listSelector="@null"
+                android:cacheColorHint="@null"
+                android:scrollbars="none"
+                app:loadMoreMode="scroll" />
+        </cn.finalteam.loadingview.PtrClassicFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/zanwu">
+
+            <ImageView
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty1" />
+
+            <TextView
+                android:id="@+id/zanwu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无贷偿计划,赶紧去制定计划试一试吧!"
+                android:textColor="@color/jiugongge"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

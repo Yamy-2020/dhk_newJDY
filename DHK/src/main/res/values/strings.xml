@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <string name="meglive_prompt">请在光线充足的情况下进行检测</string>
+    <string name="meglive_detect_initfailed">检测器初始化失败，请退出重试</string>
+    <string name="meglive_camera_initfailed">打开前置摄像头失败</string>
+    <string name="meglive_getpermission_motion">请打开手机读取运动数据权限</string>
+    <string name="meglive_phone_vertical">请竖直握紧手机</string>
+    <string name="meglive_keep_eyes_open">请勿用手遮挡眼睛</string>
+    <string name="meglive_keep_mouth_open">请勿用手遮挡嘴巴</string>
+    <string name="face_not_found">请让我看到您的正脸</string>
+    <string name="face_too_dark">请让光线再亮点</string>
+    <string name="face_too_bright">请让光线再暗点</string>
+    <string name="face_too_small">请再靠近一些</string>
+    <string name="face_too_large">请再离远一些</string>
+    <string name="face_too_blurry">请避免侧光和背光</string>
+    <string name="face_out_of_rect">请保持脸在人脸框中</string>
+    <string name="meglive_pitch">缓慢点头</string>
+    <string name="meglive_yaw">左右摇头</string>
+    <string name="meglive_mouth_open_closed">张嘴</string>
+    <string name="meglive_eye_open_closed">眨眼</string>
+    <string name="meglive_pos_yaw_left">左转</string>
+    <string name="meglive_pos_yaw_right">右转</string>
+    <string name="tipsmouth">Open your mouth and close.</string>
+    <string name="tipblink">Do blink with your eyes.</string>
+    <string name="tippose">Rotate your pose vertically.</string>
+    <string name="facelost">Face Lost</string>
+    <string name="timeout">超时</string>
+    <string name="authok">Success</string>
+    <string name="aufail">Failed</string>
+    <string name="steps">活体检测:</string>
+    <string name="pos_detection">POS</string>
+    <string name="mouth_detection">MOUTH</string>
+    <string name="blink_detection">BLINK</string>
+    <string name="camera_permission_required">本功能需要相机权限！</string>
+    <string name="touch_to_focus">触摸屏幕对焦</string>
+    <color name="preview_mock">#9a000000</color>
+
+    <array name="detect_type">
+        <item>眨眼</item>
+        <item>张嘴</item>
+        <item>摇头</item>
+    </array>
+    <array name="detect_result">
+        <item></item>
+        <item>LIVEPASS</item>
+        <item>人脸追踪失败</item>
+        <item>超时失败</item>
+        <item>LIVENOTPASS</item>
+    </array>
+
+    <string name="loading_text">使用说明：\n1、首先您需要输入姓名；\n2、之后您需要按照屏幕上的提示完成3个动作，以通过活体检测，同时软件会将您的人脸图像发送至服务器进行人脸验证；\n3、如果您没有通过活体检测或者人脸验证，则登录失败，反之则登录成功。</string>
+    <string name="loading_confirm">OK,I Know</string>
+    <string name="netowrk_parse_failed">解析服务器数据失败</string>
+    <string name="verify_error">验证失败</string>
+    <string name="verify_success">验证成功</string>
+    <string name="liveness_detection_failed">活体检测失败</string>
+    <string name="liveness_detection_failed_timeout">活体检测超时失败</string>
+    <string name="liveness_detection_failed_action_blend">活体检测动作错误</string>
+    <string name="liveness_detection_failed_not_video">活体检测连续性检测失败</string>
+    <string name="novalidframe">没有合适的图像用于人脸识别</string>
+    <string name="text_tel">请输入手机号</string>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="text_pwd">密码</string>
+    <string name="share_string">"输入分享默认内容"</string>
+    <string name="get_order_sn">"正在生成订单..."</string>
+    <string name="wait_load">"请稍候..."</string>
+    <string name="no_load">"暂无更多数据加载"</string>
+    <string name="sp_null">请填写您的商铺名称</string>
+    <!-- LoginActivity -->
+    <string name="login_text">登录</string>
+    <string name="account_null">请填写您的手机号</string>
+    <string name="password_null">请填写您的密码</string>
+    <string name="login_sucess">登录成功</string>
+    <string name="import_img">导入图片</string>
+    <string name="take_photo">拍照</string>
+    <string name="photo_too_lage">图片太大！</string>
+    <string name="no_sdcard">无sdcard！</string>
+    <string name="takephoto_fail">拍照失败</string>
+
+    <!-- RegisterActivity -->
+    <string name="register">注册</string>
+    <string name="register_hint">真实手机号码</string>
+    <string name="register_warning">"请填写真实手机号，否则收不到验证短信"</string>
+    <string name="input_confirmation">请输入验证码</string>
+    <string name="set_password">请设置6-18位密码</string>
+    <string name="re_input">请再重复输入一遍</string>
+    <string name="next_step">完  成</string>
+    <string name="time">180</string>
+    <string name="time_hint">秒后重新获取</string>
+    <string name="share_tel">"请输入邀请人手机号"</string>
+    <string name="send_hint">已发送请求，请耐心等候</string>
+    <string name="please_input_phone">请输入手机号</string>
+    <string name="correct_phone">请输入正确的手机号</string>
+    <string name="please_input_identifing_code">请输入验证码</string>
+    <string name="password_not_empty">请输入您的密码</string>
+    <string name="please_reinput_password">请再次输入您的密码</string>
+    <string name="password_differ">两次输入的密码不一致</string>
+    <string name="share_phone">请输入邀请人的手机号</string>
+    <string name="correct_share_phone">请输入正确的邀请人手机号</string>
+    <string name="forget">忘记密码</string>
+
+    <!-- AddGoodActivity -->
+    <string name="add_goods">添加商品</string>
+    <string name="good_name_notnull">商品名字不能为空</string>
+    <string name="good_describe_notnull">商品描述不能为空</string>
+    <string name="good_price_notnull">价格不能为空</string>
+    <string name="inventory_notnull">库存不能为空</string>
+    <string name="please_select_image">请上传您的商品图片</string>
+    <string name="edit_good">商品编辑</string>
+
+    <!-- CreateShopActivity -->
+    <string name="createshop">创建店铺</string>
+    <string name="takephone">拍照</string>
+    <string name="edit_shop">编辑店铺</string>
+
+    <!-- IncomeActivity -->
+    <string name="income">我的收入</string>
+
+    <!-- FaceToPyaActivity -->
+    <string name="face_title">收银</string>
+    <string name="number">数量</string>
+    <string name="goods_name">货物名称</string>
+    <string name="money_no">金额输入有误</string>
+    <string name="money_max">单笔交易金额超过上限</string>
+    <string name="money_min">单笔交易金额超过下限</string>
+    <string name="facepay_forbidden">壹号微店将配合银行共同打击无真实交易背景的虚假交易，银行卡转账套现或洗钱等被禁止的交易行为，请如实交易，否则款项将不能结算!</string>
+
+    <string name="connet_host_fail">网络异常,请稍后重试</string>
+    <string name="network_nouser">网络异常,请稍后重试</string>
+    <string name="fromphone">"从手机相册选择"</string>
+
+    <string name="uploadpic">确定上传</string>
+    <string name="upload_hint">正在加载相册，请稍等</string>
+    <string name="select_image">您商品的图片已经超过八张，请重新选择</string>
+    <string name="no_updateImage">您已经上传了八张商品图</string>
+
+    <!-- ShopCreateSuccessActivity -->
+    <string name="create_success">店铺创建成功</string>
+
+    <!-- MyShopActivity -->
+    <string name="shareto">"分享到"</string>
+    <string name="qqfriend">"QQ"</string>
+    <string name="weixinfriend">"微信好友"</string>
+    <string name="shoujiduanxin">"手机短信"</string>
+    <string name="pengyouquan">"朋友圈"</string>
+    <string name="myshop">微店管理</string>
+
+    <!-- GoodDetailActivity -->
+    <string name="good_detail">商品详情</string>
+
+    <!-- CloseAccountActivity -->
+    <string name="close_account">"结算"</string>
+
+    <!-- SetingActivity -->
+    <string name="setactivity">个人中心</string>
+
+    <string name="personal_information">个人资料</string>
+
+    <string name="message_center">通知中心</string>
+    <string name="trading_rate"> 交易费率</string>
+
+    <!-- UpgradeActivity -->
+    <string name="upgrade">我要优惠</string>
+
+    <string name="feedback">意见反馈</string>
+
+    <!-- ContractActivity -->
+    <string name="contract">联系我们</string>
+
+    <string name="lock_up_agreement">禁售协议</string>
+    <!-- UpgradeActivity -->
+    <string name="Upgrade_title">商户升级</string>
+
+    <string name="register_agreement">梅俪女人注册协议</string>
+
+    <!-- OrderActivity -->
+    <string name="order_title">订单详情</string>
+    <string name="order_pay">支付方式</string>
+    <string name="order_pay_text">付款后，资金直接进入卖家账户。如需退款换货，请与卖家联系，梅俪女人不介入交易纠纷处理。</string>
+    <string name="order_pay_update_text">请使用本人信用卡支付升级，请确保注册姓名和输入姓名为同一人，否则升级将会提示失败！</string>
+
+    <!-- MSGActivity -->
+    <string name="msg_title">智能空中支付</string>
+    <string name="msg_tel_no">请输入正确的手机号</string>
+    <string name="msg_btn_text">创建并发送收款链接</string>
+    <!-- YBPayActivity -->
+    <string name="ybpay_title">现场支付</string>
+    <!-- MerchantActivity -->
+    <string name="merchant_title">商户管理</string>
+    <!-- OrderManagementActivity -->
+    <string name="order_m_title">店铺交易订单管理</string>
+    <string name="order_m_ftitle">收银订单管理</string>
+
+    <!-- BintTheBankCardActivity -->
+    <string name="please_input_bank_number">请输入银行卡号(15位以上)</string>
+    <string name="address">开户所在地，如:福建省厦门市</string>
+    <string name="bank_depost">所属支行,如:湖滨支行</string>
+    <string name="next">下一步</string>
+    <string name="bind_bank">银行卡</string>
+
+    <string name="real_name">请输入真实姓名</string>
+    <string name="idnumber">请输入身份证号</string>
+    <string name="idcard">身份证正面与银行卡正面照，身份证及银行卡反面照
+          （银行卡反面要签正楷名字），本人持身份证正面照，本人持银行卡正面照。</string>
+    <string name="vedio">拍摄身份证，银行卡，本人正面视频</string>
+    <string name="real_name_title">证件认证</string>
+    <string name="image_up">您已经上传了八张图片</string>
+
+    <!-- AddBusicessActivity -->
+    <string name="add_busicess_title">新增商户</string>
+
+    <!-- AddBusicessPhoneActivity -->
+    <string name="phone_number">请输入真实手机号</string>
+    <string name="add_customer">新增商户</string>
+    <string name="opening_ths_stores">开通分店</string>
+
+    <!-- GetMoneyActivity -->
+    <string name="getmoney_title">结算</string>
+
+    <string name="content_notnull">请先输入您要反馈的意见</string>
+
+    <string name="select_bank">请选择银行</string>
+    <string name="bank_number">请输入银行卡号</string>
+    <string name="correct_bank_number">请输入正确的银行卡号</string>
+    <string name="bank_address">请输入您银行卡的开户地址</string>
+    <string name="bank_depost_bind">请输入您的开户行</string>
+    <string name="no_data">没有找到符合条件的商品</string>
+    <!-- pullTorefreshview -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="title_activity_main_two">MainTwo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_one_frement">OneFrement</string>
+    <string name="title_activity_t">TActivity</string>
+    <string name="title_activity_two_frement">TwoFrement</string>
+    <string name="title_activity_scro">ScroActivity</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_mydianpu">MydianpuActivity</string>
+    <string name="title_activity_guanyu">GuanyuActivity</string>
+    <string name="title_activity_testnew">TestnewActivity</string>
+    <string name="title_activity_desk">DeskActivity</string>
+    <string name="title_activity_tixiansq">TixiansqActivity</string>
+    <string name="title_activity_tixianjl">TixianjlActivity</string>
+    <string name="title_activity_fenxiaoshang">FenxiaoActivity</string>
+    <string name="title_activity_fenxiaoshangdel">FenxiaoshangdelActivity</string>
+    <string name="title_activity_tixianmessage">TixianmessageActivity</string>
+    <string name="title_activity_xiugaimessage">XiugaimessageActivity</string>
+    <string name="title_activity_yonjinjl">YonjinjlActivity</string>
+    <string name="title_activity_erweima">ErweimaActivity</string>
+    <string name="title_activity_myshanghu">MyshanghuActivity</string>
+    <string name="title_activity_shnegji_new">Shnegji_newActivity</string>
+    <string name="title_activity_sj">SjActivity</string>
+    <string name="title_activity_shoukuan_new">Shoukuan_newActivity</string>
+    <string name="title_activity_add_bank">AddBankActivity</string>
+    <string name="title_activity_zhifu_new">Zhifu_newActivity</string>
+    <string name="title_activity_zhifuerwei">ZhifuerweiActivity</string>
+    <string name="title_activity_message_new">Message_newActivity</string>
+    <string name="title_activity_shengjigz">ShengjigzActivity</string>
+    <string name="title_activity_shengjicz">ShengjiczActivity</string>
+    <string name="title_activity_lianxi">LianxiActivity</string>
+    <string name="title_activity_fenruntixian">FenruntixianActivity</string>
+    <string name="title_activity_yue_tixian">Yue_tixianActivity</string>
+    <string name="title_activity_yue_tixian2">Yue_tixian2Activity</string>
+    <string name="title_activity_myshanghu_new">Myshanghu_newActivity</string>
+    <string name="title_activity_more">MoreActivity</string>
+    <string name="title_activity_zhangdan_yindao">Zhangdan_yindaoActivity</string>
+    <string name="title_activity_add_zd_xin">Add_zd_xinActivity</string>
+    <string name="title_activity_huankuan_jihua">Huankuan_jihuaActivity</string>
+    <string name="menu_work">工作台</string>
+    <string name="menu_msg">消息</string>
+    <string name="menu_my">我的</string>
+    <string name="network_error">世界上最遥远的距离就是没有网络</string>
+    <string name="data_error">无相关数据</string>
+    <string name="service_error">无法访问或网络不稳定</string>
+    <string name="data_excption">数据异常，请重试。</string>
+    <string name="login_msg">正在为您登陆&#8230;</string>
+    <string name="load_msg">正在加载数据&#8230;</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新&#8230; </string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载&#8230;</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="settings">设置</string>
+    <string name="logout">注销</string>
+    <string name="uploading_statu">正在更新订单状态</string>
+    <string name="upload_statu">点击更新状态</string>
+    <string name="upload_sure">确定更新订单状态么？</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="empty_message">不能为空</string>
+    <string name="mobile_validator">手机号格式不正确 !</string>
+    <string name="pass_length_message">密码只能是数字或字母且不少于6位</string>
+    <string name="network_error1">网络通信错误</string>
+    <string name="system_maintenance">系统维护中, 请稍后重试</string>
+    <string name="dialog_title">温馨提示</string>
+    <string name="user_name_must_not_null">用户姓名不能为空</string>
+    <string name="card_number_must_not_null">证件号码不能为空</string>
+    <string name="id_formate_error">身份证号码格式不正确</string>
+    <string name="card_number_must_not_be_null">银行卡号不能为空</string>
+    <string name="card_number_error">银行卡号无效</string>
+    <string name="account_info">账户信息</string>
+    <string name="user_id">用户名：</string>
+    <string name="can_withdraw_amt">可提现金额：</string>
+    <string name="freeze_amt">冻结金额：</string>
+    <string name="taccount_amt">账户总金额：</string>
+    <string name="this_may_withdrawal">今日可提现：</string>
+    <string name="encrypt_manager_error">加密初始化数据出错</string>
+    <string name="input_withdraw_money">请填写提现金额</string>
+    <string name="withdraw_0">提现金额必须大于0</string>
+    <string name="select_account">请选择收款账户</string>
+    <string name="this_withdrawal_amt">提现金额：</string>
+    <string name="prompt_pay_pass_word">请输入交易密码</string>
+    <string name="hint_re_pay_pass_word">请再次输入交易密码</string>
+    <string name="pay_pass_word">交易密码:</string>
+    <string name="calendar_text">行事历</string>
+    <string name="calendar_info_text">运营经理给督导安排考勤打卡</string>
+    <string name="arrange_text">排班</string>
+    <string name="arrange_info_text">店长给员工安排打卡时间,员工只能查看</string>
+    <string name="mychecking_text">我的考勤</string>
+    <string name="mychecking_info_text">员工可查看自己所有的考勤记录</string>
+    <string name="store_text">门店明细</string>
+    <string name="store_info_text">门店股东可以查看门店收支明细</string>
+    <string name="underchecking_text">下属考勤</string>
+    <string name="underchecking_info_text">管理层可查看自己部门员工的考勤情况</string>
+    <string name="revenue_text">营收上报</string>
+    <string name="revenue_info_text">店长将每日收入情况汇报并提交给营运助理审核</string>
+    <string name="goods_manager_text">商品管理</string>
+    <string name="goods_manager_info_text">可快捷设置本店商品促销价格和促销时间段</string>
+    <string name="orders_manager_text">订单管理</string>
+    <string name="orders_manager_info_text">店长可管理微商城实时订单,实时提醒,避免漏单</string>
+    <string name="revenue_manager_text">营收管理</string>
+    <string name="contacts_text">通讯录</string>
+    <string name="contacts_info_text">员工所在门店的通讯录</string>
+    <string name="employee_text">员工管理</string>
+    <string name="work_log_text">工作日志</string>
+    <string name="work_log_info_text">督导填写工作日志，营运助理后台查看</string>
+    <string name="employee_info_text">店长录入员工信息，人事后台审核</string>
+    <string name="credit_card_order_note">注:该明细为用户进入信用卡申请页面时浏览记录</string>
+    <string name="title_activity_erweima_leixing">Erweima_leixingActivity</string>
+    <string name="title_activity_tongdao_zf">Tongdao_zfActivity</string>
+    <string name="title_activity_single">SingleActivity</string>
+    <string name="title_activity_shoukuan">ShoukuanActivity</string>
+    <string name="title_activity_bank_delete">BankDeleteActivity</string>
+    <string name="title_activity_system_message">SystemMessageActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_zhifu">ZhifuActivity</string>
+    <string name="title_activity_ddlb">DdlbActivity</string>
+    <string name="title_activity_minesfz">MinesfzActivity</string>
+    <string name="title_activity_acamera">ACameraActivity</string>
+    <string name="title_activity_minecxk">MinecxkActivity</string>
+    <string name="title_activity_minexyk">MinexykActivity</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <string name="title_activity_tu_wen">TuWenActivity</string>
+    <string name="title_activity_mark_detail">MarkDetailActivity</string>
+    <string name="title_activity_level">LevelActivity</string>
+    <string name="title_activity_ziliao">ZiliaoActivity</string>
+    <string name="title_activity_gou_mai">GouMaiActivity</string>
+    <string name="title_activity_dyq">DyqActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_new_adress">NewAdressActivity</string>
+    <string name="title_activity_adress_list">AdressListActivity</string>
+    <string name="title_activity_goumai2">Goumai2Activity</string>
+    <string name="title_activity_zhang_dan_shou_kuan">ZhangDanShouKuanActivity</string>
+    <string name="title_activity_zhang_dan_qr">ZhangDanQRActivity</string>
+    <string name="title_activity_zhang_dan_kuai_jie">ZhangDanKuaiJieActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_camera2ctivity">Camera2ctivity</string>
+    <string name="title_activity_diyq">DiyqActivity</string>
+    <string name="title_activity_real_name_five">RealName_fiveActivity</string>
+    <string name="title_activity_new_web_view">NewWebViewActivity</string>
+    <string name="title_activity_show_more">ShowMoreActivity</string>
+    <string name="title_activity_sao_ma">SaoMaActivity</string>
+    <string name="title_activity_new_shou_kuan">NewShouKuanActivity</string>
+    <string name="title_activity_guang_gao">GuangGaoActivity</string>
+    <string name="title_activity_zhu_ce1">ZhuCe1Activity</string>
+    <string name="title_activity_zhu_ce2">ZhuCe2Activity</string>
+    <string name="title_activity_zhu_ce">ZhuCeActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_zhang_hu">ZhangHuActivity</string>
+    <string name="title_activity_fan_xianzh">FanXianzhActivity</string>
+    <string name="title_activity_fan_xian_detail_activity1">FanXianDetailActivity1</string>
+    <string name="title_activity_fan_xian_detail">FanXianDetailActivity</string>
+    <string name="title_activity_fan_xiantxmx">FanXiantxmxActivity</string>
+    <string name="title_activity_fanxian_shaixun">FanxianShaixunActivity</string>
+    <string name="title_activity_fan_xian_yer_ti_xian">FanXianYerTiXianActivity</string>
+    <string name="title_activity_zhang_dan">ZhangDanActivity</string>
+    <string name="title_activity_zhang_dang">ZhangDangActivity</string>
+    <string name="title_activity_huo_dong">HuoDongActivity</string>
+    <string name="title_activity_shai_xun">ShaiXunActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_screen">ScreenActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_change_account">ChangeAccountActivity</string>
+    <string name="title_activity_mall_search">MallSearchActivity</string>
+    <string name="title_activity_public_web">PublicWebActivity</string>
+    <string name="title_activity_xin_yong_ka">XinYongKaActivity</string>
+    <string name="title_activity_new_detail">NewDetailActivity</string>
+    <string name="title_activity_bank_list">BankListActivity</string>
+    <string name="title_activity_bank_change">BankChangeActivity</string>
+    <string name="title_activity_bank_add_succ">BankAddSuccActivity</string>
+    <string name="title_activity_bank_ti_xian">BankTiXianActivity</string>
+    <string name="title_activity_bank_ti_xian_detail">BankTiXianDetailActivity</string>
+    <string name="title_activity_bank_ti_xian_detail_time">BankTiXianDetailTimeActivity</string>
+    <string name="title_activity_bank_code_pay">BankCodePayActivity</string>
+    <string name="title_activity_bank_news_detail">BankNewsDetailActivity</string>
+    <string name="title_activity_tui_guang">TuiGuangActivity</string>
+    <string name="title_activity_bank_sig_ning">BankSigNingActivity</string>
+    <string name="title_activity_up_grade">UpGradeActivity</string>
+    <string name="title_activity_fen_run">FenRunActivity</string>
+    <string name="title_activity_fen_run_detail">FenRunDetailActivity</string>
+    <string name="title_activity_system_news">SystemNews</string>
+    <string name="title_activity_xiao_xi">XiaoXiActivity</string>
+    <string name="title_activity_register_x">RegisterActivity_x</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_fan_xian_ti_xian_detail">FanXianTiXianDetailActivity</string>
+    <string name="title_activity_fan_xian_detail_x">FanXianDetailActivity_x</string>
+    <string name="title_activity_fan_xian_detail_xx">FanXianDetailActivity_xx</string>
+
+    <string name="app_name">个推多平台</string>
+    <string name="no_clientid">(none)</string>
+    <string name="start">已启动</string>
+    <string name="clientid">clientid&#160;=&#160;</string>
+    <string name="stop">已停止</string>
+    <string name="clear">清除日志</string>
+    <string name="enablelog">开启debug日志</string>
+    <string name="bindcell">绑定手机号</string>
+    <string name="pmsg">透传测试</string>
+    <string name="psmsg">通知栏测试</string>
+    <string name="transmit">透传内容</string>
+    <string name="begin">开始(h)</string>
+    <string name="end">结束</string>
+    <string name="duration">持续时间(h)</string>
+    <string name="set_heartbeat">心跳间隔(s)</string>
+    <string name="send_msg">发送消息</string>
+    <string name="bind_alias">绑定别名</string>
+    <string name="bind_alias_unknown_exception">绑定别名失败，未知异常</string>
+    <string name="bind_alias_success">绑定别名成功</string>
+    <string name="bind_alias_error_frequency">绑定别名失败，请求频次超限</string>
+    <string name="bind_alias_error_param_error">绑定别名失败，参数错误</string>
+    <string name="bind_alias_error_request_filter">绑定别名失败，请求被过滤</string>
+    <string name="bind_alias_error_cid_lost">绑定别名失败，未获取到cid</string>
+    <string name="bind_alias_error_connect_lost">绑定别名失败，网络错误</string>
+    <string name="bind_alias_error_alias_invalid">绑定别名失败，别名无效</string>
+    <string name="bind_alias_error_sn_invalid">绑定别名失败，sn无效</string>
+    <string name="unbind_alias">解绑别名</string>
+    <string name="unbind_alias_unknown_exception">取消绑定别名失败，未知异常</string>
+    <string name="unbind_alias_success">取消绑定别名成功</string>
+    <string name="unbind_alias_error_frequency">取消绑定别名失败，请求频次超限</string>
+    <string name="unbind_alias_error_param_error">取消绑定别名失败，参数错误</string>
+    <string name="unbind_alias_error_request_filter">取消绑定别名失败，请求被过滤</string>
+    <string name="unbind_alias_error_cid_lost">取消绑定别名失败，未获取到cid</string>
+    <string name="unbind_alias_error_connect_lost">取消绑定别名失败，网络错误</string>
+    <string name="unbind_alias_error_alias_invalid">取消绑定别名失败，别名无效</string>
+    <string name="unbind_alias_error_sn_invalid">取消绑定别名失败，sn无效</string>
+    <string name="add_tag">添加标签</string>
+    <string name="add_tag_unknown_exception">设置标签失败，未知异常</string>
+    <string name="add_tag_success">接口调用成功</string>
+    <string name="add_tag_error_count">接口调用失败, tag数量过大, 最大不能超过200个</string>
+    <string name="add_tag_error_frequency">设置标签失败，频率过快</string>
+    <string name="add_tag_error_null">接口调用失败, tag 为空</string>
+    <string name="add_tag_error_repeat">设置标签失败, 标签重复</string>
+    <string name="add_tag_error_unbind">设置标签失败, 服务未初始化成功</string>
+    <string name="add_tag_error_not_online">还未登陆成功</string>
+    <string name="add_tag_error_black_list">该应用已经在黑名单中,请联系售后支持!</string>
+    <string name="add_tag_error_exceed">已存 tag 超过限制</string>
+    <string name="version">版本号</string>
+    <string name="silentime">静默时间</string>
+    <string name="getclientid">获取cid</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="exit">退出</string>
+    <string name="appid">appid&#160;=&#160;</string>
+    <string name="appkey">appkey&#160;=&#160;</string>
+    <string name="appsecret">appsecret&#160;=&#160;</string>
+    <string name="mastersecret">mastersecret&#160;=&#160;</string>
+    <string name="show_version">当前sdk版本&#160;=&#160;</string>
+    <string name="show_cid">当前应用的cid&#160;=&#160;</string>
+    <string name="set_silenttime">设置静默时间段</string>
+    <string name="push_notification_title">通知栏测试</string>
+    <string name="push_notification_msg_title">通知栏测试</string>
+    <string name="push_notification_msg_content">您收到一条测试消息，点击访问</string>
+    <string name="push_transmission_data">收到一条透传测试消息</string>
+    <string name="network_invalid">对不起，当前网络不可用!</string>
+
+    <!--OCRphoto-->
+    <string name="camera_permission_not_granted">请开启相机权限再进行拍照</string>
+    <string name="camera_permission_confirmation">需要相机权限</string>
+    <string name="error_camera_permission">请求相机权限出错</string>
+
+    <declare-styleable name="ScannerBarView">
+        <attr name="sbvSrc" format="reference" />
+    </declare-styleable>
+    <string name="title_activity_jsbridge">JsbridgeActivity</string>
+    <string name="hk_hkri">请选择还款日</string>
+    <string name="text">修改</string>
+    <string name="hlr">还款日</string>
+    <string name="zdr">请选择账单日</string>
+</resources>

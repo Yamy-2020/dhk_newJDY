@@ -1,0 +1,573 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--个人信息开始-->
+            <LinearLayout
+                android:id="@+id/grxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/public_20_dp"
+                android:layout_marginRight="@dimen/public_20_dp"
+                android:layout_marginTop="@dimen/public_20_dp"
+                android:background="@drawable/rxf_btn1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/li1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_90">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/grxx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:paddingBottom="@dimen/dp_3"
+                            android:text="个人信息"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:paddingTop="@dimen/dp_3"
+                            android:text="全面评估您的信用状况"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_grxx"
+                            android:layout_width="@dimen/public_20_dp"
+                            android:layout_height="@dimen/public_20_dp"
+                            android:src="@drawable/bottom" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/bg_line"/>
+
+                <LinearLayout
+                    android:id="@+id/li1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--实名认证开始-->
+                    <LinearLayout
+                        android:id="@+id/renzheng1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_smrz"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="实名认证"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="可信分+300分"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--实名认证结束-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line"
+                        android:layout_marginLeft="@dimen/dp_20"/>
+
+                    <!--单位认证开始-->
+                    <LinearLayout
+                        android:id="@+id/renzheng2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_dwrz"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="单位认证"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="可信分+50分"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--单位认证结束-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line"
+                        android:layout_marginLeft="@dimen/dp_20"/>
+
+                    <!--社保认证开始-->
+                    <LinearLayout
+                        android:id="@+id/renzheng3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_sbrz"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="社保认证"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="可信分+50分"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--社保认证结束-->
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--个人信息结束-->
+
+            <!--养卡日常开始-->
+            <LinearLayout
+                android:id="@+id/ykrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/public_20_dp"
+                android:layout_marginRight="@dimen/public_20_dp"
+                android:layout_marginTop="@dimen/public_20_dp"
+                android:background="@drawable/rxf_btn1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/li2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_90">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ykrc" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:paddingBottom="@dimen/dp_3"
+                            android:text="日常用卡"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:paddingTop="@dimen/dp_3"
+                            android:text="全面评估您的信用状况"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_ykrc"
+                            android:layout_width="@dimen/public_20_dp"
+                            android:layout_height="@dimen/public_20_dp"
+                            android:src="@drawable/bottom" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/bg_line"/>
+
+                <LinearLayout
+                    android:id="@+id/li2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--信用卡还款开始-->
+                    <LinearLayout
+                        android:id="@+id/huankuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_xykhk"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="完美还款"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="可信分+1分/次"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--信用卡还款结束-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_line"
+                        android:layout_marginLeft="@dimen/dp_20"/>
+
+                    <!--信用卡账单开始-->
+                    <LinearLayout
+                        android:id="@+id/zhangdan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_xykzd"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="信用卡账单"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="导入账单+5分  更新账单+1分"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--信用卡账单结束-->
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--养卡日常结束-->
+
+            <!--升级中心开始-->
+            <LinearLayout
+                android:id="@+id/sjzx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/public_20_dp"
+                android:layout_marginRight="@dimen/public_20_dp"
+                android:layout_marginTop="@dimen/public_20_dp"
+                android:background="@drawable/rxf_btn1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/li3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_90">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sjzx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:paddingBottom="@dimen/dp_3"
+                            android:text="升级中心"
+                            android:textColor="@color/black_33"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:paddingTop="@dimen/dp_3"
+                            android:text="享受尊贵会员专属权限"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_sjzx"
+                            android:layout_width="@dimen/public_20_dp"
+                            android:layout_height="@dimen/public_20_dp"
+                            android:src="@drawable/bottom" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/bg_line"/>
+
+                <LinearLayout
+                    android:id="@+id/li3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--会员升级开始-->
+                    <LinearLayout
+                        android:id="@+id/shengji"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/xy_hysj"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="会员升级"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_65"
+                                android:text="可信分+50分"
+                                android:gravity="top"
+                                android:textColor="@color/blue_2e"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--会员升级结束-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--升级中心结束-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/public_20_dp"
+                android:layout_marginRight="@dimen/public_20_dp"
+                android:layout_marginLeft="@dimen/public_20_dp"
+                android:layout_marginBottom="@dimen/public_60_dp"
+                android:text="注:如违反信用规则,我们有权取消您的可信分获取资格"
+                android:textSize="@dimen/sp_13"
+                android:textColor="@color/black_33"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

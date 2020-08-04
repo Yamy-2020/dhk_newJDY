@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/head" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner"
+                    android:orientation="horizontal">
+
+                    <com.kym.ui.newutilutil.CircleImageView
+                        android:id="@+id/iv_bank_sign"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_bank_sign_card_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*******"
+                            android:textColor="@color/black_33"
+                            android:textSize="17sp"
+                            tools:text="****银行" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_sign_card_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="**** **** **** ***"
+                            android:textColor="@color/gray_a7"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_go" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_bank_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="vertical" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/public_60_dp"
+                    android:gravity="center"
+                    android:textColor="@color/jiugongge"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/change_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/corner2"
+                    android:gravity="center"
+                    android:text="确认签约"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.kym.ui.newutil.DragFloatActionButton
+        android:id="@+id/circle_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:clickable="true"
+        android:src="@drawable/tianjia" />
+
+</RelativeLayout>

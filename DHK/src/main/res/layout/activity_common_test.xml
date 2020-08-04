@@ -1,0 +1,266 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_pull_fenrundel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="请输入api.php/后面部分"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingLeft="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="#555555"
+                android:textSize="16.0sp">
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/test1_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="请输入key"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+                <EditText
+                    android:id="@+id/test1_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="请输入value"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/test2_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="请输入key"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+                <EditText
+                    android:id="@+id/test2_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="请输入value"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/test3_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="请输入key"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+                <EditText
+                    android:id="@+id/test3_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="请输入value"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/test4_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="请输入key"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+                <EditText
+                    android:id="@+id/test4_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="请输入value"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/test5_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="请输入key"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+                <EditText
+                    android:id="@+id/test5_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="请输入value"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="#555555"
+                    android:textSize="16.0sp">
+                </EditText>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login_btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/corner2"
+                android:gravity="center"
+                android:text="测试"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/black_33"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

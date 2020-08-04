@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--背景颜色-->
+    <item android:id="@android:id/background">
+        <shape>
+            <!--<corners  android:radius="0dip" /> 圆角-->
+            <gradient android:startColor="@color/gray_d9"
+                android:endColor="@color/gray_d9"
+                android:angle="270.0"
+                android:centerY="0.75"
+                android:centerColor="@color/gray_d9" /> <!--渐变的背景-->
+            <!-- <stroke android:width="0.5dp" android:color="#7d7f83" /> 描边，边框宽度、颜色 -->
+
+        </shape>
+    </item>
+
+    <!--第二条进度，可以不需要
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners  android:radius="6.0dip" />
+                <gradient android:startColor="#e71a5e"
+                    android:endColor="#6c213a"
+                    android:angle="90.0"
+                    android:centerY="0.75"
+                    android:centerColor="#ac6079" />
+                <stroke android:width="0.5dp" android:color="#7d7f83" />
+            </shape>
+        </clip>
+    </item>-->
+
+    <!--进度颜色-->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <!--<corners android:radius="6.0dip" />-->
+                <gradient
+                    android:startColor="@color/blue_21"
+                    android:endColor="@color/blue_21"
+                    android:centerColor="@color/blue_21"
+                    android:angle="270.0" /><!---->
+                <!-- <stroke android:width="0.5dp" android:color="#7d7f83" />-->
+             </shape>
+         </clip>
+     </item>
+ </layer-list>

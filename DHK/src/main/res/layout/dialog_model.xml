@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_lginerror"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="标题"
+        android:textSize="@dimen/sp_18" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_d9" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_d9" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+
+        <RelativeLayout
+            android:id="@+id/confirm_and_cancle_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/flag_ll"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/gray_dc"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/cancle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/flag_ll"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/confirm_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/flag_ll"
+                android:gravity="center"
+                android:text="确定"
+                android:textSize="@dimen/sp_18" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/single_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <TextView
+                android:id="@+id/confirm1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="确定"
+                android:textSize="@dimen/sp_18" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

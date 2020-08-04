@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_empty_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/default_img"
+            android:gravity="center"
+            android:text="网络未连接"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/tv_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请连接网络后，下拉刷新重试" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/dp_8"
+        android:drawableTop="@drawable/carnull"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_nulls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/dp_8"
+        android:drawableTop="@drawable/nodata"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:visibility="gone" />
+</FrameLayout>
