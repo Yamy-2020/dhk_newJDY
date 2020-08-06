@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/ll111"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -68,6 +69,7 @@
                 android:paddingLeft="@dimen/dp_2"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/blue_2e"
+
                 android:visibility="gone" />
 <!--                android:background="@drawable/morexf"-->
             <TextView

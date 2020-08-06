@@ -124,6 +124,7 @@ public class SPConfig {
      */
     public int getUserInfoStatus() {
         sp = context.getSharedPreferences(Constant.USER_INFO, 0);
+
         return sp.getInt("status", -1);
     }
 

@@ -70,7 +70,7 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
         total = findViewById(R.id.total);
         LinearLayout daichang = findViewById(R.id.daichang);
         daichang.setVisibility(View.GONE);
-        findViewById(R.id.jiaoyi).setVisibility(View.GONE);
+//        findViewById(R.id.jiaoyi).setVisibility(View.GONE);
         xf_total = findViewById(R.id.xf_total);
         hk_total = findViewById(R.id.hk_total);
         sk_total = findViewById(R.id.sk_total);

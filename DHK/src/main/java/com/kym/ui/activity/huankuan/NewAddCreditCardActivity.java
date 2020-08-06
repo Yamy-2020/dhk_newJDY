@@ -82,7 +82,7 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
     private PromptDialog promptDialog;
     private DragFloatActionButton circle_button;
 
-    private CountDownTimer timer = new CountDownTimer(300000, 1000) {
+    private CountDownTimer timer = new CountDownTimer(60000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             long second = millisUntilFinished / 1000;

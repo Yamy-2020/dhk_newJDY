@@ -66,11 +66,12 @@ public class TuiGuangTuDetailsActivity extends BaseActivity implements View.OnCl
     private void initView() {
         intent = getIntent();
         ImageView img = (ImageView) findViewById(R.id.img);
-        TextView baocun = (TextView) findViewById(R.id.baocun);
-        baocun.setVisibility(View.GONE);
+//        TextView baocun = (TextView) findViewById(R.id.baocun);
+//        baocun.setVisibility(View.GONE);
         fenxiang = (TextView) findViewById(R.id.fenxiang);
         fenxiang.setText("保存");
-//        baocun.setOnClickListener(this);
+
+//        .setOnClickListener(this);
         fenxiang.setOnClickListener(this);
         savePicture1(intent.getStringExtra("img"));
         Glide.with(getApplicationContext()).load(intent.getStringExtra("img")).placeholder(R.drawable.tgt_def).dontAnimate().into(img);

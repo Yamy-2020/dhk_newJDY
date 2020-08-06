@@ -1,14 +1,18 @@
 package com.kym.ui.activity.bpbro_safe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.RegisterActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.IService;
@@ -22,6 +26,8 @@ import java.util.HashMap;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 
 public class RegisterActivity_x extends BaseActivity {
 
@@ -42,7 +48,7 @@ public class RegisterActivity_x extends BaseActivity {
     @BindView(R.id.submit)
     TextView submit;
     private int flag; // 标记是忘记密码还是注册 0注册 1忘记密码 2修改密码
-    private CountDownTimer timer = new CountDownTimer(300000, 1000) {
+    private CountDownTimer timer = new CountDownTimer(60000, 1000) {
         @Override
         public void onTick(long l) {
             msgBtn.setText(String.format("重新获取(%ds)", l / 1000));
@@ -120,9 +126,16 @@ public class RegisterActivity_x extends BaseActivity {
                 YanzhengInfo_old response = (YanzhengInfo_old) JsonUtils.parse((String) result, YanzhengInfo_old.class);
                 if (response.getResult().getCode() == 10000) {
                     if (flag == 1) {
-                        ToastUtil.showTextToas(getApplicationContext(), "重置密码成功");
+                     /*   ToastUtil.showTextToas(getApplicationContext(), "重置密码成功,即将退出");
+
+                        restartApp(getApplicationContext());*/
+                     startActivity(new Intent(RegisterActivity_x.this, LoginActivity.class));
+
                     } else {
-                        ToastUtil.showTextToas(getApplicationContext(), "修改密码成功");
+                        startActivity(new Intent(RegisterActivity_x.this, LoginActivity.class));
+
+                      /*  restartApp(getApplicationContext());
+                        ToastUtil.showTextToas(getApplicationContext(), "修改密码成功");*/
                     }
                     finish();
                 } else {

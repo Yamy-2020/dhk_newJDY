@@ -30,11 +30,11 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int leak_canary_display_leak = 0x7f0c0154;
-        public static final int leak_canary_heap_dump_toast = 0x7f0c0155;
-        public static final int leak_canary_leak_row = 0x7f0c0156;
-        public static final int leak_canary_ref_row = 0x7f0c0157;
-        public static final int leak_canary_ref_top_row = 0x7f0c0158;
+        public static final int leak_canary_display_leak = 0x7f0c0155;
+        public static final int leak_canary_heap_dump_toast = 0x7f0c0156;
+        public static final int leak_canary_leak_row = 0x7f0c0157;
+        public static final int leak_canary_ref_row = 0x7f0c0158;
+        public static final int leak_canary_ref_top_row = 0x7f0c0159;
     }
     public static final class string {
         private string() {}

@@ -361,7 +361,7 @@ public class New_DaiChang_JieKuan_Activity extends BaseActivity implements View.
 
     // 开始倒计时
     private void startCountDown() {
-        timer = new CountDownTimer(300000, 1000) {
+        timer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
                 tvGetCode.setText(String.format("重新发送(%d秒)", l / 1000));

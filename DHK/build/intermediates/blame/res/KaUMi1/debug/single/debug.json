@@ -416,6 +416,10 @@
         "source": "E:\\android\\dhk_newJDY\\ocr_ui\\build\\intermediates\\packaged_res\\debug\\layout\\bd_ocr_take_picture.xml"
     },
     {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_head1.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\head1.xml"
+    },
+    {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi_fenrun_zong.png.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\fenrun_zong.png"
     },
@@ -3978,6 +3982,10 @@
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi_new_user_xinyongka.png.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\new_user_xinyongka.png"
+    },
+    {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable_textview_color.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\textview_color.xml"
     },
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout-v21_notification_action.xml.flat",
@@ -7880,6 +7888,10 @@
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\bd_ocr_close.png"
     },
     {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable_textview_shape1.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\textview_shape1.xml"
+    },
+    {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xhdpi-v4_bd_ocr_cancel.png.flat",
         "source": "E:\\android\\dhk_newJDY\\ocr_ui\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\bd_ocr_cancel.png"
     },
@@ -8826,6 +8838,10 @@
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\raw_meglive_failed.mp3.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\raw\\meglive_failed.mp3"
+    },
+    {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable_textview_sha.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\textview_sha.xml"
     },
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_activity_men_dian.xml.flat",

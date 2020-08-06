@@ -31,8 +31,10 @@ import com.baidu.ocr.ui.camera.CameraNativeHelper;
 import com.baidu.ocr.ui.camera.CameraView;
 import com.igexin.sdk.PushManager;
 import com.kym.ui.BackDialog3;
+import com.kym.ui.NewHomeFragment;
 import com.kym.ui.R;
 import com.kym.ui.SearchActivity;
+import com.kym.ui.ThreeFrement_new;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.bpbro_untils.bank_ocr.FileUtil;
 import com.kym.ui.activity.sun_util.ToastUtil;
@@ -415,6 +417,9 @@ public class Bpbro_Idcardid_Activity extends BaseActivity {
                     String mima = pref.getString("mima", "");
                     login(zhanghao, mima);
                     ToastUtil.showTextToas(getApplicationContext(), "实名认证成功");
+                    Intent intent = getIntent();
+                    intent.putExtra("code",response.getResult().getCode());
+                    setResult(1,intent);
                     finish();
                 } else {
                     ToastUtil.showTextToas(getApplicationContext(), response.getResult().getMsg());

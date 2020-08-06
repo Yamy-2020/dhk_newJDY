@@ -20,7 +20,7 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
 
   private View view2131296671;
 
-  private View view2131296985;
+  private View view2131296986;
 
   private View view2131296336;
 
@@ -32,7 +32,7 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
 
   private View view2131296341;
 
-  private View view2131297233;
+  private View view2131297234;
 
   @UiThread
   public Bpbro_Idcardid_Activity_ViewBinding(Bpbro_Idcardid_Activity target) {
@@ -57,7 +57,7 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
     target.userName = Utils.findRequiredViewAsType(source, R.id.user_name, "field 'userName'", EditText.class);
     view = Utils.findRequiredView(source, R.id.name_photo, "field 'namePhoto' and method 'onViewClicked'");
     target.namePhoto = Utils.castView(view, R.id.name_photo, "field 'namePhoto'", TextView.class);
-    view2131296985 = view;
+    view2131296986 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -118,7 +118,7 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
     target.mobileNo = Utils.findRequiredViewAsType(source, R.id.mobile_no, "field 'mobileNo'", EditText.class);
     view = Utils.findRequiredView(source, R.id.submit, "field 'submit' and method 'onViewClicked'");
     target.submit = Utils.castView(view, R.id.submit, "field 'submit'", TextView.class);
-    view2131297233 = view;
+    view2131297234 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -154,8 +154,8 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
 
     view2131296671.setOnClickListener(null);
     view2131296671 = null;
-    view2131296985.setOnClickListener(null);
-    view2131296985 = null;
+    view2131296986.setOnClickListener(null);
+    view2131296986 = null;
     view2131296336.setOnClickListener(null);
     view2131296336 = null;
     view2131296339.setOnClickListener(null);
@@ -166,7 +166,7 @@ public class Bpbro_Idcardid_Activity_ViewBinding implements Unbinder {
     view2131296333 = null;
     view2131296341.setOnClickListener(null);
     view2131296341 = null;
-    view2131297233.setOnClickListener(null);
-    view2131297233 = null;
+    view2131297234.setOnClickListener(null);
+    view2131297234 = null;
   }
 }

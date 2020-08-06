@@ -79,9 +79,9 @@ public class Sj_oneAdapter extends BaseAdapter {
         holder.textV_zhijie_num.setText("累计" + e + " 人");
         holder.textV_jianjie_num.setText("间接  " + info.getNum2() + " 人");
 
-
         Glide.with(activity).load(info.getHead_img()).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
                 .into(holder.imageView);
+
 
 
         return convertView;

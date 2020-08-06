@@ -21,234 +21,242 @@
             android:text="权益优惠"
             android:textColor="#D2BD83" />
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_sha"
             android:layout_marginLeft="@dimen/dp_9"
             android:layout_marginTop="@dimen/dp_24"
-            android:layout_marginRight="@dimen/dp_9"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:padding="@dimen/dp_8"
-                android:textColor="#fff" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="交易奖励"
-                android:textColor="#fff" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="直推奖励"
-                android:textColor="#fff" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="团队奖励"
-                android:textColor="#fff" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_marginLeft="@dimen/dp_9"
-            android:layout_marginRight="@dimen/dp_9"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="收款"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
-            <TextView
-                android:id="@+id/tv3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-                android:textColor="#fff" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_marginLeft="@dimen/dp_9"
-            android:layout_marginRight="@dimen/dp_9"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="还款"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="30%"
-                android:textColor="#fff" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp_9"
-            android:layout_marginRight="@dimen/dp_9"
             android:layout_marginBottom="@dimen/dp_11"
-            android:orientation="horizontal">
+
+            android:layout_marginRight="@dimen/dp_9"
+            android:orientation="vertical">
 
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="智收"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv8"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/tv9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/textview_shape"
-                android:gravity="center"
-                android:padding="@dimen/dp_8"
-                android:text="40%"
-
-                android:textColor="#fff" />
+                android:orientation="horizontal">
 
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:padding="@dimen/dp_8"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="交易奖励"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="直推奖励"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="团队奖励"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="收款"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="还款"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="30%"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="智收"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_shape"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="40%"
+
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
         </LinearLayout>
+
         <!-- <View
              android:layout_width="wrap_content"
              android:layout_height="1dp"

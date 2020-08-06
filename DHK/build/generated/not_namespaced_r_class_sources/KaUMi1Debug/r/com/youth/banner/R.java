@@ -39,7 +39,7 @@ public final class R {
         public static final int black_background = 0x7f08009d;
         public static final int gray_radius = 0x7f08014e;
         public static final int no_banner = 0x7f080265;
-        public static final int white_radius = 0x7f08038e;
+        public static final int white_radius = 0x7f080391;
     }
     public static final class id {
         private id() {}
@@ -57,10 +57,10 @@ public final class R {
         public static final int fit_start = 0x7f090150;
         public static final int fit_xy = 0x7f090151;
         public static final int indicatorInside = 0x7f090203;
-        public static final int matrix = 0x7f0902c8;
-        public static final int numIndicator = 0x7f0902ee;
-        public static final int numIndicatorInside = 0x7f0902ef;
-        public static final int titleView = 0x7f090461;
+        public static final int matrix = 0x7f0902c9;
+        public static final int numIndicator = 0x7f0902ef;
+        public static final int numIndicatorInside = 0x7f0902f0;
+        public static final int titleView = 0x7f090462;
     }
     public static final class layout {
         private layout() {}

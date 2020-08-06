@@ -63,12 +63,12 @@ public final class R {
         public static final int all = 0x7f09003b;
         public static final int basic = 0x7f09005e;
         public static final int chains = 0x7f0900aa;
-        public static final int none = 0x7f0902e9;
-        public static final int packed = 0x7f0902fa;
-        public static final int parent = 0x7f0902fd;
-        public static final int spread = 0x7f0903c9;
-        public static final int spread_inside = 0x7f0903ca;
-        public static final int wrap = 0x7f09054f;
+        public static final int none = 0x7f0902ea;
+        public static final int packed = 0x7f0902fb;
+        public static final int parent = 0x7f0902fe;
+        public static final int spread = 0x7f0903ca;
+        public static final int spread_inside = 0x7f0903cb;
+        public static final int wrap = 0x7f090550;
     }
     public static final class styleable {
         private styleable() {}

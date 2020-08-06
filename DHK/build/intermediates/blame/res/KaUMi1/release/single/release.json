@@ -3660,6 +3660,10 @@
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\zl_sh.png"
     },
     {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\release\\layout_head1.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\head1.xml"
+    },
+    {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\release\\drawable-xhdpi_shengjizh.png.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xhdpi\\shengjizh.png"
     },

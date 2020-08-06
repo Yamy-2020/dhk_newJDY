@@ -34,22 +34,12 @@
 
         <TextView
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_265"
-            android:layout_marginTop="-22dp"
-            android:text="¥"
-            android:textColor="#fff"
-
-            android:textSize="@dimen/sp_15" />
-        <TextView
-
             android:id="@+id/payment_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_280"
-            android:layout_marginTop="-22dp"
-            android:text="88"
+            android:layout_marginLeft="@dimen/dp_265"
+            android:layout_marginTop="-18dp"
+            android:text="¥  88"
             android:textColor="#fff"
 
             android:textSize="@dimen/sp_15" />

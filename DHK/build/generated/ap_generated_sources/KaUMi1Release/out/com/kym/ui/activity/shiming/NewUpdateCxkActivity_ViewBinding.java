@@ -30,7 +30,7 @@ public class NewUpdateCxkActivity_ViewBinding implements Unbinder {
 
   private View view2131296341;
 
-  private View view2131297233;
+  private View view2131297234;
 
   @UiThread
   public NewUpdateCxkActivity_ViewBinding(NewUpdateCxkActivity target) {
@@ -105,7 +105,7 @@ public class NewUpdateCxkActivity_ViewBinding implements Unbinder {
     target.mobileNo = Utils.findRequiredViewAsType(source, R.id.mobile_no, "field 'mobileNo'", EditText.class);
     view = Utils.findRequiredView(source, R.id.submit, "field 'submit' and method 'onViewClicked'");
     target.submit = Utils.castView(view, R.id.submit, "field 'submit'", TextView.class);
-    view2131297233 = view;
+    view2131297234 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -148,7 +148,7 @@ public class NewUpdateCxkActivity_ViewBinding implements Unbinder {
     view2131296333 = null;
     view2131296341.setOnClickListener(null);
     view2131296341 = null;
-    view2131297233.setOnClickListener(null);
-    view2131297233 = null;
+    view2131297234.setOnClickListener(null);
+    view2131297234 = null;
   }
 }

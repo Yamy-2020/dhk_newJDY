@@ -25,9 +25,9 @@ public class SheZhiActivity_ViewBinding implements Unbinder {
 
   private View view2131296869;
 
-  private View view2131297401;
+  private View view2131297402;
 
-  private View view2131297673;
+  private View view2131297674;
 
   @UiThread
   public SheZhiActivity_ViewBinding(SheZhiActivity target) {
@@ -79,7 +79,7 @@ public class SheZhiActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tuichu, "field 'tuichu' and method 'onViewClicked'");
     target.tuichu = Utils.castView(view, R.id.tuichu, "field 'tuichu'", LinearLayout.class);
-    view2131297401 = view;
+    view2131297402 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -88,7 +88,7 @@ public class SheZhiActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.zhuxiao, "field 'zhuxiao' and method 'onViewClicked'");
     target.zhuxiao = Utils.castView(view, R.id.zhuxiao, "field 'zhuxiao'", LinearLayout.class);
-    view2131297673 = view;
+    view2131297674 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -121,9 +121,9 @@ public class SheZhiActivity_ViewBinding implements Unbinder {
     view2131296866 = null;
     view2131296869.setOnClickListener(null);
     view2131296869 = null;
-    view2131297401.setOnClickListener(null);
-    view2131297401 = null;
-    view2131297673.setOnClickListener(null);
-    view2131297673 = null;
+    view2131297402.setOnClickListener(null);
+    view2131297402 = null;
+    view2131297674.setOnClickListener(null);
+    view2131297674 = null;
   }
 }

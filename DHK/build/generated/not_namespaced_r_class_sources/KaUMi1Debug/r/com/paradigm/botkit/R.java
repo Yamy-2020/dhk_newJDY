@@ -112,55 +112,55 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int pd_char_fragment = 0x7f090309;
-        public static final int pd_emoji_back = 0x7f09030a;
-        public static final int pd_input_audio = 0x7f09030b;
-        public static final int pd_input_emoji = 0x7f09030c;
-        public static final int pd_input_key = 0x7f09030d;
-        public static final int pd_input_plugin = 0x7f09030e;
-        public static final int pd_input_record = 0x7f09030f;
-        public static final int pd_input_send = 0x7f090310;
-        public static final int pd_input_text = 0x7f090311;
-        public static final int pd_message_back = 0x7f090312;
-        public static final int pd_message_content_back = 0x7f090313;
-        public static final int pd_message_feedback_down = 0x7f090314;
-        public static final int pd_message_feedback_up = 0x7f090315;
-        public static final int pd_message_item_cover = 0x7f090316;
-        public static final int pd_message_item_digest = 0x7f090317;
-        public static final int pd_message_item_duration = 0x7f090318;
-        public static final int pd_message_item_image = 0x7f090319;
-        public static final int pd_message_item_title = 0x7f09031a;
-        public static final int pd_message_list = 0x7f09031b;
-        public static final int pd_message_portrait_l = 0x7f09031c;
-        public static final int pd_message_portrait_r = 0x7f09031d;
-        public static final int pd_message_time = 0x7f09031e;
-        public static final int pd_plgin_back = 0x7f09031f;
-        public static final int pd_plgin_item_image = 0x7f090320;
-        public static final int pd_plgin_item_title = 0x7f090321;
-        public static final int pd_record_back = 0x7f090322;
-        public static final int pd_record_state = 0x7f090323;
-        public static final int pd_record_volume = 0x7f090324;
-        public static final int pd_suggestion_list = 0x7f090325;
+        public static final int pd_char_fragment = 0x7f09030a;
+        public static final int pd_emoji_back = 0x7f09030b;
+        public static final int pd_input_audio = 0x7f09030c;
+        public static final int pd_input_emoji = 0x7f09030d;
+        public static final int pd_input_key = 0x7f09030e;
+        public static final int pd_input_plugin = 0x7f09030f;
+        public static final int pd_input_record = 0x7f090310;
+        public static final int pd_input_send = 0x7f090311;
+        public static final int pd_input_text = 0x7f090312;
+        public static final int pd_message_back = 0x7f090313;
+        public static final int pd_message_content_back = 0x7f090314;
+        public static final int pd_message_feedback_down = 0x7f090315;
+        public static final int pd_message_feedback_up = 0x7f090316;
+        public static final int pd_message_item_cover = 0x7f090317;
+        public static final int pd_message_item_digest = 0x7f090318;
+        public static final int pd_message_item_duration = 0x7f090319;
+        public static final int pd_message_item_image = 0x7f09031a;
+        public static final int pd_message_item_title = 0x7f09031b;
+        public static final int pd_message_list = 0x7f09031c;
+        public static final int pd_message_portrait_l = 0x7f09031d;
+        public static final int pd_message_portrait_r = 0x7f09031e;
+        public static final int pd_message_time = 0x7f09031f;
+        public static final int pd_plgin_back = 0x7f090320;
+        public static final int pd_plgin_item_image = 0x7f090321;
+        public static final int pd_plgin_item_title = 0x7f090322;
+        public static final int pd_record_back = 0x7f090323;
+        public static final int pd_record_state = 0x7f090324;
+        public static final int pd_record_volume = 0x7f090325;
+        public static final int pd_suggestion_list = 0x7f090326;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int pd_activity_chat = 0x7f0c0179;
-        public static final int pd_fragment_chat = 0x7f0c017a;
-        public static final int pd_item_message = 0x7f0c017b;
-        public static final int pd_item_message_audio = 0x7f0c017c;
-        public static final int pd_item_message_evaluate = 0x7f0c017d;
-        public static final int pd_item_message_image = 0x7f0c017e;
-        public static final int pd_item_message_menu = 0x7f0c017f;
-        public static final int pd_item_message_menuhead = 0x7f0c0180;
-        public static final int pd_item_message_menuitem = 0x7f0c0181;
-        public static final int pd_item_message_richtext = 0x7f0c0182;
-        public static final int pd_item_message_text = 0x7f0c0183;
-        public static final int pd_item_message_tip = 0x7f0c0184;
-        public static final int pd_item_message_unsupport = 0x7f0c0185;
-        public static final int pd_item_message_workorder = 0x7f0c0186;
-        public static final int pd_item_suggestion = 0x7f0c0187;
-        public static final int pd_view_plugin_item = 0x7f0c0188;
+        public static final int pd_activity_chat = 0x7f0c017a;
+        public static final int pd_fragment_chat = 0x7f0c017b;
+        public static final int pd_item_message = 0x7f0c017c;
+        public static final int pd_item_message_audio = 0x7f0c017d;
+        public static final int pd_item_message_evaluate = 0x7f0c017e;
+        public static final int pd_item_message_image = 0x7f0c017f;
+        public static final int pd_item_message_menu = 0x7f0c0180;
+        public static final int pd_item_message_menuhead = 0x7f0c0181;
+        public static final int pd_item_message_menuitem = 0x7f0c0182;
+        public static final int pd_item_message_richtext = 0x7f0c0183;
+        public static final int pd_item_message_text = 0x7f0c0184;
+        public static final int pd_item_message_tip = 0x7f0c0185;
+        public static final int pd_item_message_unsupport = 0x7f0c0186;
+        public static final int pd_item_message_workorder = 0x7f0c0187;
+        public static final int pd_item_suggestion = 0x7f0c0188;
+        public static final int pd_view_plugin_item = 0x7f0c0189;
     }
     public static final class string {
         private string() {}

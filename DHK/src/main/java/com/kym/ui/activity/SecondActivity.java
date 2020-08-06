@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -64,13 +66,10 @@ public class SecondActivity extends FragmentActivity {
     private ThreeFrement_new mineFragment; //我的
     private refreshBroadcastReceiver receiver;//刷新的广播
     private long exitTime = 0;
-    private int s;
+    private int is_shop;
     private KeTangFragment keTangFragment;
     private String[] tabTitles;
     private int[] bitmap;
-    private String[] tabTitles1;
-    private int[] bitmap1;
-    private int str=1;
 
     @Override
     protected void onResume() {
@@ -103,13 +102,12 @@ public class SecondActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        ifshop();
         setContentView(R.layout.activity_second);
         ButterKnife.bind(this);
         activity = this;
         sp = new SharedPreferencesHelper(SecondActivity.this);
-        ifshop();
-        initView();
-        registerBroadCast();
+
     }
 
     @Override
@@ -133,30 +131,34 @@ public class SecondActivity extends FragmentActivity {
 
     private void addTab3() {
         LayoutInflater inflater = getLayoutInflater();
+
+
+        if (is_shop==0){
+            tabTitles = new String[]{"首页", "可信分", "我的"};
+            bitmap = new int[]{R.drawable.icon_shoukuan_selector,
+                    R.drawable.icon_rongxinfen_selector,
+                    R.drawable.icon_tongji_selector};
+        }else if(is_shop==1){
+
+            tabTitles = new String[]{"首页", "小课堂", "我的"};
+            bitmap = new int[]{R.drawable.icon_shoukuan_selector,
+                    R.drawable.icon_ketang_selector,
+                    R.drawable.icon_tongji_selector};
+        }
         for (int i = 0; i < 3; i++) {
             @SuppressLint("InflateParams") final View tab = inflater.inflate(R.layout.tm_tab_btn, null);
             ImageView imageView = tab.findViewById(R.id.tab_icon);
             imageView2 = tab.findViewById(R.id.tab_icon_hint);
             TextView textView = tab.findViewById(R.id.tab_icon_titles);
 
+            Log.e("22222222222222", "addTab3: 11111111"+is_shop );
 
-            if (str!=s&&s==0){
-                tabTitles = new String[]{"首页", "可信分", "我的"};
-                bitmap = new int[]{R.drawable.icon_shoukuan_selector,
-//                    R.drawable.icon_daichang_selector,
-                        R.drawable.icon_rongxinfen_selector,
-                        R.drawable.icon_tongji_selector};
+            if (is_shop==0){
                 textView.setText(tabTitles[i]);
                 imageView.setBackgroundResource(bitmap[i]);
-            }else if(str!=s){
-
-                tabTitles1 = new String[]{"首页", "小课堂", "我的"};
-                 bitmap1 = new int[]{R.drawable.icon_shoukuan_selector,
-//                    R.drawable.icon_daichang_selector,
-                        R.drawable.icon_ketang_selector,
-                        R.drawable.icon_tongji_selector};
-                textView.setText(tabTitles1[i]);
-                imageView.setBackgroundResource(bitmap1[i]);
+            }else if(is_shop==1){
+                textView.setText(tabTitles[i]);
+                imageView.setBackgroundResource(bitmap[i]);
             }
 
             final int finalI = i;
@@ -190,7 +192,7 @@ public class SecondActivity extends FragmentActivity {
                         case 1:
                             resetFragment(transaction);
 
-                            if (s==0&&s!=1){
+                            if (is_shop==0){
 
                                 if (rongXinFenFragment == null) {
                                     rongXinFenFragment = new RongXinFenFragment();
@@ -200,7 +202,7 @@ public class SecondActivity extends FragmentActivity {
                                 }
                                 resetTab();
                                 tab.setSelected(true);
-                            }else if (s==1&&s!=0){
+                            }else if (is_shop==1){
                                 if (keTangFragment == null) {
                                 keTangFragment = new KeTangFragment();
                                 transaction.add(R.id.container_second, keTangFragment).commit();
@@ -231,6 +233,27 @@ public class SecondActivity extends FragmentActivity {
             llTab.addView(tab, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1));
         }
     }
+
+
+    Handler mHandler = new Handler(){
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 0:
+                    //do something,refresh UI;
+                    initView();
+                    registerBroadCast();
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
+
     protected void ifshop() {
         HashMap<String, String> params = new HashMap<>();
         params.put("version",LoginActivity.VERSION);
@@ -240,9 +263,11 @@ public class SecondActivity extends FragmentActivity {
             public void onSuccess(Object result) {
                 KeXinFenBean shop = (KeXinFenBean) JsonUtils.parse((String) result, KeXinFenBean.class);
                 if (shop.getResult().getCode() == 10000) {
-                    s = shop.getData().getShop();
-                    str = s;
-                    Log.e("1111111", "onSuccess: " + s+",,,,,,,,,"+str);
+                    is_shop = shop.getData().getShop();
+                    Log.e("is_shop ==== ", "onSuccess: " + is_shop);
+                    mHandler.sendEmptyMessage(0);
+
+
 
                 } /*else {
                     ToastUtil.showTextToas(getContext(), "请联系客服");

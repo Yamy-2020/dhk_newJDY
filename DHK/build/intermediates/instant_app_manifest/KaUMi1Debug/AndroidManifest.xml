@@ -3,7 +3,7 @@
     package="com.kym.ui"
     android:targetSandboxVersion="2"
     android:versionCode="2"
-    android:versionName="1.1.0" >
+    android:versionName="1.2.0" >
 
     <uses-sdk
         android:minSdkVersion="16"

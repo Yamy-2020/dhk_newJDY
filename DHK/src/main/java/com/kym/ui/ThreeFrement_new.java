@@ -29,7 +29,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
@@ -42,7 +41,6 @@ import com.kym.ui.activity.MyCXKActivity;
 import com.kym.ui.activity.SheZhiActivity;
 import com.kym.ui.activity.bpbro_safe.UserAnQuanActivity;
 import com.kym.ui.activity.bpbro_real_name.Bpbro_Idcardid_Activity;
-import com.kym.ui.activity.shiming.ZhengJianActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.log;
 import com.kym.ui.activity.news.NewsActivity;
@@ -63,15 +61,12 @@ import com.kym.ui.util.JsonUtils;
 import com.kym.ui.util.PerMisson;
 import com.kym.ui.util.UpLoadImage;
 import com.kym.ui.wxapi.WXEntryActivity;
-
 import org.json.JSONObject;
-
 import java.io.File;
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.HashMap;
-
 import widget.CustomPopWindow;
-
 import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 import static com.kym.ui.util.ShareUtil.bmpToByteArray;
 import static com.zzss.jindy.appconfig.Clone.OMID;
@@ -354,6 +349,7 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         }
     }
 
+
     @SuppressLint("SetTextI18n")
     private void initView() {
         id = layout.findViewById(R.id.shiming_sanjiao);
@@ -363,6 +359,7 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         status_sm = layout.findViewById(R.id.status);
         if (spConfig == null) {
             spConfig = SPConfig.getInstance(getActivity().getApplicationContext());
+
         }
         int status = spConfig.getUserInfoStatus();
         if (status == 1) {
@@ -402,21 +399,6 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         yaoqing.setOnClickListener(this);
         user_lingqian = layout.findViewById(R.id.user_lingqian);
         user_lingqian.setOnClickListener(this);
-     /*   if (OMID.equals("1H1AJD6SLKVADDM6")) {
-            wdkf.setText("卡医生");
-            lingqian.setText("资金保障险");
-            user_lingqian.setVisibility(View.VISIBLE);
-            if (SPConfig.getInstance(getContext()).getUserAllInfoNew().getIs_yuyue().equals("1")) {
-                layout.findViewById(R.id.user_zhangdan).setVisibility(View.VISIBLE);
-            } else {
-                layout.findViewById(R.id.user_zhangdan).setVisibility(View.GONE);
-            }
-        } else if (OMID.equals("rd500ZbaNVcKVr8g")) {
-            wdkf.setText("卡医生");
-        } else {
-            wdkf.setText("我的客服");
-            layout.findViewById(R.id.user_zhangdan).setVisibility(View.GONE);
-        }*/
         ceshi = layout.findViewById(R.id.ceshi);
         ceshi.setOnClickListener(this);
         if (OMID.equals("R4PGM59YOCLZLOG6")) {
@@ -427,9 +409,10 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         textV_dj = layout.findViewById(R.id.textv_set_dj);
         textV_fl = layout.findViewById(R.id.textv_set_fl);
         image_head = layout.findViewById(R.id.imageV_dj_log);
+        Glide.with(getActivity()).load(this.userAllInfoNew.getHeadimage()).error(R.drawable.image_home)
+                .dontAnimate().into(image_head);
         image_head.setOnClickListener(this);
-     /*   Glide.with(getActivity()).load(this.userAllInfoNew.getHeadimage()).error(R.drawable.icon)
-                .dontAnimate().into(image_head);*/
+
     }
 
     private void getImage() {
@@ -552,7 +535,8 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                 }
                 int status = spConfig.getUserInfoStatus();
                 if (status == 1) {
-                    startActivity(new Intent(getActivity(), Bpbro_Idcardid_Activity.class));
+                    Intent intent1 = new Intent(getActivity(), Bpbro_Idcardid_Activity.class);
+                    startActivityForResult(intent1,1);
                 }
                 break;
             case R.id.change_password:
@@ -741,5 +725,16 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                 ToastUtil.showTextToas(getContext(), message);
             }
         });
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
+        super.startActivityForResult(intent, requestCode, options);
+        if (requestCode==1){
+            status_sm.setText("已实名");
+            if (status_sm.getText().equals("已实名")){
+                id.setVisibility(View.INVISIBLE);
+            }
+        }
     }
 }

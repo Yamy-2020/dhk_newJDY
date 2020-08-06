@@ -79,7 +79,8 @@ public class ShangHuListAdapter extends BaseAdapter {
         }
 
         final MyChild.DataBean info = mList.get(position);
-        Glide.with(activity).load(headImg).into(holder.header);
+        Glide.with(activity).load(headImg).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
+                .into(holder.header);
         if (null == info.getName() || info.getName().length() == 0) {
             holder.textv_sr_name.setText("未实名");
         } else {

@@ -16,13 +16,13 @@ import java.lang.Override;
 public class New_Test_Fragment_ViewBinding implements Unbinder {
   private New_Test_Fragment target;
 
-  private View view2131297581;
-
   private View view2131297582;
 
   private View view2131297583;
 
   private View view2131297584;
+
+  private View view2131297585;
 
   private View view2131296877;
 
@@ -36,7 +36,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     target.banner = Utils.findRequiredViewAsType(source, R.id.banner, "field 'banner'", CustomBanner.class);
     view = Utils.findRequiredView(source, R.id.view_new_home_1, "field 'viewNewHome1' and method 'onViewClicked'");
     target.viewNewHome1 = view;
-    view2131297581 = view;
+    view2131297582 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +45,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.view_new_home_2, "field 'viewNewHome2' and method 'onViewClicked'");
     target.viewNewHome2 = view;
-    view2131297582 = view;
+    view2131297583 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.view_new_home_3, "field 'viewNewHome3' and method 'onViewClicked'");
     target.viewNewHome3 = view;
-    view2131297583 = view;
+    view2131297584 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.view_new_home_4, "field 'viewNewHome4' and method 'onViewClicked'");
     target.viewNewHome4 = view;
-    view2131297584 = view;
+    view2131297585 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,14 +105,14 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     target.liCourse = null;
     target.liProblem = null;
 
-    view2131297581.setOnClickListener(null);
-    view2131297581 = null;
     view2131297582.setOnClickListener(null);
     view2131297582 = null;
     view2131297583.setOnClickListener(null);
     view2131297583 = null;
     view2131297584.setOnClickListener(null);
     view2131297584 = null;
+    view2131297585.setOnClickListener(null);
+    view2131297585 = null;
     view2131296877.setOnClickListener(null);
     view2131296877 = null;
     view2131296889.setOnClickListener(null);

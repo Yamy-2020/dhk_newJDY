@@ -20,7 +20,7 @@
         android:layout_height="@dimen/dp_50"
         android:layout_alignParentBottom="true">
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -36,7 +36,7 @@
                 android:text="保存"
                 android:textColor="@color/black_33"
                 android:textSize="@dimen/sp_15" />
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="@dimen/dp_0"

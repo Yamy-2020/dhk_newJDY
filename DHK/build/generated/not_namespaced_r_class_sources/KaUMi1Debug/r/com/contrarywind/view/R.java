@@ -47,7 +47,7 @@ public final class R {
 
         public static final int center = 0x7f0900a4;
         public static final int left = 0x7f090258;
-        public static final int right = 0x7f09035a;
+        public static final int right = 0x7f09035b;
     }
     public static final class string {
         private string() {}

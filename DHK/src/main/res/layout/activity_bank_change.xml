@@ -5,7 +5,7 @@
     android:background="@color/bg_line"
     android:orientation="vertical">
 
-    <include layout="@layout/head" />
+    <include layout="@layout/head1" />
 
     <ScrollView
         android:layout_width="match_parent"

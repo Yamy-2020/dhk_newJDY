@@ -277,7 +277,8 @@ public class RongXinFenFragment extends Fragment {
                 break;
             case R.id.xinyong_zuji:
                 if (canJump()) {
-                    startActivity(new Intent(getActivity(), XinYong_ZuJi_Activity.class));
+                    tipView("暂未开放,敬请期待");
+//                    startActivity(new Intent(getActivity(), XinYong_ZuJi_Activity.class));
                 }
                 break;
             case R.id.xinyong_guize:

@@ -46,7 +46,7 @@ public class HKCardAdapter extends RecyclerView.Adapter {
                 viewHolder.dc_type.setText("还款金额");
                 viewHolder.dc_img.setImageResource(R.drawable.dc_hk);
                 viewHolder.dc_money.setText("+" + (Double.parseDouble(model.getAmount()) / 100) + "元");
-                viewHolder.dc_money.setTextColor(0xFFFF6666);
+                viewHolder.dc_money.setTextColor(0xFFD9BC84);
             }
 
             viewHolder.dc_time.setText(getDateToString10(Long.parseLong(model.getTasktime())));

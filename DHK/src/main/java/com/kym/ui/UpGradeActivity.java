@@ -2,8 +2,6 @@ package com.kym.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -48,7 +46,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.igexin.push.core.b.i;
 import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 
 /**
@@ -129,11 +126,6 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
             }
 
             @Override
-            public void onItemClickListenter1(int position) {
-                getOnClickfeiyong(position);
-            }
-
-            @Override
             public void onItemClickListenter2(int position, View view) {
                 showPopupWindow(view);
             }
@@ -147,6 +139,16 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
      * 弹出popupwindow
      */
     private void showPopupWindow(View v) {
+        name = data2.getPayment_list().get(0).getName();
+        zt = payment_list.get(0).getRate_list().getSk().getZt();
+        lf = payment_list.get(0).getRate_list().getSk().getLf();
+        td = payment_list.get(0).getRate_list().getSk().getTd();
+        zt1 = payment_list.get(0).getRate_list().getYk().getZt();
+        lf1 = payment_list.get(0).getRate_list().getYk().getLf();
+        td1 = payment_list.get(0).getRate_list().getYk().getTd();
+        zt2 = payment_list.get(0).getRate_list().getHk().getZt();
+        lf2 = payment_list.get(0).getRate_list().getHk().getLf();
+        td2 = payment_list.get(0).getRate_list().getHk().getTd();
         if (popupWindow == null) {
             // 将自己定义的布局文件泵出来
             popupWindow_view = LayoutInflater.from(UpGradeActivity.this).inflate(
@@ -181,7 +183,7 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
         mTv7 = popupWindow_view.findViewById(R.id.tv7);
         mTv8 = popupWindow_view.findViewById(R.id.tv8);
         mTv9 = popupWindow_view.findViewById(R.id.tv9);
-        mKehu.setText(name+"权益优惠");
+        mKehu.setText(name + "权益优惠");
         mTv1.setText(zt);
         mTv2.setText(lf);
         mTv3.setText(td);
@@ -383,16 +385,6 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                 if (data1.getResult().getCode() == 10000) {
                     data2 = data1.getData();
                     payment_list = data2.getPayment_list();
-                    name = data2.getPayment_list().get(0).getName();
-                    zt = payment_list.get(0).getRate_list().getSk().getZt();
-                    lf = payment_list.get(0).getRate_list().getSk().getLf();
-                    td = payment_list.get(0).getRate_list().getSk().getTd();
-                    zt1 = payment_list.get(0).getRate_list().getYk().getZt();
-                    lf1 = payment_list.get(0).getRate_list().getYk().getLf();
-                    td1 = payment_list.get(0).getRate_list().getYk().getTd();
-                    zt2 = payment_list.get(0).getRate_list().getHk().getZt();
-                    lf2 = payment_list.get(0).getRate_list().getHk().getLf();
-                    td2 = payment_list.get(0).getRate_list().getHk().getTd();
 
 
                     SharedPrefrenceUtils.putSerializableList(UpGradeActivity.this, "payment_list", payment_list);

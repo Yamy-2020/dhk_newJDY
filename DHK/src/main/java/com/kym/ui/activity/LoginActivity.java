@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -82,6 +83,7 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
+import static com.zzss.jindy.appconfig.Clone.APP_NAME;
 import static com.zzss.jindy.appconfig.Clone.OMID;
 
 
@@ -102,7 +104,7 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.READ_PHONE_STATE};
 
-    public  static final String VERSION="1.1.1";
+    public  static final String VERSION="1.2.0";
     public static String accessToken_xin = "", host = "", dl_phone, dl_pw, user_id, isFinger, img_type;
 
     @BindView(R.id.login_tet)
@@ -143,6 +145,8 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
     public static int versionCode;
     private  Shenji_all_Info info;
     private static Shenji_data_info shenji_data_info;
+    private static String code ;
+    private static PackageInfo info1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,6 +200,8 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
         initToken(2);
         permissionsTask();
     }
+
+
 
     /**
      * 获取AccessToken
@@ -907,7 +913,7 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
      * 开始倒计时
      */
     private void startCountDown() {
-        timer = new CountDownTimer(100000, 1000) {
+        timer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
                 tvGetCode.setText(String.format("重新发送(%d秒)", l / 1000));

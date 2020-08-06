@@ -171,11 +171,14 @@ public class SheZhiActivity extends BaseActivity {
                 switch (view.getId()) {
                     case R.id.textView1:
                         LoginOut();
-                        backDialog4.dismiss();
+//                        backDialog4.dismiss();
+                        startActivity(new Intent(SheZhiActivity.this,LoginActivity.class));
                         break;
                     case R.id.textView2:
                         backDialog4.dismiss();
+
                         break;
+
                 }
             }
         });

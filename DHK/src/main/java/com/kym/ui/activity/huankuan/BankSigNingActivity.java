@@ -36,7 +36,7 @@ public class  BankSigNingActivity extends BaseActivity implements View.OnClickLi
     private BackDialog backDialog;
 
     private BankListResponse.BankInfo bankInfo;
-    private CountDownTimer timer = new CountDownTimer(61000, 1000) {
+    private CountDownTimer timer = new CountDownTimer(60000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             long second = millisUntilFinished / 1000;

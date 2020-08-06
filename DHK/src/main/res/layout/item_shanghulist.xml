@@ -42,7 +42,7 @@
                     android:layout_width="@dimen/dp_50"
                     android:layout_height="@dimen/dp_50"
                     android:layout_gravity="center"
-                    android:src="@drawable/push"
+                    android:src="@drawable/image_home"
                     app:civ_fill_color="@color/white" />
             </FrameLayout>
 

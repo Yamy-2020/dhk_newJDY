@@ -172,7 +172,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
      * 计时器
      */
     private void startCountDown() {
-        timer = new CountDownTimer(300000, 1000) {
+        timer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
                 get_confirmation_tv.setText(String.format("重新获取(%ds)", l / 1000));

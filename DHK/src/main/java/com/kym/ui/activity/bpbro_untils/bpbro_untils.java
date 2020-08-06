@@ -20,7 +20,7 @@ public class bpbro_untils {
                 .getLaunchIntentForPackage(context.getPackageName());
         PendingIntent restartIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         AlarmManager mgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 1000, restartIntent); // 1秒钟后重启应用
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 900, restartIntent); // 1秒钟后重启应用
 
         SecondActivity.activity.finish();
 //            BpbroTabActivity.activity.finish();

@@ -47,7 +47,7 @@ public class KeTangFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_web, container, false);
-        initHead();
+//        initHead();
         initView();
 //        ifshop();
         checkAppVersion();
@@ -78,6 +78,7 @@ public class KeTangFragment extends Fragment {
 
 
     public void initView() {
+        view.findViewById(R.id.ll111).setVisibility(View.GONE);
         webView = view.findViewById(R.id.webView);
         runOnUiThread(new Runnable() {
             @Override

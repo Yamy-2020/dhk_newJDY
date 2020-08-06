@@ -145,7 +145,7 @@ public class ShouKuantxActivity extends BaseActivity implements View.OnClickList
      * 开始倒计时
      */
     private void startCountDown() {
-        timer = new CountDownTimer(100000, 1000) {
+        timer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
                 tvGetCode.setText(String.format("重新发送(%d秒)", l / 1000));

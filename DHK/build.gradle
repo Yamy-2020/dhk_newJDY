@@ -60,7 +60,7 @@ android {
         KaUMi1 {
             applicationId "com.kym.ui"  //包名
             versionCode 2
-            versionName "1.1.0"   //版本号
+            versionName "1.2.0"   //版本号
             buildConfigField "String", "WX_APP_ID", '"wxddda0822580a4630"'//微信
             manifestPlaceholders = [APP_NAME       : "指算",
                                     QQ_APP_ID      : "tencent1106647221",//qq现在没有用

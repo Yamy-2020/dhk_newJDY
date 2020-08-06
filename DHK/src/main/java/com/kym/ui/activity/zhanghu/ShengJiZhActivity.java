@@ -58,7 +58,7 @@ public class ShengJiZhActivity extends BaseActivity implements View.OnClickListe
                         remain_sum = AmountUtils.changeF2Y(Long.parseLong("" + balance));
                         float parseFloat = Float.parseFloat(remain_sum);
                         textV_yuer.withNumber(parseFloat);
-                        textV_yuer.setDuration(2000);
+                        textV_yuer.setDuration(0);
                         textV_yuer.start();
                         textV_ljfr.setVisibility(View.INVISIBLE);
                         textV_ljfr.setText(splitter_sum);

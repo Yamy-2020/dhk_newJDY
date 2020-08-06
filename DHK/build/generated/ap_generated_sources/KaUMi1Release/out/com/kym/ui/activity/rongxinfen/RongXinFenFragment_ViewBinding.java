@@ -17,13 +17,13 @@ import java.lang.Override;
 public class RongXinFenFragment_ViewBinding implements Unbinder {
   private RongXinFenFragment target;
 
-  private View view2131297630;
-
-  private View view2131297633;
-
   private View view2131297631;
 
+  private View view2131297634;
+
   private View view2131297632;
+
+  private View view2131297633;
 
   @UiThread
   public RongXinFenFragment_ViewBinding(final RongXinFenFragment target, View source) {
@@ -38,7 +38,7 @@ public class RongXinFenFragment_ViewBinding implements Unbinder {
     target.nokeepCount = Utils.findRequiredViewAsType(source, R.id.nokeep_count, "field 'nokeepCount'", TextView.class);
     view = Utils.findRequiredView(source, R.id.xinyong_guanli, "field 'xinyongGuanli' and method 'onViewClicked'");
     target.xinyongGuanli = Utils.castView(view, R.id.xinyong_guanli, "field 'xinyongGuanli'", LinearLayout.class);
-    view2131297630 = view;
+    view2131297631 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class RongXinFenFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.xinyong_zuji, "field 'xinyongZuji' and method 'onViewClicked'");
     target.xinyongZuji = Utils.castView(view, R.id.xinyong_zuji, "field 'xinyongZuji'", LinearLayout.class);
-    view2131297633 = view;
+    view2131297634 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class RongXinFenFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.xinyong_guize, "field 'xinyongGuize' and method 'onViewClicked'");
     target.xinyongGuize = Utils.castView(view, R.id.xinyong_guize, "field 'xinyongGuize'", LinearLayout.class);
-    view2131297631 = view;
+    view2131297632 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -65,7 +65,7 @@ public class RongXinFenFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.xinyong_shenghuo, "field 'xinyongShenghuo' and method 'onViewClicked'");
     target.xinyongShenghuo = Utils.castView(view, R.id.xinyong_shenghuo, "field 'xinyongShenghuo'", LinearLayout.class);
-    view2131297632 = view;
+    view2131297633 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -94,13 +94,13 @@ public class RongXinFenFragment_ViewBinding implements Unbinder {
     target.xinyongShenghuo = null;
     target.rxTitle = null;
 
-    view2131297630.setOnClickListener(null);
-    view2131297630 = null;
-    view2131297633.setOnClickListener(null);
-    view2131297633 = null;
     view2131297631.setOnClickListener(null);
     view2131297631 = null;
+    view2131297634.setOnClickListener(null);
+    view2131297634 = null;
     view2131297632.setOnClickListener(null);
     view2131297632 = null;
+    view2131297633.setOnClickListener(null);
+    view2131297633 = null;
   }
 }

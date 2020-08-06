@@ -248,7 +248,7 @@ public class BenJinGuanLiActivity extends BaseActivity implements View.OnClickLi
                         final String principal = obj2.get("principal").toString();
                         float parseFloat = Float.parseFloat(principal);
                         benjin.withNumber(parseFloat);
-                        benjin.setDuration(2000);
+                        benjin.setDuration(0);
                         benjin.start();
                         principal_use.setText(obj2.getString("principal_use"));
                         principal_frozen.setText(obj2.getString("principal_frozen"));

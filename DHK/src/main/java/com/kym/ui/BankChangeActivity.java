@@ -1,8 +1,10 @@
 package com.kym.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.DrawableUtils;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -47,7 +49,7 @@ public class BankChangeActivity extends BaseActivity implements View.OnClickList
     private TextView tvRepayment;
     private CustomPopWindow datePopWindow;
     private BackDialog backDialog;
-    private TextView head_img_right;
+    private ImageView head_img_right;
     private TopRightMenu mTopRightMenu;
 
     @Override
@@ -140,7 +142,8 @@ public class BankChangeActivity extends BaseActivity implements View.OnClickList
         findViewById(R.id.tv_change_bank_confirm).setOnClickListener(this);
         findViewById(R.id.head_img_left).setOnClickListener(this);
         title.setText("信用卡信息修改");
-        head_img_right = (TextView) findViewById(R.id.head_img_right);
+        head_img_right = (ImageView) findViewById(R.id.head_img_right);
+//        head_img_right.setBackground(new Color(R.drawable.morexf));
         head_img_right.setVisibility(View.VISIBLE);
         head_img_right.setOnClickListener(this);
         tvRepayment.setOnClickListener(this);

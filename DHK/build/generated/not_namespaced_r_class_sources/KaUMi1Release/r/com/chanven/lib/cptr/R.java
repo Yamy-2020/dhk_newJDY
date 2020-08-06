@@ -40,19 +40,19 @@ public final class R {
         private id() {}
 
         public static final int item_touch_helper_previous_elevation = 0x7f090206;
-        public static final int loadmore_default_footer_progressbar = 0x7f09029f;
-        public static final int loadmore_default_footer_tv = 0x7f0902a0;
-        public static final int ptr_classic_header_rotate_view = 0x7f090336;
-        public static final int ptr_classic_header_rotate_view_header_last_update = 0x7f090337;
-        public static final int ptr_classic_header_rotate_view_header_text = 0x7f090338;
-        public static final int ptr_classic_header_rotate_view_header_title = 0x7f090339;
-        public static final int ptr_classic_header_rotate_view_progressbar = 0x7f09033a;
+        public static final int loadmore_default_footer_progressbar = 0x7f0902a0;
+        public static final int loadmore_default_footer_tv = 0x7f0902a1;
+        public static final int ptr_classic_header_rotate_view = 0x7f090337;
+        public static final int ptr_classic_header_rotate_view_header_last_update = 0x7f090338;
+        public static final int ptr_classic_header_rotate_view_header_text = 0x7f090339;
+        public static final int ptr_classic_header_rotate_view_header_title = 0x7f09033a;
+        public static final int ptr_classic_header_rotate_view_progressbar = 0x7f09033b;
     }
     public static final class layout {
         private layout() {}
 
         public static final int cube_ptr_classic_default_header = 0x7f0c00d1;
-        public static final int loadmore_default_footer = 0x7f0c0155;
+        public static final int loadmore_default_footer = 0x7f0c0156;
     }
     public static final class string {
         private string() {}

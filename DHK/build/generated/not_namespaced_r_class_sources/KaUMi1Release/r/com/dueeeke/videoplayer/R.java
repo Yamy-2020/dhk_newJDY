@@ -45,16 +45,16 @@ public final class R {
         private id() {}
 
         public static final int iv_icon = 0x7f09020c;
-        public static final int message = 0x7f0902c7;
-        public static final int pro_percent = 0x7f090330;
-        public static final int status_btn = 0x7f0903cb;
-        public static final int tv_percent = 0x7f0904c9;
-        public static final int type_16_9 = 0x7f090504;
-        public static final int type_4_3 = 0x7f090505;
-        public static final int type_center_crop = 0x7f090506;
-        public static final int type_default = 0x7f090507;
-        public static final int type_match_parent = 0x7f090508;
-        public static final int type_original = 0x7f09050a;
+        public static final int message = 0x7f0902c8;
+        public static final int pro_percent = 0x7f090331;
+        public static final int status_btn = 0x7f0903cc;
+        public static final int tv_percent = 0x7f0904ca;
+        public static final int type_16_9 = 0x7f090505;
+        public static final int type_4_3 = 0x7f090506;
+        public static final int type_center_crop = 0x7f090507;
+        public static final int type_default = 0x7f090508;
+        public static final int type_match_parent = 0x7f090509;
+        public static final int type_original = 0x7f09050b;
     }
     public static final class layout {
         private layout() {}

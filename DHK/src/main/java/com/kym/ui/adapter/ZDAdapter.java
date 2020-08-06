@@ -41,6 +41,8 @@ public class ZDAdapter extends RecyclerView.Adapter {
             if (model.getStatus().equals("未支付")) {
                 viewHolder.status.setTextColor(0xFF34A350);
 
+            }else {
+                viewHolder.status.setTextColor(0xFFD9BC84);
             }
         }
     }
