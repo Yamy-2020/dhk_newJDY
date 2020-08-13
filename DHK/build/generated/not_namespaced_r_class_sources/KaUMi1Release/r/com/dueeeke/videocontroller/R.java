@@ -50,45 +50,45 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int dkplayer_battery_level = 0x7f080105;
-        public static final int dkplayer_ic_action_arrow_back = 0x7f080106;
-        public static final int dkplayer_ic_action_autorenew = 0x7f080107;
-        public static final int dkplayer_ic_action_battery = 0x7f080108;
-        public static final int dkplayer_ic_action_battery_10 = 0x7f080109;
-        public static final int dkplayer_ic_action_battery_20 = 0x7f08010a;
-        public static final int dkplayer_ic_action_battery_30 = 0x7f08010b;
-        public static final int dkplayer_ic_action_battery_40 = 0x7f08010c;
-        public static final int dkplayer_ic_action_battery_50 = 0x7f08010d;
-        public static final int dkplayer_ic_action_battery_60 = 0x7f08010e;
-        public static final int dkplayer_ic_action_battery_70 = 0x7f08010f;
-        public static final int dkplayer_ic_action_battery_80 = 0x7f080110;
-        public static final int dkplayer_ic_action_battery_90 = 0x7f080111;
-        public static final int dkplayer_ic_action_brightness = 0x7f080112;
-        public static final int dkplayer_ic_action_close = 0x7f080113;
-        public static final int dkplayer_ic_action_fast_forward = 0x7f080114;
-        public static final int dkplayer_ic_action_fast_rewind = 0x7f080115;
-        public static final int dkplayer_ic_action_fullscreen = 0x7f080116;
-        public static final int dkplayer_ic_action_fullscreen_exit = 0x7f080117;
-        public static final int dkplayer_ic_action_lock_open = 0x7f080118;
-        public static final int dkplayer_ic_action_lock_outline = 0x7f080119;
-        public static final int dkplayer_ic_action_pause = 0x7f08011a;
-        public static final int dkplayer_ic_action_play_arrow = 0x7f08011b;
-        public static final int dkplayer_ic_action_replay = 0x7f08011c;
-        public static final int dkplayer_ic_action_volume_off = 0x7f08011d;
-        public static final int dkplayer_ic_action_volume_up = 0x7f08011e;
-        public static final int dkplayer_layer_progress_bar = 0x7f08011f;
-        public static final int dkplayer_progress_loading = 0x7f080120;
-        public static final int dkplayer_seekbar_thumb = 0x7f080121;
-        public static final int dkplayer_seekbar_thumb_normal = 0x7f080122;
-        public static final int dkplayer_seekbar_thumb_pressed = 0x7f080123;
-        public static final int dkplayer_selector_full_screen_button = 0x7f080124;
-        public static final int dkplayer_selector_lock_button = 0x7f080125;
-        public static final int dkplayer_selector_play_button = 0x7f080126;
-        public static final int dkplayer_shape_back_bg = 0x7f080127;
-        public static final int dkplayer_shape_play_bg = 0x7f080128;
-        public static final int dkplayer_shape_standard_controller_top_bg = 0x7f080129;
-        public static final int dkplayer_shape_stardard_controller_bottom_bg = 0x7f08012a;
-        public static final int dkplayer_shape_status_view_btn = 0x7f08012b;
+        public static final int dkplayer_battery_level = 0x7f080106;
+        public static final int dkplayer_ic_action_arrow_back = 0x7f080107;
+        public static final int dkplayer_ic_action_autorenew = 0x7f080108;
+        public static final int dkplayer_ic_action_battery = 0x7f080109;
+        public static final int dkplayer_ic_action_battery_10 = 0x7f08010a;
+        public static final int dkplayer_ic_action_battery_20 = 0x7f08010b;
+        public static final int dkplayer_ic_action_battery_30 = 0x7f08010c;
+        public static final int dkplayer_ic_action_battery_40 = 0x7f08010d;
+        public static final int dkplayer_ic_action_battery_50 = 0x7f08010e;
+        public static final int dkplayer_ic_action_battery_60 = 0x7f08010f;
+        public static final int dkplayer_ic_action_battery_70 = 0x7f080110;
+        public static final int dkplayer_ic_action_battery_80 = 0x7f080111;
+        public static final int dkplayer_ic_action_battery_90 = 0x7f080112;
+        public static final int dkplayer_ic_action_brightness = 0x7f080113;
+        public static final int dkplayer_ic_action_close = 0x7f080114;
+        public static final int dkplayer_ic_action_fast_forward = 0x7f080115;
+        public static final int dkplayer_ic_action_fast_rewind = 0x7f080116;
+        public static final int dkplayer_ic_action_fullscreen = 0x7f080117;
+        public static final int dkplayer_ic_action_fullscreen_exit = 0x7f080118;
+        public static final int dkplayer_ic_action_lock_open = 0x7f080119;
+        public static final int dkplayer_ic_action_lock_outline = 0x7f08011a;
+        public static final int dkplayer_ic_action_pause = 0x7f08011b;
+        public static final int dkplayer_ic_action_play_arrow = 0x7f08011c;
+        public static final int dkplayer_ic_action_replay = 0x7f08011d;
+        public static final int dkplayer_ic_action_volume_off = 0x7f08011e;
+        public static final int dkplayer_ic_action_volume_up = 0x7f08011f;
+        public static final int dkplayer_layer_progress_bar = 0x7f080120;
+        public static final int dkplayer_progress_loading = 0x7f080121;
+        public static final int dkplayer_seekbar_thumb = 0x7f080122;
+        public static final int dkplayer_seekbar_thumb_normal = 0x7f080123;
+        public static final int dkplayer_seekbar_thumb_pressed = 0x7f080124;
+        public static final int dkplayer_selector_full_screen_button = 0x7f080125;
+        public static final int dkplayer_selector_lock_button = 0x7f080126;
+        public static final int dkplayer_selector_play_button = 0x7f080127;
+        public static final int dkplayer_shape_back_bg = 0x7f080128;
+        public static final int dkplayer_shape_play_bg = 0x7f080129;
+        public static final int dkplayer_shape_standard_controller_top_bg = 0x7f08012a;
+        public static final int dkplayer_shape_stardard_controller_bottom_bg = 0x7f08012b;
+        public static final int dkplayer_shape_status_view_btn = 0x7f08012c;
     }
     public static final class id {
         private id() {}
@@ -96,26 +96,26 @@ public final class R {
         public static final int back = 0x7f090044;
         public static final int bottom_container = 0x7f09006c;
         public static final int bottom_progress = 0x7f09006d;
-        public static final int complete_container = 0x7f0900bc;
-        public static final int curr_time = 0x7f0900d2;
-        public static final int fullscreen = 0x7f09015a;
-        public static final int iv_battery = 0x7f090209;
-        public static final int iv_icon = 0x7f09020c;
-        public static final int iv_play = 0x7f090219;
-        public static final int iv_refresh = 0x7f09021a;
-        public static final int iv_replay = 0x7f09021b;
-        public static final int loading = 0x7f09029f;
-        public static final int lock = 0x7f0902a2;
-        public static final int message = 0x7f0902c8;
-        public static final int pro_percent = 0x7f090331;
-        public static final int seekBar = 0x7f090385;
-        public static final int start_play = 0x7f0903c9;
-        public static final int status_btn = 0x7f0903cc;
-        public static final int stop_fullscreen = 0x7f0903cf;
-        public static final int sys_time = 0x7f0903d9;
-        public static final int thumb = 0x7f090451;
-        public static final int title = 0x7f090459;
-        public static final int top_container = 0x7f090463;
+        public static final int complete_container = 0x7f0900bd;
+        public static final int curr_time = 0x7f0900d3;
+        public static final int fullscreen = 0x7f090159;
+        public static final int iv_battery = 0x7f090208;
+        public static final int iv_icon = 0x7f09020b;
+        public static final int iv_play = 0x7f090218;
+        public static final int iv_refresh = 0x7f090219;
+        public static final int iv_replay = 0x7f09021a;
+        public static final int loading = 0x7f09029d;
+        public static final int lock = 0x7f0902a0;
+        public static final int message = 0x7f0902c6;
+        public static final int pro_percent = 0x7f09032e;
+        public static final int seekBar = 0x7f090382;
+        public static final int start_play = 0x7f0903c7;
+        public static final int status_btn = 0x7f0903ca;
+        public static final int stop_fullscreen = 0x7f0903cd;
+        public static final int sys_time = 0x7f0903d8;
+        public static final int thumb = 0x7f090450;
+        public static final int title = 0x7f090458;
+        public static final int top_container = 0x7f090462;
         public static final int total_time = 0x7f090467;
         public static final int tv_multi_rate = 0x7f0904a7;
         public static final int tv_percent = 0x7f0904ca;
@@ -129,9 +129,9 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int dkplayer_layout_center_window = 0x7f0c00f2;
-        public static final int dkplayer_layout_standard_controller = 0x7f0c00f3;
-        public static final int dkplayer_layout_status_view = 0x7f0c00f4;
+        public static final int dkplayer_layout_center_window = 0x7f0c00f1;
+        public static final int dkplayer_layout_standard_controller = 0x7f0c00f2;
+        public static final int dkplayer_layout_status_view = 0x7f0c00f3;
     }
     public static final class string {
         private string() {}

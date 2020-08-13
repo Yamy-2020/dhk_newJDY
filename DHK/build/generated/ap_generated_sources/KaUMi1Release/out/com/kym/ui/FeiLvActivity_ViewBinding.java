@@ -16,7 +16,7 @@ import java.lang.Override;
 public class FeiLvActivity_ViewBinding implements Unbinder {
   private FeiLvActivity target;
 
-  private View view2131296671;
+  private View view2131296669;
 
   @UiThread
   public FeiLvActivity_ViewBinding(FeiLvActivity target) {
@@ -31,7 +31,7 @@ public class FeiLvActivity_ViewBinding implements Unbinder {
     target.headTextTitle = Utils.findRequiredViewAsType(source, R.id.head_text_title, "field 'headTextTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.head_img_left, "field 'headImgLeft' and method 'onViewClicked'");
     target.headImgLeft = Utils.castView(view, R.id.head_img_left, "field 'headImgLeft'", ImageView.class);
-    view2131296671 = view;
+    view2131296669 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class FeiLvActivity_ViewBinding implements Unbinder {
     target.tdjl = null;
     target.rvBankList = null;
 
-    view2131296671.setOnClickListener(null);
-    view2131296671 = null;
+    view2131296669.setOnClickListener(null);
+    view2131296669 = null;
   }
 }

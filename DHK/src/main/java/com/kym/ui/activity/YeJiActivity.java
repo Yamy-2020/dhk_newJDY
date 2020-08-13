@@ -40,13 +40,11 @@ import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
  * @date 2019/12/3
  */
 
-public class YeJiActivity extends BaseActivity implements View.OnClickListener {
+public class YeJiActivity extends BaseActivity {
 
     private String day_total_vol, day_rec_vol, day_repx_vol, day_conx_vol, last_day_total_vol, last_team_total_vol,
-            team_total_vol, team_rec_vol, team_repx_vol, team_conx_vol, day_kadex_vol,
-            team_kadex_vol, curr_day_total_vol, curr_team_total_vol;
-    private TextView total, xf_total, hk_total, sk_total, total_tip,
-            btn_gr1, btn_gr2, btn_team1, btn_team2, dc_total, by_total, sy_total;
+            team_total_vol, team_rec_vol, team_repx_vol, team_conx_vol, curr_day_total_vol, curr_team_total_vol;
+    private TextView total, xf_total, hk_total, sk_total, by_total, sy_total,total1, xf_total1, hk_total1, sk_total1, by_total1, sy_total1;
     private List<UserMyMerchant.DataBean.ListBean> data_dj;
     private ListView listView;
     private DialogUtil dialogUtil;
@@ -54,44 +52,30 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
     private TextView textV_tg_zhijie;
     private TextView textV_tg_shimin;
     private BackDialog backDialog;
-    private PaiHangBangAdapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jiaoyi_ln);
+        setContentView(R.layout.jiaoyi_yeji);
         initView();
         getJiaoYi();
-        getPaiHangBang();
     }
 
     private void initView() {
-        total = findViewById(R.id.total);
-        LinearLayout daichang = findViewById(R.id.daichang);
-        daichang.setVisibility(View.GONE);
-//        findViewById(R.id.jiaoyi).setVisibility(View.GONE);
         xf_total = findViewById(R.id.xf_total);
         hk_total = findViewById(R.id.hk_total);
         sk_total = findViewById(R.id.sk_total);
-        dc_total = findViewById(R.id.dc_total);
         by_total = findViewById(R.id.by_total);
         sy_total = findViewById(R.id.sy_total);
-//        total_tip = findViewById(R.id.total_tip);
-        btn_gr1 = findViewById(R.id.btn_gr1);
-        btn_team1 = findViewById(R.id.btn_team1);
-        btn_gr2 = findViewById(R.id.btn_gr2);
-        btn_team2 = findViewById(R.id.btn_team2);
-        btn_gr1.setOnClickListener(this);
-        btn_team1.setOnClickListener(this);
-        btn_gr2.setOnClickListener(this);
-        btn_team2.setOnClickListener(this);
-        LinearLayout gone1 = findViewById(R.id.gone1);
-        if (Clone.OMID.equals("SX90IOKIPZNCO5O1")) {
-            gone1.setVisibility(View.GONE);
-        } else {
-            gone1.setVisibility(View.VISIBLE);
-        }
+        total = findViewById(R.id.total);
+        xf_total1 = findViewById(R.id.xf_total1);
+        hk_total1 = findViewById(R.id.hk_total1);
+        sk_total1 = findViewById(R.id.sk_total1);
+        by_total1 = findViewById(R.id.by_total1);
+        sy_total1 = findViewById(R.id.sy_total1);
+        total1 = findViewById(R.id.total1);
+
         TextView textV_title = findViewById(R.id.head_text_title);
         textV_title.setText("业绩管理");
         findViewById(R.id.head_img_left).setOnClickListener(new View.OnClickListener() {
@@ -123,22 +107,6 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
                 }
             }
         });
-        final RecyclerView mRecyclerView = findViewById(R.id.phb_list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        };
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new PaiHangBangAdapter(this, new PaiHangBangAdapter.OnZDClick() {
-
-            @Override
-            public void OnZDClick(PaiHangBangResponse.PaiHangBangInfo zdInfo) {
-
-            }
-        });
-        mRecyclerView.setAdapter(adapter);
     }
 
     private void getJiaoYi() {
@@ -164,22 +132,24 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
                         day_rec_vol = obj2.getString("day_rec_vol");
                         day_repx_vol = obj2.getString("day_repx_vol");
                         day_conx_vol = obj2.getString("day_conx_vol");
-                        day_kadex_vol = obj2.getString("day_kadex_vol");
-                        team_kadex_vol = obj2.getString("team_kadex_vol");
                         team_total_vol = obj2.getString("team_total_vol");
                         team_rec_vol = obj2.getString("team_rec_vol");
                         team_repx_vol = obj2.getString("team_repx_vol");
                         team_conx_vol = obj2.getString("team_conx_vol");
-                        total.setText(day_total_vol);
-                        sk_total.setText(day_rec_vol);
-                        hk_total.setText(day_repx_vol);
-                        xf_total.setText(day_conx_vol);
-                        dc_total.setText(day_kadex_vol);
-                        by_total.setText(curr_day_total_vol);
-                        sy_total.setText(last_day_total_vol);
-//                        total_tip.setText("个人总交易量");
-                        btn_gr1.setVisibility(View.VISIBLE);
-                        btn_team1.setVisibility(View.VISIBLE);
+                        /*个人*/
+                        total.setText(day_total_vol);//昨日交易量
+                        sk_total.setText(day_rec_vol);//收款
+                        hk_total.setText(day_repx_vol);//还款
+                        xf_total.setText(day_conx_vol);//智收
+                        by_total.setText(curr_day_total_vol);//本月总交易量
+                        sy_total.setText(last_day_total_vol);//上月总交易量
+                        /*团队*/
+                        total1.setText(team_total_vol);//昨日交易量
+                        sk_total1.setText(team_rec_vol);//收款
+                        hk_total1.setText(team_repx_vol);//还款
+                        xf_total1.setText(team_conx_vol);//智收
+                        by_total1.setText(curr_team_total_vol);//本月总交易量
+                        sy_total1.setText(last_team_total_vol);//上月总交易量
                     } else if (code.equals("101") || code.equals("601")) {
                         backDialog = new BackDialog("", "登录过期,请重新登录", "确定", YeJiActivity.this,
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
@@ -207,70 +177,7 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
         });
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.head_img_left:
-                finish();
-                break;
-            case R.id.btn_gr1:
-                total.setText(day_total_vol);
-                sk_total.setText(day_rec_vol);
-                hk_total.setText(day_repx_vol);
-                xf_total.setText(day_conx_vol);
-                dc_total.setText(day_kadex_vol);
-                by_total.setText(curr_day_total_vol);
-                sy_total.setText(last_day_total_vol);
-//                total_tip.setText("个人总交易量");
-                btn_gr1.setVisibility(View.VISIBLE);
-                btn_gr2.setVisibility(View.GONE);
-                btn_team1.setVisibility(View.VISIBLE);
-                btn_team2.setVisibility(View.GONE);
-                break;
-            case R.id.btn_team1:
-                total.setText(team_total_vol);
-                sk_total.setText(team_rec_vol);
-                hk_total.setText(team_repx_vol);
-                xf_total.setText(team_conx_vol);
-                dc_total.setText(team_kadex_vol);
-                by_total.setText(curr_team_total_vol);
-                sy_total.setText(last_team_total_vol);
-//                total_tip.setText("团队总交易量");
-                btn_gr1.setVisibility(View.GONE);
-                btn_gr2.setVisibility(View.VISIBLE);
-                btn_team1.setVisibility(View.GONE);
-                btn_team2.setVisibility(View.VISIBLE);
-                break;
-            case R.id.btn_gr2:
-                total.setText(day_total_vol);
-                sk_total.setText(day_rec_vol);
-                hk_total.setText(day_repx_vol);
-                xf_total.setText(day_conx_vol);
-                dc_total.setText(day_kadex_vol);
-//                total_tip.setText("个人总交易量");
-                by_total.setText(curr_day_total_vol);
-                sy_total.setText(last_day_total_vol);
-                btn_gr1.setVisibility(View.VISIBLE);
-                btn_gr2.setVisibility(View.GONE);
-                btn_team1.setVisibility(View.VISIBLE);
-                btn_team2.setVisibility(View.GONE);
-                break;
-            case R.id.btn_team2:
-                total.setText(team_total_vol);
-                sk_total.setText(team_rec_vol);
-                hk_total.setText(team_repx_vol);
-                xf_total.setText(team_conx_vol);
-                dc_total.setText(team_kadex_vol);
-                by_total.setText(curr_team_total_vol);
-                sy_total.setText(last_team_total_vol);
-//                total_tip.setText("团队总交易量");
-                btn_gr1.setVisibility(View.GONE);
-                btn_gr2.setVisibility(View.VISIBLE);
-                btn_team1.setVisibility(View.GONE);
-                btn_team2.setVisibility(View.VISIBLE);
-                break;
-        }
-    }
+
 
     private void getDengji() {
         dialogUtil = new DialogUtil(this);
@@ -319,44 +226,5 @@ public class YeJiActivity extends BaseActivity implements View.OnClickListener {
         return true;
     }
 
-    /**
-     * 获取还款信用卡列表
-     */
-    private void getPaiHangBang() {
-        final DialogUtil dialogUtil = new DialogUtil(this);
-        Connect.getInstance().post(getApplicationContext(), IService.PAIHANGBANG, null, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                dialogUtil.dismiss();
-                PaiHangBangResponse response = (PaiHangBangResponse) JsonUtils.parse((String) result, PaiHangBangResponse.class);
-                if (response.getResult().getCode() == 10000) {
-                    List<PaiHangBangResponse.PaiHangBangInfo> data = response.getData();
-                    if (data != null && data.size() > 0) {
-                        adapter.setData(data);
-                    } else {
-                        adapter.clearData();
-                    }
-                } else if (response.getResult().getCode() == 101 || response.getResult().getCode() == 601) {
-                    backDialog = new BackDialog("", "登录过期,请重新登录", "确定", YeJiActivity.this,
-                            R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            restartApp(getApplicationContext());
-                            backDialog.dismiss();
-                        }
-                    });
-                    backDialog.setCancelable(false);
-                    backDialog.show();
-                } else {
-                    ToastUtil.showTextToas(getApplicationContext(), response.getResult().getMsg());
-                }
-            }
 
-            @Override
-            public void onFailure(String message) {
-                dialogUtil.dismiss();
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
 }

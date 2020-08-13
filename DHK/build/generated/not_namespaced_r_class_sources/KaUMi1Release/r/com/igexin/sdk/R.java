@@ -12,63 +12,63 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int getui_big_bigtext_defaultView = 0x7f09015f;
-        public static final int getui_big_bigview_defaultView = 0x7f090160;
-        public static final int getui_big_defaultView = 0x7f090161;
-        public static final int getui_big_default_Content = 0x7f090162;
-        public static final int getui_big_imageView_headsup = 0x7f090163;
-        public static final int getui_big_imageView_headsup2 = 0x7f090164;
-        public static final int getui_big_notification = 0x7f090165;
-        public static final int getui_big_notification_content = 0x7f090166;
-        public static final int getui_big_notification_date = 0x7f090167;
-        public static final int getui_big_notification_icon = 0x7f090168;
-        public static final int getui_big_notification_icon2 = 0x7f090169;
-        public static final int getui_big_notification_title = 0x7f09016a;
-        public static final int getui_big_notification_title_center = 0x7f09016b;
-        public static final int getui_big_text_headsup = 0x7f09016c;
-        public static final int getui_bigview_banner = 0x7f09016d;
-        public static final int getui_bigview_expanded = 0x7f09016e;
-        public static final int getui_headsup_banner = 0x7f09016f;
-        public static final int getui_icon_headsup = 0x7f090170;
-        public static final int getui_message_headsup = 0x7f090171;
-        public static final int getui_notification_L = 0x7f090172;
-        public static final int getui_notification_L_context = 0x7f090173;
-        public static final int getui_notification_L_icon = 0x7f090174;
-        public static final int getui_notification_L_line1 = 0x7f090175;
-        public static final int getui_notification_L_line2 = 0x7f090176;
-        public static final int getui_notification_L_line3 = 0x7f090177;
-        public static final int getui_notification_L_right_icon = 0x7f090178;
-        public static final int getui_notification_L_time = 0x7f090179;
-        public static final int getui_notification__style2_title = 0x7f09017a;
-        public static final int getui_notification_bg = 0x7f09017b;
-        public static final int getui_notification_date = 0x7f09017c;
-        public static final int getui_notification_download_L = 0x7f09017d;
-        public static final int getui_notification_download_content = 0x7f09017e;
-        public static final int getui_notification_download_content_L = 0x7f09017f;
-        public static final int getui_notification_download_info_L = 0x7f090180;
-        public static final int getui_notification_download_progressBar_L = 0x7f090181;
-        public static final int getui_notification_download_progressbar = 0x7f090182;
-        public static final int getui_notification_download_title_L = 0x7f090183;
-        public static final int getui_notification_headsup = 0x7f090184;
-        public static final int getui_notification_icon = 0x7f090185;
-        public static final int getui_notification_icon2 = 0x7f090186;
-        public static final int getui_notification_l_layout = 0x7f090187;
-        public static final int getui_notification_style1 = 0x7f090188;
-        public static final int getui_notification_style1_content = 0x7f090189;
-        public static final int getui_notification_style1_title = 0x7f09018a;
-        public static final int getui_notification_style2 = 0x7f09018b;
-        public static final int getui_notification_style3 = 0x7f09018c;
-        public static final int getui_notification_style3_content = 0x7f09018d;
-        public static final int getui_notification_style4 = 0x7f09018e;
-        public static final int getui_notification_title_L = 0x7f09018f;
-        public static final int getui_root_view = 0x7f090190;
-        public static final int getui_time_headsup = 0x7f090191;
-        public static final int getui_title_headsup = 0x7f090192;
+        public static final int getui_big_bigtext_defaultView = 0x7f09015e;
+        public static final int getui_big_bigview_defaultView = 0x7f09015f;
+        public static final int getui_big_defaultView = 0x7f090160;
+        public static final int getui_big_default_Content = 0x7f090161;
+        public static final int getui_big_imageView_headsup = 0x7f090162;
+        public static final int getui_big_imageView_headsup2 = 0x7f090163;
+        public static final int getui_big_notification = 0x7f090164;
+        public static final int getui_big_notification_content = 0x7f090165;
+        public static final int getui_big_notification_date = 0x7f090166;
+        public static final int getui_big_notification_icon = 0x7f090167;
+        public static final int getui_big_notification_icon2 = 0x7f090168;
+        public static final int getui_big_notification_title = 0x7f090169;
+        public static final int getui_big_notification_title_center = 0x7f09016a;
+        public static final int getui_big_text_headsup = 0x7f09016b;
+        public static final int getui_bigview_banner = 0x7f09016c;
+        public static final int getui_bigview_expanded = 0x7f09016d;
+        public static final int getui_headsup_banner = 0x7f09016e;
+        public static final int getui_icon_headsup = 0x7f09016f;
+        public static final int getui_message_headsup = 0x7f090170;
+        public static final int getui_notification_L = 0x7f090171;
+        public static final int getui_notification_L_context = 0x7f090172;
+        public static final int getui_notification_L_icon = 0x7f090173;
+        public static final int getui_notification_L_line1 = 0x7f090174;
+        public static final int getui_notification_L_line2 = 0x7f090175;
+        public static final int getui_notification_L_line3 = 0x7f090176;
+        public static final int getui_notification_L_right_icon = 0x7f090177;
+        public static final int getui_notification_L_time = 0x7f090178;
+        public static final int getui_notification__style2_title = 0x7f090179;
+        public static final int getui_notification_bg = 0x7f09017a;
+        public static final int getui_notification_date = 0x7f09017b;
+        public static final int getui_notification_download_L = 0x7f09017c;
+        public static final int getui_notification_download_content = 0x7f09017d;
+        public static final int getui_notification_download_content_L = 0x7f09017e;
+        public static final int getui_notification_download_info_L = 0x7f09017f;
+        public static final int getui_notification_download_progressBar_L = 0x7f090180;
+        public static final int getui_notification_download_progressbar = 0x7f090181;
+        public static final int getui_notification_download_title_L = 0x7f090182;
+        public static final int getui_notification_headsup = 0x7f090183;
+        public static final int getui_notification_icon = 0x7f090184;
+        public static final int getui_notification_icon2 = 0x7f090185;
+        public static final int getui_notification_l_layout = 0x7f090186;
+        public static final int getui_notification_style1 = 0x7f090187;
+        public static final int getui_notification_style1_content = 0x7f090188;
+        public static final int getui_notification_style1_title = 0x7f090189;
+        public static final int getui_notification_style2 = 0x7f09018a;
+        public static final int getui_notification_style3 = 0x7f09018b;
+        public static final int getui_notification_style3_content = 0x7f09018c;
+        public static final int getui_notification_style4 = 0x7f09018d;
+        public static final int getui_notification_title_L = 0x7f09018e;
+        public static final int getui_root_view = 0x7f09018f;
+        public static final int getui_time_headsup = 0x7f090190;
+        public static final int getui_title_headsup = 0x7f090191;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int getui_notification = 0x7f0c0103;
+        public static final int getui_notification = 0x7f0c0102;
     }
     public static final class raw {
         private raw() {}

@@ -117,8 +117,6 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initView() {
-
-
         adapter.setmOnItemClickListenter(new GouMaiAdapter.OnItemClickListenter() {
             @Override
             public void onItemClickListenter(int position) {
@@ -127,10 +125,9 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
 
             @Override
             public void onItemClickListenter2(int position, View view) {
-                showPopupWindow(view);
+
+                showPopupWindow(position,view);
             }
-
-
         });
 
     }
@@ -138,17 +135,19 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
     /**
      * 弹出popupwindow
      */
-    private void showPopupWindow(View v) {
-        name = data2.getPayment_list().get(0).getName();
-        zt = payment_list.get(0).getRate_list().getSk().getZt();
-        lf = payment_list.get(0).getRate_list().getSk().getLf();
-        td = payment_list.get(0).getRate_list().getSk().getTd();
-        zt1 = payment_list.get(0).getRate_list().getYk().getZt();
-        lf1 = payment_list.get(0).getRate_list().getYk().getLf();
-        td1 = payment_list.get(0).getRate_list().getYk().getTd();
-        zt2 = payment_list.get(0).getRate_list().getHk().getZt();
-        lf2 = payment_list.get(0).getRate_list().getHk().getLf();
-        td2 = payment_list.get(0).getRate_list().getHk().getTd();
+    private void showPopupWindow(int position, View v) {
+
+
+            name = data2.getPayment_list().get(position).getName();
+            zt = payment_list.get(position).getRate_list().getSk().getZt();
+            lf = payment_list.get(position).getRate_list().getSk().getLf();
+            td = payment_list.get(position).getRate_list().getSk().getTd();
+            zt1 = payment_list.get(position).getRate_list().getYk().getZt();
+            lf1 = payment_list.get(position).getRate_list().getYk().getLf();
+            td1 = payment_list.get(position).getRate_list().getYk().getTd();
+            zt2 = payment_list.get(position).getRate_list().getHk().getZt();
+            lf2 = payment_list.get(position).getRate_list().getHk().getLf();
+            td2 = payment_list.get(position).getRate_list().getHk().getTd();
         if (popupWindow == null) {
             // 将自己定义的布局文件泵出来
             popupWindow_view = LayoutInflater.from(UpGradeActivity.this).inflate(

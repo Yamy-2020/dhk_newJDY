@@ -93,11 +93,11 @@ public class BankChangeActivity extends BaseActivity implements View.OnClickList
             case R.id.head_img_right:
                 mTopRightMenu = new TopRightMenu(BankChangeActivity.this);
                 List<MenuItem> menuItems = new ArrayList<>();
-                menuItems.add(new MenuItem("解绑"));
+//                menuItems.add(new MenuItem("解绑"));
                 menuItems.add(new MenuItem("修改额度"));
                 menuItems.add(new MenuItem("提额明细"));
                 mTopRightMenu
-                        .setHeight(450)     //默认高度480
+                        .setHeight(320)     //默认高度480  ,三个是450
                         .showIcon(false) //默认宽度wrap_content
                         .setAnimationStyle(R.style.TRM_ANIM_STYLE)  //默认为R.style.TRM_ANIM_STYLE
                         .addMenuList(menuItems)
@@ -105,24 +105,26 @@ public class BankChangeActivity extends BaseActivity implements View.OnClickList
                             @Override
                             public void onMenuItemClick(int position) {
                                 if (position == 0) {
-                                    Intent intent = new Intent(getApplicationContext(), JieBangCardActivity.class);
+                                 /*   Intent intent = new Intent(getApplicationContext(), JieBangCardActivity.class);
                                     intent.putExtra("NCardId", getIntent().getStringExtra("NCardId"));
                                     intent.putExtra("NBankName", getIntent().getStringExtra("NBankName"));
                                     intent.putExtra("NBankNo", getIntent().getStringExtra("NBankNo"));
                                     intent.putExtra("NLogoUrl", getIntent().getStringExtra("NLogoUrl"));
-                                    startActivity(intent);
-                                } else if (position == 1) {
+                                    startActivity(intent);*/
+
                                     Intent intent = new Intent(getApplicationContext(), BankChangeEduActivity.class);
                                     intent.putExtra("NCardId", getIntent().getStringExtra("NCardId"));
                                     intent.putExtra("NBankName", getIntent().getStringExtra("NBankName"));
                                     intent.putExtra("NBankNo", getIntent().getStringExtra("NBankNo"));
                                     intent.putExtra("NLogoUrl", getIntent().getStringExtra("NLogoUrl"));
                                     startActivity(intent);
-                                } else {
+                                } else if (position == 1) {
                                     Intent intent = new Intent(getApplicationContext(), TieListActivity.class);
                                     intent.putExtra("NCardId", getIntent().getStringExtra("NCardId"));
                                     startActivity(intent);
-                                }
+                                }/*else {
+
+                                }*/
                             }
                         })
                         .showAsDropDown(head_img_right, -140, 0);

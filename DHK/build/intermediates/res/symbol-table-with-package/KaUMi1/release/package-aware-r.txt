@@ -2608,6 +2608,7 @@ drawable corner0
 drawable corner1
 drawable corner10
 drawable corner11
+drawable corner111
 drawable corner12
 drawable corner13
 drawable corner14
@@ -3504,6 +3505,7 @@ id btn_yhk_zp
 id btn_zz_zp
 id buttonPanel
 id by_total
+id by_total1
 id bzzx
 id cache
 id calendarView
@@ -3574,7 +3576,6 @@ id curr_time
 id custom
 id customPanel
 id dae
-id daichang
 id danbixiane
 id dangrixiane
 id date
@@ -3610,7 +3611,6 @@ id dc_sxf
 id dc_text
 id dc_time
 id dc_tip
-id dc_total
 id dc_type
 id dc_way
 id dc_xfnum
@@ -3766,7 +3766,6 @@ id getui_title_headsup
 id ghost_view
 id go
 id gone
-id gone1
 id gradual
 id group_divider
 id grxx
@@ -3793,6 +3792,7 @@ id hk_text
 id hk_time
 id hk_tip
 id hk_total
+id hk_total1
 id hk_xyk
 id hk_yue
 id hknum
@@ -3907,7 +3907,6 @@ id iv_share_qr_wx_1
 id iv_share_qr_wx_2
 id java_to_js_default
 id java_to_js_spec
-id jiaoyi
 id jiben_xx
 id jiesao_set
 id jk_date
@@ -4161,7 +4160,6 @@ id pd_record_state
 id pd_record_volume
 id pd_suggestion_list
 id pengyouquan
-id phb_list
 id phone
 id phone_iv
 id photograph
@@ -4306,6 +4304,7 @@ id sk2
 id sk3
 id sk_text
 id sk_total
+id sk_total1
 id smallLabel
 id small_circle1
 id small_circle2
@@ -4345,6 +4344,7 @@ id surfaceview
 id swipe_refresh
 id swipe_refresh_layout
 id sy_total
+id sy_total1
 id sys_time
 id tab1
 id tab2
@@ -4486,6 +4486,7 @@ id topTitle
 id top_container
 id top_to_bottom
 id total
+id total1
 id total_money
 id total_time
 id total_tip
@@ -4727,6 +4728,7 @@ id xf_num
 id xf_text
 id xf_time
 id xf_total
+id xf_total1
 id xf_way
 id xfnum
 id xh
@@ -4982,7 +4984,6 @@ layout activity_xin_yong_ka
 layout activity_xin_yong_sheng_huo
 layout activity_xin_yong_zu_ji
 layout activity_yang_pu_tao
-layout activity_ye_ji
 layout activity_yin_si_xie_yi
 layout activity_you_hui
 layout activity_zd
@@ -5123,7 +5124,7 @@ layout item_youhui
 layout item_zanwu
 layout item_zd
 layout item_zhangdanfuwu
-layout jiaoyi_ln
+layout jiaoyi_yeji
 layout json_sheng
 layout ke_tang_rv1
 layout layout_aqsjh_code

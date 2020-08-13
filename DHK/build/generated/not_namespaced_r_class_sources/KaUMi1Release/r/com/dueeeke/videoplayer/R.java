@@ -33,21 +33,21 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int dkplayer_ic_action_brightness = 0x7f080112;
-        public static final int dkplayer_ic_action_fast_forward = 0x7f080114;
-        public static final int dkplayer_ic_action_fast_rewind = 0x7f080115;
-        public static final int dkplayer_ic_action_volume_off = 0x7f08011d;
-        public static final int dkplayer_ic_action_volume_up = 0x7f08011e;
-        public static final int dkplayer_layer_progress_bar = 0x7f08011f;
-        public static final int dkplayer_shape_status_view_btn = 0x7f08012b;
+        public static final int dkplayer_ic_action_brightness = 0x7f080113;
+        public static final int dkplayer_ic_action_fast_forward = 0x7f080115;
+        public static final int dkplayer_ic_action_fast_rewind = 0x7f080116;
+        public static final int dkplayer_ic_action_volume_off = 0x7f08011e;
+        public static final int dkplayer_ic_action_volume_up = 0x7f08011f;
+        public static final int dkplayer_layer_progress_bar = 0x7f080120;
+        public static final int dkplayer_shape_status_view_btn = 0x7f08012c;
     }
     public static final class id {
         private id() {}
 
-        public static final int iv_icon = 0x7f09020c;
-        public static final int message = 0x7f0902c8;
-        public static final int pro_percent = 0x7f090331;
-        public static final int status_btn = 0x7f0903cc;
+        public static final int iv_icon = 0x7f09020b;
+        public static final int message = 0x7f0902c6;
+        public static final int pro_percent = 0x7f09032e;
+        public static final int status_btn = 0x7f0903ca;
         public static final int tv_percent = 0x7f0904ca;
         public static final int type_16_9 = 0x7f090505;
         public static final int type_4_3 = 0x7f090506;
@@ -59,8 +59,8 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int dkplayer_layout_center_window = 0x7f0c00f2;
-        public static final int dkplayer_layout_status_view = 0x7f0c00f4;
+        public static final int dkplayer_layout_center_window = 0x7f0c00f1;
+        public static final int dkplayer_layout_status_view = 0x7f0c00f3;
     }
     public static final class string {
         private string() {}

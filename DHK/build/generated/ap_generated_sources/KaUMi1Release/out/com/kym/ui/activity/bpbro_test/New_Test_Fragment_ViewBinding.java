@@ -24,9 +24,9 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
 
   private View view2131297578;
 
-  private View view2131296870;
+  private View view2131296868;
 
-  private View view2131296882;
+  private View view2131296880;
 
   @UiThread
   public New_Test_Fragment_ViewBinding(final New_Test_Fragment target, View source) {
@@ -72,7 +72,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.li_course, "field 'liCourse' and method 'onViewClicked'");
     target.liCourse = Utils.castView(view, R.id.li_course, "field 'liCourse'", LinearLayout.class);
-    view2131296870 = view;
+    view2131296868 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,7 +81,7 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.li_problem, "field 'liProblem' and method 'onViewClicked'");
     target.liProblem = Utils.castView(view, R.id.li_problem, "field 'liProblem'", LinearLayout.class);
-    view2131296882 = view;
+    view2131296880 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -113,9 +113,9 @@ public class New_Test_Fragment_ViewBinding implements Unbinder {
     view2131297577 = null;
     view2131297578.setOnClickListener(null);
     view2131297578 = null;
-    view2131296870.setOnClickListener(null);
-    view2131296870 = null;
-    view2131296882.setOnClickListener(null);
-    view2131296882 = null;
+    view2131296868.setOnClickListener(null);
+    view2131296868 = null;
+    view2131296880.setOnClickListener(null);
+    view2131296880 = null;
   }
 }

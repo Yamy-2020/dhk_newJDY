@@ -383,18 +383,19 @@
                     android:background="@color/white"
                     android:padding="@dimen/dp_10">
 
-                    <TextView
-                        android:id="@+id/tv_add_new_credit_confirm"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_48"
-                        android:background="@drawable/round_5dp_blue"
-                        android:gravity="center"
-                        android:text="提交"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_18" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_add_new_credit_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/round_5dp_blue"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
     </LinearLayout>
 
     <com.kym.ui.newutil.DragFloatActionButton

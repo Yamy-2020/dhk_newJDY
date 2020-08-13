@@ -32,6 +32,7 @@ import com.kym.ui.appconfig.IService;
 import com.kym.ui.info.KeXinFenBean;
 import com.kym.ui.newutil.SharedPreferencesHelper;
 import com.kym.ui.util.Connect;
+import com.kym.ui.util.DialogUtil;
 import com.kym.ui.util.JsonUtils;
 import com.zzss.jindy.appconfig.Clone;
 
@@ -40,6 +41,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.leefeng.promptlibrary.PromptDialog;
 
 import static com.kym.ui.util.MyDataCleanManager.clearAllCache;
 
@@ -70,6 +72,7 @@ public class SecondActivity extends FragmentActivity {
     private KeTangFragment keTangFragment;
     private String[] tabTitles;
     private int[] bitmap;
+    private PromptDialog promptDialog;
 
     @Override
     protected void onResume() {
@@ -123,6 +126,7 @@ public class SecondActivity extends FragmentActivity {
     }
 
     private void initView() {
+
         fm = getSupportFragmentManager();
         addTab3();
         llTab.getChildAt(0).performClick();
@@ -145,6 +149,8 @@ public class SecondActivity extends FragmentActivity {
                     R.drawable.icon_ketang_selector,
                     R.drawable.icon_tongji_selector};
         }
+        promptDialog.dismissImmediately();
+
         for (int i = 0; i < 3; i++) {
             @SuppressLint("InflateParams") final View tab = inflater.inflate(R.layout.tm_tab_btn, null);
             ImageView imageView = tab.findViewById(R.id.tab_icon);
@@ -243,6 +249,7 @@ public class SecondActivity extends FragmentActivity {
             switch (msg.what) {
                 case 0:
                     //do something,refresh UI;
+
                     initView();
                     registerBroadCast();
 
@@ -255,27 +262,35 @@ public class SecondActivity extends FragmentActivity {
     };
 
     protected void ifshop() {
+        promptDialog = new PromptDialog(SecondActivity.this);
+
+        promptDialog.showLoading("加载中");
+
         HashMap<String, String> params = new HashMap<>();
         params.put("version",LoginActivity.VERSION);
         params.put("terminal","android");
         Connect.getInstance().post(this, IService.KEXINFEN_SHOP, params, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
+
                 KeXinFenBean shop = (KeXinFenBean) JsonUtils.parse((String) result, KeXinFenBean.class);
                 if (shop.getResult().getCode() == 10000) {
+                    promptDialog.dismissImmediately();
+
                     is_shop = shop.getData().getShop();
                     Log.e("is_shop ==== ", "onSuccess: " + is_shop);
                     mHandler.sendEmptyMessage(0);
 
 
 
-                } /*else {
-                    ToastUtil.showTextToas(getContext(), "请联系客服");
-                }*/
+                } else {
+                    ToastUtil.showTextToas(SecondActivity.this, "请联系客服");
+                }
             }
 
             @Override
             public void onFailure(String message) {
+
 
             }
         });

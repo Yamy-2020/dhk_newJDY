@@ -17,13 +17,13 @@ import java.lang.Override;
 public class UserAnQuanActivity_ViewBinding implements Unbinder {
   private UserAnQuanActivity target;
 
-  private View view2131296671;
+  private View view2131296669;
 
-  private View view2131296859;
+  private View view2131296857;
 
-  private View view2131296865;
+  private View view2131296863;
 
-  private View view2131296869;
+  private View view2131296867;
 
   @UiThread
   public UserAnQuanActivity_ViewBinding(UserAnQuanActivity target) {
@@ -38,7 +38,7 @@ public class UserAnQuanActivity_ViewBinding implements Unbinder {
     target.headTextTitle = Utils.findRequiredViewAsType(source, R.id.head_text_title, "field 'headTextTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.head_img_left, "field 'headImgLeft' and method 'onViewClicked'");
     target.headImgLeft = Utils.castView(view, R.id.head_img_left, "field 'headImgLeft'", ImageView.class);
-    view2131296671 = view;
+    view2131296669 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class UserAnQuanActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.li1, "field 'li1' and method 'onViewClicked'");
     target.li1 = Utils.castView(view, R.id.li1, "field 'li1'", LinearLayout.class);
-    view2131296859 = view;
+    view2131296857 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class UserAnQuanActivity_ViewBinding implements Unbinder {
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", TextView.class);
     view = Utils.findRequiredView(source, R.id.li3, "field 'li3' and method 'onViewClicked'");
     target.li3 = Utils.castView(view, R.id.li3, "field 'li3'", LinearLayout.class);
-    view2131296865 = view;
+    view2131296863 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +67,7 @@ public class UserAnQuanActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.li4, "field 'li4' and method 'onViewClicked'");
     target.li4 = Utils.castView(view, R.id.li4, "field 'li4'", LinearLayout.class);
-    view2131296869 = view;
+    view2131296867 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -93,13 +93,13 @@ public class UserAnQuanActivity_ViewBinding implements Unbinder {
     target.li4 = null;
     target.li3Text = null;
 
-    view2131296671.setOnClickListener(null);
-    view2131296671 = null;
-    view2131296859.setOnClickListener(null);
-    view2131296859 = null;
-    view2131296865.setOnClickListener(null);
-    view2131296865 = null;
-    view2131296869.setOnClickListener(null);
-    view2131296869 = null;
+    view2131296669.setOnClickListener(null);
+    view2131296669 = null;
+    view2131296857.setOnClickListener(null);
+    view2131296857 = null;
+    view2131296863.setOnClickListener(null);
+    view2131296863 = null;
+    view2131296867.setOnClickListener(null);
+    view2131296867 = null;
   }
 }

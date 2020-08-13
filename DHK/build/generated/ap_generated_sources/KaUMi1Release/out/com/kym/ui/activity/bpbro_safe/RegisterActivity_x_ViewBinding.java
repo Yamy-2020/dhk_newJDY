@@ -17,11 +17,11 @@ import java.lang.Override;
 public class RegisterActivity_x_ViewBinding implements Unbinder {
   private RegisterActivity_x target;
 
-  private View view2131296671;
+  private View view2131296669;
 
-  private View view2131296979;
+  private View view2131296977;
 
-  private View view2131297234;
+  private View view2131297232;
 
   @UiThread
   public RegisterActivity_x_ViewBinding(RegisterActivity_x target) {
@@ -36,7 +36,7 @@ public class RegisterActivity_x_ViewBinding implements Unbinder {
     target.headTextTitle = Utils.findRequiredViewAsType(source, R.id.head_text_title, "field 'headTextTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.head_img_left, "field 'headImgLeft' and method 'onViewClicked'");
     target.headImgLeft = Utils.castView(view, R.id.head_img_left, "field 'headImgLeft'", ImageView.class);
-    view2131296671 = view;
+    view2131296669 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class RegisterActivity_x_ViewBinding implements Unbinder {
     target.message = Utils.findRequiredViewAsType(source, R.id.message, "field 'message'", EditText.class);
     view = Utils.findRequiredView(source, R.id.msg_btn, "field 'msgBtn' and method 'onViewClicked'");
     target.msgBtn = Utils.castView(view, R.id.msg_btn, "field 'msgBtn'", TextView.class);
-    view2131296979 = view;
+    view2131296977 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class RegisterActivity_x_ViewBinding implements Unbinder {
     target.repassword = Utils.findRequiredViewAsType(source, R.id.repassword, "field 'repassword'", EditText.class);
     view = Utils.findRequiredView(source, R.id.submit, "field 'submit' and method 'onViewClicked'");
     target.submit = Utils.castView(view, R.id.submit, "field 'submit'", TextView.class);
-    view2131297234 = view;
+    view2131297232 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -83,11 +83,11 @@ public class RegisterActivity_x_ViewBinding implements Unbinder {
     target.repassword = null;
     target.submit = null;
 
-    view2131296671.setOnClickListener(null);
-    view2131296671 = null;
-    view2131296979.setOnClickListener(null);
-    view2131296979 = null;
-    view2131297234.setOnClickListener(null);
-    view2131297234 = null;
+    view2131296669.setOnClickListener(null);
+    view2131296669 = null;
+    view2131296977.setOnClickListener(null);
+    view2131296977 = null;
+    view2131297232.setOnClickListener(null);
+    view2131297232 = null;
   }
 }

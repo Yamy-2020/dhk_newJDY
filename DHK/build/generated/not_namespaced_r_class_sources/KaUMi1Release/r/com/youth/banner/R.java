@@ -37,9 +37,9 @@ public final class R {
         private drawable() {}
 
         public static final int black_background = 0x7f08009d;
-        public static final int gray_radius = 0x7f08014e;
-        public static final int no_banner = 0x7f080262;
-        public static final int white_radius = 0x7f08038e;
+        public static final int gray_radius = 0x7f08014f;
+        public static final int no_banner = 0x7f080263;
+        public static final int white_radius = 0x7f08038f;
     }
     public static final class id {
         private id() {}
@@ -48,24 +48,24 @@ public final class R {
         public static final int bannerDefaultImage = 0x7f090058;
         public static final int bannerTitle = 0x7f090059;
         public static final int bannerViewPager = 0x7f09005a;
-        public static final int center = 0x7f0900a4;
-        public static final int center_crop = 0x7f0900a5;
-        public static final int center_inside = 0x7f0900a7;
-        public static final int circleIndicator = 0x7f0900b2;
-        public static final int fit_center = 0x7f09014e;
-        public static final int fit_end = 0x7f09014f;
-        public static final int fit_start = 0x7f090150;
-        public static final int fit_xy = 0x7f090151;
-        public static final int indicatorInside = 0x7f090203;
-        public static final int matrix = 0x7f0902c2;
-        public static final int numIndicator = 0x7f0902e8;
-        public static final int numIndicatorInside = 0x7f0902e9;
-        public static final int titleView = 0x7f09045b;
+        public static final int center = 0x7f0900a5;
+        public static final int center_crop = 0x7f0900a6;
+        public static final int center_inside = 0x7f0900a8;
+        public static final int circleIndicator = 0x7f0900b3;
+        public static final int fit_center = 0x7f09014d;
+        public static final int fit_end = 0x7f09014e;
+        public static final int fit_start = 0x7f09014f;
+        public static final int fit_xy = 0x7f090150;
+        public static final int indicatorInside = 0x7f090202;
+        public static final int matrix = 0x7f0902c0;
+        public static final int numIndicator = 0x7f0902e6;
+        public static final int numIndicatorInside = 0x7f0902e7;
+        public static final int titleView = 0x7f09045a;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int banner = 0x7f0c00c5;
+        public static final int banner = 0x7f0c00c4;
     }
     public static final class styleable {
         private styleable() {}
