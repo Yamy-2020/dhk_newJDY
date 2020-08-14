@@ -1,4 +1,4 @@
-#Thu Aug 13 16:58:49 CST 2020
+#Fri Aug 14 11:19:17 CST 2020
 base.0=E\:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\dex\\KaUMi1Release\\mergeDexKaUMi1Release\\out\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

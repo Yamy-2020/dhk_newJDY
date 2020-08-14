@@ -284,7 +284,7 @@ public class SecondActivity extends FragmentActivity {
 
 
                 } else {
-                    ToastUtil.showTextToas(SecondActivity.this, "请联系客服");
+                    ToastUtil.showTextToas(SecondActivity.this, "登录已超时");
                 }
             }
 

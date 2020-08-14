@@ -239,25 +239,5 @@
     <orderEntry type="module" module-name="library" />
     <orderEntry type="module" module-name="gallery" />
     <orderEntry type="library" name="Gradle: org.apache.http.legacy-android-28" level="project" />
-    <orderEntry type="module" module-name="circleprogress" />
-    <orderEntry type="module" module-name="ocr_ui" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="gallery" />
-    <orderEntry type="module" module-name="circleprogress" />
-    <orderEntry type="module" module-name="ocr_ui" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="gallery" />
-    <orderEntry type="module" module-name="circleprogress" />
-    <orderEntry type="module" module-name="ocr_ui" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="gallery" />
-    <orderEntry type="module" module-name="circleprogress" />
-    <orderEntry type="module" module-name="ocr_ui" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="gallery" />
-    <orderEntry type="module" module-name="circleprogress" />
-    <orderEntry type="module" module-name="ocr_ui" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="gallery" />
   </component>
 </module>
