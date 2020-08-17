@@ -57,7 +57,7 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
             BankListResponse.BankInfo model = models.get(position);
             viewHolder.bank_name.setText(model.getBank_name());
             viewHolder.bank_no.setText(model.getBank_no().substring(0, 4)
-                    + " **** **** " + model.getBank_no().substring(model.getBank_no().length() - 4));
+                    + " **** **** " + model.getBank_no().substring(model.getBank_no().length() - 4, model.getBank_no().length()));
 
             Calendar calendar = Calendar.getInstance();
             int day = calendar.get(Calendar.DAY_OF_MONTH);//当天
@@ -72,10 +72,10 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                         viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                         viewHolder.submit.setEnabled(true);
-                    } else if (type.equals("XF")) {
-                        viewHolder.submit.setText("立即养卡");
+                    } /*else if (type.equals("XF")) {
+                        viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
-                    }
+                    }*/
                 } else {
                     if (day < billDate) {
                         int month = calendar.get(Calendar.MONTH) + 1;
@@ -96,10 +96,10 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                         viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_blur);
                         viewHolder.submit.setEnabled(false);
-                    } else if (type.equals("XF")) {
-                        viewHolder.submit.setText("立即养卡");
+                    } /*else if (type.equals("XF")) {
+                        viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
-                    }
+                    }*/
                 }
             } else {
                 if (day <= reapyDate) {
@@ -111,10 +111,10 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                         viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                         viewHolder.submit.setEnabled(true);
-                    } else if (type.equals("XF")) {
-                        viewHolder.submit.setText("立即养卡");
+                    } /*else if (type.equals("XF")) {
+                        viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
-                    }
+                    }*/
                 } else if (day >= billDate) {
                     int dayCount = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
                     int num = dayCount - day + reapyDate;
@@ -130,7 +130,7 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                         viewHolder.submit.setEnabled(true);
                     } else if (type.equals("XF")) {
-                        viewHolder.submit.setText("立即养卡");
+                        viewHolder.submit.setText("立即还款");
                         viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                     }
                 } else {
@@ -143,7 +143,7 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                             viewHolder.submit.setBackgroundResource(R.drawable.bank_list_blur);
                             viewHolder.submit.setEnabled(false);
                         } else if (type.equals("XF")) {
-                            viewHolder.submit.setText("立即养卡");
+                            viewHolder.submit.setText("立即还款");
                             viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                         }
                     } else if (day > reapyDate) {
@@ -161,7 +161,7 @@ public class NewBankListAdapter extends RecyclerView.Adapter {
                             viewHolder.submit.setBackgroundResource(R.drawable.bank_list_blur);
                             viewHolder.submit.setEnabled(false);
                         } else if (type.equals("XF")) {
-                            viewHolder.submit.setText("立即养卡");
+                            viewHolder.submit.setText("立即还款");
                             viewHolder.submit.setBackgroundResource(R.drawable.bank_list_focus);
                         }
                     }

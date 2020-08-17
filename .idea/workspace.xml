@@ -38,21 +38,43 @@
       <change beforePath="$PROJECT_DIR$/DHK/build/generated/source/buildConfig/KaUMi1/release/com/kym/ui/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/generated/source/buildConfig/KaUMi1/release/com/kym/ui/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/apk_list/KaUMi1Debug/mainApkListPersistenceKaUMi1Debug/apk-list.gson" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/apk_list/KaUMi1Debug/mainApkListPersistenceKaUMi1Debug/apk-list.gson" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/apk_list/KaUMi1Release/mainApkListPersistenceKaUMi1Release/apk-list.gson" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/apk_list/KaUMi1Release/mainApkListPersistenceKaUMi1Release/apk-list.gson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/release/multi-v2/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/release/multi-v2/release.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/release/single/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/blame/res/KaUMi1/release/single/release.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Debug/processKaUMi1DebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Debug/processKaUMi1DebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Debug/processKaUMi1DebugManifest/bundle-manifest/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Debug/processKaUMi1DebugManifest/bundle-manifest/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/bundle-manifest/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/bundle_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/bundle-manifest/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/dex/KaUMi1Release/mergeDexKaUMi1Release/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/dex/KaUMi1Release/mergeDexKaUMi1Release/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1DebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1DebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1DebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1DebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1ReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/incremental/mergeKaUMi1ReleaseResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/incremental/packageKaUMi1Release/tmp/KaUMi1Release/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/incremental/packageKaUMi1Release/tmp/KaUMi1Release/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/incremental/packageKaUMi1Release/tmp/KaUMi1Release/zip-cache/9bKljlk+FJgAEFvGh5E1IbKEW9c=" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/incremental/packageKaUMi1Release/tmp/KaUMi1Release/zip-cache/9bKljlk+FJgAEFvGh5E1IbKEW9c=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Release/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/instant_app_manifest/KaUMi1Release/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/BuildConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/LoginActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/LoginActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/KeTangFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/SecondActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/util/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/util/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/activity/YeJiActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/HKprePlanAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/HKprePlanAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/Holder.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/Holder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/NewBankListAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/NewBankListAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/ShangHuListAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/ShangHuListAdapter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/ShangHuListAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/javac/KaUMi1Release/classes/com/kym/ui/adapter/ShangHuListAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/manifest_merge_blame_file/KaUMi1Debug/manifest-merger-blame-KaUMi1-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/manifest_merge_blame_file/KaUMi1Debug/manifest-merger-blame-KaUMi1-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/manifest_merge_blame_file/KaUMi1Release/manifest-merger-blame-KaUMi1-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/manifest_merge_blame_file/KaUMi1Release/manifest-merger-blame-KaUMi1-release-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/merged_manifests/KaUMi1Debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/merged_manifests/KaUMi1Debug/AndroidManifest.xml" afterDir="false" />
@@ -63,11 +85,129 @@
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/metadata_feature_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/metadata-feature/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/metadata_feature_manifest/KaUMi1Release/processKaUMi1ReleaseManifest/metadata-feature/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/processed_res/KaUMi1Release/processKaUMi1ReleaseResources/out/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/processed_res/KaUMi1Release/processKaUMi1ReleaseResources/out/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/processed_res/KaUMi1Release/processKaUMi1ReleaseResources/out/resources-KaUMi1Release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/processed_res/KaUMi1Release/processKaUMi1ReleaseResources/out/resources-KaUMi1Release.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/color_design_error.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/color_mtrl_btn_bg_color_selector.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_flash_on_s.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_icon_new_home_bk.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_rx_bg1.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_titlet.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_wangyin.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_wenti_fenrun.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-hdpi_ykrc.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi-v4_dkplayer_ic_action_volume_up.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi-v4_pd_portrait_robot.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_bg.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_dc_guize.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_fx.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_hl_ld.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_hl_sz.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_hl_xx.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_icon_bk.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_icon_fv.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_icon_qb.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_ke_tang11.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_liveness_layout_bottom_tips.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_new_zhanghu.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_shoukuan.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_user_zjsc.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_v5.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_v7.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_wenti_fenrun.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_xj.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xhdpi_yk.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_carnull.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_choosebar_down.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_click_cxk.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_mingxi.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_newclock.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_qidong.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_rx_img1.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_rx_img6.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_rx_img9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_tab_icon_blur2.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_tab_icon_blur4.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_user_smrz.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_user_sz.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_user_zdfw.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxhdpi_zl_cxk.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxxhdpi-v4_ic_prompt_close.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable-xxxhdpi-v4_ic_prompt_warn.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_corner.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_corner13.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_dc_conner.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_edit_press4.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_ic_mtrl_chip_checked_circle.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_loading_bg.9.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_login1_title_hui_yuan.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_pd_page_dot_no.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_qrcode_scan_line.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_selector_dot_true.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_textview_sha.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/drawable_textview_sha.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout-v21_notification_action.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_abc_activity_chooser_view_list_item.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_acitivity_jd_tixian.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_ben_jin_guan_li.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_lianxi_xin_x.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_ling_qian_money.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_new_add_credit.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_new_add_credit.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_rh_zheng_jian.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_shou_kuantx.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_tixian.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_update_cxk.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_activity_ye_ji.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_dialog_model.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_head.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_item_bank_list.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_item_bank_list.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_jiaoyi_ln.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_ke_tang_rv1.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_ke_tang_rv1.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_notification_template_big_media_custom.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_pd_item_message_menu.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_popuplayout.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_popuplayout.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/debug/layout_sign_window.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/release/layout_activity_new_add_credit.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/release/layout_activity_new_add_credit.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/release/layout_item_bank_list.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/res/merged/KaUMi1/release/layout_item_bank_list.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/BuildConfig.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/KeTangFragment.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/LoginActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/LoginActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/SecondActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/activity/YeJiActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/HKprePlanAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/HKprePlanAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/Holder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/Holder.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/NewBankListAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/NewBankListAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/ShangHuListAdapter$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/ShangHuListAdapter$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/ShangHuListAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/adapter/ShangHuListAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/util/Connect.dex" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/intermediates/transforms/dexBuilder/KaUMi1/release/0/com/kym/ui/util/Connect.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/DHK-KaUMi1-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/DHK-KaUMi1-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/build/outputs/apk/KaUMi1/release/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/HKprePlanAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/HKprePlanAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/NewBankListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/NewBankListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/res/layout/activity_new_add_credit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/res/layout/activity_new_add_credit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DHK/src/main/res/layout/item_bank_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DHK/src/main/res/layout/item_bank_list.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +218,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="f366049" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -133,67 +273,90 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2323">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
+            <state relative-caret-position="252">
+              <caret line="103" column="66" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/ShaiXunActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/shaixun/ShaiXun1Fragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ShangHuListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4439">
+              <caret line="283" column="71" selection-start-line="283" selection-start-column="71" selection-end-line="283" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="989">
-              <caret line="286" column="68" selection-start-line="286" selection-start-column="68" selection-end-line="286" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="182">
+              <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="106" column="46" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+            <state relative-caret-position="297">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DHK/build.gradle">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/DialogUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+            <state relative-caret-position="87">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/appconfig/IService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="1187" column="25" selection-start-line="1187" selection-start-column="25" selection-end-line="1187" selection-end-column="25" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/jiaoyi_yeji.xml">
+        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1265">
-              <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner11.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner111.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="232">
+              <caret line="461" column="56" selection-start-line="461" selection-start-column="41" selection-end-line="461" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -211,23 +374,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>handler</find>
-      <find>实名认证</find>
-      <find>submit</find>
-      <find>SPConfig</find>
-      <find>s</find>
-      <find>ziliao_set</find>
-      <find>textview_sha</find>
-      <find>LinearLayout</find>
-      <find>exict_ll</find>
-      <find>banben</find>
-      <find>view_new_home_3</find>
-      <find>rv_bank_list</find>
-      <find>view_new_home_1</find>
-      <find>lay_foot_add</find>
       <find>tv_add_new_credit_confirm</find>
       <find>addTab3</find>
-      <find>view_new_home_8</find>
       <find>view_new_home_4</find>
       <find>sk_total</find>
       <find>hk_total</find>
@@ -241,6 +389,21 @@
       <find>head_img_left</find>
       <find>btn_gr1</find>
       <find>backgro</find>
+      <find>lay_foot_add</find>
+      <find>home_sk</find>
+      <find>circle_button</find>
+      <find>mLv</find>
+      <find>listView</find>
+      <find>R.drawable.</find>
+      <find>view_new_home_7</find>
+      <find>sk2</find>
+      <find>is_sign</find>
+      <find>sk1</find>
+      <find>home_hk</find>
+      <find>listViewSj</find>
+      <find>rv_bank_list</find>
+      <find>submit</find>
+      <find>view_new_home_8</find>
     </findStrings>
     <replaceStrings>
       <replace>@dimen/dp_30</replace>
@@ -293,15 +456,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/zhanghu/ShengJiTiXianActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/zhanghu/ShouKuantxActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_safe/UserAnQuanActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_yk/XFprePlanActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_untils/bpbro_untils.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_three_frement_new.xml" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/Sj_oneAdapter.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_shanghulist.xml" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ShangHuListAdapter.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ZDAdapter.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/zhanghu/TotalzhActivity.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/zhanghu/XinYongKaActivity.java" />
@@ -319,7 +475,6 @@
         <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_web.xml" />
         <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_web1.xml" />
         <option value="$PROJECT_DIR$/DHK/src/main/res/layout/head.xml" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/rongxinfen/RongXinFenFragment.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_safe/RegisterActivity_x.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/appconfig/IService.java" />
@@ -334,23 +489,31 @@
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SheZhiActivity.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/BankChangeActivity.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/UpGradeActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_new_add_credit.xml" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/huankuan/NewAddCreditCardActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_BK_WebActivity.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/res/drawable/corner111.xml" />
         <option value="$PROJECT_DIR$/DHK/src/main/res/layout/jiaoyi_yeji.xml" />
-        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java" />
-        <option value="$PROJECT_DIR$/DHK/build.gradle" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/activity_new_add_credit.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/newutil/DragFloatActionButton.java" />
+        <option value="$PROJECT_DIR$/DHK/build.gradle" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_hk/HK_BankList_Activity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/res/layout/item_bank_list.xml" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/HKprePlanAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/NewBankListAdapter.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_BK_WebActivity.java" />
         <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java" />
+        <option value="$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ShangHuListAdapter.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="376" />
-    <option name="y" value="36" />
-    <option name="width" value="1434" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="365" />
+    <option name="y" value="45" />
+    <option name="width" value="1515" />
     <option name="height" value="985" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -414,12 +577,6 @@
               <item name="apk" type="462c0819:PsiDirectoryNode" />
               <item name="KaUMi1" type="462c0819:PsiDirectoryNode" />
               <item name="release" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhk_newJDY" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="DHK" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="KaUMi1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dhk_newJDY" type="b2602c69:ProjectViewProjectNode" />
@@ -505,9 +662,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,7 +675,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/DHK/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DHK/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="D:/da2/day06/ZLEduVideo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -530,12 +687,8 @@
     <option name="LAST_EDITED_FLAVOR_OR_DIMENSION" value="KaUMi1" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable" />
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\layout" />
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xxhdpi" />
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xhdpi" />
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-hdpi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\java\com\kym\ui\sp" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.kym.ui" />
@@ -553,8 +706,12 @@
       <recent name="com.zzss.jindy" />
       <recent name="com.zzss.jindy.a_new_app.saoma_zh" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\android\dhk_newJDY\DHK\src\main\java\com\kym\ui\sp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\layout" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xxhdpi" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-xhdpi" />
+      <recent name="E:\android\dhk_newJDY\DHK\src\main\res\drawable-hdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -787,7 +944,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597311521371</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="zhisuan">
+      <created>1597375405582</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597375405582</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -800,9 +964,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.20375335" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" weight="0.31032172" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.1621984" />
       <window_info id="Captures" order="2" sideWeight="0.5021216" side_tool="true" weight="0.17292225" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -813,18 +978,18 @@
       <window_info id="Resources Explorer" order="8" weight="0.32908848" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49262735" weight="0.36737806" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.53966004" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4858357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49597856" weight="0.32152975" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.52124643" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5073727" side_tool="true" weight="0.29745042" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5080429" side_tool="true" weight="0.29745042" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.6859972" />
       <window_info anchor="bottom" id="Build" order="12" sideWeight="0.49396783" weight="0.28895184" />
-      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.6487252" />
+      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.53966004" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -835,11 +1000,11 @@
       <window_info anchor="right" id="Coverage" order="7" side_tool="true" />
       <window_info anchor="right" id="Device File Explorer" order="8" sideWeight="0.50073206" side_tool="true" weight="0.32908848" />
       <window_info anchor="right" id="Gradle" order="9" sideWeight="0.49926794" visible="true" weight="0.22050938" />
-      <window_info anchor="right" id="Preview" order="10" weight="0.43967828" />
+      <window_info anchor="right" id="Preview" order="10" weight="0.38337803" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787837" visible="true" weight="0.20978552" />
-      <window_info id="Structure" order="1" sideWeight="0.50136983" side_tool="true" weight="0.20375335" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" weight="0.31032172" />
+      <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.1621984" />
       <window_info id="Captures" order="2" sideWeight="0.5021216" side_tool="true" weight="0.17292225" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -849,18 +1014,18 @@
       <window_info id="Resources Explorer" order="8" weight="0.32908848" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49262735" weight="0.5524079" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49262735" weight="0.53966004" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4858357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49597856" weight="0.32152975" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.5219236" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49919224" weight="0.52124643" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5073727" side_tool="true" weight="0.29745042" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.6859972" />
-      <window_info anchor="bottom" id="Build" order="12" sideWeight="0.49396783" weight="0.4815864" />
-      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.70963174" />
+      <window_info anchor="bottom" id="Build" order="12" sideWeight="0.49396783" weight="0.28895184" />
+      <window_info anchor="bottom" id="Logcat" order="13" sideWeight="0.49329758" weight="0.53966004" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -870,8 +1035,8 @@
       <window_info anchor="right" id="Assistant" order="6" />
       <window_info anchor="right" id="Coverage" order="7" side_tool="true" />
       <window_info anchor="right" id="Device File Explorer" order="8" sideWeight="0.50073206" side_tool="true" weight="0.32908848" />
-      <window_info anchor="right" id="Gradle" order="9" sideWeight="0.49926794" visible="true" weight="0.26206434" />
-      <window_info anchor="right" id="Preview" order="10" weight="0.43163538" />
+      <window_info anchor="right" id="Gradle" order="9" sideWeight="0.49926794" visible="true" weight="0.22050938" />
+      <window_info anchor="right" id="Preview" order="10" weight="0.38337803" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
@@ -912,291 +1077,380 @@
     <SUITE FILE_PATH="coverage/dhk_newJDY$dhk_newJDY__installRongEHuanRelease_.ic" NAME="dhk_newJDY [installRongEHuanRelease] Coverage Results" MODIFIED="1580704118343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/ke_tang_rv1.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/DHK/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding>
-            <element signature="e#1444#1459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/ThreeFrement_new.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="545" column="66" selection-start-line="545" selection-start-column="66" selection-end-line="545" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SheZhiActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/jock/pickerview/lib/bean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/shape_point_select.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/JieBangCardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/BankChangeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaaach/toprightmenu/1.0/141774ba58a81dc0c2a897e90321d0f218fddd41/toprightmenu-1.0-sources.jar!/com/zaaach/toprightmenu/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_bank_change.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/head1.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/head.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/UpGradeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_all_card_list.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="167" column="17" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/backdalog.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/BackDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/AllCardListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="74" column="83" selection-start-line="74" selection-start-column="83" selection-end-line="74" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_new_add_credit.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="390" column="54" selection-start-line="390" selection-start-column="29" selection-end-line="390" selection-end-column="54" />
-          <folding>
-            <element signature="e#17293#17307#0" expanded="true" />
-            <element signature="e#17507#17521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/huankuan/NewAddCreditCardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/sun_util/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/DialogUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_web.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/shiming/NewUpdateCxkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="253" column="16" selection-start-line="253" selection-start-column="16" selection-end-line="253" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_BK_WebActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1114">
-          <caret line="149" selection-start-line="149" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="226" column="64" selection-start-line="226" selection-start-column="64" selection-end-line="226" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner0.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner1.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner2.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner4.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner5.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner6.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner7.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner12.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner8.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner3.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner9.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner10.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/PaiHangBangAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/jiaoyi_ln.xml" />
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_ye_ji.xml" />
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2323">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="-184">
+          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/jiaoyi_yeji.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
+        <state relative-caret-position="149">
+          <caret line="130" column="48" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="48" />
+          <folding>
+            <element signature="e#2027#2041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner11.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner111.xml">
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_shai_xun.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="149">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_shai_xun1.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483" />
+        <state relative-caret-position="92">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="31" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/shaixun/ShaiXun5Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="106" column="46" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+        <state relative-caret-position="404">
+          <caret line="268" column="28" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DHK/build.gradle">
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/XFplanlistAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        <state relative-caret-position="-736">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_yk/XFplaninfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/HKplanlistAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_hk/HK_planinfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/DingDanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="52" column="73" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ZDAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_sk/KuaiJieDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/huankuan/NewAddCreditCardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_HuanKuanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_hl__huan_kuan.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_hk__bank_list.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android_sdk/sources/android-28/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="2082" column="16" selection-start-line="2082" selection-start-column="16" selection-end-line="2082" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android_sdk/sources/android-28/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="439" column="28" selection-start-line="439" selection-start-column="28" selection-end-line="439" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/item_bank_list.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="88" column="51" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/KaUMi1/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/HKprePlanAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_hk/HK_prePlanActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="204" column="61" selection-start-line="204" selection-start-column="61" selection-end-line="204" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_hk/HK_planActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="547" column="80" selection-start-line="547" selection-start-column="80" selection-end-line="547" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_hk/HK_BankList_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="123" column="79" selection-start-line="123" selection-start-column="79" selection-end-line="123" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_hkpre_plan.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/activity_hkplan.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="304" column="57" selection-start-line="304" selection-start-column="57" selection-end-line="304" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/corner2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/drawable/bank_list_blur.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/KuaiJieCardListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/bpbro_home/bpbro_yk/XiaoFeiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/NewBankListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="104" column="23" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/rongxinfen/XinYong_GuanLi_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1086">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/ShareActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1352">
+          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/appconfig/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="1187" column="25" selection-start-line="1187" selection-start-column="25" selection-end-line="1187" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android_sdk/sources/android-28/android/webkit/WebView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/res/layout/fragment_new_home2.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="461" column="56" selection-start-line="461" selection-start-column="41" selection-end-line="461" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/android_sdk/platforms/android-28/android.jar!/android/webkit/WebViewClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+          <folding>
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/Tab_WebActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/CardTestWebActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1569">
+          <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2237">
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/SecondActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="286" column="68" selection-start-line="286" selection-start-column="68" selection-end-line="286" selection-end-column="68" />
+        <state relative-caret-position="182">
+          <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/util/DialogUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.limxing/Android-PromptDialog/1.1.3/b1378eca0fc4c18551aaafe70b17e071199ac946/Android-PromptDialog-1.1.3-sources.jar!/me/leefeng/promptlibrary/PromptDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/KeTangFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/hualuo/HL_BK_WebActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1991">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/NewHomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4439">
+          <caret line="283" column="71" selection-start-line="283" selection-start-column="71" selection-end-line="283" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/activity/YeJiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="103" column="66" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/ShaiXunActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/adapter/ShangHuListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DHK/src/main/java/com/kym/ui/shaixun/ShaiXun1Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>

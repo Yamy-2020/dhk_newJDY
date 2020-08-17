@@ -28,10 +28,13 @@ import com.kym.ui.appconfig.IService;
 import com.kym.ui.info.KuaiJieCardList;
 import com.kym.ui.info.WebViewBean;
 import com.kym.ui.util.Connect;
+import com.kym.ui.util.DialogUtil;
 import com.kym.ui.util.JsonUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import me.leefeng.promptlibrary.PromptDialog;
 
 import static com.lzy.okgo.utils.HttpUtils.runOnUiThread;
 
@@ -43,27 +46,37 @@ public class KeTangFragment extends Fragment {
     private Map<String, String> map;
     private String s;
     private View view;
+    private DialogUtil dialogUtil;
+    private PromptDialog promptDialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_web, container, false);
 //        initHead();
+        dialogUtil = new DialogUtil(getContext());
+
         initView();
 //        ifshop();
         checkAppVersion();
         return view;
     }
     protected void checkAppVersion() {
+//        dialogUtil = new DialogUtil(getContext());
+
         Connect.getInstance().post(getContext(), IService.WEB_URL, null, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 WebViewBean info = (WebViewBean) JsonUtils.parse((String) result, WebViewBean.class);
                 if (info.getResult().getCode() == 10000) {
+//                    promptDialog.dismiss();
+//                    dialogUtil.dismiss();
+
                     Log.e("1111111", "onSuccess: " + info.getData());
                     map = new HashMap<>();
                     map.put("KYT-OSVC-Token", info.getData().getKYTOSVCToken());
 
                     webView.loadUrl(info.getData().getUrl(), map);
+
                 } else {
                     ToastUtil.showTextToas(getContext(), "请联系客服");
                 }
@@ -78,6 +91,8 @@ public class KeTangFragment extends Fragment {
 
 
     public void initView() {
+//        promptDialog = new PromptDialog(getActivity());
+
         view.findViewById(R.id.ll111).setVisibility(View.GONE);
         webView = view.findViewById(R.id.webView);
         runOnUiThread(new Runnable() {
@@ -116,6 +131,7 @@ public class KeTangFragment extends Fragment {
                         try {
                             if (url.startsWith("http:") || url.startsWith("https:")) {
                                 view.loadUrl(url);
+
                             } else {
                                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                                 startActivity(intent);
@@ -150,6 +166,8 @@ public class KeTangFragment extends Fragment {
                     @Override
                     public void onPageFinished(WebView view, String url) {
                         //设定加载结束的操作
+//                         promptDialog.dismiss();
+                        dialogUtil.dismiss();
                     }
                 });
                 webView.setOnKeyListener(new View.OnKeyListener() {

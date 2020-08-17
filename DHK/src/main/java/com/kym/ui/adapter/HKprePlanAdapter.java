@@ -70,7 +70,7 @@ public class HKprePlanAdapter extends BaseAdapter {
             holder.dc_type.setText("还款金额");
             holder.dc_img.setImageResource(R.drawable.dc_xf);
             holder.dc_sxf.setText("手续费 " + info.getTotalfee());
-            holder.dc_money.setTextColor(0xFFFF6666);
+            holder.dc_money.setTextColor(0xFFD9BC84);
             holder.dc_money.setText("+" + info.getMoney() + "元");
         }
         return convertView;

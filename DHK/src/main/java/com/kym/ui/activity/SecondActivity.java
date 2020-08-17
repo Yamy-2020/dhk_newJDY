@@ -72,7 +72,7 @@ public class SecondActivity extends FragmentActivity {
     private KeTangFragment keTangFragment;
     private String[] tabTitles;
     private int[] bitmap;
-    private PromptDialog promptDialog;
+    private KeXinFenBean shop;
 
     @Override
     protected void onResume() {
@@ -105,13 +105,34 @@ public class SecondActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         ifshop();
+
         setContentView(R.layout.activity_second);
         ButterKnife.bind(this);
         activity = this;
         sp = new SharedPreferencesHelper(SecondActivity.this);
 
     }
+    Handler mHandler = new Handler(){
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 0:
+                    //do something,refresh UI;
+
+                    initView();
+                    registerBroadCast();
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
 
     @Override
     protected void onDestroy() {
@@ -143,13 +164,13 @@ public class SecondActivity extends FragmentActivity {
                     R.drawable.icon_rongxinfen_selector,
                     R.drawable.icon_tongji_selector};
         }else if(is_shop==1){
-
+//                dialogUtil.dismiss();
             tabTitles = new String[]{"首页", "小课堂", "我的"};
             bitmap = new int[]{R.drawable.icon_shoukuan_selector,
                     R.drawable.icon_ketang_selector,
                     R.drawable.icon_tongji_selector};
         }
-        promptDialog.dismissImmediately();
+
 
         for (int i = 0; i < 3; i++) {
             @SuppressLint("InflateParams") final View tab = inflater.inflate(R.layout.tm_tab_btn, null);
@@ -173,6 +194,7 @@ public class SecondActivity extends FragmentActivity {
                 public void onClick(View view) {
                     FragmentTransaction transaction = fm.beginTransaction();
                     switch (finalI) {
+
                         case 0:
                             resetFragment(transaction);
                             if (homeFragment == null) {
@@ -219,8 +241,7 @@ public class SecondActivity extends FragmentActivity {
                                 tab.setSelected(true);
                             }
 
-                            resetTab();
-                            tab.setSelected(true);
+
                             break;
                         case 2:
                             resetFragment(transaction);
@@ -241,30 +262,9 @@ public class SecondActivity extends FragmentActivity {
     }
 
 
-    Handler mHandler = new Handler(){
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case 0:
-                    //do something,refresh UI;
-
-                    initView();
-                    registerBroadCast();
-
-                    break;
-                default:
-                    break;
-            }
-        }
-
-    };
 
     protected void ifshop() {
-        promptDialog = new PromptDialog(SecondActivity.this);
 
-        promptDialog.showLoading("加载中");
 
         HashMap<String, String> params = new HashMap<>();
         params.put("version",LoginActivity.VERSION);
@@ -273,9 +273,9 @@ public class SecondActivity extends FragmentActivity {
             @Override
             public void onSuccess(Object result) {
 
-                KeXinFenBean shop = (KeXinFenBean) JsonUtils.parse((String) result, KeXinFenBean.class);
+                shop = (KeXinFenBean) JsonUtils.parse((String) result, KeXinFenBean.class);
                 if (shop.getResult().getCode() == 10000) {
-                    promptDialog.dismissImmediately();
+//                    dialogUtil.dismiss();
 
                     is_shop = shop.getData().getShop();
                     Log.e("is_shop ==== ", "onSuccess: " + is_shop);

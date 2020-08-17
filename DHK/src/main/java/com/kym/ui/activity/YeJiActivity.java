@@ -53,7 +53,6 @@ public class YeJiActivity extends BaseActivity {
     private TextView textV_tg_shimin;
     private BackDialog backDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -3228,6 +3228,10 @@
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\xy_hysj.png"
     },
     {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_jiaoyi_yeji.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\jiaoyi_yeji.xml"
+    },
+    {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_pd_activity_chat.xml.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\pd_activity_chat.xml"
     },
@@ -3818,6 +3822,10 @@
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi_xj.png.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\xj.png"
+    },
+    {
+        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable_corner111.xml.flat",
+        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\corner111.xml"
     },
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-hdpi_rx_img3.png.flat",
@@ -6676,10 +6684,6 @@
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable\\background_tab.xml"
     },
     {
-        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_jiaoyi_ln.xml.flat",
-        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\jiaoyi_ln.xml"
-    },
-    {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-2\\files-2.1\\8516ac599c0f39cda6e75249f41fc5c3\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
@@ -7022,10 +7026,6 @@
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi_new_jgg_kayisheng.png.flat",
         "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\drawable-xxhdpi\\new_jgg_kayisheng.png"
-    },
-    {
-        "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\layout_activity_ye_ji.xml.flat",
-        "source": "E:\\android\\dhk_newJDY\\DHK\\src\\main\\res\\layout\\activity_ye_ji.xml"
     },
     {
         "merged": "E:\\android\\dhk_newJDY\\DHK\\build\\intermediates\\res\\merged\\KaUMi1\\debug\\drawable-xxhdpi_user_wdkf.png.flat",
