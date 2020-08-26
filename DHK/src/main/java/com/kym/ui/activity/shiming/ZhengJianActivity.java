@@ -1,5 +1,6 @@
 package com.kym.ui.activity.shiming;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +10,11 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,6 +24,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.ShaiXunActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.daichang.DaiChangCityActivity;
 import com.kym.ui.activity.daichang.DaiChangRongHuiWebActivity;
@@ -25,11 +32,17 @@ import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.Constant;
 import com.kym.ui.appconfig.IService;
 import com.kym.ui.appconfig.SPConfig;
+import com.kym.ui.fragment.ShouYi_Show_Fragment;
 import com.kym.ui.info.BankListResponse;
 import com.kym.ui.info.RequestParam;
 import com.kym.ui.info.UploadFile;
 import com.kym.ui.model.NewUserResponse;
 import com.kym.ui.model.Result;
+import com.kym.ui.shaixun.ShaiXun1Fragment;
+import com.kym.ui.shaixun.ShaiXun2Fragment;
+import com.kym.ui.shaixun.ShaiXun3Fragment;
+import com.kym.ui.shaixun.ShaiXun4Fragment;
+import com.kym.ui.shaixun.ShaiXun5Fragment;
 import com.kym.ui.util.Connect;
 import com.kym.ui.util.DialogUtil;
 import com.kym.ui.util.FileCache;
@@ -44,6 +57,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
+import cn.finalteam.loadingview.PagerSlidingTabStrip;
+
 import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 
 
@@ -54,504 +69,68 @@ import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
  * @date 2020/1/14
  */
 
-public class ZhengJianActivity extends BaseActivity implements View.OnClickListener {
-
-    private ImageView img1, img2, img3, img4, img1_1, img1_2, img1_3, img1_4, big_img;
-    private static final int PHOTO_REQUEST_CAMERA = 11;
-    private String img_name;
-    private LinearLayout img_box1, img_box2, img_box3, img_box4, btn_login, li1, close;
-    private RelativeLayout li2;
-    private String path, photoType;
-    private String picPath, idCardPhoto, idCardBackPhoto, BankCardPhoto, PersonPhoto;
-    private Uri picUri;
-    private TextView right_tv;
-    private Intent intent;
-    private BankListResponse.BankInfo bankInfo;
-    private BackDialog backDialog;
+public class ZhengJianActivity extends FragmentActivity implements View.OnClickListener {
+//    private final String[] TITLES = {"收款收益", "还款收益", "智收收益", "升级"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zheng_jian);
-        bankInfo = (BankListResponse.BankInfo) getIntent().getSerializableExtra("bankInfo");
-        initHead();
-        initView();
-    }
+        setContentView(R.layout.fragment_feng_xiang);
+//        PagerSlidingTabStrip psts = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+//        ViewPager pager = (ViewPager) findViewById(R.id.pager);
+//        TextView tv = findViewById(R.id.head_text_title);
+//        findViewById(R.id.head_img_left).setOnClickListener(this);
+//        tv.setText("分润账户");
+//        FragmentManager fm = getSupportFragmentManager();
 
-    private void initHead() {
-        TextView tv = (TextView) findViewById(R.id.head_text_title);
-        findViewById(R.id.head_img_left).setOnClickListener(this);
-        right_tv = (TextView) findViewById(R.id.right_tv);
-        right_tv.setText("重新拍照");
-        right_tv.setOnClickListener(this);
-        tv.setText("证件认证");
+      /*  ZhengJianActivity.MyPagerAdapter myPagerAdapter = new ZhengJianActivity.MyPagerAdapter(fm);
+        pager.setAdapter(myPagerAdapter);
+        psts.setViewPager(pager);*/
     }
+   /* public class MyPagerAdapter extends FragmentPagerAdapter {
 
-    private void initView() {
-        img1 = (ImageView) findViewById(R.id.img1);
-        img2 = (ImageView) findViewById(R.id.img2);
-        img3 = (ImageView) findViewById(R.id.img3);
-        img4 = (ImageView) findViewById(R.id.img4);
-        big_img = (ImageView) findViewById(R.id.big_img);
-        img1_1 = (ImageView) findViewById(R.id.img1_1);
-        img1_2 = (ImageView) findViewById(R.id.img1_2);
-        img1_3 = (ImageView) findViewById(R.id.img1_3);
-        img1_4 = (ImageView) findViewById(R.id.img1_4);
-        img_box1 = (LinearLayout) findViewById(R.id.img_box1);
-        img_box2 = (LinearLayout) findViewById(R.id.img_box2);
-        img_box3 = (LinearLayout) findViewById(R.id.img_box3);
-        img_box4 = (LinearLayout) findViewById(R.id.img_box4);
-        btn_login = (LinearLayout) findViewById(R.id.btn_login);
-        li1 = (LinearLayout) findViewById(R.id.li1);
-        li2 = (RelativeLayout) findViewById(R.id.li2);
-        close = (LinearLayout) findViewById(R.id.close);
-        btn_login.setOnClickListener(this);
-        img_box1.setOnClickListener(this);
-        img_box2.setOnClickListener(this);
-        img_box3.setOnClickListener(this);
-        img_box4.setOnClickListener(this);
-        close.setOnClickListener(this);
-        li2.setVisibility(View.GONE);
-        right_tv.setVisibility(View.GONE);
-        if (getIntent().getStringExtra("code1").equals("1")) {
-            showYiBaoImg();
-        } else {
-            img1_1.setImageResource(R.drawable.img1);
-            img1_2.setImageResource(R.drawable.img2);
-            img1_3.setImageResource(R.drawable.img3);
-            img1_4.setImageResource(R.drawable.img4);
+        MyPagerAdapter(FragmentManager fm) {
+            super(fm);
         }
-    }
 
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return TITLES[position];
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new ShouYi_Show_Fragment(ZhengJianActivity.this);
+                case 1:
+                    return new ShouYi_Show_Fragment(ZhengJianActivity.this);
+                case 2:
+                    return new ShouYi_Show_Fragment(ZhengJianActivity.this);
+                case 3:
+                    return new ShouYi_Show_Fragment(ZhengJianActivity.this);
+                case 4:
+                    return new ShouYi_Show_Fragment(ZhengJianActivity.this);
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return TITLES.length;
+        }
+    }*/
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.head_img_left:
                 finish();
                 break;
-            case R.id.right_tv:
-                if (photoType.equals("idCardPhoto")) {
-                    img_name = "idCardPhoto";
-                } else if (photoType.equals("idCardBackPhoto")) {
-                    img_name = "idCardBackPhoto";
-                } else if (photoType.equals("BankCardPhoto")) {
-                    img_name = "BankCardPhoto";
-                } else if (photoType.equals("PersonPhoto")) {
-                    img_name = "PersonPhoto";
-                }
-                li1.setVisibility(View.VISIBLE);
-                li2.setVisibility(View.GONE);
-                photo();
-                break;
-            case R.id.img_box1:
-                if (img1.getVisibility() == View.GONE) {
-                    right_tv.setVisibility(View.VISIBLE);
-                    li1.setVisibility(View.GONE);
-                    li2.setVisibility(View.VISIBLE);
-                    Glide.with(getApplicationContext()).load(idCardPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                            .into(big_img);
-                    photoType = "idCardPhoto";
-                } else {
-                    li1.setVisibility(View.VISIBLE);
-                    li2.setVisibility(View.GONE);
-                    img_name = "idCardPhoto";
-                    photo();
-                }
-                break;
-            case R.id.img_box2:
-                if (img2.getVisibility() == View.GONE) {
-                    right_tv.setVisibility(View.VISIBLE);
-                    li1.setVisibility(View.GONE);
-                    li2.setVisibility(View.VISIBLE);
-                    Glide.with(getApplicationContext()).load(idCardBackPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                            .into(big_img);
-                    photoType = "idCardBackPhoto";
-                } else {
-                    li1.setVisibility(View.VISIBLE);
-                    li2.setVisibility(View.GONE);
-                    img_name = "idCardBackPhoto";
-                    photo();
-                }
 
-                break;
-            case R.id.img_box3:
-                if (img3.getVisibility() == View.GONE) {
-                    right_tv.setVisibility(View.VISIBLE);
-                    li1.setVisibility(View.GONE);
-                    li2.setVisibility(View.VISIBLE);
-                    Glide.with(getApplicationContext()).load(BankCardPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                            .into(big_img);
-                    photoType = "BankCardPhoto";
-                } else {
-                    li1.setVisibility(View.VISIBLE);
-                    li2.setVisibility(View.GONE);
-                    img_name = "BankCardPhoto";
-                    photo();
-                }
-
-                break;
-            case R.id.img_box4:
-                if (img4.getVisibility() == View.GONE) {
-                    right_tv.setVisibility(View.VISIBLE);
-                    li1.setVisibility(View.GONE);
-                    li2.setVisibility(View.VISIBLE);
-                    Glide.with(getApplicationContext()).load(PersonPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                            .into(big_img);
-                    photoType = "PersonPhoto";
-                } else {
-                    li1.setVisibility(View.VISIBLE);
-                    li2.setVisibility(View.GONE);
-                    img_name = "PersonPhoto";
-                    photo();
-                }
-                break;
-            case R.id.btn_login:
-                if (img1.getVisibility() != View.GONE || img2.getVisibility() != View.GONE ||
-                        img3.getVisibility() != View.GONE || img4.getVisibility() != View.GONE) {
-                    ToastUtil.showTextToas(getApplicationContext(), "请先补充照片");
-                } else {
-                    if (getIntent().getStringExtra("type").equals("kongka")) {
-                        isShangchuanDiqu();
-                    } else {
-                        finish();
-                    }
-                }
-                break;
-            case R.id.close:
-                li1.setVisibility(View.VISIBLE);
-                li2.setVisibility(View.GONE);
-                right_tv.setVisibility(View.GONE);
+            default:
                 break;
         }
     }
 
-    /**
-     * 判断是否上传地区
-     */
-    private void isShangchuanDiqu() {
-        final DialogUtil dialogUtil = new DialogUtil(this);
-        Connect.getInstance().post(getApplicationContext(), IService.IS_CHUANDIQU, null, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                dialogUtil.dismiss();
-                try {
-                    JSONObject obj = new JSONObject(result.toString());
-                    String result1 = obj.get("result").toString();
-                    JSONObject obj1 = new JSONObject(result1);
-                    String code = obj1.get("code").toString();
-                    String msg = obj1.get("msg").toString();
-                    if (code.equals("10000")) {
-                        String data1 = obj.get("data").toString();
-                        JSONObject obj2 = new JSONObject(data1);
-                        String code1 = obj2.get("code").toString();
-                        if (code1.equals("1")) {
-                            /**
-                             * 已上传
-                             */
-                            getBangKa();
-                        } else {
-                            /**
-                             * 未上传
-                             */
-                            intent = new Intent(getApplicationContext(), DaiChangCityActivity.class);
-                            intent.putExtra("data", bankInfo);
-                            intent.putExtra("id", getIntent().getStringExtra("id"));
-                            startActivity(intent);
-
-                        }
-                    } else if (code.equals("101") || code.equals("601")) {
-                        backDialog = new BackDialog("", "登录过期,请重新登录", "确定", ZhengJianActivity.this,
-                                R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                restartApp(getApplicationContext());
-                                backDialog.dismiss();
-                            }
-                        });
-                        backDialog.setCancelable(false);
-                        backDialog.show();
-                    } else {
-                        ToastUtil.showTextToas(getApplicationContext(), msg);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(String message) {
-                dialogUtil.dismiss();
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
-
-    /**
-     * 融汇绑卡
-     */
-    private void getBangKa() {
-        final DialogUtil dialogUtil = new DialogUtil(this);
-        HashMap<String, String> params = new HashMap<>();
-        params.put("id", getIntent().getStringExtra("id"));
-        params.put("cardid", bankInfo.getCardid());
-        Connect.getInstance().post(getApplicationContext(), IService.ALL_SIGN, params, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                dialogUtil.dismiss();
-                try {
-                    JSONObject obj = new JSONObject(result.toString());
-                    String result1 = obj.get("result").toString();
-                    JSONObject obj1 = new JSONObject(result1);
-                    String code = obj1.get("code").toString();
-                    String msg = obj1.get("msg").toString();
-                    if (code.equals("10000")) {
-                        String data = obj.get("data").toString();
-                        JSONObject obj2 = new JSONObject(data);
-                        intent = new Intent(getApplicationContext(), DaiChangRongHuiWebActivity.class);
-                        intent.putExtra("html", obj2.getString("html"));
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        ToastUtil.showTextToas(getApplicationContext(), msg);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(String message) {
-                dialogUtil.dismiss();
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
-
-    //生成照片的名字
-    private String getPhotoFileName() {
-        Date date = new Date(System.currentTimeMillis());
-        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss");
-        return "IMG_" + format.format(date);
-    }
-
-    private void photo() {
-        if (new PerMisson().cameraIsCanUse()) {
-            path = Environment.getExternalStorageDirectory().getPath();
-            picPath = path + File.separator + getPhotoFileName() + ".jpg";
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            //Android7.0文件保存方式改变了
-            if (Build.VERSION.SDK_INT < 24) {
-                picUri = Uri.fromFile(new File(picPath));
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, picUri);//将原图的uri传入
-                startActivityForResult(intent, PHOTO_REQUEST_CAMERA);
-            } else {
-                ContentValues contentValues = new ContentValues(1);
-                contentValues.put(MediaStore.Images.Media.DATA, picPath);
-                Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-                startActivityForResult(intent, PHOTO_REQUEST_CAMERA);
-            }
-        } else {
-            ToastUtil.showTextToas(getApplicationContext(), "请打开摄像头权限");
-        }
-    }
-
-    private void uploadUserHeadImg(final String url, final File file) {
-
-        HashMap<String, String> params = new HashMap<>();
-        params.put(img_name, url);
-        Connect.getInstance().post(getApplicationContext(), IService.ZHENGJISN, params, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                Result response = (Result) JsonUtils.parse((String) result, Result.class);
-                if (response.getResult().getCode() == 10000) {
-                    showYiBaoImg1();
-                    if (img_name.equals("idCardPhoto")) {
-                        img1_1.setVisibility(View.VISIBLE);
-                        img1.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(url).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_1);
-                    } else if (img_name.equals("idCardBackPhoto")) {
-                        img1_2.setVisibility(View.VISIBLE);
-                        img2.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(url).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_2);
-                    } else if (img_name.equals("BankCardPhoto")) {
-                        img1_3.setVisibility(View.VISIBLE);
-                        img3.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(url).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_3);
-                    } else if (img_name.equals("PersonPhoto")) {
-                        img1_4.setVisibility(View.VISIBLE);
-                        img4.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(url).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_4);
-                    }
-                } else {
-                    ToastUtil.showTextToas(getApplicationContext(), response.getResult().getMsg());
-                }
-            }
-
-            @Override
-            public void onFailure(String message) {
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
-
-    private Handler.Callback callback = new Handler.Callback() {
-        public boolean handleMessage(Message msg) {
-            final DialogUtil dialogUtil = new DialogUtil(ZhengJianActivity.this);
-            final File file = (File) msg.obj;
-            UploadFile params = new UploadFile();
-            NewUserResponse.DataBean userInfo = SPConfig.getInstance(getApplicationContext()).getUserAllInfoNew();
-            params.setType(userInfo.getUid());
-            params.setFile(file);
-            RequestParam param = new RequestParam(IService.UPLOAD_IMG, params, getApplicationContext(), Constant.UPDLOAD);
-            Connect.getInstance().httpUtil(param, new Connect.OnResponseListener() {
-                @Override
-                public void onSuccess(Object result) {
-
-                    UpLoadImage resultUrl = (UpLoadImage) result;
-                    if (resultUrl.getResult().getCode() == 10000) {
-                        uploadUserHeadImg(resultUrl.getData().getUrl(), file);
-                    } else {
-                        ToastUtil.showTextToas(getApplicationContext(), resultUrl.getResult().getMsg());
-                    }
-                    dialogUtil.dismiss();
-                }
-
-                @Override
-                public void onFailure(String message) {
-                    ToastUtil.showTextToas(getApplicationContext(), message);
-                    dialogUtil.dismiss();
-                }
-            });
-            return false;
-        }
-    };
-    private Handler handler = new Handler(callback);
-
-    private void uploadImage(final String path) {
-        new Thread() {
-
-            @Override
-            public void run() {
-                File file = FileCache.getInstance().saveBitmapToFile("/image" + 0 + ".jpg",
-                        FileCache.getInstance().getImageFromLocal(path));
-                Message msg = new Message();
-                msg.obj = file;
-                msg.what = 0;
-                handler.sendMessage(msg);
-            }
-
-        }.start();
-
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            if (requestCode == PHOTO_REQUEST_CAMERA) {
-                try {
-                    uploadImage(picPath);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    /**
-     * 易宝
-     */
-    private void showYiBaoImg() {
-        final DialogUtil dialogUtil = new DialogUtil(this);
-        Connect.getInstance().post(getApplicationContext(), IService.ZHENGJIAN_SHOW, null, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                dialogUtil.dismiss();
-                try {
-                    JSONObject obj = new JSONObject(result.toString());
-                    String result1 = obj.get("result").toString();
-                    JSONObject obj1 = new JSONObject(result1);
-                    String code = obj1.get("code").toString();
-                    String msg = obj1.get("msg").toString();
-                    if (code.equals("10000")) {
-                        String data1 = obj.get("data").toString();
-                        JSONObject obj2 = new JSONObject(data1);
-                        idCardPhoto = obj2.getString("idCardPhoto");
-                        idCardBackPhoto = obj2.getString("idCardBackPhoto");
-                        BankCardPhoto = obj2.getString("BankCardPhoto");
-                        PersonPhoto = obj2.getString("PersonPhoto");
-                        img1_1.setVisibility(View.VISIBLE);
-                        img1.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(idCardPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_1);
-
-                        img1_2.setVisibility(View.VISIBLE);
-                        img2.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(idCardBackPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_2);
-
-                        img1_3.setVisibility(View.VISIBLE);
-                        img3.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(BankCardPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_3);
-
-                        img1_4.setVisibility(View.VISIBLE);
-                        img4.setVisibility(View.GONE);
-                        Glide.with(getApplicationContext()).load(PersonPhoto).placeholder(R.drawable.default_image).dontAnimate().error(R.drawable.default_image)
-                                .into(img1_4);
-                    } else {
-                        ToastUtil.showTextToas(getApplicationContext(), msg);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(String message) {
-                dialogUtil.dismiss();
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
-
-    private void showYiBaoImg1() {
-        final DialogUtil dialogUtil = new DialogUtil(this);
-        Connect.getInstance().post(getApplicationContext(), IService.ZHENGJIAN_SHOW, null, new Connect.OnResponseListener() {
-            @Override
-            public void onSuccess(Object result) {
-                dialogUtil.dismiss();
-                try {
-                    JSONObject obj = new JSONObject(result.toString());
-                    String result1 = obj.get("result").toString();
-                    JSONObject obj1 = new JSONObject(result1);
-                    String code = obj1.get("code").toString();
-                    String msg = obj1.get("msg").toString();
-                    if (code.equals("10000")) {
-                        String data1 = obj.get("data").toString();
-                        JSONObject obj2 = new JSONObject(data1);
-                        idCardPhoto = obj2.getString("idCardPhoto");
-                        idCardBackPhoto = obj2.getString("idCardBackPhoto");
-                        BankCardPhoto = obj2.getString("BankCardPhoto");
-                        PersonPhoto = obj2.getString("PersonPhoto");
-                    } else {
-                        ToastUtil.showTextToas(getApplicationContext(), msg);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(String message) {
-                dialogUtil.dismiss();
-                ToastUtil.showTextToas(getApplicationContext(), message);
-            }
-        });
-    }
 }

@@ -18,9 +18,11 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.daichang.DaiChangCityActivity;
 import com.kym.ui.activity.daichang.DaiChangRongHuiWebActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.Constant;
 import com.kym.ui.appconfig.IService;
@@ -262,7 +264,9 @@ public class RhZhengJianActivity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(RhZhengJianActivity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });

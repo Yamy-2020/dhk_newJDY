@@ -4,10 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 public class GouMaiQuanYi implements Serializable {
+
     private static final long serialVersionUID = -3917294680571197141L;
     /**
      * result : {"code":10000,"msg":"请求成功"}
-     * data : {"current_list":{"top_imgurl":"https://app.izhisuan.com/resource/level1.png","name":"新客户","current_msg":"已推广 0 人。还差 1000 人免费升级为：老客户。"},"payment_list":[{"upgrade_level":2,"upgrade_number":"NO.101140559402","name":"老客户","payment_amount":"88.00","rate_list":{"sk":{"lf":"10%","td":"5%","zt":"5%"},"yk":{"lf":"10%","td":"5%","zt":"5%"},"hk":{"lf":"10%","td":"5%","zt":"5%"}}},{"upgrade_level":3,"upgrade_number":"NO.101140559403","name":"贵宾客户","payment_amount":"199.00","rate_list":{"sk":{"lf":"40%","td":"30%","zt":"35%"},"yk":{"lf":"40%","td":"30%","zt":"35%"},"hk":{"lf":"40%","td":"30%","zt":"35%"}}}]}
+     * data : {"current_list":{"top_imgurl":"https://app.izhisuan.com/var/upload/api/img/20200805/9INGK7PVH3.jpg","level_name":"新用户（级别1）","current_msg":"已推广 5 人。"},"payment_list":[{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000","upgrade_level":2,"upgrade_level_name":"服务商（级别2）","payment_amount":"20000","upgrade_number":"NO.101140559402","rate_list":{"sk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"hk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"zs":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}}},{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000","upgrade_level":4,"upgrade_level_name":"金牌服务商（级别4）","payment_amount":"40000","upgrade_number":"NO.101140559404","rate_list":{"sk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"hk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"zs":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}}}]}
      */
 
     private ResultBean result;
@@ -29,7 +30,7 @@ public class GouMaiQuanYi implements Serializable {
         this.data = data;
     }
 
-    public static class ResultBean {
+    public static class ResultBean  implements Serializable{
         /**
          * code : 10000
          * msg : 请求成功
@@ -55,11 +56,11 @@ public class GouMaiQuanYi implements Serializable {
         }
     }
 
-    public static class DataBean implements Serializable{
+    public static class DataBean  implements Serializable{
         private static final long serialVersionUID = -1407686646407781719L;
         /**
-         * current_list : {"top_imgurl":"https://app.izhisuan.com/resource/level1.png","name":"新客户","current_msg":"已推广 0 人。还差 1000 人免费升级为：老客户。"}
-         * payment_list : [{"upgrade_level":2,"upgrade_number":"NO.101140559402","name":"老客户","payment_amount":"88.00","rate_list":{"sk":{"lf":"10%","td":"5%","zt":"5%"},"yk":{"lf":"10%","td":"5%","zt":"5%"},"hk":{"lf":"10%","td":"5%","zt":"5%"}}},{"upgrade_level":3,"upgrade_number":"NO.101140559403","name":"贵宾客户","payment_amount":"199.00","rate_list":{"sk":{"lf":"40%","td":"30%","zt":"35%"},"yk":{"lf":"40%","td":"30%","zt":"35%"},"hk":{"lf":"40%","td":"30%","zt":"35%"}}}]
+         * current_list : {"top_imgurl":"https://app.izhisuan.com/var/upload/api/img/20200805/9INGK7PVH3.jpg","level_name":"新用户（级别1）","current_msg":"已推广 5 人。"}
+         * payment_list : [{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000","upgrade_level":2,"upgrade_level_name":"服务商（级别2）","payment_amount":"20000","upgrade_number":"NO.101140559402","rate_list":{"sk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"hk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"zs":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}}},{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000","upgrade_level":4,"upgrade_level_name":"金牌服务商（级别4）","payment_amount":"40000","upgrade_number":"NO.101140559404","rate_list":{"sk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"hk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"zs":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}}}]
          */
 
         private CurrentListBean current_list;
@@ -81,16 +82,16 @@ public class GouMaiQuanYi implements Serializable {
             this.payment_list = payment_list;
         }
 
-        public static class CurrentListBean implements Serializable {
-            private static final long serialVersionUID = -6230403943683928869L;
+        public static class CurrentListBean  implements Serializable{
+            private static final long serialVersionUID = 1298038504797059016L;
             /**
-             * top_imgurl : https://app.izhisuan.com/resource/level1.png
-             * name : 新客户
-             * current_msg : 已推广 0 人。还差 1000 人免费升级为：老客户。
+             * top_imgurl : https://app.izhisuan.com/var/upload/api/img/20200805/9INGK7PVH3.jpg
+             * level_name : 新用户（级别1）
+             * current_msg : 已推广 5 人。
              */
 
             private String top_imgurl;
-            private String name;
+            private String level_name;
             private String current_msg;
 
             public String getTop_imgurl() {
@@ -101,12 +102,12 @@ public class GouMaiQuanYi implements Serializable {
                 this.top_imgurl = top_imgurl;
             }
 
-            public String getName() {
-                return name;
+            public String getLevel_name() {
+                return level_name;
             }
 
-            public void setName(String name) {
-                this.name = name;
+            public void setLevel_name(String level_name) {
+                this.level_name = level_name;
             }
 
             public String getCurrent_msg() {
@@ -119,20 +120,50 @@ public class GouMaiQuanYi implements Serializable {
         }
 
         public static class PaymentListBean implements Serializable{
-            private static final long serialVersionUID = -3833965400176431858L;
+            private static final long serialVersionUID = 9118586858751769122L;
             /**
+             * profit_ratio : 0.0000
+             * profit_ratio_zt : 0.0000
+             * profit_ratio_jt : 0.0000
              * upgrade_level : 2
+             * upgrade_level_name : 服务商（级别2）
+             * payment_amount : 20000
              * upgrade_number : NO.101140559402
-             * name : 老客户
-             * payment_amount : 88.00
-             * rate_list : {"sk":{"lf":"10%","td":"5%","zt":"5%"},"yk":{"lf":"10%","td":"5%","zt":"5%"},"hk":{"lf":"10%","td":"5%","zt":"5%"}}
+             * rate_list : {"sk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"hk":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"},"zs":{"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}}
              */
 
+            private double profit_ratio;
+            private double profit_ratio_zt;
+            private double profit_ratio_jt;
             private int upgrade_level;
-            private String upgrade_number;
-            private String name;
+            private String upgrade_level_name;
             private String payment_amount;
+            private String upgrade_number;
             private RateListBean rate_list;
+
+            public double getProfit_ratio() {
+                return profit_ratio;
+            }
+
+            public void setProfit_ratio(double profit_ratio) {
+                this.profit_ratio = profit_ratio;
+            }
+
+            public double getProfit_ratio_zt() {
+                return profit_ratio_zt;
+            }
+
+            public void setProfit_ratio_zt(double profit_ratio_zt) {
+                this.profit_ratio_zt = profit_ratio_zt;
+            }
+
+            public double getProfit_ratio_jt() {
+                return profit_ratio_jt;
+            }
+
+            public void setProfit_ratio_jt(double profit_ratio_jt) {
+                this.profit_ratio_jt = profit_ratio_jt;
+            }
 
             public int getUpgrade_level() {
                 return upgrade_level;
@@ -142,20 +173,12 @@ public class GouMaiQuanYi implements Serializable {
                 this.upgrade_level = upgrade_level;
             }
 
-            public String getUpgrade_number() {
-                return upgrade_number;
+            public String getUpgrade_level_name() {
+                return upgrade_level_name;
             }
 
-            public void setUpgrade_number(String upgrade_number) {
-                this.upgrade_number = upgrade_number;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name) {
-                this.name = name;
+            public void setUpgrade_level_name(String upgrade_level_name) {
+                this.upgrade_level_name = upgrade_level_name;
             }
 
             public String getPayment_amount() {
@@ -166,6 +189,14 @@ public class GouMaiQuanYi implements Serializable {
                 this.payment_amount = payment_amount;
             }
 
+            public String getUpgrade_number() {
+                return upgrade_number;
+            }
+
+            public void setUpgrade_number(String upgrade_number) {
+                this.upgrade_number = upgrade_number;
+            }
+
             public RateListBean getRate_list() {
                 return rate_list;
             }
@@ -174,17 +205,17 @@ public class GouMaiQuanYi implements Serializable {
                 this.rate_list = rate_list;
             }
 
-            public static class RateListBean implements Serializable{
-                private static final long serialVersionUID = -1311303838479913942L;
+            public static class RateListBean  implements Serializable{
+                private static final long serialVersionUID = -7771157518964881555L;
                 /**
-                 * sk : {"lf":"10%","td":"5%","zt":"5%"}
-                 * yk : {"lf":"10%","td":"5%","zt":"5%"}
-                 * hk : {"lf":"10%","td":"5%","zt":"5%"}
+                 * sk : {"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}
+                 * hk : {"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}
+                 * zs : {"profit_ratio":"0.0000","profit_ratio_zt":"0.0000","profit_ratio_jt":"0.0000"}
                  */
 
                 private SkBean sk;
-                private YkBean yk;
                 private HkBean hk;
+                private ZsBean zs;
 
                 public SkBean getSk() {
                     return sk;
@@ -192,14 +223,6 @@ public class GouMaiQuanYi implements Serializable {
 
                 public void setSk(SkBean sk) {
                     this.sk = sk;
-                }
-
-                public YkBean getYk() {
-                    return yk;
-                }
-
-                public void setYk(YkBean yk) {
-                    this.yk = yk;
                 }
 
                 public HkBean getHk() {
@@ -210,114 +233,122 @@ public class GouMaiQuanYi implements Serializable {
                     this.hk = hk;
                 }
 
+                public ZsBean getZs() {
+                    return zs;
+                }
+
+                public void setZs(ZsBean zs) {
+                    this.zs = zs;
+                }
+
                 public static class SkBean implements Serializable{
-                    private static final long serialVersionUID = -8721704693010312342L;
+                    private static final long serialVersionUID = -3117225609502090783L;
                     /**
-                     * lf : 10%
-                     * td : 5%
-                     * zt : 5%
+                     * profit_ratio : 0.0000
+                     * profit_ratio_zt : 0.0000
+                     * profit_ratio_jt : 0.0000
                      */
 
-                    private String lf;
-                    private String td;
-                    private String zt;
+                    private double profit_ratio;
+                    private double profit_ratio_zt;
+                    private double profit_ratio_jt;
 
-                    public String getLf() {
-                        return lf;
+                    public double getProfit_ratio() {
+                        return profit_ratio;
                     }
 
-                    public void setLf(String lf) {
-                        this.lf = lf;
+                    public void setProfit_ratio(double profit_ratio) {
+                        this.profit_ratio = profit_ratio;
                     }
 
-                    public String getTd() {
-                        return td;
+                    public double getProfit_ratio_zt() {
+                        return profit_ratio_zt;
                     }
 
-                    public void setTd(String td) {
-                        this.td = td;
+                    public void setProfit_ratio_zt(double profit_ratio_zt) {
+                        this.profit_ratio_zt = profit_ratio_zt;
                     }
 
-                    public String getZt() {
-                        return zt;
+                    public double getProfit_ratio_jt() {
+                        return profit_ratio_jt;
                     }
 
-                    public void setZt(String zt) {
-                        this.zt = zt;
+                    public void setProfit_ratio_jt(double profit_ratio_jt) {
+                        this.profit_ratio_jt = profit_ratio_jt;
                     }
                 }
 
-                public static class YkBean implements Serializable {
-                    private static final long serialVersionUID = -2374569595084559689L;
+                public static class HkBean  implements Serializable{
+                    private static final long serialVersionUID = -787117922234180030L;
                     /**
-                     * lf : 10%
-                     * td : 5%
-                     * zt : 5%
+                     * profit_ratio : 0.0000
+                     * profit_ratio_zt : 0.0000
+                     * profit_ratio_jt : 0.0000
                      */
 
-                    private String lf;
-                    private String td;
-                    private String zt;
+                    private double profit_ratio;
+                    private double profit_ratio_zt;
+                    private double profit_ratio_jt;
 
-                    public String getLf() {
-                        return lf;
+                    public double getProfit_ratio() {
+                        return profit_ratio;
                     }
 
-                    public void setLf(String lf) {
-                        this.lf = lf;
+                    public void setProfit_ratio(double profit_ratio) {
+                        this.profit_ratio = profit_ratio;
                     }
 
-                    public String getTd() {
-                        return td;
+                    public double getProfit_ratio_zt() {
+                        return profit_ratio_zt;
                     }
 
-                    public void setTd(String td) {
-                        this.td = td;
+                    public void setProfit_ratio_zt(double profit_ratio_zt) {
+                        this.profit_ratio_zt = profit_ratio_zt;
                     }
 
-                    public String getZt() {
-                        return zt;
+                    public double getProfit_ratio_jt() {
+                        return profit_ratio_jt;
                     }
 
-                    public void setZt(String zt) {
-                        this.zt = zt;
+                    public void setProfit_ratio_jt(double profit_ratio_jt) {
+                        this.profit_ratio_jt = profit_ratio_jt;
                     }
                 }
 
-                public static class HkBean implements Serializable{
-                    private static final long serialVersionUID = 8815367541156645848L;
+                public static class ZsBean  implements Serializable{
+                    private static final long serialVersionUID = -3178569891983558684L;
                     /**
-                     * lf : 10%
-                     * td : 5%
-                     * zt : 5%
+                     * profit_ratio : 0.0000
+                     * profit_ratio_zt : 0.0000
+                     * profit_ratio_jt : 0.0000
                      */
 
-                    private String lf;
-                    private String td;
-                    private String zt;
+                    private double profit_ratio;
+                    private double profit_ratio_zt;
+                    private double profit_ratio_jt;
 
-                    public String getLf() {
-                        return lf;
+                    public double getProfit_ratio() {
+                        return profit_ratio;
                     }
 
-                    public void setLf(String lf) {
-                        this.lf = lf;
+                    public void setProfit_ratio(double profit_ratio) {
+                        this.profit_ratio = profit_ratio;
                     }
 
-                    public String getTd() {
-                        return td;
+                    public double getProfit_ratio_zt() {
+                        return profit_ratio_zt;
                     }
 
-                    public void setTd(String td) {
-                        this.td = td;
+                    public void setProfit_ratio_zt(double profit_ratio_zt) {
+                        this.profit_ratio_zt = profit_ratio_zt;
                     }
 
-                    public String getZt() {
-                        return zt;
+                    public double getProfit_ratio_jt() {
+                        return profit_ratio_jt;
                     }
 
-                    public void setZt(String zt) {
-                        this.zt = zt;
+                    public void setProfit_ratio_jt(double profit_ratio_jt) {
+                        this.profit_ratio_jt = profit_ratio_jt;
                     }
                 }
             }

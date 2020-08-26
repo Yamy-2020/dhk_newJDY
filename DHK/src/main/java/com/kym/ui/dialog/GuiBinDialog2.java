@@ -16,6 +16,7 @@ import com.kym.ui.UpGradeActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.IService;
 import com.kym.ui.info.GouMaiQuanYi;
+import com.kym.ui.util.AmountUtils;
 import com.kym.ui.util.Connect;
 import com.kym.ui.util.JsonUtils;
 import com.zzss.jindy.appconfig.Clone;
@@ -73,15 +74,15 @@ public class GuiBinDialog2 extends Dialog implements View.OnClickListener {
     private void getSjQy() {
         HashMap<String, String> params = new HashMap<>();
         params.put("level", UpGradeActivity.weizhi);
-        Connect.getInstance().post(context, IService.HOME_YOUHUI, params, new Connect.OnResponseListener() {
+        Connect.getInstance().post(context, IService.GOUMAI_XINGZHENGCHE, params, new Connect.OnResponseListener() {
             @Override
-            public void onSuccess(Object result) {
+            public void onSuccess(Object result) throws Exception {
                 GouMaiQuanYi response = (GouMaiQuanYi) JsonUtils.parse((String) result, GouMaiQuanYi.class);
                 if (response.getResult().getCode() == 10000) {
                     if (Clone.OMID.equals("BSV3MJA0ZC6DAV11")) {
-                        tip.setText(response.getData().getPayment_list().get(0).getPayment_amount() + "元/年" + response.getData().getPayment_list().get(0).getName() + "专享权益");
+                        tip.setText(AmountUtils.changeF2Y(response.getData().getPayment_list().get(0).getPayment_amount()) + "元/年" + response.getData().getPayment_list().get(0).getUpgrade_level_name() + "专享权益");
                     } else {
-                        tip.setText(response.getData().getPayment_list().get(0).getPayment_amount() + "元/年" + response.getData().getPayment_list().get(0).getName() + "专享权益");
+                        tip.setText(AmountUtils.changeF2Y(response.getData().getPayment_list().get(1).getPayment_amount()) + "元/年" + response.getData().getPayment_list().get(0).getUpgrade_level_name() + "专享权益");
                     }
                 } else {
                     ToastUtil.showTextToas(getContext(), response.getResult().getMsg());

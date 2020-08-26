@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.daichang.DaiChangBankCardListActivity;
 import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
@@ -100,7 +101,9 @@ public class Bpbro_DiaChang_DX_Activity extends BaseActivity implements View.OnC
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(Bpbro_DiaChang_DX_Activity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

@@ -8,13 +8,7 @@
         android:largeScreens="true"
         android:normalScreens="true"
         android:resizeable="true"
-        android:smallScreens="true" />
-
-
-    <!-- 个推电子围栏功能所需权限 -->
-
-
-
+        android:smallScreens="true" /> <!-- 个推电子围栏功能所需权限 -->
     <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- 用于访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -26,6 +20,10 @@
     <!-- location获取运营商信息，用于支持提供运营商信息相关的接口 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- location这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
+
 
     <permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- 更改设置 -->
     <permission android:name="android.permission.WRITE_SETTINGS" /> <!-- location用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
@@ -60,7 +58,7 @@
     <uses-feature android:name="android.hardware.camera.flash" />
 
     <application
-        android:name="com.kym.ui.util.MyApplication"
+        android:name=".util.MyApplication"
         android:allowBackup="true"
         android:configChanges="orientation|keyboardHidden|screenSize"
         android:icon="@drawable/abc"
@@ -69,10 +67,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-        <activity android:name="com.kym.ui.activity.ImgBannerActivity" />
-        <activity android:name="com.kym.ui.activity.AllQianYueListActivity" />
+        <activity android:name=".activity.newcheshi.HomeCheShiActivity"></activity>
+        <activity android:name=".activity.ImgBannerActivity" />
+        <activity android:name=".activity.AllQianYueListActivity" />
         <activity
-            android:name="com.kym.ui.comeActivity"
+            android:name=".comeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
@@ -83,7 +82,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.kym.ui.activity.WelcomeActivity"
+            android:name=".activity.WelcomeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- //android:usesCleartextTraffic="true" -->
@@ -117,13 +116,10 @@
             android:exported="false"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- alipay sdk end -->
-
         <!-- 高德地图key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="${GAODE_KEY}" />
-
-        <!-- ***********************个推配置开始********************** -->
+            android:value="${GAODE_KEY}" /> <!-- ***********************个推配置开始********************** -->
         <meta-data
             android:name="PUSH_APPID"
             android:value="${PUSH_APP_ID}"
@@ -137,316 +133,315 @@
             android:value="${PUSH_APP_SECRET}"
             tools:replace="android:value" /> <!-- 用户自定义服务名 -->
         <service
-            android:name="com.kym.ui.getui.DemoPushService"
+            android:name=".getui.DemoPushService"
             android:exported="true"
             android:label="PushService"
             android:process=":pushservice" /> <!-- android:permission在2.13.1.0版本后必须配置 -->
         <service
-            android:name="com.kym.ui.getui.DemoIntentService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <!-- ***********************个推配置结束********************** -->
+            android:name=".getui.DemoIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- ***********************个推配置结束********************** -->
         <activity
-            android:name="com.kym.ui.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.kym.ui.activity.SecondActivity"
+            android:name=".activity.SecondActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.kym.ui.activity.RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.kym.ui.activity.MessageCenterContentActivity"
+            android:name=".activity.MessageCenterContentActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
-            android:name="com.kym.ui.wxapi.WXEntryActivity"
+            android:name=".wxapi.WXEntryActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.LianxiActivity_new"
+            android:name=".LianxiActivity_new"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_lianxi"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
-            android:name="com.kym.ui.ShangHuActivity"
+            android:name=".ShangHuActivity"
             android:label="@string/title_activity_myshanghu_new"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.SearchActivity"
+            android:name=".SearchActivity"
             android:label="@string/title_activity_search"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustResize|stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.ZhangHuActivity"
+            android:name=".activity.zhanghu.ZhangHuActivity"
             android:label="@string/title_activity_zhang_hu"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.FanXianzhActivity"
+            android:name=".activity.zhanghu.FanXianzhActivity"
             android:label="@string/title_activity_fan_xianzh"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.FanXianTiXianActivity"
+            android:name=".activity.zhanghu.FanXianTiXianActivity"
             android:label="@string/title_activity_fan_xian_yer_ti_xian"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.PublicWebActivity"
+            android:name=".PublicWebActivity"
             android:label="@string/title_activity_public_web"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.XinYongKaActivity"
+            android:name=".activity.zhanghu.XinYongKaActivity"
             android:label="@string/title_activity_xin_yong_ka"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.NewDetailActivity"
+            android:name=".activity.zhanghu.NewDetailActivity"
             android:label="@string/title_activity_new_detail"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.huankuan.BankPlanActivity"
+            android:name=".activity.huankuan.BankPlanActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.BankChangeActivity"
+            android:name=".BankChangeActivity"
             android:label="@string/title_activity_bank_change"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustResize|stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.kym.ui.activity.huankuan.NewAddCreditCardActivity"
+            android:name=".activity.huankuan.NewAddCreditCardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.kym.ui.activity.huankuan.NewRepaymentPlanActivity"
+            android:name=".activity.huankuan.NewRepaymentPlanActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.BankTiXianActivity"
+            android:name=".activity.zhanghu.BankTiXianActivity"
             android:label="@string/title_activity_bank_ti_xian"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.BankTiXianDetailActivity"
+            android:name=".activity.zhanghu.BankTiXianDetailActivity"
             android:label="@string/title_activity_bank_ti_xian_detail"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.RepaymentPlanDetailActivity"
+            android:name=".activity.RepaymentPlanDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.huankuan.BankSigNingActivity"
+            android:name=".activity.huankuan.BankSigNingActivity"
             android:label="@string/title_activity_bank_sig_ning"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.UpGradeActivity"
+            android:name=".UpGradeActivity"
             android:label="@string/title_activity_up_grade"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.huankuan.NewRepaymentDetailActivity"
+            android:name=".activity.huankuan.NewRepaymentDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.FenRunActivity"
+            android:name=".FenRunActivity"
             android:label="@string/title_activity_fen_run"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.FenRunDetailActivity"
+            android:name=".FenRunDetailActivity"
             android:label="@string/title_activity_fen_run_detail"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.ShareQRCodeActivity"
+            android:name=".activity.ShareQRCodeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.bpbro_safe.RegisterActivity_x"
+            android:name=".activity.bpbro_safe.RegisterActivity_x"
             android:label="@string/title_activity_register_x"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
-            android:name="com.kym.ui.ShaiXunActivity"
+            android:name=".ShaiXunActivity"
             android:label="@string/title_activity_shai_xun"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.news.NewsActivity"
+            android:name=".activity.news.NewsActivity"
             android:label="@string/title_activity_news"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.FanXianTiXianDetailActivity"
+            android:name=".activity.zhanghu.FanXianTiXianDetailActivity"
             android:label="@string/title_activity_fan_xian_ti_xian_detail" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.FanXianDetailActivity_x"
+            android:name=".activity.zhanghu.FanXianDetailActivity_x"
             android:label="@string/title_activity_fan_xian_detail_x" />
         <activity
-            android:name="com.kym.ui.activity.zhanghu.FanXianDetailActivity_xx"
+            android:name=".activity.zhanghu.FanXianDetailActivity_xx"
             android:label="@string/title_activity_fan_xian_detail_xx" />
-        <activity android:name="com.kym.ui.activity.SpecialPublicWebActivity" />
-        <activity android:name="com.kym.ui.SpecialPublicWebActivity" />
-        <activity android:name="com.kym.ui.activity.CardTestWebActivity" />
-        <activity android:name="com.kym.ui.OrderActivity" />
+        <activity android:name=".activity.SpecialPublicWebActivity" />
+        <activity android:name=".SpecialPublicWebActivity" />
+        <activity android:name=".activity.CardTestWebActivity" />
+        <activity android:name=".OrderActivity" />
         <activity
-            android:name="com.kym.ui.PayActivity"
+            android:name=".PayActivity"
             android:exported="true" />
         <activity
-            android:name="com.kym.ui.wxapi.WXPayEntryActivity"
+            android:name=".wxapi.WXPayEntryActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kym.ui.activity.mendianma.MenDianActivity"
+            android:name=".activity.mendianma.MenDianActivity"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
 
-        <receiver android:name="com.kym.ui.activity.AppRegister">
+        <receiver android:name=".activity.AppRegister">
             <intent-filter>
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.kym.ui.CourseActivity" />
-        <activity android:name="com.kym.ui.activity.mendianma.DynamicQRcodeActivity" />
-        <activity android:name="com.kym.ui.activity.mendianma.QRcodeActivity" />
-        <activity android:name="com.kym.ui.WebActivity" />
-        <activity android:name="com.kym.ui.ZDActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanzhActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanDetailActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanDetailListActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuantxActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShouKuanTiXianDetailActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieDetailActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieMsgPayActivity" />
-        <activity android:name="com.kym.ui.activity.huankuan.CardSignActivity" />
-        <activity android:name="com.kym.ui.RongHuiWebActivity" />
-        <activity android:name="com.kym.ui.FeiLvActivity" />
-        <activity android:name="com.kym.ui.activity.UpdateZdActivity" />
-        <activity android:name="com.kym.ui.activity.SheZhiActivity" />
-        <activity android:name="com.kym.ui.activity.shiming.ZhengJianActivity" />
-        <activity android:name="com.kym.ui.zhengjian.CameraActivity" />
-        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_GuanLi_Activity" />
-        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_ZuJi_Activity" />
-        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_GuiZe_Activity" />
-        <activity android:name="com.kym.ui.activity.rongxinfen.XinYong_ShengHuo_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_safe.UserAnQuanActivity" />
-        <activity android:name="com.kym.ui.activity.AllCardListActivity" />
-        <activity android:name="com.kym.ui.PatternActivity" />
-        <activity android:name="com.kym.ui.PassWordActivity" />
-        <activity android:name="com.kym.ui.PatterLoginActivity" />
-        <activity android:name="com.kym.ui.FingerActivity" />
-        <activity android:name="com.kym.ui.Course1Activity" />
-        <activity android:name="com.kym.ui.activity.CommonTestActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangBankCardListActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangQianYueActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanRecordActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanPreviewActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangCardPlanDetailActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieShanghuActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangPlanRulesActivity" />
-        <activity android:name="com.kym.ui.activity.ShareActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangzhActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangtxActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangTiXianDetailActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangDetailActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.DaiChangDetailListActivity" />
-        <activity android:name="com.kym.ui.activity.lingqian.LingQianActivity" />
-        <activity android:name="com.kym.ui.activity.lingqian.LingQianMoneyActivity" />
-        <activity android:name="com.kym.ui.activity.lingqian.LingQianTiXianActivity" />
-        <activity android:name="com.kym.ui.activity.lingqian.LingQianListActivity" />
-        <activity android:name="com.kym.ui.activity.YouHuiActivity" />
-        <activity android:name="com.kym.ui.activity.Banka_Activity" />
-        <activity android:name="com.kym.ui.activity.Banka_glActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChang_QianYue_Activity" />
-        <activity android:name="com.kym.ui.activity.MyCXKActivity" />
-        <activity android:name="com.kym.ui.JieBangCardActivity" />
+        <activity android:name=".CourseActivity" />
+        <activity android:name=".activity.mendianma.DynamicQRcodeActivity" />
+        <activity android:name=".activity.mendianma.QRcodeActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".ZDActivity" />
+        <activity android:name=".activity.zhanghu.ShouKuanzhActivity" />
+        <activity android:name=".activity.zhanghu.ShouKuanDetailActivity" />
+        <activity android:name=".activity.zhanghu.ShouKuanDetailListActivity" />
+        <activity android:name=".activity.zhanghu.ShouKuantxActivity" />
+        <activity android:name=".activity.zhanghu.ShouKuanTiXianDetailActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.KuaiJieDetailActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.KuaiJieMsgPayActivity" />
+        <activity android:name=".activity.huankuan.CardSignActivity" />
+        <activity android:name=".RongHuiWebActivity" />
+        <activity android:name=".FeiLvActivity" />
+        <activity android:name=".activity.UpdateZdActivity" />
+        <activity android:name=".activity.SheZhiActivity" />
+        <activity android:name=".activity.shiming.ZhengJianActivity" />
+        <activity android:name=".zhengjian.CameraActivity" />
+        <activity android:name=".activity.rongxinfen.XinYong_GuanLi_Activity" />
+        <activity android:name=".activity.rongxinfen.XinYong_ZuJi_Activity" />
+        <activity android:name=".activity.rongxinfen.XinYong_GuiZe_Activity" />
+        <activity android:name=".activity.rongxinfen.XinYong_ShengHuo_Activity" />
+        <activity android:name=".activity.bpbro_safe.UserAnQuanActivity" />
+        <activity android:name=".activity.AllCardListActivity" />
+        <activity android:name=".PatternActivity" />
+        <activity android:name=".PassWordActivity" />
+        <activity android:name=".PatterLoginActivity" />
+        <activity android:name=".FingerActivity" />
+        <activity android:name=".Course1Activity" />
+        <activity android:name=".activity.CommonTestActivity" />
+        <activity android:name=".activity.daichang.DaiChangBankCardListActivity" />
+        <activity android:name=".activity.daichang.DaiChangPlanActivity" />
+        <activity android:name=".activity.daichang.DaiChangQianYueActivity" />
+        <activity android:name=".activity.daichang.DaiChangPlanRecordActivity" />
+        <activity android:name=".activity.daichang.DaiChangPlanPreviewActivity" />
+        <activity android:name=".activity.daichang.DaiChangCardPlanDetailActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.KuaiJieShanghuActivity" />
+        <activity android:name=".activity.daichang.DaiChangPlanRulesActivity" />
+        <activity android:name=".activity.ShareActivity" />
+        <activity android:name=".activity.zhanghu.DaiChangzhActivity" />
+        <activity android:name=".activity.zhanghu.DaiChangtxActivity" />
+        <activity android:name=".activity.zhanghu.DaiChangTiXianDetailActivity" />
+        <activity android:name=".activity.zhanghu.DaiChangDetailActivity" />
+        <activity android:name=".activity.zhanghu.DaiChangDetailListActivity" />
+        <activity android:name=".activity.lingqian.LingQianActivity" />
+        <activity android:name=".activity.lingqian.LingQianMoneyActivity" />
+        <activity android:name=".activity.lingqian.LingQianTiXianActivity" />
+        <activity android:name=".activity.lingqian.LingQianListActivity" />
+        <activity android:name=".activity.YouHuiActivity" />
+        <activity android:name=".activity.Banka_Activity" />
+        <activity android:name=".activity.Banka_glActivity" />
+        <activity android:name=".activity.daichang.DaiChang_QianYue_Activity" />
+        <activity android:name=".activity.MyCXKActivity" />
+        <activity android:name=".JieBangCardActivity" />
         <activity
-            android:name="com.kym.ui.when_page.PageActivity"
+            android:name=".when_page.PageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XiaoFeiActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiZhActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiTiXianActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiTiXianDetailActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiDetailActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.ShengJiDetailListActivity" /> <!-- ocrphoto -->
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFsignActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplanActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XF_QRsignActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFprePlanActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplaninfoActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_yk.XFplanlistdetailActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XiaoFeiActivity" />
+        <activity android:name=".activity.zhanghu.ShengJiZhActivity" />
+        <activity android:name=".activity.zhanghu.ShengJiTiXianActivity" />
+        <activity android:name=".activity.zhanghu.ShengJiTiXianDetailActivity" />
+        <activity android:name=".activity.zhanghu.ShengJiDetailActivity" />
+        <activity android:name=".activity.zhanghu.ShengJiDetailListActivity" /> <!-- ocrphoto -->
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XFsignActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XFplanActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XF_QRsignActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XFprePlanActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XFplaninfoActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_yk.XFplanlistdetailActivity" />
         <activity
-            android:name="com.kym.ui.hualuo.VideoActivity"
+            android:name=".hualuo.VideoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_BankList_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sign_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_QRsignActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planActivity" />
-        <activity android:name="com.kym.ui.hualuo.HL_ShuaKaActivity" />
-        <activity android:name="com.kym.ui.hualuo.HL_HuanKuanActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_prePlanActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planinfoActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_planlistdetailActivity" />
-        <activity android:name="com.kym.ui.hualuo.HL_BK_WebActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_BankList_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_TongDao_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_XianE_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.SK_ShouKuan_Activity" />
-        <activity android:name="com.kym.ui.activity.ShareWenAn_Activity" />
-        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangTuActivity" />
-        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangWenAnActivity" />
-        <activity android:name="com.kym.ui.activity.tgsucai.TuiGuangTuDetailsActivity" />
-        <activity android:name="com.kym.ui.activity.JiaoYi_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_BankList_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_Sign_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_QRsignActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_planActivity" />
+        <activity android:name=".hualuo.HL_ShuaKaActivity" />
+        <activity android:name=".hualuo.HL_HuanKuanActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_prePlanActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_planinfoActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_planlistdetailActivity" />
+        <activity android:name=".hualuo.HL_BK_WebActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.SK_BankList_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.SK_TongDao_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.SK_XianE_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.SK_ShouKuan_Activity" />
+        <activity android:name=".activity.ShareWenAn_Activity" />
+        <activity android:name=".activity.tgsucai.TuiGuangTuActivity" />
+        <activity android:name=".activity.tgsucai.TuiGuangWenAnActivity" />
+        <activity android:name=".activity.tgsucai.TuiGuangTuDetailsActivity" />
+        <activity android:name=".activity.JiaoYi_Activity" />
         <activity
-            android:name="com.kym.ui.hualuo.RotateRecyclerViewActivity"
+            android:name=".hualuo.RotateRecyclerViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
-        <activity android:name="com.kym.ui.activity.shiming.NewShiMingActivity" />
-        <activity android:name="com.kym.ui.activity.shiming.NewUpdateCxkActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li4_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li4_Sqb_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.BenJinGuanLiActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.EDuGuanLiActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.BenJinTradeListActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li2_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li2_Sqb_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_JieKuan_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li6_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li3_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li5_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li1_Activity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li7_Activity" />
-        <activity android:name="com.kym.ui.activity.DingDanActivity" />
+        <activity android:name=".activity.shiming.NewShiMingActivity" />
+        <activity android:name=".activity.shiming.NewUpdateCxkActivity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li4_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li4_Sqb_Activity" />
+        <activity android:name=".activity.new_dc.BenJinGuanLiActivity" />
+        <activity android:name=".activity.new_dc.EDuGuanLiActivity" />
+        <activity android:name=".activity.new_dc.BenJinTradeListActivity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li2_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li2_Sqb_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_JieKuan_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li6_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li3_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li5_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li1_Activity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li7_Activity" />
+        <activity android:name=".activity.DingDanActivity" />
         <activity
-            android:name="com.kym.ui.activity.YeJiActivity"
+            android:name=".activity.YeJiActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name="com.kym.ui.activity.fee_kf.DemoChatActivity" />
-        <activity android:name="com.kym.ui.activity.fee_kf.ChatActivity" />
-        <activity android:name="com.kym.ui.activity.zhanghu.TotalzhActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.DaiChangTotalActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.KeHuGuanLiActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.PaiHangActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.DaiChangShenPiActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.AllDcCardListActivity" />
-        <activity android:name="com.kym.ui.BankChangeEduActivity" />
-        <activity android:name="com.kym.ui.TieListActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangCityActivity" />
-        <activity android:name="com.kym.ui.activity.daichang.DaiChangRongHuiWebActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_huankuan_Activity" />
+        <activity android:name=".activity.fee_kf.DemoChatActivity" />
+        <activity android:name=".activity.fee_kf.ChatActivity" />
+        <activity android:name=".activity.zhanghu.TotalzhActivity" />
+        <activity android:name=".activity.new_dc.DaiChangTotalActivity" />
+        <activity android:name=".activity.new_dc.KeHuGuanLiActivity" />
+        <activity android:name=".activity.new_dc.PaiHangActivity" />
+        <activity android:name=".activity.new_dc.DaiChangShenPiActivity" />
+        <activity android:name=".activity.new_dc.AllDcCardListActivity" />
+        <activity android:name=".BankChangeEduActivity" />
+        <activity android:name=".TieListActivity" />
+        <activity android:name=".activity.daichang.DaiChangCityActivity" />
+        <activity android:name=".activity.daichang.DaiChangRongHuiWebActivity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_huankuan_Activity" />
         <activity
-            android:name="com.kym.ui.activity.bpbro_home.JsbridgeActivity"
+            android:name=".activity.bpbro_home.JsbridgeActivity"
             android:label="@string/title_activity_jsbridge" />
-        <activity android:name="com.kym.ui.activity.shiming.RhZhengJianActivity" />
-        <activity android:name="com.kym.ui.activity.new_dc.New_DaiChang_Li8_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DiaChang_DX_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DaiChangQyActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_dc.Bpbro_DaiChang_PayListActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_real_name.Bpbro_Idcardid_Activity" />
-        <activity android:name="com.kym.ui.activity.bpbro_safe.YinSiXieYiActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieBangKaMsgActivity" />
-        <activity android:name="com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sb_planinfoActivity" />
-        <activity android:name="com.kym.ui.Tab_WebActivity" />
+        <activity android:name=".activity.shiming.RhZhengJianActivity" />
+        <activity android:name=".activity.new_dc.New_DaiChang_Li8_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_dc.Bpbro_DiaChang_DX_Activity" />
+        <activity android:name=".activity.bpbro_home.bpbro_dc.Bpbro_DaiChangQyActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_dc.Bpbro_DaiChang_PayListActivity" />
+        <activity android:name=".activity.bpbro_real_name.Bpbro_Idcardid_Activity" />
+        <activity android:name=".activity.bpbro_safe.YinSiXieYiActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_sk.KuaiJieBangKaMsgActivity" />
+        <activity android:name=".activity.bpbro_home.bpbro_hk.HK_Sb_planinfoActivity" />
+        <activity android:name=".Tab_WebActivity" />
     </application>
 
 </manifest>

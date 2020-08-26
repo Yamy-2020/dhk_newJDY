@@ -1,5 +1,6 @@
 package com.kym.ui.activity.bpbro_home.bpbro_sk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.ZDAdapter;
@@ -78,7 +80,9 @@ public class KuaiJieDetailActivity extends BaseActivity implements View.OnClickL
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(KuaiJieDetailActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

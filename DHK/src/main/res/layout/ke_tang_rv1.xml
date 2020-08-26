@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginTop="@dimen/dp_20"
-            android:text="老客户"
             android:textColor="#fff"
             android:textSize="@dimen/sp_15" />
         <TextView
@@ -27,7 +26,7 @@
             android:textSize="@dimen/sp_11"
             android:textColor="#F1D99D"
             android:layout_marginTop="-18dp"
-            android:layout_marginLeft="@dimen/dp_110"
+            android:layout_marginLeft="@dimen/dp_150"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="查看权益" />
@@ -39,7 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_265"
             android:layout_marginTop="-18dp"
-            android:text="¥  88"
             android:textColor="#fff"
 
             android:textSize="@dimen/sp_15" />
@@ -58,14 +56,14 @@
             android:textColor="#fff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="交易奖励" />
+            android:text="直推奖励" />
         <TextView
             android:textColor="#fff"
             android:layout_marginRight="@dimen/dp_50"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="直推奖励" />
+            android:text="间接奖励" />
         <TextView
             android:textColor="#fff"
 
@@ -88,7 +86,7 @@
             android:id="@+id/lf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40%" />
+            />
 
         <TextView
             android:id="@+id/lf1"
@@ -97,7 +95,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40%" />
+             />
 
 
         <TextView
@@ -105,7 +103,7 @@
             android:textColor="#fff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40%" />
+           />
 
     </LinearLayout>
 

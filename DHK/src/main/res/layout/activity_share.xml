@@ -18,6 +18,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:src="@drawable/fenxiang_tuiguang_pig"
                 android:id="@+id/share_bg_top"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_140"

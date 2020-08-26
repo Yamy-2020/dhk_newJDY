@@ -25,6 +25,9 @@ import com.baidu.ocr.sdk.exception.OCRError;
 import com.baidu.ocr.sdk.model.BankCardParams;
 import com.baidu.ocr.sdk.model.BankCardResult;
 import com.baidu.ocr.ui.camera.CameraActivity;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sb_planinfoActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity;
 import com.paradigm.botkit.BotKitClient;
 import com.paradigm.botlib.VisitorInfo;
 import com.kym.ui.BackDialog;
@@ -80,7 +83,7 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
     private CustomPopWindow bankPopWindow;
     private BackDialog backDialog;
     private PromptDialog promptDialog;
-    private DragFloatActionButton circle_button;
+//    private DragFloatActionButton circle_button;
 
     private CountDownTimer timer = new CountDownTimer(60000, 1000) {
         @Override
@@ -161,7 +164,7 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
                         CameraActivity.CONTENT_TYPE_BANK_CARD);
                 startActivityForResult(intent, REQUEST_CODE_BANKCARD);
                 break;
-            case R.id.circle_button:
+           /* case R.id.circle_button:
                 VisitorInfo info = new VisitorInfo();
                 info.nickName = Clone.APP_NAME + "_" + SPConfig.getInstance(getApplicationContext()).getUserAllInfoNew().getName() + "_" + SPConfig.getInstance(getApplicationContext()).getUserAllInfoNew().getUid();
                 info.userName = SPConfig.getInstance(getApplicationContext()).getUserAllInfoNew().getName();
@@ -170,7 +173,7 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
                 BotKitClient.getInstance().setPortraitUser(getResources().getDrawable(R.drawable.icon));
                 BotKitClient.getInstance().setPortraitRobot(getResources().getDrawable(R.drawable.tianjia));
                 startActivity(new Intent(getApplicationContext(), ChatActivity.class));
-                break;
+                break;*/
             default:
                 break;
 
@@ -178,11 +181,11 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
     }
 
     private void initView() {
-        circle_button = findViewById(R.id.circle_button);
-        circle_button.setOnClickListener(this);
-        if (OMID.equals("E1TDVFFY8JX3RY62")) {
-            circle_button.setVisibility(View.GONE);
-        }
+//        circle_button = findViewById(R.id.circle_button);
+//        circle_button.setOnClickListener(this);
+//        if (OMID.equals("E1TDVFFY8JX3RY62")) {
+//            circle_button.setVisibility(View.GONE);
+//        }
         findViewById(R.id.head_img_left).setOnClickListener(this);
         TextView tvTitle = findViewById(R.id.head_text_title);
         etCardNumber = findViewById(R.id.et_new_add_number);
@@ -368,7 +371,9 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(NewAddCreditCardActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });
@@ -409,7 +414,9 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(NewAddCreditCardActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });
@@ -478,7 +485,9 @@ public class NewAddCreditCardActivity extends BaseActivity implements View.OnCli
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(NewAddCreditCardActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

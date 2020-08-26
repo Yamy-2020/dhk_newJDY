@@ -28,6 +28,7 @@ import com.kym.ui.BackDialog3;
 import com.kym.ui.R;
 import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_real_name.Bpbro_Idcardid_Activity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.IService;
 import com.kym.ui.appconfig.SPConfig;
@@ -367,7 +368,9 @@ public class RongXinFenFragment extends Fragment {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                                restartApp(getContext());
                                 backDialog.dismiss();
                             }
                         });

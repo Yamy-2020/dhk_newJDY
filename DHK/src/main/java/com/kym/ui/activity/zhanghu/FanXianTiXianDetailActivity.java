@@ -140,9 +140,9 @@ public class FanXianTiXianDetailActivity extends BaseActivity implements OnClick
 
     private void initUI() {
         mLv = (ListViewFinal) findViewById(R.id.lv);
-        adapter_fen = new TiXianAdapter(
+  /*      adapter_fen = new TiXianAdapter(
                 FanXianTiXianDetailActivity.this
-                , allhotlist_shouru);
+                , allhotlist_shouru);*/
         mLv.setAdapter(adapter_fen);
         mFlEmptyView = (FrameLayout) findViewById(R.id.fl_empty_view);
         mPtrLayout = (PtrClassicFrameLayout) findViewById(R.id.ptr_layout);

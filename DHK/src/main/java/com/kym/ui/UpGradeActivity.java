@@ -22,10 +22,12 @@ import com.alipay.sdk.app.PayTask;
 import com.bumptech.glide.Glide;
 import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.Constant;
 import com.kym.ui.appconfig.IService;
 import com.kym.ui.appconfig.SPConfig;
+import com.kym.ui.dialog.GuiBinDialog;
 import com.kym.ui.dialog.GuiBinDialog1;
 import com.kym.ui.dialog.GuiBinDialog2;
 import com.kym.ui.info.GouMaiQuanYi;
@@ -33,6 +35,7 @@ import com.kym.ui.info.LoginInfo;
 import com.kym.ui.info.RegisterInfo;
 import com.kym.ui.info.RequestParam;
 import com.kym.ui.sp.SharedPrefrenceUtils;
+import com.kym.ui.util.AmountUtils;
 import com.kym.ui.util.Connect;
 import com.kym.ui.util.DialogUtil;
 import com.kym.ui.util.JsonUtils;
@@ -41,6 +44,7 @@ import com.zzss.jindy.appconfig.Clone;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -84,15 +88,15 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
     private TextView mTv8;
     private TextView mTv9;
     private String name;
-    private String zt;
-    private String lf;
-    private String td;
-    private String zt1;
-    private String lf1;
-    private String td1;
-    private String zt2;
-    private String lf2;
-    private String td2;
+    private double zt;
+    private double lf;
+    private double td;
+    private double zt1;
+    private double lf1;
+    private double td1;
+    private double zt2;
+    private double lf2;
+    private double td2;
 
 
     @Override
@@ -102,17 +106,16 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
         initHead();
         initView();
 
-        List<GouMaiQuanYi.DataBean.PaymentListBean> list1 = SharedPrefrenceUtils.getSerializableList(UpGradeActivity.this, "payment_list");
+       /* List<GouMaiQuanYi.DataBean.PaymentListBean> list1 = SharedPrefrenceUtils.getSerializableList(UpGradeActivity.this, "payment_list");
         if (list1 == null) {
+*/
+        getHomeYouHuiShengJi();
 
-            getHomeYouHuiShengJi();
-
-        } else {
+      /*  } else {
             getHomeYouHuiShengJi();
 
             adapter.notifyDataSetChanged();
-        }
-
+        }*/
 //        initUI();
     }
 
@@ -126,28 +129,28 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
             @Override
             public void onItemClickListenter2(int position, View view) {
 
-                showPopupWindow(position,view);
+                showPopupWindow(position, view);
             }
         });
 
     }
+    /*
+     *
+     * 弹出popupwindow*/
 
-    /**
-     * 弹出popupwindow
-     */
     private void showPopupWindow(int position, View v) {
 
 
-            name = data2.getPayment_list().get(position).getName();
-            zt = payment_list.get(position).getRate_list().getSk().getZt();
-            lf = payment_list.get(position).getRate_list().getSk().getLf();
-            td = payment_list.get(position).getRate_list().getSk().getTd();
-            zt1 = payment_list.get(position).getRate_list().getYk().getZt();
-            lf1 = payment_list.get(position).getRate_list().getYk().getLf();
-            td1 = payment_list.get(position).getRate_list().getYk().getTd();
-            zt2 = payment_list.get(position).getRate_list().getHk().getZt();
-            lf2 = payment_list.get(position).getRate_list().getHk().getLf();
-            td2 = payment_list.get(position).getRate_list().getHk().getTd();
+        name = data2.getPayment_list().get(position).getUpgrade_level_name();
+        zt = payment_list.get(position).getRate_list().getSk().getProfit_ratio_zt();
+        lf = payment_list.get(position).getRate_list().getSk().getProfit_ratio_jt();
+        td = payment_list.get(position).getRate_list().getSk().getProfit_ratio();
+        zt1 = payment_list.get(position).getRate_list().getZs().getProfit_ratio_zt();
+        lf1 = payment_list.get(position).getRate_list().getZs().getProfit_ratio_jt();
+        td1 = payment_list.get(position).getRate_list().getZs().getProfit_ratio();
+        zt2 = payment_list.get(position).getRate_list().getHk().getProfit_ratio_zt();
+        lf2 = payment_list.get(position).getRate_list().getHk().getProfit_ratio_jt();
+        td2 = payment_list.get(position).getRate_list().getHk().getProfit_ratio();
         if (popupWindow == null) {
             // 将自己定义的布局文件泵出来
             popupWindow_view = LayoutInflater.from(UpGradeActivity.this).inflate(
@@ -183,17 +186,17 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
         mTv8 = popupWindow_view.findViewById(R.id.tv8);
         mTv9 = popupWindow_view.findViewById(R.id.tv9);
         mKehu.setText(name + "权益优惠");
-        mTv1.setText(zt);
-        mTv2.setText(lf);
-        mTv3.setText(td);
+        mTv1.setText(AmountUtils.round(zt*100)+"%");
+        mTv2.setText(AmountUtils.round(lf*100)+"%");
+        mTv3.setText(AmountUtils.round(td*100)+"%");
 
-        mTv4.setText(zt2);
-        mTv5.setText(lf2);
-        mTv6.setText(td2);
+        mTv4.setText(AmountUtils.round(zt2*100)+"%");
+        mTv5.setText(AmountUtils.round(lf2*100)+"%");
+        mTv6.setText(AmountUtils.round(td2*100)+"%");
 
-        mTv7.setText(lf1);
-        mTv8.setText(zt1);
-        mTv9.setText(td1);
+        mTv7.setText(AmountUtils.round(zt1*100)+"%");
+        mTv8.setText(AmountUtils.round(lf1*100)+"%");
+        mTv9.setText(AmountUtils.round(td1*100)+"%");
 
     }
 
@@ -234,10 +237,12 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                         public void onClick(View view) {
                             switch (view.getId()) {
                                 case R.id.pay:
-                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level)
-                                    );
+                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level), 1);
+                                    adapter.notifyDataSetChanged();
                                     break;
                                 case R.id.close:
+                                    adapter.notifyDataSetChanged();
+
                                     guiBinDialog.dismiss();
                                     break;
                             }
@@ -245,6 +250,7 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                     });
                     guiBinDialog.setCancelable(false);
                     guiBinDialog.show();
+                    adapter.notifyDataSetChanged();
                 } else {
                     tipView("您已经大于该等级");
                 }
@@ -263,9 +269,12 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                     public void onClick(View view) {
                         switch (view.getId()) {
                             case R.id.pay:
-                                zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level));
+                                zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level), 1);
+                                adapter.notifyDataSetChanged();
                                 break;
                             case R.id.close:
+                                adapter.notifyDataSetChanged();
+
                                 guiBinDialog.dismiss();
                                 break;
                         }
@@ -273,6 +282,8 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                 });
                 guiBinDialog.setCancelable(false);
                 guiBinDialog.show();
+                adapter.notifyDataSetChanged();
+
             } else {
                 tipView("您已经大于该等级");
             }
@@ -288,16 +299,22 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                         public void onClick(View view) {
                             switch (view.getId()) {
                                 case R.id.pay:
-                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level));
+                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level), 1);
+                                    adapter.notifyDataSetChanged();
                                     break;
                                 case R.id.close:
+                                    adapter.notifyDataSetChanged();
+
                                     guiBinDialog.dismiss();
+
                                     break;
                             }
                         }
                     });
                     guiBinDialog.setCancelable(false);
                     guiBinDialog.show();
+                    adapter.notifyDataSetChanged();
+
                 } else {
                     tipView("您已经大于该等级");
                 }
@@ -315,10 +332,14 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                         public void onClick(View view) {
                             switch (view.getId()) {
                                 case R.id.pay:
-                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level3));
+                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level3), 1);
+                                    adapter.notifyDataSetChanged();
                                     break;
                                 case R.id.close:
+                                    adapter.notifyDataSetChanged();
+
                                     guiBinDialog1.dismiss();
+
                                     break;
                             }
                         }
@@ -332,10 +353,14 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                         public void onClick(View view) {
                             switch (view.getId()) {
                                 case R.id.pay:
-                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level3));
+                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level3), 1);
+                                    adapter.notifyDataSetChanged();
                                     break;
                                 case R.id.close:
+                                    adapter.notifyDataSetChanged();
+
                                     guiBinDialog1.dismiss();
+
                                     break;
                             }
                         }
@@ -348,17 +373,20 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                 int upgrade_level = list.get(1).getUpgrade_level();
                 weizhi = String.valueOf(upgrade_level);
 
-                if (upgrade_level == 3) {
+                if (upgrade_level == 4) {
                     guiBinDialog = new GuiBinDialog1(UpGradeActivity.this,
                             R.style.Theme_Dialog_Scale, new GuiBinDialog1.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
                             switch (view.getId()) {
                                 case R.id.pay:
-                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level));
+                                    zhifubao(IService.UPGRADEORDER, String.valueOf(upgrade_level), 1);
+                                    adapter.notifyDataSetChanged();
                                     break;
                                 case R.id.close:
                                     guiBinDialog.dismiss();
+                                    adapter.notifyDataSetChanged();
+
                                     break;
                             }
                         }
@@ -376,7 +404,7 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
     private void getHomeYouHuiShengJi() {
         final DialogUtil dialogUtil = new DialogUtil(this);
 
-        Connect.getInstance().post(UpGradeActivity.this, IService.HOME_YOUHUI, null, new Connect.OnResponseListener() {
+        Connect.getInstance().post(UpGradeActivity.this, IService.GOUMAI_XINGZHENGCHE, null, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 dialogUtil.dismiss();
@@ -389,12 +417,15 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                     SharedPrefrenceUtils.putSerializableList(UpGradeActivity.this, "payment_list", payment_list);
 
                     String s = data1.getData().getCurrent_list().getCurrent_msg();
-                    String name = data1.getData().getCurrent_list().getName();
+                    String name = data1.getData().getCurrent_list().getLevel_name();
                     String imgurl = data1.getData().getCurrent_list().getTop_imgurl();
                     if (payment_list != null && payment_list.size() > 0) {
                         list.addAll(payment_list);
+                        adapter.notifyDataSetChanged();
+
+                    } else {
+                        adapter.notifyDataSetChanged();
                     }
-                    adapter.notifyDataSetChanged();
 
                     if (Clone.OMID.equals("1H1AJD6SLKVADDM6")) {
                         lv0_tv2.setText(s);
@@ -408,12 +439,16 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
 
                     }
 
+                    adapter.notifyDataSetChanged();
+
                 } else if (data1.getResult().getCode() == 101 || data1.getResult().getCode() == 601) {
                     backDialog = new BackDialog("", "登录过期,请重新登录", "确定", UpGradeActivity.this,
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(UpGradeActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });
@@ -447,6 +482,7 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
         list = new ArrayList<>();
         adapter = new GouMaiAdapter(this, list);
         mRecGounai.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
 
@@ -482,11 +518,15 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
+                                getHomeYouHuiShengJi();
                                 backDialog.dismiss();
+
+                                adapter.notifyDataSetChanged();
                             }
                         });
                         backDialog.setCancelable(false);
                         backDialog.show();
+                        adapter.notifyDataSetChanged();
                     } else {
                         tipView("支付失败");
                     }
@@ -535,10 +575,11 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
         });
     }
 
-    private void zhifubao(String url, String level) {
+    private void zhifubao(String url, String level, int in) {
         final DialogUtil dialogUtil = new DialogUtil(this);
         HashMap<String, String> params = new HashMap<>();
         params.put("upgrade_level", level);
+        params.put("type", in + "");
         Connect.getInstance().post(this, url, params, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
@@ -562,9 +603,11 @@ public class UpGradeActivity extends BaseActivity implements View.OnClickListene
                                 Message msg = new Message();
                                 msg.what = SDK_PAY_FLAG;
                                 msg.obj = result;
+                                adapter.notifyDataSetChanged();
                                 mHandler.sendMessage(msg);
                             }
                         };
+                        adapter.notifyDataSetChanged();
                         // 必须异步调用
                         Thread payThread = new Thread(payRunnable);
                         payThread.start();

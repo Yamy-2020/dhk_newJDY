@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.donkingliang.labels.LabelsView;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.paradigm.botkit.BotKitClient;
 import com.paradigm.botlib.VisitorInfo;
 import com.zaaach.toprightmenu.MenuItem;
@@ -213,7 +215,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -267,7 +271,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -333,7 +339,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -393,7 +401,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -455,7 +465,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });
@@ -616,7 +628,9 @@ public class SK_TongDao_Activity extends BaseActivity implements View.OnClickLis
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(SK_TongDao_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });

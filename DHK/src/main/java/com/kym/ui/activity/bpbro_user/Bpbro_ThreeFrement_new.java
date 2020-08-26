@@ -29,6 +29,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.kym.ui.BackDialog;
 import com.kym.ui.BackDialog3;
@@ -113,7 +115,9 @@ public class Bpbro_ThreeFrement_new extends Fragment implements OnClickListener 
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+//                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
                                 backDialog.dismiss();
                             }
                         });
@@ -187,7 +191,9 @@ public class Bpbro_ThreeFrement_new extends Fragment implements OnClickListener 
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getContext());
+                            startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                            restartApp(getContext());
                             backDialog.dismiss();
                         }
                     });

@@ -3,24 +3,24 @@
 3    package="com.baidu.ocr.ui.test" >
 4
 5    <uses-sdk
-5-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:5:5-74
+5-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:5:5-74
 6        android:minSdkVersion="14"
-6-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:5:15-41
+6-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:5:15-41
 7        android:targetSdkVersion="25" />
-7-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:5:42-71
+7-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:5:42-71
 8
 9    <instrumentation
-9-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:11:5-15:71
+9-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:11:5-15:71
 10        android:name="android.support.test.runner.AndroidJUnitRunner"
-10-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:11:22-83
+10-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:11:22-83
 11        android:functionalTest="false"
-11-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:14:22-52
+11-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:14:22-52
 12        android:handleProfiling="false"
-12-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:13:22-53
+12-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:13:22-53
 13        android:label="Tests for com.baidu.ocr.ui.test"
-13-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:15:22-69
+13-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:15:22-69
 14        android:targetPackage="com.baidu.ocr.ui.test" />
-14-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:12:22-67
+14-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:12:22-67
 15
 16    <uses-permission android:name="android.permission.CAMERA" />
 16-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-65
@@ -43,11 +43,11 @@
 22-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:19-67
 23
 24    <application
-24-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:7:5-9:19
+24-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:7:5-9:19
 25        android:allowBackup="true"
 25-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:9-35
 26        android:debuggable="true"
-26-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:7:18-43
+26-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:7:18-43
 27        android:label="@string/app_name"
 27-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-41
 28        android:supportsRtl="true"
@@ -57,8 +57,8 @@
 30        android:vmSafeMode="true" >
 30-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-34
 31        <uses-library android:name="android.test.runner" />
-31-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:8:9-60
-31-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6190930195119160450.xml:8:23-57
+31-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:8:9-60
+31-->E:\android\dhk_newJDY\ocr_ui\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7626083109903528908.xml:8:23-57
 32
 33        <activity
 33-->[__tested_artifact__::ocr_ui] E:\android\dhk_newJDY\ocr_ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-29:80

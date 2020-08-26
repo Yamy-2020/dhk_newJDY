@@ -33,9 +33,11 @@ import com.kym.ui.BackDialog3;
 import com.kym.ui.FeiLvActivity;
 import com.kym.ui.LianxiActivity_new;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.MyCXKActivity;
 import com.kym.ui.activity.SheZhiActivity;
 import com.kym.ui.activity.bpbro_safe.UserAnQuanActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.news.NewsActivity;
 import com.kym.ui.activity.shiming.NewShiMingActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
@@ -102,7 +104,9 @@ public class User_Test_Fragment extends Fragment implements OnClickListener {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                                restartApp(getContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -172,7 +176,9 @@ public class User_Test_Fragment extends Fragment implements OnClickListener {
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getContext());
+                            startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                            restartApp(getContext());
                             backDialog.dismiss();
                         }
                     });

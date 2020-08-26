@@ -11,7 +11,9 @@ import android.widget.TextView;
 
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.HKplanlistAdapter;
 import com.kym.ui.appconfig.IService;
@@ -127,7 +129,9 @@ public class HK_Sb_planinfoActivity extends BaseActivity {
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(HK_Sb_planinfoActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });
@@ -170,7 +174,9 @@ public class HK_Sb_planinfoActivity extends BaseActivity {
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(HK_Sb_planinfoActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

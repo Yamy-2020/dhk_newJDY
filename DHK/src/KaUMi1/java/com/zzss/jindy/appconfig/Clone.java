@@ -2,7 +2,12 @@ package com.zzss.jindy.appconfig;
 
 public class Clone {
     public final static String APP_NAME = "指算";
-    public static String HOST = "https://app.izhisuan.com/";  //正式
+//    public static String HOST = "https:// app.izhisuan.com/";  //正式
+//    public static String HOST = "https://apps.utools.club";  //测试
+//    public static String HOST = "http://test.app.izhisuan.com/";  //测试
+
+    public static String HOST="https://app.izhisuan.com/";//正式;
+
     public final static String OMID = "BSV3MJA0ZC6DAV11";  //oemId唯一辨识   管后台要
     /*
     隐私协议,注册协议

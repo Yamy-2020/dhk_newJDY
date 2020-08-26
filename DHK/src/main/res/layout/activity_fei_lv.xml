@@ -21,29 +21,7 @@
                 android:layout_height="100dp"
                 android:background="@color/black_33">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center_vertical">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="当前等级:"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/public_16_sp" />
-
-                    <TextView
-                        android:id="@+id/dengji"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:textColor="@color/blue_2e"
-                        android:textSize="@dimen/public_18_sp" />
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -135,7 +113,7 @@
                         android:layout_weight="1"
                         android:gravity="left"
                         android:textColor="@color/blue_2e"
-                        android:textSize="@dimen/public_18_sp" />
+                        android:textSize="@dimen/sp_16" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -148,7 +126,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="自用奖励"
+                        android:text="间推奖励"
                         android:textColor="@color/black_33"
                         android:textSize="17sp" />
 
@@ -217,7 +195,7 @@
                 android:clipToPadding="false"
                 android:overScrollMode="never"
                 android:paddingBottom="20dp" />
-        <LinearLayout
+       <!-- <LinearLayout
             android:gravity="center"
 
             android:layout_width="match_parent"
@@ -230,7 +208,7 @@
                 android:layout_width="@dimen/dp_300"
                 android:text="升级账户享更多优惠"
                 android:layout_height="wrap_content"/>
-        </LinearLayout>
+        </LinearLayout>-->
         </LinearLayout>
 
 

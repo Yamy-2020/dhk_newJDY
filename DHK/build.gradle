@@ -60,16 +60,16 @@ android {
         KaUMi1 {
             applicationId "com.kym.ui"  //包名
             versionCode 3
-            versionName "1.2.1"   //版本号
+            versionName "2.0.0"   //版本号
             buildConfigField "String", "WX_APP_ID", '"wxddda0822580a4630"'//微信
             manifestPlaceholders = [APP_NAME       : "指算",
                                     QQ_APP_ID      : "tencent1106647221",//qq现在没有用
-                    /* 推送 */
+                                    /* 推送 */
                                     PUSH_APP_ID    : "xm2JxZ5uFkAjJsiEzDGyUA",
                                     PUSH_APP_KEY   : "CL86jik1uO7jWj2nzgOh36",
                                     PUSH_APP_SECRET: "R3Rc5A6rGM60RY5mgiVj7A",
                                     PACKAGE_NAME   : "com.kym.ui",
-                    /*高德 */
+                                    /*高德 */
                                     GAODE_KEY      : "edaba156353a30355acee5376cdd3978"]
         }
     }
@@ -82,8 +82,6 @@ android {
         checkReleaseBuilds false
     }
     buildTypes {
-
-
 
 
         debug {
@@ -125,6 +123,8 @@ configurations.all {
 }
 
 dependencies {
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$smartRefresh"
+    implementation "com.scwang.smartrefresh:SmartRefreshHeader:$smartRefresh"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$android_support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -294,4 +294,5 @@ dependencies {
      * 二维码
      */
     implementation 'com.google.zxing:core:3.3.0'
+    compile 'com.github.paradoxie:AutoVerticalTextview:0.1'
 }

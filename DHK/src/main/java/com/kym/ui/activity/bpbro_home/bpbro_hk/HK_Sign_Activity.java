@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity;
 import com.paradigm.botkit.BotKitClient;
 import com.paradigm.botlib.VisitorInfo;
 import com.kym.ui.BackDialog;
@@ -189,7 +191,9 @@ public class HK_Sign_Activity extends BaseActivity implements View.OnClickListen
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(HK_Sign_Activity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });

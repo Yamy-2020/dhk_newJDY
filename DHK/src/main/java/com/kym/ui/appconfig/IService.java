@@ -995,7 +995,8 @@ public class IService {
     // 46.付费升级
     //无参数
 //    public static final String UPGRADEORDER = Clone.HOST + "api.php/order/upgradeorder";
-    public static final String UPGRADEORDER = Clone.HOST + "api.php/order/upgradeorderLatest";
+//    public static final String UPGRADEORDER = Clone.HOST + "api.php/order/upgradeorderLatest";
+    public static final String UPGRADEORDER = Clone.HOST + "api.php/user/teamupgradepay";
 
     // 60.继续支付
     public static final String REPAYMENT_AGAIN = Clone.HOST + "api.php/bills/afreshdeductions";
@@ -1189,4 +1190,20 @@ public class IService {
 
     public static String KEXINFEN_SHOP=Clone.HOST+"api.php/appModuleControl/appModuleControl";
     public static String HOME_YOUHUI=Clone.HOST+"api.php/user/upgradeLatest";
+
+
+
+    public static String FENRUN_ZHANGHU=Clone.HOST+"api.php/user/splitterStatisticslist";
+
+    public static String FENRUN_ZHANGHU_XIANGQING=Clone.HOST+"api.php/user/splitterDetail";
+    public static String FRILV_MY=Clone.HOST+"api.php/user/myRate";
+    public static String GOUMAI_XINGZHENGCHE=Clone.HOST+"api.php/user/teamupgrade";
+
+    public static String YEJIGUALI_SHOW=Clone.HOST+"api.php/user/performancelist";
+    public static String YEJIGUANLI_XIANGQING=Clone.HOST+"api.php/user/performanceDetail";
+    public static String XIAOHONH_SHOW=Clone.HOST+"api.php/icon/iconShow2";
+    public static String YONGHUFENRUNTIXIAN=Clone.HOST+"api.php/user/withdraw";
+    public static String YONGHUFENXIANGPING=Clone.HOST+"api.php/user/withdrawRecord";
+
+
 }

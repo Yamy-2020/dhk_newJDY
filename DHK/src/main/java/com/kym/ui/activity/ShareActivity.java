@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.FutureTarget;
 import com.bumptech.glide.request.target.Target;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.sp.SharedPrefrenceUtils;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXImageObject;
@@ -104,7 +105,7 @@ public class ShareActivity extends BaseActivity implements View.OnClickListener 
         showUrl = intent.getStringExtra("showUrl");
         savePicture1(showUrl);
         ImageView share_bg_top = findViewById(R.id.share_bg_top);
-        Glide.with(this).load(intent.getStringExtra("share_bgimg")).dontAnimate().into(share_bg_top);
+        Glide.with(this).load(intent.getStringExtra("share_bgimg")).placeholder(R.drawable.share_default).error(R.drawable.fenxiang_tuiguang_pig).dontAnimate().into(share_bg_top);
         mRecyclerView = findViewById(R.id.share_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
             @Override
@@ -304,7 +305,9 @@ public class ShareActivity extends BaseActivity implements View.OnClickListener 
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(ShareActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });

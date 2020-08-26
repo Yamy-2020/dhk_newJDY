@@ -25,6 +25,7 @@ import com.kym.ui.appconfig.log;
 import com.kym.ui.adapter.TiXianAdapter;
 import com.kym.ui.appconfig.IService;
 import com.kym.ui.appconfig.SPConfig;
+import com.kym.ui.bean.YongHuFenRunXiangQingBean;
 import com.kym.ui.model.CashList;
 import com.kym.ui.model.NewUserResponse;
 import com.kym.ui.newutil.EmptyViewUtils;
@@ -49,7 +50,7 @@ import cn.finalteam.loadingview.PtrClassicFrameLayout;
 import cn.finalteam.loadingview.PtrFrameLayout;
 
 public class BankTiXianDetailActivity extends BaseActivity implements OnClickListener {
-    private List<CashList.DataBean.CashListBean> allhotlist_shouru = new ArrayList<>();
+    private List<YongHuFenRunXiangQingBean.DataBean.ListBean> allhotlist_shouru = new ArrayList<>();
     private ListViewFinal mLv;
     private PtrClassicFrameLayout mPtrLayout;
     private int mPage = 1;
@@ -148,9 +149,7 @@ public class BankTiXianDetailActivity extends BaseActivity implements OnClickLis
 
     private void initUI() {
         mLv = (ListViewFinal) findViewById(R.id.lv);
-        adapter_fen = new TiXianAdapter(
-                BankTiXianDetailActivity.this
-                , allhotlist_shouru);
+        adapter_fen = new TiXianAdapter(BankTiXianDetailActivity.this, allhotlist_shouru);
         mLv.setAdapter(adapter_fen);
 
         mFlEmptyView = (FrameLayout) findViewById(R.id.fl_empty_view);
@@ -160,12 +159,12 @@ public class BankTiXianDetailActivity extends BaseActivity implements OnClickLis
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
-                CashList.DataBean.CashListBean info = allhotlist_shouru.get(arg2);
+//
+                YongHuFenRunXiangQingBean.DataBean.ListBean info = allhotlist_shouru.get(arg2);
                 if (info.getStatus().equals("3")) {
                     try {
 
-                        dialog_one(info.getBank_name(), AmountUtils.changeF2Y(info.getMoney()), info.getAddtime());
+                        dialog_one(info.getStatus_name(), AmountUtils.round(info.getWithdraw_amount()/100), info.getApply_time());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -200,15 +199,21 @@ public class BankTiXianDetailActivity extends BaseActivity implements OnClickLis
         Loading = new DialogUtil(BankTiXianDetailActivity.this);
         HashMap<String, String> params = new HashMap<>();
         params.put("p", page + "");
-        Connect.getInstance().post(BankTiXianDetailActivity.this, IService.CASH_LSIT, params, new Connect.OnResponseListener() {
+        Connect.getInstance().post(BankTiXianDetailActivity.this, IService.YONGHUFENXIANGPING, params, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 log.e("查询用户提现记录：" + result);
-                CashList response = (CashList) JsonUtils.parse((String) result, CashList.class);
+                YongHuFenRunXiangQingBean response = (YongHuFenRunXiangQingBean) JsonUtils.parse((String) result, YongHuFenRunXiangQingBean.class);
                 if (response.getResult().getCode() == 10000) {
+                    List<YongHuFenRunXiangQingBean.DataBean.ListBean> list = response.getData().getList();
+                    textV_txall.setText(AmountUtils.round(response.getData().getSum_cash()/100));
 
-                    if (response.getData().getCash_list() != null) {
-                        EmptyViewUtils.goneNoDataEmpty1(mFlEmptyView);
+                    if ( list!= null&&list.size()>0) {
+                        allhotlist_shouru.addAll(list);
+                        adapter_fen.notifyDataSetChanged();
+
+
+                     /*   EmptyViewUtils.goneNoDataEmpty1(mFlEmptyView);
                         mPage = page + 1;
                         CashList.DataBean data = response.getData();
                         List<CashList.DataBean.CashListBean> cash_list = data.getCash_list();
@@ -223,7 +228,7 @@ public class BankTiXianDetailActivity extends BaseActivity implements OnClickLis
                                 e.printStackTrace();
                             }
                         }
-
+*/
 
                     } else {
                         if (page == 1) {
@@ -240,14 +245,14 @@ public class BankTiXianDetailActivity extends BaseActivity implements OnClickLis
                         EmptyViewUtils.showNoDataEmpty1(mFlEmptyView, "暂无数据");
                     }
                     if (allhotlist_shouru.size() > 0) {
-                        String cash_sum = response.getData().getTotal_cash();
+                      /*  String cash_sum = response.getData().getTotal_cash();
                         int i = Integer.parseInt(cash_sum);
                         try {
                             String s = AmountUtils.changeF2Y(Long.parseLong("" + i));
                             textV_txall.setText(s + " 元");
                         } catch (Exception e) {
                             e.printStackTrace();
-                        }
+                        }*/
                     } else {
                         textV_txall.setText("0.00 元");
                     }

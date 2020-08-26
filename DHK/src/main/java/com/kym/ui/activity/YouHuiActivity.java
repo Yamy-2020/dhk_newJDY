@@ -20,6 +20,7 @@ import com.kym.ui.LianxiActivity_new;
 import com.kym.ui.PayResult;
 import com.kym.ui.R;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.YouHuiShengJiAdapter;
 import com.kym.ui.adapter.YouHuiTuiGuangAdapter;
@@ -160,7 +161,9 @@ public class YouHuiActivity extends BaseActivity implements View.OnClickListener
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(YouHuiActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });
@@ -201,7 +204,9 @@ public class YouHuiActivity extends BaseActivity implements View.OnClickListener
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(YouHuiActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });
@@ -238,7 +243,9 @@ public class YouHuiActivity extends BaseActivity implements View.OnClickListener
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(YouHuiActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

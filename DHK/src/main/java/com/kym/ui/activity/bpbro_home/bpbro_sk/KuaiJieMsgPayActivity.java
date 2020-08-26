@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.info.KuaiJieCardList;
 import com.kym.ui.model.Result;
@@ -183,7 +184,9 @@ public class KuaiJieMsgPayActivity extends BaseActivity implements View.OnClickL
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(KuaiJieMsgPayActivity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -240,7 +243,9 @@ public class KuaiJieMsgPayActivity extends BaseActivity implements View.OnClickL
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+                            startActivity(new Intent(KuaiJieMsgPayActivity.this, LoginActivity.class));
+
+//                            restartApp(getApplicationContext());
                             backDialog.dismiss();
                         }
                     });

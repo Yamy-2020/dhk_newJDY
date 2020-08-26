@@ -12,7 +12,9 @@ import com.kym.ui.BackDialog;
 import com.kym.ui.BankChangeActivity;
 import com.kym.ui.JieBangCardActivity;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.AllCardListAdapter;
 import com.kym.ui.appconfig.IService;
@@ -170,8 +172,11 @@ public class AllDcCardListActivity extends BaseActivity implements View.OnClickL
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+//                                restartApp(getApplicationContext());
+                                startActivity(new Intent(AllDcCardListActivity.this, LoginActivity.class));
+
                                 backDialog.dismiss();
+
                             }
                         });
                         backDialog.setCancelable(false);

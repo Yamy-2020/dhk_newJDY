@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kym.ui.R;
+import com.kym.ui.activity.zhanghu.ShengJiTiXianActivity;
+import com.kym.ui.activity.zhanghu.ZhangHuActivity;
+import com.kym.ui.bean.YongHuFenRunXiangQingBean;
 import com.kym.ui.model.CashList;
 import com.kym.ui.util.AmountUtils;
 import com.kym.ui.util.log;
@@ -20,9 +23,9 @@ import java.util.List;
 public class TiXianAdapter extends BaseAdapter {
 
     private Activity activity;
-    private List<CashList.DataBean.CashListBean> mList;
+    private List<YongHuFenRunXiangQingBean.DataBean.ListBean> mList;
 
-    public TiXianAdapter(Activity activity, List<CashList.DataBean.CashListBean> hotgoodsList) {
+    public TiXianAdapter(Activity activity, List<YongHuFenRunXiangQingBean.DataBean.ListBean> hotgoodsList) {
         this.activity = activity;
         this.mList = hotgoodsList;
     }
@@ -62,8 +65,16 @@ public class TiXianAdapter extends BaseAdapter {
         } else {
             holder = (Holder) convertView.getTag();
         }
-        CashList.DataBean.CashListBean info = mList.get(position);
-        switch (info.getStatus()) {
+        YongHuFenRunXiangQingBean.DataBean.ListBean bean = mList.get(position);
+        holder.textV_money.setText("-"+AmountUtils.round(+bean.getWithdraw_amount()/100));
+        holder.textV_tixian_time .setText(bean.getApply_time());
+        holder.textV_tixian_bank .setText(bean.getTitle());
+
+        switch (bean.getStatus()) {
+            case "4":
+                //失败
+                holder.imageV_st.setBackgroundResource(R.drawable.shibai);
+                break;
             case "3":
                 //成功
                 holder.imageV_st.setBackgroundResource(R.drawable.ic_wancheng);
@@ -72,19 +83,19 @@ public class TiXianAdapter extends BaseAdapter {
                 holder.imageV_st.setBackgroundResource(R.drawable.ic_jisuan);
                 break;
         }
-        if (info.getBank_name().equals("支付宝")) {
-            holder.textV_tixian_bank.setText(info.getBank_name() + "（" + info.getBank_no() + "）");
+      /*  if (bean.getBank_name().equals("银行卡")) {
+            holder.textV_tixian_bank.setText(bean.getBank_name() + "（" + bean.getBank_no() + "）");
         } else {
-            String bank_no = info.getBank_no();
+            String bank_no = bean.getBank_no();
 
             if (bank_no.length() > 1) {
                 int n = 4;
                 String bank_no_new = bank_no.substring(bank_no.length() - n
                 );
-                holder.textV_tixian_bank.setText(info.getBank_name() + " (" + bank_no_new
+                holder.textV_tixian_bank.setText(bean.getBank_name() + " (" + bank_no_new
                         + ")");
             } else {
-                holder.textV_tixian_bank.setText(info.getBank_name());
+                holder.textV_tixian_bank.setText(bean.getBank_name());
             }
         }
         holder.textV_tixian_time.setText(gettime(info.getAddtime()));
@@ -96,8 +107,7 @@ public class TiXianAdapter extends BaseAdapter {
             holder.textV_money.setText("-" + s + "元");
         } catch (Exception e) {
             e.printStackTrace();
-        }
-
+        }*/
         return convertView;
     }
 

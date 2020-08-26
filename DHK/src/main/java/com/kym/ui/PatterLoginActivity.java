@@ -443,7 +443,6 @@ public class PatterLoginActivity extends BaseActivity implements View.OnClickLis
             }
         });
     }
-
     private BackDialog3 backDialog4;
 
     private void showUpdata() {

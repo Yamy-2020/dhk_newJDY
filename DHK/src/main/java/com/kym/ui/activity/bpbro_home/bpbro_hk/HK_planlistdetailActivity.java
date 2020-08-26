@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.zaaach.toprightmenu.MenuItem;
 import com.zaaach.toprightmenu.TopRightMenu;
 import com.kym.ui.BackDialog;
@@ -103,7 +105,9 @@ public class HK_planlistdetailActivity extends BaseActivity implements View.OnCl
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(HK_planlistdetailActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });
@@ -154,7 +158,6 @@ public class HK_planlistdetailActivity extends BaseActivity implements View.OnCl
             case R.id.head_img_right:
                 mTopRightMenu = new TopRightMenu(HK_planlistdetailActivity.this);
                 List<MenuItem> menuItems = new ArrayList<>();
-                menuItems.add(new MenuItem("帮助中心"));
                 menuItems.add(new MenuItem("终止计划"));
                 mTopRightMenu
                         .setHeight(300)     //默认高度480
@@ -165,11 +168,10 @@ public class HK_planlistdetailActivity extends BaseActivity implements View.OnCl
                             @Override
                             public void onMenuItemClick(int position) {
                                 if (position == 0) {
-                                    Intent intent = new Intent(HK_planlistdetailActivity.this, Course1Activity.class);
+                                  /*  Intent intent = new Intent(HK_planlistdetailActivity.this, Course1Activity.class);
                                     intent.putExtra("type", "hk");
                                     intent.putExtra("title", "还款计划");
-                                    startActivity(intent);
-                                } else {
+                                    startActivity(intent);*/
                                     stopPlan();
                                 }
                             }

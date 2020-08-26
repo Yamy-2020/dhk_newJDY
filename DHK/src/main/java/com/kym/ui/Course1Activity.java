@@ -1,5 +1,6 @@
 package com.kym.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +8,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.CourseAdapter;
 import com.kym.ui.appconfig.IService;
@@ -93,7 +96,9 @@ public class Course1Activity extends BaseActivity implements View.OnClickListene
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(Course1Activity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.util.Connect.OnResponseListener;
 
 import android.os.Handler;
@@ -73,7 +74,7 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
     private TextView textV_bankname;
     private TextView textV_bankno;
     private NewUserResponse.DataBean userAllInfoNew;
-    private String bank_name;
+    public static String bank_name,substring;
     private String amount = "0";
     private DialogUtil dialogUtil;
     private TextView line1, line2, zhifubao, zfbBtn;
@@ -84,6 +85,8 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
     private TextView tvGetCode, text_title_code;
     private EditText etCode, logingTextTel;
     private Dialog getCodeDialog;
+    private String s;
+
 
 
     @Override
@@ -176,7 +179,7 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
                 if (response.getResult().getCode() == 10000) {
                     AccessTodebit.DataBean bank = response.getData();
                     String bank_no = bank.getBank_no();
-                    String substring = bank_no.substring(bank_no.length() - 4, bank_no.length());
+                    substring = bank_no.substring(bank_no.length() - 4, bank_no.length());
                     bank_name = bank.getBank_name();
                     mobile=bank.getBank_mobile();
                     zhifubao.setText("提现到储蓄卡：" + bank_name + "(" + substring + ")");
@@ -204,8 +207,7 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
                     TiXianInFo.DataBean data = response.getData();
                     String minMoney = data.getCash_min();
                     String fee = data.getFee();
-                    String msg = data.getMsg();
-                    tv_tip.setText("" + msg);
+
                     try {
                         int i = Integer.parseInt(fee);
                         int ii = Integer.parseInt(minMoney);
@@ -214,8 +216,7 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
                         String s1 = AmountUtils.changeF2Y(Long.parseLong("" + ii));
                         min = s1;
                         min_dou = Double.parseDouble(min);
-                        textV_ts.setText("手续费 " + s + " 元/笔,税收6%,提现金额 " + s1
-                                + " -1000.00元");
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -235,12 +236,15 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
     }
 
     private void account_cash() {
-        String s = editT_money.getText().toString();
+        s = editT_money.getText().toString();
         amount = AmountUtils.changeY2F(s);
         HashMap<String, String> param = new HashMap<>();
-        param.put("amount", amount);
+        param.put("withdraw_amount", amount);
+        param.put("withdraw_type",2+"");
+        param.put("auth_code",etCode.getText().toString());
+        param.put("mobile", LoginActivity.mobile);
         loadDialogUti = new DialogUtil(this);
-        Connect.getInstance().post(ShengJiTiXianActivity.this, IService.SHENGJI_ACCOUNT, param, new Connect.OnResponseListener() {
+        Connect.getInstance().post(ShengJiTiXianActivity.this, IService.YONGHUFENRUNTIXIAN, param, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 AccountBalance response = (AccountBalance) JsonUtils.parse((String) result, AccountBalance.class);
@@ -261,15 +265,23 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
     }
 
 
+    private String skzs_withdraw,withdraw_msg,withdraw_time_msg,withdraw_amount_max,withdraw_amount_min;
     @SuppressLint("SetTextI18n")
     private void initview() {
 
         Intent intent = getIntent();
         yue = intent.getStringExtra("yue");
-        TextView right_tv = findViewById(R.id.right_tv);
+        skzs_withdraw = intent.getStringExtra("skzs_withdraw");
+        withdraw_msg = intent.getStringExtra("withdraw_msg");
+        withdraw_time_msg = intent.getStringExtra("withdraw_time_msg");
+        withdraw_amount_max = intent.getStringExtra("withdraw_amount_max");
+        withdraw_amount_min = intent.getStringExtra("withdraw_amount_min");
+
+
+      /*  TextView right_tv = findViewById(R.id.right_tv);
         right_tv.setText("提现明细");
-        right_tv.setVisibility(View.VISIBLE);
-        right_tv.setOnClickListener(this);
+        right_tv.setVisibility(View.VISIBLE);*/
+//        right_tv.setOnClickListener(this);
         ImageView imageV_fanhui = findViewById(R.id.head_img_left);
         imageV_fanhui.setVisibility(View.VISIBLE);
         imageV_fanhui.setOnClickListener(this);
@@ -277,12 +289,16 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
         tv_tip = findViewById(R.id.tv_tip);
         TextView textV_title = findViewById(R.id.head_text_title);
         textV_title.setVisibility(View.VISIBLE);
+
+        textV_title.setText("升级账户提现");
       /*  if (OMID.equals("VIB0T31Q2L7DNDK5")) {
             textV_title.setText("办卡分润提现");
         } else {
             textV_title.setText("升级账户提现");
         }*/
         textV_ts = findViewById(R.id.textV_tishimsg);
+        textV_ts.setText(withdraw_msg);
+        tv_tip.setText(withdraw_time_msg);
         textV_bankname = findViewById(R.id.textV_bankname);
         textV_bankno = findViewById(R.id.textV_bankno_wei);
         TextView textV_yue = findViewById(R.id.textV_yue);
@@ -299,10 +315,10 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
         tab2 = findViewById(R.id.tab2);
 //        tab1.setOnClickListener(this);
 //        tab2.setOnClickListener(this);
-        line1 = findViewById(R.id.text_line1);
-        line2 = findViewById(R.id.text_line2);
-        li1.setVisibility(View.VISIBLE);
-        line1.setVisibility(View.VISIBLE);
+//        text_line1 = findViewById(R.id.text_line1);
+//        line2 = findViewById(R.id.text_line2);
+//        li1.setVisibility(View.VISIBLE);
+//        line1.setVisibility(View.VISIBLE);
     }
 
 
@@ -323,6 +339,9 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
         TextView textV_bank = view.findViewById(R.id.textV_bank_t);
         TextView textV_time = view.findViewById(R.id.textV_time_t);
         TextView textV_money = view.findViewById(R.id.textV_money_t);
+        textV_bank.setText(bank_name + "(" + substring + ")");//
+        textV_money.setText( s);
+
         Glide.with(ShengJiTiXianActivity.this).load(userAllInfoNew.getHeadimage()).placeholder(R.drawable.default_image).error(R.drawable.default_image)
                 .dontAnimate().into(imageV_top);
         view.findViewById(R.id.layout_diss).setOnClickListener(this);
@@ -380,25 +399,28 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
                         double b = min_dou;
                         if (money_dou >= b) {
                             if (money_yue >= money_dou) {
-                                account_cash();
-
-
-
-                                View view = LayoutInflater.from(this).inflate(R.layout.layout_get_divide_code, null);
-                                TextView id = view.findViewById(R.id.text_title_code);
-                                etCode = view.findViewById(R.id.et_get_code);
-                                tvGetCode = view.findViewById(R.id.tv_get_code);
-                                text_title_code = view.findViewById(R.id.text_title_code);
-                                LinearLayout close = view.findViewById(R.id.close);
-                                close.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        getCodeDialog.dismiss();
-                                    }
-                                });
-                                view.findViewById(R.id.tv_get_code).setOnClickListener(this);
-                                id.setText("请使用"+mobile.substring(mobile.length() - 4)+"的手机号获取验证码");
-                                showGetCodeDialog(view);
+                                    View view = LayoutInflater.from(this).inflate(R.layout.layout_get_divide_code, null);
+                                    TextView id = view.findViewById(R.id.text_title_code);
+                                    etCode = view.findViewById(R.id.et_get_code);
+                                    tvGetCode = view.findViewById(R.id.tv_get_code);
+                                    TextView tv_get_code_confirm =view.findViewById(R.id.tv_get_code_confirm);
+                                    text_title_code = view.findViewById(R.id.text_title_code);
+                                    LinearLayout close = view.findViewById(R.id.close);
+                                    tv_get_code_confirm.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            account_cash();
+                                        }
+                                    });
+                                    close.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            getCodeDialog.dismiss();
+                                        }
+                                    });
+                                    view.findViewById(R.id.tv_get_code).setOnClickListener(this);
+                                    id.setText("请使用"+mobile.substring(mobile.length() - 4)+"的手机号获取验证码");
+                                    showGetCodeDialog(view);
 
                             } else {
                                 ToastUtil.showTextToas(getApplicationContext(), "提现金额+手续费不能超过账户余额");
@@ -434,6 +456,7 @@ public class ShengJiTiXianActivity extends BaseActivity implements View.OnClickL
             case R.id.tv_get_code:
                 getCode(mobile);
                 break;
+
 
            /*     break;
             case R.id.zfbBtn:

@@ -144,7 +144,9 @@ public class XiaoFeiActivity extends BaseActivity implements View.OnClickListene
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(XiaoFeiActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });

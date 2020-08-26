@@ -61,6 +61,7 @@ public class Connect {
     private static OkHttpClient instance;
     private static Connect connect;
     private Handler mHandler = new Handler(Looper.getMainLooper());
+    private UploadFile updloadFile;
 
     public static Connect getInstance() {
         if (instance == null) {
@@ -199,7 +200,11 @@ public class Connect {
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            processResult(param.getFlag(), listener, string);
+                            try {
+                                processResult(param.getFlag(), listener, string);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     });
                 }
@@ -233,7 +238,11 @@ public class Connect {
                         @Override
                         public void run() {
                             if (isJson(string)) {
-                                listener.onSuccess(Unicode.convertUnicode(string));
+                                try {
+                                    listener.onSuccess(Unicode.convertUnicode(string));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                             } else {
                                 listener.onFailure("网络不太稳定,请稍后重试");
                             }
@@ -326,13 +335,14 @@ public class Connect {
 
             case Constant.UPDLOAD:
                 params.put("accessToken", token);
-                UploadFile UPDLOADFile = (UploadFile) param.getParams();
-                params.put("usid", UPDLOADFile.getType());
-                params.put("uid", UPDLOADFile.getType());
+                updloadFile = (UploadFile) param.getParams();
+                params.put("usid", updloadFile.getType());
+                params.put("uid", updloadFile.getType());
                 params.put("type", "image");
                 break;
 
             case Constant.card_Link:
+
                 params.put("accessToken", token);
                 params.put("usid", (String) param.getParams());
                 break;
@@ -386,7 +396,7 @@ public class Connect {
     /**
      * 处理服务器响应结果
      */
-    private void processResult(int flag, OnResponseListener listener, String result) {
+    private void processResult(int flag, OnResponseListener listener, String result) throws Exception {
         result = Unicode.convertUnicode(result);
         Gson gson = new Gson();
         Type type;
@@ -519,7 +529,7 @@ public class Connect {
      * @author Administrator
      */
     public interface OnResponseListener {
-        void onSuccess(Object result);
+        void onSuccess(Object result) throws Exception;
 
         void onFailure(String message);
     }

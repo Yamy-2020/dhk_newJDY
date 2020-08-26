@@ -13,29 +13,30 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.jock.pickerview.lib.bean;
 import com.kym.ui.DateUtils;
 import com.kym.ui.R;
 import com.kym.ui.activity.sun_util.ToastUtil;
+import com.kym.ui.bean.YeJi_XiangQingBean;
 import com.kym.ui.model.MyChild;
 import com.kym.ui.newutilutil.CircleImageView;
+import com.kym.ui.util.AmountUtils;
 
 import java.util.List;
 
 public class ShangHuListAdapter extends BaseAdapter {
-    private String title;
-    private String headImg;
     private Activity activity;
-    private List<MyChild.DataBean> mList;
+    private List<YeJi_XiangQingBean.DataBean> mList;
 
-    public ShangHuListAdapter(Activity activity, List<MyChild.DataBean> hotgoodsList, String title, String headImg) {
+    public ShangHuListAdapter(Activity activity, List<YeJi_XiangQingBean.DataBean> hotgoodsList) {
 
         this.activity = activity;
         this.mList = hotgoodsList;
-        this.title = title;
-        this.headImg = headImg;
+
 
     }
 
@@ -73,15 +74,31 @@ public class ShangHuListAdapter extends BaseAdapter {
             holder.textv_sr_phone = convertView.findViewById(R.id.textV_yg_phone);
             holder.textV_yg_zt = convertView.findViewById(R.id.tv_fenrun_status);
             holder.textv_sr_time = convertView.findViewById(R.id.textV_yg_time);
+            holder.iv_fenrun_phone=convertView.findViewById(R.id.iv_fenrun_phone);
+            holder.iv_fenrun_phone.setVisibility(View.GONE);
+
+            /*暂时不知道传什么参数,*/
+            holder.textView_dengji_dengji=convertView.findViewById(R.id.dengji_dengji);
+            holder.textView_shouyi_money=convertView.findViewById(R.id.shouyi_money);
+
+
+
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
         }
 
-        final MyChild.DataBean info = mList.get(position);
-        Glide.with(activity).load(headImg).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
+        final YeJi_XiangQingBean.DataBean info = mList.get(position);
+        Glide.with(activity).load(info.getHeadimage()).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
                 .into(holder.header);
-        if (null == info.getName() || info.getName().length() == 0) {
+        holder.textView_dengji_dengji.setText(info.getLevel_name());
+
+        holder.textView_shouyi_money.setText("累计收益: "+ AmountUtils.round(info.getSplitter()/100));
+        holder.textV_yg_zt.setText(info.getStatus_auth());
+        holder.textv_sr_name.setText(info.getName());
+        holder.textv_sr_phone.setText(info.getMobile());
+        holder.textv_sr_time.setText(info.getAddtime());
+    /*    if (null == info.getName() || info.getName().length() == 0) {
             holder.textv_sr_name.setText("未实名");
         } else {
             String str = "";
@@ -117,8 +134,8 @@ public class ShangHuListAdapter extends BaseAdapter {
         }
         holder.textv_yg_dj.setText(title);
         holder.textv_sr_phone.setText(info.getMobile().substring(0, 3) +
-                " **** " + info.getMobile().substring(7, 11));
-        holder.textv_sr_phone.setOnClickListener(new OnClickListener() {
+                " **** " + info.getMobile().substring(7, 11));*/
+        /*holder.textv_sr_phone.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -138,7 +155,7 @@ public class ShangHuListAdapter extends BaseAdapter {
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
         return convertView;
     }
 }
@@ -147,7 +164,8 @@ public class ShangHuListAdapter extends BaseAdapter {
 class Holder {
     CircleImageView header;
     TextView textv_sr_name, textv_sr_phone,
-            textv_sr_time, textv_yg_dj, textV_yg_zt;
+            textv_sr_time, textv_yg_dj, textV_yg_zt,textView_shouyi_money,textView_dengji_dengji;
+    ImageView iv_fenrun_phone;
 
 }
 

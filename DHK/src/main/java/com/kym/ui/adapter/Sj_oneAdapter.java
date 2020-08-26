@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.kym.ui.R;
+import com.kym.ui.ShangHuActivity;
+import com.kym.ui.activity.YeJiActivity;
+import com.kym.ui.bean.YeJiGuanLiBean;
 import com.kym.ui.model.UserMyMerchant;
 
 import java.text.SimpleDateFormat;
@@ -20,15 +23,17 @@ import java.util.List;
 public class Sj_oneAdapter extends BaseAdapter {
 
     private Activity activity;
-    private List<UserMyMerchant.DataBean.ListBean> mList;
+    private List<YeJiGuanLiBean.DataBean.LevelListBean> mList;
 
 
-    public Sj_oneAdapter(Activity activity, List<UserMyMerchant.DataBean.ListBean> hotgoodsList) {
 
+
+    public Sj_oneAdapter(YeJiActivity activity, List<YeJiGuanLiBean.DataBean.LevelListBean> hotgoodsList) {
         this.activity = activity;
         this.mList = hotgoodsList;
-
     }
+
+
 
     @Override
     public int getCount() {
@@ -73,13 +78,12 @@ public class Sj_oneAdapter extends BaseAdapter {
             holder = (Holder) convertView.getTag();
         }
 
-        UserMyMerchant.DataBean.ListBean info = mList.get(position);
-        int e = info.getNum1()+info.getNum2();
-        holder.textV_mincheng.setText(info.getName() + "");
-        holder.textV_zhijie_num.setText("累计" + e + " 人");
-        holder.textV_jianjie_num.setText("间接  " + info.getNum2() + " 人");
+        YeJiGuanLiBean.DataBean.LevelListBean bean = mList.get(position);
+        holder.textV_mincheng.setText(bean.getLevel_name());
+        holder.textV_zhijie_num.setText("累计" + bean.getInvite_count() + " 人");
+//        holder.textV_jianjie_num.setText("间接  " + info.getNum2() + " 人");
 
-        Glide.with(activity).load(info.getHead_img()).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
+        Glide.with(activity).load(bean.getImglevel()).placeholder(R.drawable.image_home).error(R.drawable.image_home).dontAnimate()
                 .into(holder.imageView);
 
 

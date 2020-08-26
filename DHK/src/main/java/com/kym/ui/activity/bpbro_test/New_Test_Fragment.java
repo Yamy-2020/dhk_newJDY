@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.donkingliang.banner.CustomBanner;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_sk.KuaiJieTFTShanghuActivity;
 import com.paradigm.botkit.BotKitClient;
 import com.paradigm.botlib.VisitorInfo;
 import com.kym.ui.BackDialog;
@@ -151,7 +153,9 @@ public class New_Test_Fragment extends Fragment {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                                restartApp(getContext());
                                 backDialog.dismiss();
                             }
                         });

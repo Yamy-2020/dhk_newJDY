@@ -49,17 +49,17 @@ public class CourseActivity extends BaseActivity implements View.OnClickListener
         wenti2 = (LinearLayout) findViewById(R.id.wenti2);
         wenti3 = (LinearLayout) findViewById(R.id.wenti3);
 //        wenti4 = (LinearLayout) findViewById(R.id.wenti4);
-        wenti5 = (LinearLayout) findViewById(R.id.wenti5);
+//        wenti5 = (LinearLayout) findViewById(R.id.wenti5);
         wenti6 = (LinearLayout) findViewById(R.id.wenti6);
-        wenti7 = (LinearLayout) findViewById(R.id.wenti7);
+//        wenti7 = (LinearLayout) findViewById(R.id.wenti7);
         wenti8 = (LinearLayout) findViewById(R.id.wenti8);
         wenti1.setOnClickListener(this);
         wenti2.setOnClickListener(this);
         wenti3.setOnClickListener(this);
 //        wenti4.setOnClickListener(this);
-        wenti5.setOnClickListener(this);
+//        wenti5.setOnClickListener(this);
         wenti6.setOnClickListener(this);
-        wenti7.setOnClickListener(this);
+//        wenti7.setOnClickListener(this);
         wenti8.setOnClickListener(this);
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.rv_bank_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -99,15 +99,15 @@ public class CourseActivity extends BaseActivity implements View.OnClickListener
 //            case R.id.wenti4:
 //                tiaozhuan("fr","分润问题");
 //                break;
-            case R.id.wenti5:
+           /* case R.id.wenti5:
                 tiaozhuan("rx", "可信分");
-                break;
+                break;*/
             case R.id.wenti6:
                 tiaozhuan("zd", "账单问题");
                 break;
-            case R.id.wenti7:
+            /*case R.id.wenti7:
                 tiaozhuan("xf", "消费计划");
-                break;
+                break;*/
             case R.id.wenti8:
                 tiaozhuan("qt", "其他问题");
                 break;

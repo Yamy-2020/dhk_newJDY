@@ -104,8 +104,9 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.READ_PHONE_STATE};
 
-    public  static final String VERSION="1.2.1";
+    public  static final String VERSION="2.0.0";
     public static String accessToken_xin = "", host = "", dl_phone, dl_pw, user_id, isFinger, img_type;
+    public static String uid,mobile;
 
     @BindView(R.id.login_tet)
     TextView loginTet;
@@ -147,6 +148,7 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
     private static Shenji_data_info shenji_data_info;
     private static String code ;
     private static PackageInfo info1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -251,7 +253,7 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
         versionCode = ApplicationUtil.getLocalVersionCode(this);
     /*    params.put("version_code", String.valueOf(versionCode));
         params.put("os", "1");*/
-        /*      params.put("version", String.valueOf(versionCode));
+/*              params.put("version", String.valueOf(versionCode));
 //        params.put("os", "1");
         params.put("terminal","android");*/
         Connect.getInstance().post(this, IService.UPGRADE, params, new OnResponseListener() {
@@ -824,9 +826,12 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
                 NewUserResponse newresponse = (NewUserResponse) JsonUtils.parse((String) result, NewUserResponse.class);
                 if (newresponse.getResult().getCode() == 10000) {
                     NewUserResponse.DataBean data = newresponse.getData();
+                    uid = data.getUid();
+                    mobile = data.getMobile();
                     editor = pref.edit();
                     sp.putString("new_user_id", user_id);
-                    editor.putString("u_id", data.getUid());
+                    editor.putString(
+                            "u_id", data.getUid());
                     editor.putString("zhanghao", username);
                     editor.putString("mima", password);
                     /**

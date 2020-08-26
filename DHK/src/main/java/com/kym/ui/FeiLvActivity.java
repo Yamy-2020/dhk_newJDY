@@ -9,18 +9,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.CourseAdapter;
 import com.kym.ui.adapter.FeiLvListAdapter;
 import com.kym.ui.appconfig.IService;
+import com.kym.ui.bean.FeiLv_MyBean;
 import com.kym.ui.info.CourseResponse;
 import com.kym.ui.info.FeilvResponse;
 import com.kym.ui.info.GouMaiQuanYi;
+import com.kym.ui.util.AmountUtils;
 import com.kym.ui.util.Connect;
 import com.kym.ui.util.DialogUtil;
 import com.kym.ui.util.JsonUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -43,8 +47,8 @@ public class FeiLvActivity extends BaseActivity {
     TextView headTextTitle;
     @BindView(R.id.head_img_left)
     ImageView headImgLeft;
-    @BindView(R.id.dengji)
-    TextView dengji;
+ /*   @BindView(R.id.dengji)
+    TextView dengji;*/
     @BindView(R.id.name)
     TextView name;
     @BindView(R.id.rate)
@@ -69,6 +73,7 @@ public class FeiLvActivity extends BaseActivity {
     private int i;
     private String level;
     private Button viewById;
+    private ArrayList<FeiLv_MyBean.DataBean.RateListBean> arrayList;
 
 
     @Override
@@ -76,39 +81,32 @@ public class FeiLvActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fei_lv);
         ButterKnife.bind(this);
-        getHomeYouHuiShengJi();
-        initHead();
+//        getHomeYouHuiShengJi();
+//        initHead();
         initView();
         getBaoBiao();
         getInfo();
     }
 
     private void initHead() {
-        viewById = findViewById(R.id.shengji1);
-
+//        viewById = findViewById(R.id.shengji1);
+//    viewById.setVisibility(View.GONE);
 //        viewById.setVisibility(View.GONE);
-        viewById.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (level.equals("新客户")){
-                    startActivity(new Intent(FeiLvActivity.this, UpGradeActivity.class));
-                }else if (level.equals("老客户")){
-                    startActivity(new Intent(FeiLvActivity.this,UpGradeActivity.class));
-
-
-                }
-            }
-        });
-
-
-
-        /**
-         * 天天智还
-         */
-            headTextTitle.setText("我的费率");
+//        viewById.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (level.equals("新客户")){
+//                    startActivity(new Intent(FeiLvActivity.this, UpGradeActivity.class));
+//                }else if (level.equals("老客户")){
+//                    startActivity(new Intent(FeiLvActivity.this,UpGradeActivity.class));
+//
+//
+//                }
+//            }
+//        });
     }
 
-    //新政策升级
+   /* //新政策升级
     private void getHomeYouHuiShengJi() {
 //        final DialogUtil dialogUtil = new DialogUtil(this);
 
@@ -128,7 +126,7 @@ public class FeiLvActivity extends BaseActivity {
                 ToastUtil.showTextToas(getApplicationContext(), message);
             }
         });
-    }
+    }*/
 
     private void initView() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
@@ -137,15 +135,13 @@ public class FeiLvActivity extends BaseActivity {
                 return false;
             }
         };
+        headTextTitle.setText("我的费率");
+
         feilvBox.setLayoutManager(linearLayoutManager);
-        adapter = new FeiLvListAdapter(this, new FeiLvListAdapter.OnKuaiJieInfo() {
-
-            @Override
-            public void kuaijieClick(FeilvResponse.FeiLvInfo kuaiJieInfo) {
-
-            }
-        });
+        arrayList = new ArrayList<>();
+        adapter= new FeiLvListAdapter(this,arrayList);
         feilvBox.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         rvBankList.setLayoutManager(new LinearLayoutManager(this));
         adapter1 = new CourseAdapter(this, new CourseAdapter.OnCurse() {
@@ -159,13 +155,40 @@ public class FeiLvActivity extends BaseActivity {
 
     private void getBaoBiao() {
         dialogUtil = new DialogUtil(this);
-        Connect.getInstance().post(getApplicationContext(), IService.BAOBIAO, null, new Connect.OnResponseListener() {
+        HashMap<String, String> paramx = new HashMap<>();
+        paramx.put("uid", LoginActivity.uid);
+        Connect.getInstance().post(this.getApplicationContext(), IService.FRILV_MY, paramx, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 dialogUtil.dismiss();
-                FeilvResponse response = (FeilvResponse) JsonUtils.parse((String) result, FeilvResponse.class);
+                FeiLv_MyBean response = (FeiLv_MyBean) JsonUtils.parse((String) result, FeiLv_MyBean.class);
+
                 if (response.getResult().getCode() == 10000) {
-                    List<FeilvResponse.FeiLvInfo> data = response.getData();
+                    if (response.getData()!=null){
+                        String level_name = response.getData().getLevel_name();
+                    /*    long profit_ratio = response.getData().getProfit_ratio();//团队
+                        long profit_ratio_jt = response.getData().getProfit_ratio_jt();//交易
+                        long profit_ratio_zt = response.getData().getProfit_ratio_zt();//直推*/
+                        zhiji.setText(level_name);
+                        try {
+                            tdjl.setText(AmountUtils.round(response.getData().getProfit_ratio()*10)+"%");
+                            jyjl.setText(AmountUtils.round(response.getData().getProfit_ratio_jt()*10)+"%");
+                            ztjl.setText(AmountUtils.round(response.getData().getProfit_ratio_zt()*10)+"%");
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    List<FeiLv_MyBean.DataBean.RateListBean> list = response.getData().getRate_list();
+                    if (list!=null){
+                        arrayList.addAll(list);
+                        adapter.notifyDataSetChanged();
+
+                    }
+
+
+                /*    List<FeilvResponse.FeiLvInfo> data = response.getData();
+
                     if (data != null && data.size() > 0) {
                         adapter.setData(data);
                         level = data.get(0).getLevel();
@@ -180,7 +203,7 @@ public class FeiLvActivity extends BaseActivity {
                         tdjl.setText(data.get(0).getProfits_ratio() + "%");
                     } else {
                         adapter.clearData();
-                    }
+                    }*/
                 } else {
                     ToastUtil.showTextToas(getApplicationContext(), response.getResult().getMsg());
                 }
@@ -212,7 +235,9 @@ public class FeiLvActivity extends BaseActivity {
                     if (data != null && data.size() > 0) {
                         adapter1.setData(data);
                     } else {
-                        adapter.clearData();
+//                        adapter.clearData();
+                        adapter.notifyDataSetChanged();
+
                     }
                 } else {
                     ToastUtil.showTextToas(getApplicationContext(), response.getResult().getMsg());

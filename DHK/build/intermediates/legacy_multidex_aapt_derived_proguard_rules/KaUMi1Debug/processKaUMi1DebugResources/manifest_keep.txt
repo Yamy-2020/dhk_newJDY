@@ -1,4 +1,0 @@
-# Referenced at E:\android\dhk_newJDY\DHK\build\intermediates\merged_manifests\KaUMi1Debug\AndroidManifest.xml:74
--keep class android.support.v4.app.CoreComponentFactory { <init>(); }
-# Referenced at E:\android\dhk_newJDY\DHK\build\intermediates\merged_manifests\KaUMi1Debug\AndroidManifest.xml:74
--keep class com.kym.ui.util.MyApplication { <init>(); }

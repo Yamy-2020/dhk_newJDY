@@ -3,12 +3,15 @@ package com.kym.ui;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import com.kym.ui.info.GouMaiQuanYi;
+import com.kym.ui.util.AmountUtils;
+
 import java.util.List;
 
 public class GouMaiAdapter extends RecyclerView.Adapter {
@@ -37,12 +40,20 @@ public class GouMaiAdapter extends RecyclerView.Adapter {
 
         ItemHolder itemHolder = (ItemHolder) viewHolder;
 
-        itemHolder.mName.setText(payment_list.get(position).getName());
-        itemHolder.mPaymentAmount.setText("¥  " + payment_list.get(position).getPayment_amount());
+        itemHolder.mName.setText(payment_list.get(position).getUpgrade_level_name());
+        try {
+            itemHolder.mPaymentAmount.setText("¥  " + AmountUtils.changeF2Y(payment_list.get(position).getPayment_amount()));
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         itemHolder.mUpgradeNumber.setText(payment_list.get(position).getUpgrade_number());
-        itemHolder.mLf.setText(payment_list.get(position).getRate_list().getSk().getLf());
-        itemHolder.mLf1.setText(payment_list.get(position).getRate_list().getYk().getLf());
-        itemHolder.mLf2.setText(payment_list.get(position).getRate_list().getHk().getLf());
+        itemHolder.mLf.setText(AmountUtils.round(payment_list.get(position).getProfit_ratio_zt()*100)+"%");
+
+        itemHolder.mLf1.setText(AmountUtils.round(payment_list.get(position).getProfit_ratio_jt()*100)+"%");
+        itemHolder.mLf2.setText(AmountUtils.round(payment_list.get(position).getProfit_ratio()*100)+"%");
+//        itemHolder.mLookOver.setVisibility(View.GONE);
         itemHolder.mLookOver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

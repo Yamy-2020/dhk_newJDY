@@ -36,9 +36,7 @@ public class ShaiXunActivity extends FragmentActivity implements OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shai_xun);
         Intent intent = getIntent();
-        stringTitle = intent.getStringExtra("name");
-        lid = intent.getStringExtra("lid");
-        imageUrl = intent.getStringExtra("head_img");
+        lid = intent.getStringExtra("level");
         initTttle();
         PagerSlidingTabStrip psts = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
@@ -63,15 +61,15 @@ public class ShaiXunActivity extends FragmentActivity implements OnClickListener
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new ShaiXun1Fragment(ShaiXunActivity.this, lid, stringTitle, imageUrl);
+                    return new ShaiXun1Fragment(ShaiXunActivity.this, lid);
                 case 1:
-                    return new ShaiXun2Fragment(ShaiXunActivity.this, lid, stringTitle, imageUrl);
+                    return new ShaiXun2Fragment(ShaiXunActivity.this, lid);
                 case 2:
-                    return new ShaiXun3Fragment(ShaiXunActivity.this, lid, stringTitle, imageUrl);
+                    return new ShaiXun3Fragment(ShaiXunActivity.this, lid);
                 case 3:
-                    return new ShaiXun4Fragment(ShaiXunActivity.this, lid, stringTitle, imageUrl);
+                    return new ShaiXun4Fragment(ShaiXunActivity.this, lid);
                 case 4:
-                    return new ShaiXun5Fragment(ShaiXunActivity.this, lid, stringTitle, imageUrl);
+                    return new ShaiXun5Fragment(ShaiXunActivity.this, lid);
                 default:
                     return null;
             }
@@ -89,7 +87,7 @@ public class ShaiXunActivity extends FragmentActivity implements OnClickListener
         if (null != stringTitle) {
             title.setText(stringTitle + "");
         } else {
-            title.setText("员工");
+            title.setText("我的新用户");
         }
         findViewById(R.id.head_img_left).setOnClickListener(this);
     }

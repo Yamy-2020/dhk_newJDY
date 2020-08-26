@@ -23,12 +23,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.kym.ui.BackDialog3;
 import com.kym.ui.NewHomeFragment;
 import com.kym.ui.R;
 import com.kym.ui.ThreeFrement_new;
+import com.kym.ui.activity.bpbro_real_name.Bpbro_Idcardid_Activity;
 import com.kym.ui.activity.rongxinfen.RongXinFenFragment;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.IService;
+import com.kym.ui.appconfig.SPConfig;
+import com.kym.ui.fragment.FengXiangFragment;
 import com.kym.ui.info.KeXinFenBean;
 import com.kym.ui.newutil.SharedPreferencesHelper;
 import com.kym.ui.util.Connect;
@@ -65,6 +69,8 @@ public class SecondActivity extends FragmentActivity {
     private NewHomeFragment homeFragment; //首页s
     private RongXinFenFragment rongXinFenFragment; //课堂或者可信分
 //    private New_DaiChang_Fragment daichangFragment; //贷偿
+        private FengXiangFragment daichangFragment; //分享
+
     private ThreeFrement_new mineFragment; //我的
     private refreshBroadcastReceiver receiver;//刷新的广播
     private long exitTime = 0;
@@ -139,6 +145,7 @@ public class SecondActivity extends FragmentActivity {
         super.onDestroy();
         unregisterReceiver(receiver);
     }
+    private BackDialog3 backDialog3;
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -159,20 +166,22 @@ public class SecondActivity extends FragmentActivity {
 
 
         if (is_shop==0){
-            tabTitles = new String[]{"首页", "可信分", "我的"};
+            tabTitles = new String[]{"首页","分享", "可信分", "我的"};
             bitmap = new int[]{R.drawable.icon_shoukuan_selector,
+                    R.drawable.icon_daichang_selector,
                     R.drawable.icon_rongxinfen_selector,
                     R.drawable.icon_tongji_selector};
         }else if(is_shop==1){
 //                dialogUtil.dismiss();
-            tabTitles = new String[]{"首页", "小课堂", "我的"};
+            tabTitles = new String[]{"首页","分享", "福袋", "我的"};
             bitmap = new int[]{R.drawable.icon_shoukuan_selector,
+                    R.drawable.icon_daichang_selector,
                     R.drawable.icon_ketang_selector,
                     R.drawable.icon_tongji_selector};
         }
 
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             @SuppressLint("InflateParams") final View tab = inflater.inflate(R.layout.tm_tab_btn, null);
             ImageView imageView = tab.findViewById(R.id.tab_icon);
             imageView2 = tab.findViewById(R.id.tab_icon_hint);
@@ -216,34 +225,51 @@ public class SecondActivity extends FragmentActivity {
                             }
                             resetTab();
                             tab.setSelected(true);
+
                             break;*/
                         case 1:
                             resetFragment(transaction);
 
-                            if (is_shop==0){
+                            if (canJump()) {
 
-                                if (rongXinFenFragment == null) {
-                                    rongXinFenFragment = new RongXinFenFragment();
-                                    transaction.add(R.id.container_second, rongXinFenFragment).commit();
-                                } else {
-                                    transaction.show(rongXinFenFragment).commit();
-                                }
-                                resetTab();
-                                tab.setSelected(true);
-                            }else if (is_shop==1){
-                                if (keTangFragment == null) {
-                                keTangFragment = new KeTangFragment();
-                                transaction.add(R.id.container_second, keTangFragment).commit();
+                            if (daichangFragment == null) {
+                                daichangFragment = new FengXiangFragment();
+                                transaction.add(R.id.container_second, daichangFragment).commit();
                             } else {
-                            transaction.show(keTangFragment).commit();
-                        }
-                                resetTab();
-                                tab.setSelected(true);
+                                transaction.show(daichangFragment).commit();
                             }
-
-
+                            resetTab();
+                            tab.setSelected(true);
+                    }
                             break;
                         case 2:
+
+
+                                resetFragment(transaction);
+
+                                    if (is_shop == 0) {
+
+                                        if (rongXinFenFragment == null) {
+                                            rongXinFenFragment = new RongXinFenFragment();
+                                            transaction.add(R.id.container_second, rongXinFenFragment).commit();
+                                        } else {
+                                            transaction.show(rongXinFenFragment).commit();
+                                        }
+                                        resetTab();
+                                        tab.setSelected(true);
+                                    } else if (is_shop == 1) {
+                                        if (keTangFragment == null) {
+                                            keTangFragment = new KeTangFragment();
+                                            transaction.add(R.id.container_second, keTangFragment).commit();
+                                        } else {
+                                            transaction.show(keTangFragment).commit();
+                                        }
+                                        resetTab();
+                                        tab.setSelected(true);
+                                    }
+
+                            break;
+                        case 3:
                             resetFragment(transaction);
                             if (mineFragment == null) {
                                 mineFragment = new ThreeFrement_new();
@@ -261,6 +287,39 @@ public class SecondActivity extends FragmentActivity {
         }
     }
 
+    private boolean canJump() {
+
+        int status = SPConfig.getInstance(this).getUserInfoStatus();
+        switch (status) {
+            case 1:
+                backDialog3 = new BackDialog3("确定", "取消", "提示", "请先完成实名认证", this, R.style.Theme_Dialog_Scale, new BackDialog3.Dialog3ClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        backDialog3.dismiss();
+                        switch (view.getId()) {
+                            case R.id.textView2:
+                                break;
+                            case R.id.textView1:
+                                startActivity(new Intent(SecondActivity.this, Bpbro_Idcardid_Activity.class));
+                                break;
+                        }
+                    }
+                });
+                backDialog3.setCancelable(false);
+                backDialog3.show();
+                return false;
+            case 2:
+                ToastUtil.showTextToas(this, "您的资料审核中,无法使用该功能");
+                return false;
+            case 3:
+                return true;
+            case 4:
+                ToastUtil.showTextToas(this, "您的资料审核未通过,无法使用该功能");
+                return false;
+            default:
+                return false;
+        }
+    }
 
 
     protected void ifshop() {

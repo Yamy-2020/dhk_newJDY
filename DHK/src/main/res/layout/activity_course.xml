@@ -96,8 +96,29 @@
                             android:textSize="16sp" />
 
                     </LinearLayout>
-
                     <LinearLayout
+                        android:id="@+id/wenti6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/wenti_zhangdan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="账单问题"
+                            android:textColor="@color/black_33"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                   <!-- <LinearLayout
                         android:id="@+id/wenti5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -118,7 +139,7 @@
                             android:textColor="@color/black_33"
                             android:textSize="16sp" />
 
-                    </LinearLayout>
+                    </LinearLayout>-->
                     <!--<LinearLayout-->
                     <!--android:id="@+id/wenti4"-->
                     <!--android:layout_width="0dp"-->
@@ -167,29 +188,8 @@
                     <!--android:textColor="@color/black_33"/>-->
 
                     <!--</LinearLayout>-->
-                    <LinearLayout
-                        android:id="@+id/wenti6"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/wenti_zhangdan" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="账单问题"
-                            android:textColor="@color/black_33"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
+<!--
                     <LinearLayout
                         android:id="@+id/wenti7"
                         android:layout_width="0dp"
@@ -211,7 +211,7 @@
                             android:textColor="@color/black_33"
                             android:textSize="16sp" />
 
-                    </LinearLayout>
+                    </LinearLayout>-->
 
                     <LinearLayout
                         android:id="@+id/wenti8"
@@ -235,6 +235,19 @@
                             android:textSize="16sp" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"

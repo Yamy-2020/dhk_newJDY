@@ -398,7 +398,7 @@
 
     </LinearLayout>
 
-    <com.kym.ui.newutil.DragFloatActionButton
+<!--    <com.kym.ui.newutil.DragFloatActionButton
         android:id="@+id/circle_button"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
@@ -406,6 +406,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/dp_80"
         android:clickable="true"
-        android:src="@drawable/tianjia" />
+        android:src="@drawable/tianjia" />-->
 
 </RelativeLayout>

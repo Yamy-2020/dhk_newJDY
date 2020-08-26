@@ -11,7 +11,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.adapter.Sj_oneAdapter;
 import com.kym.ui.appconfig.IService;
@@ -73,7 +75,7 @@ public class ShangHuActivity extends BaseActivity {
         textV_tg_jianjie = (TextView) findViewById(R.id.textV_tuiguang_jianjie);
         textV_tg_shimin = (TextView) findViewById(R.id.textV_tuiguang_shiming);
         listView = (ListView) findViewById(R.id.listView_sj);
-        getDengji();
+
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
@@ -109,14 +111,16 @@ public class ShangHuActivity extends BaseActivity {
                     textV_tg_jianjie.setText("" + data.getSubIndirect());
                     textV_tg_shimin.setText("" + data.getSubReal());
                     textV_tg_all.setText("" + data.getSum());
-                    Sj_oneAdapter sj_oneAdapter = new Sj_oneAdapter(ShangHuActivity.this, data_dj);
-                    listView.setAdapter(sj_oneAdapter);
+//                    Sj_oneAdapter sj_oneAdapter = new Sj_oneAdapter(ShangHuActivity.this, data_dj);
+//                    listView.setAdapter(sj_oneAdapter);
                 } else if (response.getResult().getCode() == 101 || response.getResult().getCode() == 601) {
                     backDialog = new BackDialog("", "登录过期,请重新登录", "确定", ShangHuActivity.this,
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getApplicationContext());
+//                            restartApp(getApplicationContext());
+                            startActivity(new Intent(ShangHuActivity.this, LoginActivity.class));
+
                             backDialog.dismiss();
                         }
                     });

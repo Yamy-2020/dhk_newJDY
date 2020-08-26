@@ -130,7 +130,7 @@
                 <ListView
                     android:id="@+id/listView_sj"
                     android:layout_width="match_parent"
-                    android:layout_height="156dp"
+                    android:layout_height="@dimen/dp_210"
                     android:paddingLeft="@dimen/dp_10"
                     android:paddingRight="@dimen/dp_10"
                     android:focusableInTouchMode="true"
@@ -250,6 +250,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="昨日交易详情"/>
+
+
+
+
+
+
+
+
+
             <LinearLayout
                 android:layout_marginBottom="@dimen/dp_10"
                 android:layout_marginTop="@dimen/dp_20"

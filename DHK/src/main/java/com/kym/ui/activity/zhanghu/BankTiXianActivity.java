@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.alipay.sdk.app.AuthTask;
 import com.bumptech.glide.Glide;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.bpbro_untils.bpbro_zhifubao.AuthResult;
 import com.kym.ui.activity.sun_util.ToastUtil;
@@ -79,6 +80,8 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
     private TextView line1, line2, zhifubao, zfbBtn;
     private LinearLayout li1, li2, tab1, tab2;
     private TextView tvGetCode, text_title_code;
+    private String substring;
+    private String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,7 +171,7 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
                 if (response.getResult().getCode() == 10000) {
                     AccessTodebit.DataBean bank = response.getData();
                     String bank_no = bank.getBank_no();
-                    String substring = bank_no.substring(bank_no.length() - 4, bank_no.length());
+                    substring = bank_no.substring(bank_no.length() - 4, bank_no.length());
                     bank_name = bank.getBank_name();
                     mobile=bank.getBank_mobile();
                     zhifubao.setText("提现到储蓄卡：" + bank_name + "(" + substring + ")");
@@ -199,7 +202,6 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
                     String msg = data.getMsg();
 //                    Glide.with(BankTiXianActivity.this).load(data.getLogo()).placeholder(R.drawable.default_image).error(R.drawable.default_image)
 //                            .dontAnimate().into(logo);
-                    tv_tip.setText("" + msg);
                     try {
                         int i = Integer.parseInt(fee);
                         int ii = Integer.parseInt(minMoney);
@@ -208,8 +210,7 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
                         String s1 = AmountUtils.changeF2Y(Long.parseLong("" + ii));
 //                        min = AmountUtils.changeF2Y(s1);
                         min_dou = Double.parseDouble(s1);
-                        textV_ts.setText("手续费 " + s + " 元/笔,税收6%,提现金额 " + s1
-                                + " -1000.00元");
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -228,12 +229,15 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
     }
 
     private void account_cash() {
-        String s = editT_money.getText().toString();
+        s = editT_money.getText().toString();
         amount = AmountUtils.changeY2F(s);
         HashMap<String, String> param = new HashMap<>();
-        param.put("amount", amount);
+        param.put("withdraw_amount", amount);
+        param.put("withdraw_type",1+"");
+        param.put("auth_code",etCode.getText().toString());
+        param.put("mobile", LoginActivity.mobile);
         loadDialogUti = new DialogUtil(this);
-        Connect.getInstance().post(BankTiXianActivity.this, IService.ACCOUNT_CASH, param, new Connect.OnResponseListener() {
+        Connect.getInstance().post(BankTiXianActivity.this, IService.YONGHUFENRUNTIXIAN, param, new Connect.OnResponseListener() {
             @Override
             public void onSuccess(Object result) {
                 AccountBalance response = (AccountBalance) JsonUtils.parse((String) result, AccountBalance.class);
@@ -252,15 +256,22 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
             }
         });
     }
-
+    private String skzs_withdraw,withdraw_msg,withdraw_time_msg,withdraw_amount_max,withdraw_amount_min;
     @SuppressLint("SetTextI18n")
     private void initview() {
         Intent intent = getIntent();
         yue = intent.getStringExtra("yue");
-        TextView right_tv = findViewById(R.id.right_tv);
+        skzs_withdraw = intent.getStringExtra("skzs_withdraw");
+        withdraw_msg = intent.getStringExtra("withdraw_msg");
+        withdraw_time_msg = intent.getStringExtra("withdraw_time_msg");
+        withdraw_amount_max = intent.getStringExtra("withdraw_amount_max");
+        withdraw_amount_min = intent.getStringExtra("withdraw_amount_min");
+
+
+    /*    TextView right_tv = findViewById(R.id.right_tv);
         right_tv.setText("提现明细");
         right_tv.setVisibility(View.VISIBLE);
-        right_tv.setOnClickListener(this);
+        right_tv.setOnClickListener(this);*/
         ImageView imageV_fanhui = findViewById(R.id.head_img_left);
         imageV_fanhui.setVisibility(View.VISIBLE);
         imageV_fanhui.setOnClickListener(this);
@@ -270,6 +281,8 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
         textV_title.setVisibility(View.VISIBLE);
         textV_title.setText("还款账户提现");
         textV_ts = findViewById(R.id.textV_tishimsg);
+        textV_ts.setText(withdraw_msg);
+        tv_tip.setText(withdraw_time_msg);
         textV_bankname = findViewById(R.id.textV_bankname);
         textV_bankno = findViewById(R.id.textV_bankno_wei);
         TextView textV_yue = findViewById(R.id.textV_yue);
@@ -286,10 +299,10 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
         tab2 = findViewById(R.id.tab2);
 //        tab1.setOnClickListener(this);
 //        tab2.setOnClickListener(this);
-        line1 = findViewById(R.id.text_line1);
+/*        line1 = findViewById(R.id.text_line1);
         line2 = findViewById(R.id.text_line2);
         li1.setVisibility(View.VISIBLE);
-        line1.setVisibility(View.VISIBLE);
+        line1.setVisibility(View.VISIBLE);*/
     }
 
     @SuppressLint({"SimpleDateFormat", "SetTextI18n"})
@@ -306,6 +319,8 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
                 .dontAnimate().into(imageV_top);
         view.findViewById(R.id.layout_diss).setOnClickListener(this);
         textV_name.setText(userAllInfoNew.getName() + "");
+        textV_bank.setText(bank_name + "(" + substring + ")");//
+        textV_money.setText( s);
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateNowStr = sdf.format(d);
@@ -357,16 +372,20 @@ public class BankTiXianActivity extends BaseActivity implements OnClickListener 
                         double b = min_dou;
                         if (money_dou >= b) {
                             if (money_yue >= money_dou) {
-                                account_cash();
-
-
                                 View view = LayoutInflater.from(this).inflate(R.layout.layout_get_divide_code, null);
                                 TextView id = view.findViewById(R.id.text_title_code);
                                 etCode = view.findViewById(R.id.et_get_code);
                                 tvGetCode = view.findViewById(R.id.tv_get_code);
+                                TextView tv_get_code_confirm =view.findViewById(R.id.tv_get_code_confirm);
                                 text_title_code = view.findViewById(R.id.text_title_code);
                                 LinearLayout close = view.findViewById(R.id.close);
-                                close.setOnClickListener(new OnClickListener() {
+                                tv_get_code_confirm.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        account_cash();
+                                    }
+                                });
+                                close.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
                                         getCodeDialog.dismiss();

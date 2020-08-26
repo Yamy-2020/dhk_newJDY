@@ -17,6 +17,8 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.kym.ui.BackDialog;
 import com.kym.ui.R;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.SheZhiActivity;
 import com.kym.ui.activity.bpbro_base.BaseActivity;
 import com.kym.ui.activity.sun_util.ToastUtil;
 import com.kym.ui.appconfig.IService;
@@ -279,7 +281,9 @@ public class KuaiJieShanghuActivity extends BaseActivity implements View.OnClick
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(KuaiJieShanghuActivity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -327,7 +331,9 @@ public class KuaiJieShanghuActivity extends BaseActivity implements View.OnClick
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getApplicationContext());
+                                startActivity(new Intent(KuaiJieShanghuActivity.this, LoginActivity.class));
+
+//                                restartApp(getApplicationContext());
                                 backDialog.dismiss();
                             }
                         });

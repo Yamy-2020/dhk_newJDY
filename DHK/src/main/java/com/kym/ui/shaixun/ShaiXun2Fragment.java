@@ -13,6 +13,7 @@ import com.kym.ui.R;
 import com.kym.ui.ShaiXunActivity;
 import com.kym.ui.adapter.ShangHuListAdapter;
 import com.kym.ui.appconfig.IService;
+import com.kym.ui.bean.YeJi_XiangQingBean;
 import com.kym.ui.model.MyChild;
 import com.kym.ui.newutil.EmptyViewUtils;
 import com.kym.ui.util.Connect;
@@ -31,7 +32,7 @@ import cn.finalteam.loadingview.PtrFrameLayout;
 @SuppressLint("ValidFragment")
 public class ShaiXun2Fragment extends Fragment {
     private ShangHuListAdapter adapter_fen;
-    private List<MyChild.DataBean> hotlist_shouru = new ArrayList<>();
+    private List<YeJi_XiangQingBean.DataBean> hotlist_shouru = new ArrayList<>();
     private String title;
     private String id;
     private String headImg;
@@ -44,12 +45,13 @@ public class ShaiXun2Fragment extends Fragment {
     private PtrClassicFrameLayout mPtrLayout;
     private int mPage = 1;
     private FrameLayout mFlEmptyView;
+    private int position;
 
-    public ShaiXun2Fragment(ShaiXunActivity shaiXunActivity, String lid, String title, String headImg) {
+    public ShaiXun2Fragment(ShaiXunActivity shaiXunActivity, String lid) {
         this.lid = lid;
         this.shaiXunActivity = shaiXunActivity;
         this.title = title;
-        this.headImg = headImg;
+        this.position = position;
     }
 
     @Override
@@ -71,7 +73,7 @@ public class ShaiXun2Fragment extends Fragment {
     private void initUI() {
         mFlEmptyView = layout.findViewById(R.id.fl_empty_view);
         mLv = layout.findViewById(R.id.lv);
-        adapter_fen = new ShangHuListAdapter(shaiXunActivity, hotlist_shouru, title, headImg);
+        adapter_fen = new ShangHuListAdapter(shaiXunActivity, hotlist_shouru);
         mPtrLayout = layout.findViewById(R.id.ptr_layout);
         mLv.setAdapter(adapter_fen);
 //        setSwipeRefreshInfo();
@@ -101,14 +103,13 @@ public class ShaiXun2Fragment extends Fragment {
     private void getdata(final int page) {
         hotlist_shouru.clear();
         HashMap<String, String> paramx = new HashMap<>();
-        paramx.put("lfid", lid);
-        paramx.put("p", page + "");
-        paramx.put("status_auth", "1");
-        Connect.getInstance().post(getActivity(), IService.MY_CHILD, paramx, new Connect.OnResponseListener() {
+        paramx.put("status_auth",1+"");
+        paramx.put("level",lid+"");
+        Connect.getInstance().post(getActivity(), IService.YEJIGUANLI_XIANGQING, paramx, new Connect.OnResponseListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onSuccess(Object result) {
-                MyChild response = (MyChild) JsonUtils.parse((String) result, MyChild.class);
+                YeJi_XiangQingBean response = (YeJi_XiangQingBean) JsonUtils.parse((String) result, YeJi_XiangQingBean.class);
                 if (response.getResult().getCode() == 10000) {
                     mPage = page + 1;
 

@@ -1,11 +1,15 @@
 package com.kym.ui;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,7 +18,10 @@ import android.os.Handler.Callback;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +36,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.bpbro_home.bpbro_hk.HK_Sb_planinfoActivity;
+import com.kym.ui.activity.huankuan.NewAddCreditCardActivity;
+import com.kym.ui.activity.newcheshi.HomeCheShiActivity;
+import com.kym.ui.activity.shiming.ZhengJianActivity;
+import com.kym.ui.bean.My_SamRedBean;
+import com.kym.ui.dialog.ImageDialog;
+import com.kym.ui.hualuo.HL_BK_WebActivity;
+import com.kym.ui.info.GouMaiQuanYi;
+import com.paradigm.botkit.BotKitClient;
+import com.paradigm.botlib.VisitorInfo;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
@@ -61,12 +81,20 @@ import com.kym.ui.util.JsonUtils;
 import com.kym.ui.util.PerMisson;
 import com.kym.ui.util.UpLoadImage;
 import com.kym.ui.wxapi.WXEntryActivity;
+import com.zzss.jindy.appconfig.Clone;
+
 import org.json.JSONObject;
+
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.HashMap;
+
 import widget.CustomPopWindow;
+
 import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 import static com.kym.ui.util.ShareUtil.bmpToByteArray;
 import static com.zzss.jindy.appconfig.Clone.OMID;
@@ -90,6 +118,8 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
     private CircleImageView image_head;
     private Dialog selectDialog;
     private PopupWindow popWindow;
+    private PopupWindow popupWindow1;
+
     private static final String PHOTO_FILE_NAME = "temp_photo.jpg";
     private FrameLayout ceshi;
     private BackDialog3 backDialog3;
@@ -117,7 +147,9 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                                restartApp(getContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -145,6 +177,12 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
     private BackDialog backDialog;
     private boolean isGetData = false;
     private ImageView id;
+    private TextView dengji_dengji, home2_text_red, home4_text_red, home7_text_red, textv_sr_phone;
+    private BackResDialog backRedDialog;
+    private ImageDialog imageDialog;
+    private TextView tv2;
+    private LinearLayout tuijianren;
+    private View popupWindow_view;
 
 
     @SuppressLint("InflateParams")
@@ -152,7 +190,7 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         if (layout == null) {
-            layout = inflater.inflate(R.layout.activity_three_frement_new, null);
+            layout = inflater.inflate(R.layout.fragment_feng_xiang, null);
         }
         ViewGroup parent = (ViewGroup) layout.getParent();
         if (parent != null) {
@@ -168,10 +206,14 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
             isGetData = true;
             userAllInfoNew = SPConfig.getInstance(getActivity()).getUserAllInfoNew();
             initView();
+            getHomeYouHuiShengJi();
+            getSamllRed();
             HashMap<String, String> accountInfo = SPConfig.getInstance(getActivity()).getAccountInfo();
             if (accountInfo.get(Constant.USERNAME).length() != 0) {
                 textV_fl.setText(accountInfo.get(Constant.USERNAME).substring(0, 3) +
                         "****" + accountInfo.get(Constant.USERNAME).substring(7, 11));
+
+
             }
             LevelinFormation();
         } else {
@@ -179,6 +221,7 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         }
         return super.onCreateAnimation(transit, enter, nextAnim);
     }
+
 
     private void uploadUserHeadImg(final String url, final File file) {
         HashMap<String, String> params = new HashMap<>();
@@ -195,7 +238,9 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                             R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                         @Override
                         public void onClick(View view) {
-                            restartApp(getContext());
+                            startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                            restartApp(getContext());
                             backDialog.dismiss();
                         }
                     });
@@ -212,6 +257,65 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
             }
         });
     }
+
+    //新政策升级
+    private void getHomeYouHuiShengJi() {
+
+        Connect.getInstance().post(getActivity().getApplicationContext(), IService.GOUMAI_XINGZHENGCHE, null, new Connect.OnResponseListener() {
+            @Override
+            public void onSuccess(Object result) {
+                GouMaiQuanYi data1 = (GouMaiQuanYi) JsonUtils.parse((String) result, GouMaiQuanYi.class);
+                if (data1.getResult().getCode() == 10000) {
+                    String name = data1.getData().getCurrent_list().getLevel_name();
+                    dengji_dengji.setText(name);
+                }
+            }
+
+            @Override
+            public void onFailure(String message) {
+                ToastUtil.showTextToas(getActivity().getApplicationContext(), message);
+            }
+        });
+    }
+
+    private void getSamllRed() {
+        Connect.getInstance().post(getActivity().getApplicationContext(), IService.XIAOHONH_SHOW, null, new Connect.OnResponseListener() {
+            @Override
+            public void onSuccess(Object result) {
+                My_SamRedBean data1 = (My_SamRedBean) JsonUtils.parse((String) result, My_SamRedBean.class);
+                if (data1.getResult().getCode() == 10000) {
+                    String dingdanguanli = data1.getData().getDingdanguanli();
+                    String fenrunzhanghu = data1.getData().getFenrunzhanghu();
+                    String yejiguanli = data1.getData().getYejiguanli();
+                    home2_text_red.setText(fenrunzhanghu);
+                    home4_text_red.setText(yejiguanli);
+                    home7_text_red.setText(dingdanguanli);
+                    int repaymentPlanFails1 = data1.getData().getFailplans().getRepaymentPlanFails();
+                    if (repaymentPlanFails1 != 0) {
+                        backRedDialog = new BackResDialog("温馨提示", "您有还款失败订单请及时处理", "确定", getContext(),
+                                R.style.Theme_Dialog_Scale, new BackResDialog.DialogClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(getContext(), HK_Sb_planinfoActivity.class);
+                                intent.putExtra("type", "all");
+                                startActivity(intent);
+                                backRedDialog.dismiss();
+                            }
+                        });
+                        backRedDialog.setCancelable(false);
+                        backRedDialog.show();
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(String message) {
+                ToastUtil.showTextToas(getActivity(), message);
+            }
+        });
+    }
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -235,6 +339,7 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         }.start();
 
     }
+
 
     private void LevelinFormation() {
         Connect.getInstance().post(getActivity(), IService.ACCESSINGLEVELINFORMATION, null, new Connect.OnResponseListener() {
@@ -352,8 +457,35 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
 
     @SuppressLint("SetTextI18n")
     private void initView() {
+        textv_sr_phone = layout.findViewById(R.id.textV_yg_phone);
+        textv_sr_phone.setText(Clone.MOBILE);
+        textv_sr_phone.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    if (ContextCompat.checkSelfPermission(getActivity().getApplicationContext(), android.Manifest.permission.CALL_PHONE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        ToastUtil.showTextToas(getActivity().getApplicationContext(), "请开启拨打电话权限后重试");
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE}, 1);
+                    } else {
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_CALL);
+                        intent.setData(Uri.parse("tel:" + Clone.MOBILE));
+                        getContext().startActivity(intent);
+                    }
+
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        dengji_dengji = layout.findViewById(R.id.dengji_dengji);
         id = layout.findViewById(R.id.shiming_sanjiao);
         wdkf = layout.findViewById(R.id.wdkf);
+        home2_text_red = layout.findViewById(R.id.home2_text_red);
+        home4_text_red = layout.findViewById(R.id.home4_text_red);
+        home7_text_red = layout.findViewById(R.id.home7_text_red);
         lingqian = layout.findViewById(R.id.lingqian);
         getImage();
         status_sm = layout.findViewById(R.id.status);
@@ -370,43 +502,42 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
             status_sm.setText("已实名");
 //            status_sm  实名的textview
             //id         小三角形的imageview
-            if (status_sm.getText().equals("已实名")){
+           /* if (status_sm.getText().equals("已实名")){
                 id.setVisibility(View.INVISIBLE);
-            }
+            }*/
 
         } else if (status == 4) {
             status_sm.setText("未通过");
         }
         im_lv = layout.findViewById(R.id.im_lv);
-        tv_tjr = layout.findViewById(R.id.tv_tjr);
-        if (userAllInfoNew.getReferrername().length() != 0) {
-            tv_tjr.setText(userAllInfoNew.getReferrername().substring(0, 1) + "** " +
-                    userAllInfoNew.getReferrermobile().substring(0, 3) + "****" +
-                    userAllInfoNew.getReferrermobile().substring(7, 11));
-        }
-//        zhengjian_status = layout.findViewById(R.id.zhengjian_status);
         layout.findViewById(R.id.user_feilv).setOnClickListener(this);
         layout.findViewById(R.id.change_password).setOnClickListener(this);
         layout.findViewById(R.id.user_bankcard1).setOnClickListener(this);
         layout.findViewById(R.id.zanyong).setOnClickListener(this);
-        layout.findViewById(R.id.tuijianren).setOnClickListener(this);
+        tuijianren = layout.findViewById(R.id.tuijianren);
+        tuijianren.setOnClickListener(this);
         layout.findViewById(R.id.ziliao_set).setOnClickListener(this);
+        layout.findViewById(R.id.view_new_home_7_7).setOnClickListener(this);
+
 //        layout.findViewById(R.id.jiesao_set).setOnClickListener(this);
         layout.findViewById(R.id.exict_ll).setOnClickListener(this);
-        layout.findViewById(R.id.user_zhangdan).setOnClickListener(this);
+//        layout.findViewById(R.id.user_zhangdan).setOnClickListener(this);
+
+
+
+
+        /*//测试界面
+        layout.findViewById(R.id.ceshi_show).setOnClickListener(this);
+        layout.findViewById(R.id.ceshi_show1).setOnClickListener(this);*/
+//        layout.findViewById(R.id.ceshi_show1).setVisibility(View.GONE);
+
+
 //        layout.findViewById(R.id.zhengjian).setOnClickListener(this);
-        yaoqing = layout.findViewById(R.id.yaoqing);
-        yaoqing.setOnClickListener(this);
+//        yaoqing = layout.findViewById(R.id.yaoqing);
+//        yaoqing.setOnClickListener(this);
         user_lingqian = layout.findViewById(R.id.user_lingqian);
         user_lingqian.setOnClickListener(this);
-        ceshi = layout.findViewById(R.id.ceshi);
-        ceshi.setOnClickListener(this);
-        if (OMID.equals("R4PGM59YOCLZLOG6")) {
-            ceshi.setVisibility(View.VISIBLE);
-        } else {
-            ceshi.setVisibility(View.GONE);
-        }
-        textV_dj = layout.findViewById(R.id.textv_set_dj);
+
         textV_fl = layout.findViewById(R.id.textv_set_fl);
         image_head = layout.findViewById(R.id.imageV_dj_log);
         Glide.with(getActivity()).load(this.userAllInfoNew.getHeadimage()).error(R.drawable.image_home)
@@ -452,18 +583,70 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
         albums.setOnClickListener(this);
         cancel.setOnClickListener(this);
     }
+    /**
+     * 关闭popupWindow
+     */
 
+    private void closePopupWindow() {
+        if (popupWindow1 != null && popupWindow1.isShowing()) {
+            popupWindow1.dismiss();
+            popupWindow1 = null;
+        }
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-//            case R.id.tuijianren:
-//                if (!(tv_tjr.getText().equals(" "))) {
-//                    Intent intent_tuijianren = new Intent(Intent.ACTION_DIAL);
-//                    Uri uris = Uri.parse("tel:" + userAllInfoNew.getReferrermobile());
-//                    intent_tuijianren.setData(uris);
-//                    startActivity(intent_tuijianren);
-//                }
-//                break;
+            case R.id.tuijianren:
+                if (canJump()) {
+
+                    if (popupWindow1 == null) {
+                        popupWindow_view = LayoutInflater.from(getContext()).inflate(
+                                R.layout.dialog_back2, null, false);
+                        popupWindow1 = new PopupWindow(popupWindow_view, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
+                        //弹出的时候设置
+                        setWindowBackgroundAlpha(0.7f);
+                        // 设置动画效果
+                        popupWindow1.setOutsideTouchable(true);
+                        // 点击其他地方消失
+                        popupWindow1.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                            @Override
+                            public void onDismiss() {
+                                //背景恢复正常
+                                setWindowBackgroundAlpha(1.0f);
+                                popupWindow1 = null;
+                            }
+                        });
+
+                    }
+
+
+                    // 这里是位置显示方式,在屏幕的中间，0,0分别表示X,Y的偏移量
+                    TextView tv_ti = popupWindow_view.findViewById(R.id.tv_tip);
+                    tv_ti.setText("推荐人");
+                    tv2 = popupWindow_view.findViewById(R.id.textview2);
+                    if (userAllInfoNew.getReferrername().length() != 0) {
+                        tv2.setText(userAllInfoNew.getReferrername().substring(0, 1) + "** " +
+                                userAllInfoNew.getReferrermobile().substring(0, 3) + "****" +
+                                userAllInfoNew.getReferrermobile().substring(7, 11));
+
+
+                        popupWindow1.showAtLocation(tuijianren, Gravity.CENTER, 0, 0);
+
+                        TextView textView1 = popupWindow_view.findViewById(R.id.textView1);
+                        textView1.setVisibility(View.GONE);
+                        TextView textView2 = popupWindow_view.findViewById(R.id.textView2);
+
+                        textView2.setText("确定");
+                        textView2.setOnClickListener(new OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                popupWindow1.dismiss();
+                            }
+                        });
+                    }
+                }
+
+                break;
             case R.id.photograph:
                 Intent intent_p = new Intent("android.media.action.IMAGE_CAPTURE");
                 intent_p.putExtra(MediaStore.EXTRA_OUTPUT,
@@ -536,7 +719,9 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                 int status = spConfig.getUserInfoStatus();
                 if (status == 1) {
                     Intent intent1 = new Intent(getActivity(), Bpbro_Idcardid_Activity.class);
-                    startActivityForResult(intent1,1);
+                    startActivityForResult(intent1, 1);
+                } else {
+                    Toast.makeText(getContext(), "您已完成了实名认证", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.change_password:
@@ -556,6 +741,42 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                     startActivity(new Intent(getActivity(), FeiLvActivity.class));
                 }
                 break;
+            case R.id.view_new_home_7_7:
+                if (canJump()) {
+
+                    ToastUtil.showTextToas(getActivity(), "点击图片可保存到相册");
+                    imageDialog = new ImageDialog(getContext(),
+                            R.style.Theme_Dialog_Scale, new ImageDialog.DialogClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            switch (view.getId()) {
+                                case R.id.dc_img:
+                                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.kf11);
+                                    saveImageToGallery(bitmap);
+                                    imageDialog.dismiss();
+                                    break;
+                                case R.id.close:
+                                    imageDialog.dismiss();
+                                    break;
+                            }
+                        }
+                    });
+                    imageDialog.setCancelable(false);
+                    imageDialog.show();
+                }
+
+                break;
+
+
+            //测试界面
+            case R.id.ceshi_show:
+                startActivity(new Intent(getActivity(), ZhengJianActivity.class));
+                break;
+            case R.id.ceshi_show1:
+                startActivity(new Intent(getActivity(), HomeCheShiActivity.class));
+
+                break;
+
       /*      case R.id.zhengjian:
             Intent intent = new Intent(getContext(), ZhengJianActivity.class);
             intent.putExtra("code1", code1);
@@ -565,6 +786,46 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
             default:
                 break;*/
         }
+    }
+
+    /**
+     * 保存图片到相册
+     */
+    public void saveImageToGallery(Bitmap mBitmap) {
+        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+
+            ToastUtil.showTextToas(getActivity(), "sdcard未使用");
+            return;
+        }
+        // 首先保存图片
+        File appDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsoluteFile();
+        if (!appDir.exists()) {
+            appDir.mkdir();
+        }
+        String fileName = System.currentTimeMillis() + ".jpg";
+        File file = new File(appDir, fileName);
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        // 其次把文件插入到系统图库
+        try {
+            MediaStore.Images.Media.insertImage(getContext().getContentResolver(), file.getAbsolutePath(), fileName, null);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } // 最后通知图库更新
+
+        getContext().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + "")));
+        ToastUtil.showTextToas(getActivity(), "保存成功");
     }
 
     private boolean canJump() {
@@ -609,6 +870,15 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                 .build();
         popupWindow.showAtLocation(yaoqing, Gravity.BOTTOM);
     }
+
+    public void setWindowBackgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = (getActivity()).getWindow().getAttributes();
+        lp.alpha = bgAlpha;//0.0-1.0
+        //有的手机需要加上下面这句，否则无效
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        getActivity().getWindow().setAttributes(lp);
+    }
+
 
     private View initPopView() {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_share_qr, null);
@@ -705,7 +975,9 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+//                                restartApp(getContext());
                                 backDialog.dismiss();
                             }
                         });
@@ -730,9 +1002,9 @@ public class ThreeFrement_new extends Fragment implements OnClickListener {
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
         super.startActivityForResult(intent, requestCode, options);
-        if (requestCode==1){
+        if (requestCode == 1) {
             status_sm.setText("已实名");
-            if (status_sm.getText().equals("已实名")){
+            if (status_sm.getText().equals("已实名")) {
                 id.setVisibility(View.INVISIBLE);
             }
         }

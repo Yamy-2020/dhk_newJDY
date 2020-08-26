@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kym.ui.R;
+import com.kym.ui.bean.FeiLv_MyBean;
 import com.kym.ui.info.FeilvResponse;
+import com.kym.ui.util.AmountUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +19,11 @@ public class FeiLvListAdapter extends RecyclerView.Adapter {
 
     private Context context;
     private FeiLvListAdapter.OnKuaiJieInfo listener;
-    private ArrayList<FeilvResponse.FeiLvInfo> models = new ArrayList<>();
+    private ArrayList<FeiLv_MyBean.DataBean.RateListBean> models ;
 
-    public FeiLvListAdapter(Context context, FeiLvListAdapter.OnKuaiJieInfo listener) {
+    public FeiLvListAdapter(Context context, ArrayList<FeiLv_MyBean.DataBean.RateListBean> arrayList) {
         this.context = context;
-        this.listener = listener;
+        this.models = arrayList;
     }
 
     @Override
@@ -34,10 +36,17 @@ public class FeiLvListAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof FeiLvListAdapter.ContentViewHolder) {
             FeiLvListAdapter.ContentViewHolder viewHolder = (FeiLvListAdapter.ContentViewHolder) holder;
-            FeilvResponse.FeiLvInfo model = models.get(position);
-            viewHolder.name.setText(model.getName());
-            viewHolder.rate.setText(model.getRate() + "%");
-            viewHolder.fee.setText(model.getFee() + "元/笔");
+            FeiLv_MyBean.DataBean.RateListBean bean = models.get(position);
+            viewHolder.name.setText(bean.getName());
+//            long l = Long.parseLong(bean.getRate());
+            try {
+                //AmountUtils.changeF2Y(l)
+                viewHolder.rate.setText(AmountUtils.round(bean.getRate()*100)+"%");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Integer integer = Integer.parseInt(bean.getFee());
+            viewHolder.fee.setText(integer/100 + "元/笔");
         }
     }
 
@@ -51,16 +60,6 @@ public class FeiLvListAdapter extends RecyclerView.Adapter {
         return models.size();
     }
 
-    public void setData(List<FeilvResponse.FeiLvInfo> data) {
-        models.clear();
-        models.addAll(data);
-        notifyDataSetChanged();
-    }
-
-    public void clearData() {
-        models.clear();
-        notifyDataSetChanged();
-    }
 
     private class ContentViewHolder extends RecyclerAdapter.ViewHolder {
         TextView name, fee, rate;
@@ -70,18 +69,12 @@ public class FeiLvListAdapter extends RecyclerView.Adapter {
             name = (TextView) itemView.findViewById(R.id.name);
             fee = (TextView) itemView.findViewById(R.id.fee);
             rate = (TextView) itemView.findViewById(R.id.rate);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.kuaijieClick(models.get(getAdapterPosition()));
-                    notifyDataSetChanged();
-                }
-            });
+
         }
     }
 
     public interface OnKuaiJieInfo {
 
-        void kuaijieClick(FeilvResponse.FeiLvInfo kuaiJieInfo);
+        void kuaijieClick(FeiLv_MyBean.DataBean.RateListBean kuaiJieInfo);
     }
 }

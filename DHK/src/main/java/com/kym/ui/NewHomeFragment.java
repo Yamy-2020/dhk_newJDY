@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Outline;
 import android.net.Uri;
 import android.os.Build;
@@ -28,8 +29,14 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.donkingliang.banner.CustomBanner;
+import com.kym.ui.activity.LoginActivity;
+import com.kym.ui.activity.SheZhiActivity;
 import com.kym.ui.bean.CornerTransform;
+import com.kym.ui.bean.SwitchTextView;
+import com.kym.ui.bean.XiaoXiBean;
+import com.kym.ui.info.GouMaiQuanYi;
 import com.kym.ui.sp.SharedPrefrenceUtils;
+import com.kym.ui.util.JsonUtils;
 import com.paradigm.botkit.BotKitClient;
 import com.paradigm.botlib.VisitorInfo;
 import com.kym.ui.activity.AllCardListActivity;
@@ -56,6 +63,7 @@ import com.kym.ui.hualuo.RotateRecyclerViewActivity;
 import com.kym.ui.model.NewUserResponse;
 import com.kym.ui.newutil.DragFloatActionButton;
 import com.kym.ui.util.Connect;
+import com.paradoxie.autoscrolltextview.VerticalTextview;
 import com.zzss.jindy.appconfig.Clone;
 
 import org.json.JSONArray;
@@ -69,6 +77,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static com.kym.ui.activity.bpbro_untils.bpbro_untils.restartApp;
 import static com.tencent.plus.DensityUtil.dip2px;
@@ -83,11 +93,13 @@ import static com.zzss.jindy.appconfig.Clone.OMID;
 
 public class NewHomeFragment extends Fragment implements View.OnClickListener {
 
-    private DragFloatActionButton circle_button;
+//    private DragFloatActionButton circle_button;
+        private LinearLayout circle_button;
+
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
     private CustomBanner<String> mBanner;
-    private TextView xx_text, xx_time, home5_text, sk_text, hk_text, xf_text, home8_text, home2_text_red, home4_text_red, home7_text_red;
+    private TextView   home5_text, sk_text, hk_text, xf_text, home8_text, home2_text_red, home4_text_red, home7_text_red;
     private boolean isGetData = false;
     private ArrayList<String> images;
     private BackDialog3 backDialog3;
@@ -96,17 +108,18 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
     private BackDialog backDialog;
     private LinearLayout home_yk;
     private ImageView ad_gif;
-    private View rootView;
+private SwitchTextView xx_text;
     private Intent intent;
+    private View rootView;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
-            rootView = inflater.inflate(R.layout.fragment_new_home2, null);
+            rootView = inflater.inflate(R.layout.activity_home_che_shi, null);
         }
-        initView();
+        initView(rootView);
 
         pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
         getSamllRed();
@@ -139,6 +152,7 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
     public void onPause() {
         super.onPause();
         isGetData = false;
+
     }
 
     /**
@@ -227,41 +241,7 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
                     startActivity(new Intent(getActivity(), YeJiActivity.class));
                 }
                 break;
-            case R.id.view_new_home_5:
-                if (canJump()) {
-                    if (OMID.equals("1H1AJD6SLKVADDM6")) {
-                        VisitorInfo info = new VisitorInfo();
-                        info.nickName = Clone.APP_NAME + "_" + SPConfig.getInstance(getActivity()).getUserAllInfoNew().getName() + "_" + SPConfig.getInstance(getActivity()).getUserAllInfoNew().getUid();
-                        info.userName = SPConfig.getInstance(getActivity()).getUserAllInfoNew().getName();
-                        info.phone = SPConfig.getInstance(getActivity()).getUserAllInfoNew().getMobile();
-                        BotKitClient.getInstance().setVisitor(info);
-                        BotKitClient.getInstance().setPortraitUser(getResources().getDrawable(R.drawable.icon));
-                        BotKitClient.getInstance().setPortraitRobot(getResources().getDrawable(R.drawable.tianjia));
-                        startActivity(new Intent(getActivity(), ChatActivity.class));
-                    } else /*if (OMID.equals("rd500ZbaNVcKVr8g")) */ {
-                        ToastUtil.showTextToas(getActivity(), "点击图片可保存到相册");
-                        imageDialog = new ImageDialog(getContext(),
-                                R.style.Theme_Dialog_Scale, new ImageDialog.DialogClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                switch (view.getId()) {
-                                    case R.id.dc_img:
-                                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.kf11);
 
-                                        saveImageToGallery(bitmap);
-                                        imageDialog.dismiss();
-                                        break;
-                                    case R.id.close:
-                                        imageDialog.dismiss();
-                                        break;
-                                }
-                            }
-                        });
-                        imageDialog.setCancelable(false);
-                        imageDialog.show();
-                    }
-                }
-                break;
             case R.id.view_new_home_6:
                 if (canJump()) {
                     NewUserResponse.DataBean userInfo = SPConfig.getInstance(getContext()).getUserAllInfoNew();
@@ -339,7 +319,7 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void initView() {
+    private void initView(View rootView) {
         if (OMID.equals("1H1AJD6SLKVADDM6")) {
             if (SPConfig.getInstance(getContext()).getUserAllInfoNew().getIs_ad().equals("1")) {
                 imageDialog = new ImageDialog(getContext(),
@@ -370,14 +350,14 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
             }
         }
 
-        home5_text = rootView.findViewById(R.id.home5_text);
-        home8_text = rootView.findViewById(R.id.home8_text);
-        home2_text_red = rootView.findViewById(R.id.home2_text_red);
-        home4_text_red = rootView.findViewById(R.id.home4_text_red);
-        home7_text_red = rootView.findViewById(R.id.home7_text_red);
-        sk_text = rootView.findViewById(R.id.sk_text);
-        hk_text = rootView.findViewById(R.id.hk_text);
-        xf_text = rootView.findViewById(R.id.xf_text);
+//        home5_text = this.rootView.findViewById(R.id.home5_text);
+        home8_text = this.rootView.findViewById(R.id.home8_text);
+        home2_text_red = this.rootView.findViewById(R.id.home2_text_red);
+        home4_text_red = this.rootView.findViewById(R.id.home4_text_red);
+        home7_text_red = this.rootView.findViewById(R.id.home7_text_red);
+        sk_text = this.rootView.findViewById(R.id.sk_text);
+        hk_text = this.rootView.findViewById(R.id.hk_text);
+        xf_text = this.rootView.findViewById(R.id.xf_text);
         if (OMID.equals("1H1AJD6SLKVADDM6")) {
             home5_text.setText("在线客服");
             home8_text.setText("我要OEM");
@@ -395,32 +375,34 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
         rootView.findViewById(R.id.view_new_home_1).setOnClickListener(this);
         rootView.findViewById(R.id.view_new_home_2).setOnClickListener(this);
         rootView.findViewById(R.id.view_new_home_3).setOnClickListener(this);
-        rootView.findViewById(R.id.view_new_home_4).setOnClickListener(this);
-        rootView.findViewById(R.id.view_new_home_5).setOnClickListener(this);
+       rootView.findViewById(R.id.view_new_home_4).setOnClickListener(this);
+//        rootView.findViewById(R.id.view_new_home_5).setOnClickListener(this);
         rootView.findViewById(R.id.view_new_home_6).setOnClickListener(this);
         rootView.findViewById(R.id.view_new_home_7).setOnClickListener(this);
         rootView.findViewById(R.id.view_new_home_8).setOnClickListener(this);
         rootView.findViewById(R.id.li_problem).setOnClickListener(this);
         rootView.findViewById(R.id.li_course).setOnClickListener(this);
-        rootView.findViewById(R.id.li_text).setOnClickListener(this);
         rootView.findViewById(R.id.home_sk).setOnClickListener(this);
         rootView.findViewById(R.id.home_hk).setOnClickListener(this);
-        rootView.findViewById(R.id.li_img).setOnClickListener(this);
         rootView.findViewById(R.id.more).setOnClickListener(this);
-        home_yk = rootView.findViewById(R.id.home_yk);
-        ad_gif = rootView.findViewById(R.id.ad_gif);
-        ad_gif.setOnClickListener(this);
-        if (SPConfig.getInstance(getContext()).getUserAllInfoNew().getIs_ad().equals("1")) {
+        home_yk = this.rootView.findViewById(R.id.home_yk);
+//        ad_gif = this.rootView.findViewById(R.id.ad_gif);
+        //        rootView.findViewById(R.id.li_text).setOnClickListener(this);
+//        rootView.findViewById(R.id.li_img).setOnClickListener(this);
+
+//        ad_gif.setOnClickListener(this);
+       /* if (SPConfig.getInstance(getContext()).getUserAllInfoNew().getIs_ad().equals("1")) {
             ad_gif.setVisibility(View.VISIBLE);
             Glide.with(getContext()).load("http://www.bpbro.com/h5/ad_img/ad_img.gif").diskCacheStrategy(DiskCacheStrategy.ALL).into(ad_gif);
         } else {
             ad_gif.setVisibility(View.GONE);
-        }
+        }*/
         home_yk.setOnClickListener(this);
         xx_text = rootView.findViewById(R.id.xx_text);
-        xx_time = rootView.findViewById(R.id.xx_time);
-        circle_button = rootView.findViewById(R.id.circle_button);
-        circle_button.setOnClickListener(this);
+//        xx_time = rootView.findViewById(R.id.xx_time);
+//        rootView.findViewById(R.id.textView).setVisibility(View.GONE);
+//        circle_button = rootView.findViewById(R.id.circle_button);
+//        circle_button.setOnClickListener(this);
         if (OMID.equals("E1TDVFFY8JX3RY62")) {
             circle_button.setVisibility(View.GONE);
         }
@@ -529,7 +511,9 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
                                 R.style.Theme_Dialog_Scale, new BackDialog.DialogClickListener() {
                             @Override
                             public void onClick(View view) {
-                                restartApp(getContext());
+                                startActivity(new Intent(getContext(), LoginActivity.class));
+
+                             //   restartApp(getContext()); //退出app
                                 backDialog.dismiss();
                             }
                         });
@@ -557,35 +541,41 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
         params.put("starttime", "");
         params.put("endtime", "");
         Connect.getInstance().post(getActivity().getApplicationContext(), IService.SPLITTERLIST, params, new Connect.OnResponseListener() {
+
+            private String addtime,s;
+
             @Override
             public void onSuccess(Object result) {
                 try {
-                    JSONObject obj = new JSONObject(result.toString());
-                    String result1 = obj.get("result").toString();
-                    JSONObject obj1 = new JSONObject(result1);
-                    String code = obj1.get("code").toString();
-                    if (code.equals("10000")) {
+                    XiaoXiBean data1 = (XiaoXiBean) JsonUtils.parse((String) result, XiaoXiBean.class);
+                    if (data1.getResult().getCode()==10000) {
+                        int position = 0;
+                        int len;
+                        for (int i = 0; i < data1.getData().size(); i++) {
+                            addtime = data1.getData().get(i).getAddtime();
 
-                        String data1 = obj.get("data").toString();
-                        JSONArray arr = new JSONArray(data1);
-                        JSONObject obj2 = arr.getJSONObject(0);
-                        xx_text.setText(obj2.getString("text"));
-                        Date curDate = new Date(System.currentTimeMillis());
-                        String timestamp = String.valueOf(curDate.getTime() / 1000);
-                        long lt = Integer.valueOf(timestamp) - Integer.parseInt(obj2.getString("addtime"));
-                        long fen = lt / (60);
-                        if (fen >= 60) {
-                            long shi = lt / (3600);
-                            if (shi >= 24) {
-                                long tian = lt / (3600 * 24);
-                                xx_time.setText(tian + "天前");
-                            } else {
-                                xx_time.setText(shi + "小时前");
-                            }
-                        } else {
-                            xx_time.setText(fen + "分钟前");
+                             s = data1.getData().get(i).getText();
+                            xx_text.setText(s);
+
                         }
+                        len = data1.getData().size();
+
+                        Timer timer = new Timer();
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+//                                position++;
+                               xx_text.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        xx_text.setText(data1.getData().get(position%len).getText());
+                                    }
+                                });
+                            }
+                        }, 2000, 2000);
                     }
+
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -597,6 +587,7 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
+
 
     private void getSamllRed() {
         Connect.getInstance().post(getActivity().getApplicationContext(), IService.SMALLRED, null, new Connect.OnResponseListener() {
@@ -656,44 +647,5 @@ public class NewHomeFragment extends Fragment implements View.OnClickListener {
         backDialog3 = null;
     }
 
-    /**
-     * 保存图片到相册
-     */
-    public void saveImageToGallery(Bitmap mBitmap) {
-        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
 
-            ToastUtil.showTextToas(getActivity(), "sdcard未使用");
-            return;
-        }
-        // 首先保存图片
-        File appDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsoluteFile();
-        if (!appDir.exists()) {
-            appDir.mkdir();
-        }
-        String fileName = System.currentTimeMillis() + ".jpg";
-        File file = new File(appDir, fileName);
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-
-            fos.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-
-        // 其次把文件插入到系统图库
-        try {
-            MediaStore.Images.Media.insertImage(getContext().getContentResolver(), file.getAbsolutePath(), fileName, null);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } // 最后通知图库更新
-
-        getContext().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + "")));
-        ToastUtil.showTextToas(getActivity(), "保存成功");
-    }
 }

@@ -58,7 +58,7 @@
                     android:background="@drawable/textview_shape"
                     android:gravity="center"
                     android:padding="@dimen/dp_8"
-                    android:text="交易奖励"
+                    android:text="直推奖励"
                     android:textColor="#fff" />
 
                 <TextView
@@ -69,7 +69,7 @@
                     android:background="@drawable/textview_shape"
                     android:gravity="center"
                     android:padding="@dimen/dp_8"
-                    android:text="直推奖励"
+                    android:text="间推奖励"
                     android:textColor="#fff" />
 
                 <TextView

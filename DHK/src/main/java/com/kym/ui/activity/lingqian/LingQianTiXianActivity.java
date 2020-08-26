@@ -69,7 +69,7 @@ public class LingQianTiXianActivity extends BaseActivity implements View.OnClick
         userAllInfoNew = SPConfig.getInstance(LingQianTiXianActivity.this).getUserAllInfoNew();
         initview();
         ACCESSTODEBIT();
-        isShouQuan();
+//        isShouQuan();
     }
 
     private void ACCESSTODEBIT() {
@@ -157,10 +157,10 @@ public class LingQianTiXianActivity extends BaseActivity implements View.OnClick
         zfbBtn.setOnClickListener(this);
         li1 = findViewById(R.id.li1);
         li2 = findViewById(R.id.li2);
-        tab1 = findViewById(R.id.tab1);
-        tab2 = findViewById(R.id.tab2);
-        tab1.setOnClickListener(this);
-        tab2.setOnClickListener(this);
+//        tab1 = findViewById(R.id.tab1);
+//        tab2 = findViewById(R.id.tab2);
+//        tab1.setOnClickListener(this);
+//        tab2.setOnClickListener(this);
         line1 = findViewById(R.id.text_line1);
         line2 = findViewById(R.id.text_line2);
         li1.setVisibility(View.VISIBLE);
